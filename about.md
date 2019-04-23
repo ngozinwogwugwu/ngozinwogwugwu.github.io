@@ -13,3 +13,5 @@ Ngozi's at the RC right now. Just moved to New York. Like koto, yoga, food
 cd my_directory
 ls -a
 ```
+
+check out [my wiki!](https://github.com/ngozinwogwugwu/ngozinwogwugwu.github.io/wiki)
