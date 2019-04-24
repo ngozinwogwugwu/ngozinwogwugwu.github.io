@@ -1,23 +1,10 @@
 ---
 layout: post
-title:  "Let's change up this title"
+title:  "How I Keep Notes"
 date:   2019-04-20 15:07:43 -0500
 categories: testing cookies
 ---
-# How's it going
-I like dogs and cookies.
-1. I like dogs
-2. I like cookies
 
-## This is my first post
-Have you ever posted before? My next step is to figure out how to include photos
+You might notice that this blog is pretty empty.
 
-## Never had a blog before
-Never in my life
-
-## What's up?
-Hope to post some projects here
-
-[the web]: https://google.com
-[github in general]:   https://github.com
-[the news, I guess]: https://nytimes.com
+I haven't found a topic that's perfect for my first blog post yet, but I do keep pretty detailed notes on [a wiki](https://github.com/ngozinwogwugwu/ngozinwogwugwu.github.io/wiki), so check it out if you're curious about what I've been up to.

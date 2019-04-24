@@ -4,14 +4,6 @@ title: About
 permalink: /about/
 ---
 
-Ngozi's at the RC right now. Just moved to New York. Like koto, yoga, food
-- koto
-- yoga
-- food
+Hi! I'm Ngozi.
 
-``` bash
-cd my_directory
-ls -a
-```
-
-check out [my wiki!](https://github.com/ngozinwogwugwu/ngozinwogwugwu.github.io/wiki)
+I have been working as a programmer since graduating from Boston University, and I'm currently participating in a batch at the [Recurse Center](https://www.recurse.com). I'm using my time here to improve as a programmer and explore different fields of engineering, like machine learning, robotics and databases.
