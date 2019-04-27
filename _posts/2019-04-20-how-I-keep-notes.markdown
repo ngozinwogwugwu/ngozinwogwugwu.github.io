@@ -2,7 +2,7 @@
 layout: post
 title:  "How I Keep Notes"
 date:   2019-04-20 15:07:43 -0500
-categories: testing cookies
+categories: notes wikis
 ---
 
 You might notice that this blog is pretty empty.
