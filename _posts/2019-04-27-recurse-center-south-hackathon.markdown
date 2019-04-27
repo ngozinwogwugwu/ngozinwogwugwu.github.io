@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Recurse Center S.O.U.T.H Hackathon"
+title:  "Recurse Center S.O.U.T.H. Hackathon"
 date:   2019-04-27 15:07:43 -0500
 categories: projects hackathon
 ---
