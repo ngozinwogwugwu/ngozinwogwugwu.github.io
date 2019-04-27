@@ -5,7 +5,7 @@ date:   2019-04-27 15:07:43 -0500
 categories: projects hackathon
 ---
 
-I've participated in hackathons before, but S.O.U.T.H was the first hackathon where I acted as a participant and a planner. Because the theme was "silly projects", I ended up making [Postweather](postweather): the weather app that says you should have brought an umbrella yesterday, because it rained.
+I've participated in hackathons before, but S.O.U.T.H was the first hackathon where I acted as a participant and a planner. Because the theme was "silly projects", I ended up making [Postweather](https://ngozinwogwugwu.github.io/postweather/): the weather app that says you should have brought an umbrella yesterday, because it rained.
 
 During the project, I learned how easy it is to overestimate what I can do in eight hours, and I found a few tools that I want to try using
 
@@ -23,7 +23,7 @@ I grabbed the idea of a "post weather app" from another participant because it m
 I really wanted to deploy a full stack application, since I had never done that before. I chose a combination of React and Django, because I knew that I could start an app quickly. I also wanted to see if I could send actual texts to my users, so I looked into [twilio](twilio.com)
 
 ## Trimming down the project
-Halfway through the day, I realized that I had been a little too ambitious. Although I was able to build [a quick frontend](postweather), I was struggling to connect it to my Django app, and I was nowhere close to deployment.
+Halfway through the day, I realized that I had been a little too ambitious. Although I was able to build [a quick frontend](https://ngozinwogwugwu.github.io/postweather/), I was struggling to connect it to my Django app, and I was nowhere close to deployment.
 
 Instead of using the frontend as only a signup page, I moved all of my functionality to the frontend. A user gets their useless, annoying lecture the moment they enter their zip code, rather than first thing the morning after
 
