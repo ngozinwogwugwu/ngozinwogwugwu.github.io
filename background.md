@@ -12,4 +12,4 @@ Feel free to take a look at my [resume](https://docs.google.com/document/d/1UEBU
 
 
 - **Boston University College of Engineering, Boston MA** September 2009 – May 2013
-- **The Recurse Center, Brooklyn NY** April 2019 – Present
+- **The Recurse Center, Brooklyn NY** April 2019 – June 2019
