@@ -8,7 +8,7 @@ Feel free to take a look at my [resume](https://docs.google.com/document/d/1UEBU
 - **Software Developer - Solaria Labs** March 2018 – March 2019
 - **Software Engineer II - Wayfair** November 2014 – March 2018
 - **Software Engineer I - Raytheon** June 2013 – October 2014
-- **Technical Consulting Intern - Paytronix** June 2012 – August 2012  
+- **Technical Consulting Intern - Paytronix** June 2012 – August 2012
 
 
 - **Boston University College of Engineering, Boston MA** September 2009 – May 2013
