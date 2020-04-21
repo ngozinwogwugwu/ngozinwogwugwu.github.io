@@ -4,9 +4,6 @@ title: Projects
 permalink: /projects/
 ---
 
-## Unemployment 2020
-I wanted to review computer science fundametals during quarentine, so I took an [algorithms course](https://www.coursera.org/learn/algorithms-part1). I decided to do my homework using Python rather than Java, and I published my work [here](https://github.com/ngozinwogwugwu/exercises/tree/master/data_structures_homeworks)
-
 ## NwoDB
 I wanted to learn more about databases, so I made one.
 
@@ -28,6 +25,9 @@ I've been taking notes of some of the things I've been learning.
 - [Designing Data Intensive Applications Notes](https://github.com/ngozinwogwugwu/ngozinwogwugwu.github.io/wiki#designing-data-intensive-applications)
 - [Things I've been Learning at RC](https://github.com/ngozinwogwugwu/ngozinwogwugwu.github.io/wiki#recurse-center-learning)
 - [Databases](https://github.com/ngozinwogwugwu/ngozinwogwugwu.github.io/wiki#databases)
+
+## Misc Learning
+I wanted to review computer science fundametals during quarentine, so I took an [algorithms course](https://www.coursera.org/learn/algorithms-part1). I decided to do my homework using Python rather than Java, and I published my work [here](https://github.com/ngozinwogwugwu/exercises/tree/master/data_structures_homeworks)
 
 ## RC-Robot
 I paired with [another RC-er](https://github.com/tvieregge/) to build [RC-Robot](https://github.com/tvieregge/rc-robot), the robot that tries to follow you around.
