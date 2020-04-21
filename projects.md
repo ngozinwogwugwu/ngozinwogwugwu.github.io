@@ -4,6 +4,9 @@ title: Projects
 permalink: /projects/
 ---
 
+## Unemployment 2020
+I wanted to review computer science fundametals during quarentine, so I took an [algorithms course](https://www.coursera.org/learn/algorithms-part1). I decided to do my homework using Python rather than Java, and I published my work [here](https://github.com/ngozinwogwugwu/exercises/tree/master/data_structures_homeworks)
+
 ## NwoDB
 I wanted to learn more about databases, so I made one.
 

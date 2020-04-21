@@ -4,6 +4,6 @@ layout: home
 
 Hi! I'm Ngozi.
 
-I've been working as a full stack web developer since graduating from [Boston University](http://www.bu.edu/eng/), and I just finished up a batch at the [Recurse Center](https://www.recurse.com)
+I develop websites and I'm looking for a job in New York.
 
-Outside of programming, I'm an avid [reader](https://www.goodreads.com/review/list/39266582-nwogwugwu?shelf=read&sort=date_added), and I'm learning to play the [koto](https://en.wikipedia.org/wiki/Koto_(instrument)).
+Outside of work, I'm an avid [reader](https://www.goodreads.com/review/list/39266582-nwogwugwu?shelf=read&sort=date_added) and I play the [koto](https://en.wikipedia.org/wiki/Koto_(instrument)). I recently started playing [go](https://online-go.com/player/706985/), so feel free to challenge me online
