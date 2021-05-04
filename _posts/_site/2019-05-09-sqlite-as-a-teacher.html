@@ -1,0 +1,13 @@
+<p>The University of Chicaco published a collection of programming assignments designed for teaching the internals of databases. It’s called <a href="http://chi.cs.uchicago.edu/chidb/index.html">chidb</a>, and I’m giving it a try. I’ve been using relational databases for years, but chidb has been a great way for me to view database management systems as something other than a black box. Bonus: This’ll help me get acquainted with C</p>
+
+<h3 id="chidb-quickstart">Chidb Quickstart</h3>
+<p>One drawback to this online course is that there’s not a lot of guidance. This means that it took me a couple days to get set up. If you want to give chidb a try, and you <em>don’t</em> want to spend a couple days getting setup, try using my <a href="https://github.com/ngozinwogwugwu/chidb_quickstart">chidb quickstart repo</a>. If you clone it and follow the steps in the readme, you’ll have a working docker container with a chidb bind mount in about five minutes. This means that you’ll be able to make changes to the chidb repo on your own machine, and use a docker container to install and run it. My favorite part about this is that you won’t need to install any mystery software on your own machine.</p>
+
+<h3 id="sqlite-header-viewer">SQLite Header Viewer</h3>
+<p>Getting though the unit tests for <a href="http://chi.cs.uchicago.edu/chidb/assignment_btree.html#step-1-opening-a-chidb-file">Assignment 1, Step 1</a> takes quite a bit of time if you’re starting from scratch. If you want to view the SQLite headers that chidb uses for the unit tests, you can use <a href="http://man7.org/linux/man-pages/man1/hexdump.1.html">hexdump</a>, or you can try out my <a href="https://ngozinwogwugwu.github.io/mini_frontend_projects/">SQLite Header Viewer</a>, which will tell you exactly what is wrong with a corrupted SQLite header</p>
+
+<h3 id="notes">Notes</h3>
+<p>If you’d like to check out <a href="https://github.com/ngozinwogwugwu/chidb_quickstart/blob/master/ngozis_notes.md">my notes</a> or <a href="https://github.com/ngozinwogwugwu/chidb_quickstart/tree/master/ngozis_work">my work</a>, they’re both on the chidb quickstart github repo</p>
+
+<h3 id="quick-shoutout">Quick Shoutout!</h3>
+<p>I wouldn’t have made it this far if it weren’t for <a href="https://github.com/bajh">Brandon Hopkins</a>, who’s attending the same <a href="https://recurse.com">Recurse Center</a> batch as me. He helped me get set up and was there to answer questions whenever I got stuck</p>

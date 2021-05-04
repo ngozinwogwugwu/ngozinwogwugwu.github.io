@@ -1,1 +1,88 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.7.4">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2020-04-21T16:04:21-04:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Ngozi Nwogwugwu</title><subtitle>for blogs</subtitle></feed>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.7">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2021-05-03T20:36:22-04:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Ngozi Nwogwugwu</title><subtitle>New York based software engineer</subtitle><entry><title type="html">I want skylights</title><link href="http://localhost:4000/architecture/2021/05/02/skylights.html" rel="alternate" type="text/html" title="I want skylights" /><published>2021-05-02T16:07:43-04:00</published><updated>2021-05-02T16:07:43-04:00</updated><id>http://localhost:4000/architecture/2021/05/02/skylights</id><content type="html" xml:base="http://localhost:4000/architecture/2021/05/02/skylights.html">&lt;p&gt;If I build a home, I want to include skylights in spaces that are generally neglected&lt;/p&gt;
+
+&lt;h1 id=&quot;in-the-bathroom&quot;&gt;In the Bathroom&lt;/h1&gt;
+
+&lt;p&gt;Showering in sunlight is the way to go. The master bathroom in this condo in Venice, LA, included a full skylight&lt;/p&gt;
+
+&lt;table&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt;&lt;img src=&quot;/assets/skylights/vencie-bathroom-skylight.jpg&quot; alt=&quot;vencie-bathroom-skylight.jpg&quot; /&gt;&lt;/td&gt;
+      &lt;td&gt;&lt;img src=&quot;/assets/skylights/venice-shower.jpg&quot; alt=&quot;venice-shower.jpg&quot; /&gt;&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;p&gt;This bath in Honolulu is situated underneath the veranda. Along with the regular veranda tiles, there are a few frosted glass ones.&lt;/p&gt;
+
+&lt;table&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt;&lt;img src=&quot;/assets/skylights/FEA3026C-A19B-49C2-A2F3-F0B890160197.jpeg&quot; alt=&quot;FEA3026C-A19B-49C2-A2F3-F0B890160197.jpeg&quot; /&gt;&lt;/td&gt;
+      &lt;td&gt;&lt;img src=&quot;/assets/skylights/D1983EC3-C5BF-418C-B66E-807077F862FA.jpeg&quot; alt=&quot;D1983EC3-C5BF-418C-B66E-807077F862FA.jpeg&quot; /&gt;&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;h1 id=&quot;in-hallways&quot;&gt;In hallways&lt;/h1&gt;
+
+&lt;p&gt;The house in Honolulu used the same technique to light hallways. Even in spaces that didn’t get direct sunlight benefited from lights being on upstairs&lt;/p&gt;
+
+&lt;table&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt;&lt;img src=&quot;/assets/skylights/37D1E2C2-ED1E-4A8A-8CDC-8352CEA40384.jpeg&quot; alt=&quot;37D1E2C2-ED1E-4A8A-8CDC-8352CEA40384.jpeg&quot; /&gt;&lt;/td&gt;
+      &lt;td&gt;&lt;img src=&quot;/assets/skylights/AF7C39C8-B34E-4A26-9804-AE3ABFBE199C.jpeg&quot; alt=&quot;AF7C39C8-B34E-4A26-9804-AE3ABFBE199C.jpeg&quot; /&gt;&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;</content><author><name></name></author><summary type="html">If I build a home, I want to include skylights in spaces that are generally neglected</summary></entry><entry><title type="html">Unemployment 2020</title><link href="http://localhost:4000/architecture/2020/07/02/unemployment.html" rel="alternate" type="text/html" title="Unemployment 2020" /><published>2020-07-02T16:07:43-04:00</published><updated>2020-07-02T16:07:43-04:00</updated><id>http://localhost:4000/architecture/2020/07/02/unemployment</id><content type="html" xml:base="http://localhost:4000/architecture/2020/07/02/unemployment.html">&lt;p&gt;I wanted to review computer science fundametals during quarentine, so I took an &lt;a href=&quot;https://www.coursera.org/learn/algorithms-part1&quot;&gt;algorithms course&lt;/a&gt;. I decided to do my homework using Python rather than Java, and I published my work &lt;a href=&quot;https://github.com/ngozinwogwugwu/exercises/tree/master/data_structures_homeworks&quot;&gt;here&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;The homework I had the most fun with was &lt;a href=&quot;https://github.com/ngozinwogwugwu/exercises/tree/master/data_structures_homeworks/percolation&quot;&gt;percolation&lt;/a&gt;&lt;/p&gt;
+
+&lt;h1 id=&quot;percolation&quot;&gt;Percolation&lt;/h1&gt;
+&lt;p&gt;&lt;img src=&quot;/assets/unemployment/percolation_animation.png&quot; alt=&quot;percolation_animation.png&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;I model &lt;a href=&quot;https://en.wikipedia.org/wiki/Percolation&quot;&gt;percolation&lt;/a&gt; here using an &lt;em&gt;n&lt;/em&gt; by &lt;em&gt;n&lt;/em&gt; grid. The grid percolates if there is a path from the top to the bottom through open nodes.&lt;/p&gt;
+
+&lt;p&gt;The goal is to use a Monte Carlo simulation to determine the value &lt;em&gt;p&lt;/em&gt;, which represents the ratio of open nodes to total nodes in the system where we can expect the system to percolate.&lt;/p&gt;</content><author><name></name></author><summary type="html">I wanted to review computer science fundametals during quarentine, so I took an algorithms course. I decided to do my homework using Python rather than Java, and I published my work here</summary></entry><entry><title type="html">SQLite as a Teacher</title><link href="http://localhost:4000/sqlite/databases/2019/05/09/sqlite-as-a-teacher.html" rel="alternate" type="text/html" title="SQLite as a Teacher" /><published>2019-05-09T16:07:43-04:00</published><updated>2019-05-09T16:07:43-04:00</updated><id>http://localhost:4000/sqlite/databases/2019/05/09/sqlite-as-a-teacher</id><content type="html" xml:base="http://localhost:4000/sqlite/databases/2019/05/09/sqlite-as-a-teacher.html">&lt;p&gt;The University of Chicaco published a collection of programming assignments designed for teaching the internals of databases. It’s called &lt;a href=&quot;http://chi.cs.uchicago.edu/chidb/index.html&quot;&gt;chidb&lt;/a&gt;, and I’m giving it a try. I’ve been using relational databases for years, but chidb has been a great way for me to view database management systems as something other than a black box. Bonus: This’ll help me get acquainted with C&lt;/p&gt;
+
+&lt;h3 id=&quot;chidb-quickstart&quot;&gt;Chidb Quickstart&lt;/h3&gt;
+&lt;p&gt;One drawback to this online course is that there’s not a lot of guidance. This means that it took me a couple days to get set up. If you want to give chidb a try, and you &lt;em&gt;don’t&lt;/em&gt; want to spend a couple days getting setup, try using my &lt;a href=&quot;https://github.com/ngozinwogwugwu/chidb_quickstart&quot;&gt;chidb quickstart repo&lt;/a&gt;. If you clone it and follow the steps in the readme, you’ll have a working docker container with a chidb bind mount in about five minutes. This means that you’ll be able to make changes to the chidb repo on your own machine, and use a docker container to install and run it. My favorite part about this is that you won’t need to install any mystery software on your own machine.&lt;/p&gt;
+
+&lt;h3 id=&quot;sqlite-header-viewer&quot;&gt;SQLite Header Viewer&lt;/h3&gt;
+&lt;p&gt;Getting though the unit tests for &lt;a href=&quot;http://chi.cs.uchicago.edu/chidb/assignment_btree.html#step-1-opening-a-chidb-file&quot;&gt;Assignment 1, Step 1&lt;/a&gt; takes quite a bit of time if you’re starting from scratch. If you want to view the SQLite headers that chidb uses for the unit tests, you can use &lt;a href=&quot;http://man7.org/linux/man-pages/man1/hexdump.1.html&quot;&gt;hexdump&lt;/a&gt;, or you can try out my &lt;a href=&quot;https://ngozinwogwugwu.github.io/mini_frontend_projects/&quot;&gt;SQLite Header Viewer&lt;/a&gt;, which will tell you exactly what is wrong with a corrupted SQLite header&lt;/p&gt;
+
+&lt;h3 id=&quot;notes&quot;&gt;Notes&lt;/h3&gt;
+&lt;p&gt;If you’d like to check out &lt;a href=&quot;https://github.com/ngozinwogwugwu/chidb_quickstart/blob/master/ngozis_notes.md&quot;&gt;my notes&lt;/a&gt; or &lt;a href=&quot;https://github.com/ngozinwogwugwu/chidb_quickstart/tree/master/ngozis_work&quot;&gt;my work&lt;/a&gt;, they’re both on the chidb quickstart github repo&lt;/p&gt;
+
+&lt;h3 id=&quot;quick-shoutout&quot;&gt;Quick Shoutout!&lt;/h3&gt;
+&lt;p&gt;I wouldn’t have made it this far if it weren’t for &lt;a href=&quot;https://github.com/bajh&quot;&gt;Brandon Hopkins&lt;/a&gt;, who’s attending the same &lt;a href=&quot;https://recurse.com&quot;&gt;Recurse Center&lt;/a&gt; batch as me. He helped me get set up and was there to answer questions whenever I got stuck&lt;/p&gt;</content><author><name></name></author><summary type="html">The University of Chicaco published a collection of programming assignments designed for teaching the internals of databases. It’s called chidb, and I’m giving it a try. I’ve been using relational databases for years, but chidb has been a great way for me to view database management systems as something other than a black box. Bonus: This’ll help me get acquainted with C</summary></entry><entry><title type="html">How I Keep Notes</title><link href="http://localhost:4000/notes/wikis/2019/04/20/how-I-keep-notes.html" rel="alternate" type="text/html" title="How I Keep Notes" /><published>2019-04-20T16:07:43-04:00</published><updated>2019-04-20T16:07:43-04:00</updated><id>http://localhost:4000/notes/wikis/2019/04/20/how-I-keep-notes</id><content type="html" xml:base="http://localhost:4000/notes/wikis/2019/04/20/how-I-keep-notes.html">&lt;p&gt;You might notice that this blog is pretty empty.&lt;/p&gt;
+
+&lt;p&gt;I haven’t found a topic that’s perfect for my first blog post yet, but I do keep pretty detailed notes on &lt;a href=&quot;https://github.com/ngozinwogwugwu/ngozinwogwugwu.github.io/wiki&quot;&gt;a wiki&lt;/a&gt;, so check it out if you’re curious about what I’ve been up to.&lt;/p&gt;</content><author><name></name></author><summary type="html">You might notice that this blog is pretty empty.</summary></entry><entry><title type="html">Projects</title><link href="http://localhost:4000/projects/" rel="alternate" type="text/html" title="Projects" /><published>2018-06-06T16:07:43-04:00</published><updated>2018-06-06T16:07:43-04:00</updated><id>http://localhost:4000/side-projects</id><content type="html" xml:base="http://localhost:4000/projects/">&lt;h2 id=&quot;nwodb&quot;&gt;NwoDB&lt;/h2&gt;
+&lt;p&gt;I wanted to learn more about databases, so I made one.&lt;/p&gt;
+
+&lt;p&gt;Going off of &lt;a href=&quot;https://github.com/cstack&quot;&gt;Connor Stack&lt;/a&gt;’s tutorial, &lt;a href=&quot;https://cstack.github.io/db_tutorial/&quot;&gt;Let’s Build a Simple Database&lt;/a&gt;, I decided to make my own. I followed along with Stack’s tutorial using C, then I recreated the functionality in Python.&lt;/p&gt;
+
+&lt;p&gt;If you want to see my code or try it for yourself, go &lt;a href=&quot;https://github.com/ngozinwogwugwu/nwodb&quot;&gt;here&lt;/a&gt;.&lt;/p&gt;
+
+&lt;h2 id=&quot;quick-hits&quot;&gt;Quick Hits&lt;/h2&gt;
+&lt;p&gt;I compiled some of the smaller one-off projects that I’ve made onto one page&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;&lt;strong&gt;Markdown Viewer&lt;/strong&gt;: let’s you see the results of your markdown text in real time&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;SQLite Header Viewer&lt;/strong&gt;: displays the header of a SQLite file, as defined in the &lt;a href=&quot;http://chi.cs.uchicago.edu/chidb/fileformat.html#file-header&quot;&gt;ChiDB course&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Coffee Clicker&lt;/strong&gt;: helps you decide what kind of coffee to get&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Scooter Table&lt;/strong&gt;: displays a real-time list of Coup scooters in Berlin&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;check them out &lt;a href=&quot;https://ngozinwogwugwu.github.io/mini_frontend_projects/&quot;&gt;here&lt;/a&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;my-personal-wiki&quot;&gt;My Personal Wiki&lt;/h2&gt;
+&lt;p&gt;I’ve been taking notes of some of the things I’ve been learning.&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/ngozinwogwugwu/ngozinwogwugwu.github.io/wiki#designing-data-intensive-applications&quot;&gt;Designing Data Intensive Applications Notes&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/ngozinwogwugwu/ngozinwogwugwu.github.io/wiki#recurse-center-learning&quot;&gt;Things I’ve been Learning at RC&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/ngozinwogwugwu/ngozinwogwugwu.github.io/wiki#databases&quot;&gt;Databases&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;rc-robot&quot;&gt;RC-Robot&lt;/h2&gt;
+&lt;p&gt;I paired with &lt;a href=&quot;https://github.com/tvieregge/&quot;&gt;another RC-er&lt;/a&gt; to build &lt;a href=&quot;https://github.com/tvieregge/rc-robot&quot;&gt;RC-Robot&lt;/a&gt;, the robot that tries to follow you around.&lt;/p&gt;</content><author><name></name></author><summary type="html">NwoDB I wanted to learn more about databases, so I made one.</summary></entry></feed>

@@ -5,6 +5,7 @@ permalink: /background/
 ---
 
 Feel free to take a look at my [resume](https://docs.google.com/document/d/1UEBU-v_vXzHeQ-rf7eabIoLw4Qw-T_P5iqHWG32J0Xg/edit?usp=sharing) or my [LinkedIn](https://www.linkedin.com/in/ngozinwogwugwu/) for detailed information, but here's a TL;DR
+- **Software Engineer III - Better.com** July 2020 – Present
 - **Software Engineer III - Managed by Q** August 2019 – March 2020
 - **Software Developer - Solaria Labs** March 2018 – March 2019
 - **Software Engineer II - Wayfair** November 2014 – March 2018

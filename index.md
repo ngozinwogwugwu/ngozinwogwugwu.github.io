@@ -1,9 +1,6 @@
 ---
+# Feel free to add content and custom Front Matter to this file.
+# To modify the layout, see https://jekyllrb.com/docs/themes/#overriding-theme-defaults
+
 layout: home
 ---
-
-Hi! I'm Ngozi.
-
-I develop websites and I'm looking for a job in New York.
-
-Outside of work, I'm an avid [reader](https://www.goodreads.com/review/list/39266582-nwogwugwu?shelf=read&sort=date_added) and I play the [koto](https://en.wikipedia.org/wiki/Koto_(instrument)). I recently started playing [go](https://online-go.com/player/706985/), so feel free to challenge me online
