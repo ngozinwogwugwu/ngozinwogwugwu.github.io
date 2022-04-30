@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1"><!-- Begin Jekyll SEO tag v2.6.1 -->
+<title>My Fitness RPG | Ngozi Nwogwugwu</title>
+<meta name="generator" content="Jekyll v3.8.7" />
+<meta property="og:title" content="My Fitness RPG" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="I made a simple phone game that draws on fitness stats from your wearable. The game’s concept is quite simple: Fight monsters to gain experience points and gold. The game uses several out-of-game factors to determine its behavior." />
+<meta property="og:description" content="I made a simple phone game that draws on fitness stats from your wearable. The game’s concept is quite simple: Fight monsters to gain experience points and gold. The game uses several out-of-game factors to determine its behavior." />
+<link rel="canonical" href="http://localhost:4000/games,/fitness/2022/04/25/my-fitness-rpg.html" />
+<meta property="og:url" content="http://localhost:4000/games,/fitness/2022/04/25/my-fitness-rpg.html" />
+<meta property="og:site_name" content="Ngozi Nwogwugwu" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2022-04-25T22:07:43+02:00" />
+<script type="application/ld+json">
+{"url":"http://localhost:4000/games,/fitness/2022/04/25/my-fitness-rpg.html","headline":"My Fitness RPG","dateModified":"2022-04-25T22:07:43+02:00","datePublished":"2022-04-25T22:07:43+02:00","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/games,/fitness/2022/04/25/my-fitness-rpg.html"},"description":"I made a simple phone game that draws on fitness stats from your wearable. The game’s concept is quite simple: Fight monsters to gain experience points and gold. The game uses several out-of-game factors to determine its behavior.","@type":"BlogPosting","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link rel="stylesheet" href="/assets/main.css"><link type="application/atom+xml" rel="alternate" href="http://localhost:4000/feed.xml" title="Ngozi Nwogwugwu" /></head>
+<body><header class="site-header" role="banner">
+
+  <div class="wrapper"><a class="site-title" rel="author" href="/">Ngozi Nwogwugwu</a><nav class="site-nav">
+        <input type="checkbox" id="nav-trigger" class="nav-trigger" />
+        <label for="nav-trigger">
+          <span class="menu-icon">
+            <svg viewBox="0 0 18 15" width="18px" height="15px">
+              <path d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.032C17.335,0,18,0.665,18,1.484L18,1.484z M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.032C17.335,6.031,18,6.696,18,7.516L18,7.516z M18,13.516C18,14.335,17.335,15,16.516,15H1.484 C0.665,15,0,14.335,0,13.516l0,0c0-0.82,0.665-1.483,1.484-1.483h15.032C17.335,12.031,18,12.695,18,13.516L18,13.516z"/>
+            </svg>
+          </span>
+        </label>
+
+        <div class="trigger"><a class="page-link" href="/about/">About</a><a class="page-link" href="/background/">Background</a></div>
+      </nav></div>
+</header>
+<main class="page-content" aria-label="Content">
+      <div class="wrapper">
+        <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
+
+  <header class="post-header">
+    <h1 class="post-title p-name" itemprop="name headline">My Fitness RPG</h1>
+    <p class="post-meta">
+      <time class="dt-published" datetime="2022-04-25T22:07:43+02:00" itemprop="datePublished">Apr 25, 2022
+      </time></p>
+  </header>
+
+  <div class="post-content e-content" itemprop="articleBody">
+    <p>I made a simple phone game that draws on fitness stats from your wearable. The game’s concept is quite simple: Fight monsters to gain experience points and gold. The game uses several out-of-game factors to determine its behavior.</p>
+
+<p>My goal is to pull elements of the real world into a fantastical game world. Fitness stats like cardiovascular strain and sleep determine a character’s hit strength and health. Other real-world factors, such as current weather and moon phase, determine which monsters appear. By using mundane events in the real world to create fun game mechanics, I hope to encourage my players to view daily life with a layer of whimsey.</p>
+
+<p><a href="https://witch-game-text-adventure-i26wf.ondigitalocean.app/">I published a demo. Try it out!</a></p>
+
+<h2 id="how-did-i-make-this">How did I make this?</h2>
+
+<p>The tech stack I used for this is quite straightforward. I used <strong>PostgreSQL</strong> to store data, <strong>Django</strong> to create a REST API. I used <strong>Expo/ReactNative</strong> to generate a mobile-friendly frontend because I want the option to publish my game as an iOS app. I’m using <strong>DigitalOcean</strong> to host the entire app.</p>
+
+<h2 id="aspirations">Aspirations</h2>
+
+<p>I want to pull in more real-time data and make the game more complex and story-driven. I would also consider adding NFT items as a way for the game to generate profit.</p>
+
+<h2 id="learnings">Learnings</h2>
+
+<p>I view the current incarnation of this game as a proof-of-concept, and I learned quite a bit while building this version of the game. Here’s what I’ll do for my next version:</p>
+<ul>
+  <li><strong>Deploy early and often</strong> - I want to publish a live version of my game as early as possible so I can get feedback at every step of development.</li>
+  <li><strong>Start with the integrations</strong> - I’m moving from Whoop to Apple Health, since Apple Health has far more users and allows for developer integration.</li>
+  <li><strong>Mobile first, but web is too!</strong> - Getting published on the App Store is a whole thing. I want immediate feedback on my app, so I’ll publish my game to the web before I focus on creating an iOS app</li>
+</ul>
+
+  </div><a class="u-url" href="/games,/fitness/2022/04/25/my-fitness-rpg.html" hidden></a>
+</article>
+
+      </div>
+    </main><footer class="site-footer h-card">
+  <data class="u-url" href="/"></data>
+
+  <div class="wrapper">
+
+    <h2 class="footer-heading">Ngozi Nwogwugwu</h2>
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col footer-col-1">
+        <ul class="contact-list">
+          <li class="p-name">Ngozi Nwogwugwu</li><li><a class="u-email" href="mailto:ngozi.n.nwogwugwu@gmail.com">ngozi.n.nwogwugwu@gmail.com</a></li></ul>
+      </div>
+
+      <div class="footer-col footer-col-2"><ul class="social-media-list"><li><a href="https://github.com/ngozinwogwugwu"><svg class="svg-icon"><use xlink:href="/assets/minima-social-icons.svg#github"></use></svg> <span class="username">ngozinwogwugwu</span></a></li></ul>
+</div>
+
+      <div class="footer-col footer-col-3">
+        <p>New York based software engineer</p>
+      </div>
+    </div>
+
+  </div>
+
+</footer>
+</body>
+
+</html>

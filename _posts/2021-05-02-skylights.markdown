@@ -5,7 +5,7 @@ date:   2021-05-02 15:07:43 -0500
 categories: architecture
 ---
 
-If I build a home, I want to include skylights in spaces that are generally neglected
+If I build a home, I want to include skylights in spaces that are generally neglected.
 
 # In the Bathroom
 

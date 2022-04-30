@@ -67,6 +67,7 @@ GEM
 
 PLATFORMS
   universal-darwin-17
+  universal-darwin-20
 
 DEPENDENCIES
   jekyll (~> 3.8.7)
@@ -77,4 +78,4 @@ DEPENDENCIES
   wdm (~> 0.1.0)
 
 BUNDLED WITH
-   2.2.16
+   2.3.12
