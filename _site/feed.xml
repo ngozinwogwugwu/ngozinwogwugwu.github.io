@@ -1,8 +1,19 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.7">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2022-04-30T16:06:54+02:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Ngozi Nwogwugwu</title><subtitle>New York based software engineer</subtitle><entry><title type="html">My Fitness RPG</title><link href="http://localhost:4000/games,/fitness/2022/04/25/my-fitness-rpg.html" rel="alternate" type="text/html" title="My Fitness RPG" /><published>2022-04-25T22:07:43+02:00</published><updated>2022-04-25T22:07:43+02:00</updated><id>http://localhost:4000/games,/fitness/2022/04/25/my-fitness-rpg</id><content type="html" xml:base="http://localhost:4000/games,/fitness/2022/04/25/my-fitness-rpg.html">&lt;p&gt;I made a simple phone game that draws on fitness stats from your wearable. The game’s concept is quite simple: Fight monsters to gain experience points and gold. The game uses several out-of-game factors to determine its behavior.&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.7">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2022-05-01T14:47:13+02:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Ngozi Nwogwugwu</title><subtitle>New York based software engineer</subtitle><entry><title type="html">My Fitness RPG</title><link href="http://localhost:4000/games,/fitness/2022/04/30/my-fitness-rpg.html" rel="alternate" type="text/html" title="My Fitness RPG" /><published>2022-04-30T22:07:43+02:00</published><updated>2022-04-30T22:07:43+02:00</updated><id>http://localhost:4000/games,/fitness/2022/04/30/my-fitness-rpg</id><content type="html" xml:base="http://localhost:4000/games,/fitness/2022/04/30/my-fitness-rpg.html">&lt;p&gt;I made a simple phone game that draws on fitness stats from your wearable. The game’s concept is quite simple: Fight monsters to gain experience points and gold. The game uses several out-of-game factors to determine its behavior.&lt;/p&gt;
 
 &lt;p&gt;My goal is to pull elements of the real world into a fantastical game world. Fitness stats like cardiovascular strain and sleep determine a character’s hit strength and health. Other real-world factors, such as current weather and moon phase, determine which monsters appear. By using mundane events in the real world to create fun game mechanics, I hope to encourage my players to view daily life with a layer of whimsey.&lt;/p&gt;
 
 &lt;p&gt;&lt;a href=&quot;https://witch-game-text-adventure-i26wf.ondigitalocean.app/&quot;&gt;I published a demo. Try it out!&lt;/a&gt;&lt;/p&gt;
+
+&lt;table&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt;&lt;img src=&quot;/assets/witch_game/IMG_9150.PNG&quot; alt=&quot;IMG_9150.PNG&quot; /&gt;&lt;/td&gt;
+      &lt;td&gt;&lt;img src=&quot;/assets/witch_game/IMG_9151.PNG&quot; alt=&quot;IMG_9151.PNG&quot; /&gt;&lt;/td&gt;
+      &lt;td&gt;&lt;img src=&quot;/assets/witch_game/IMG_9152.PNG&quot; alt=&quot;IMG_9152.PNG&quot; /&gt;&lt;/td&gt;
+      &lt;td&gt;&lt;img src=&quot;/assets/witch_game/IMG_9153.PNG&quot; alt=&quot;IMG_9153.PNG&quot; /&gt;&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
 
 &lt;h2 id=&quot;how-did-i-make-this&quot;&gt;How did I make this?&lt;/h2&gt;
 

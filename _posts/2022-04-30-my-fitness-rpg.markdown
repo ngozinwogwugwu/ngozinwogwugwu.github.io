@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "My Fitness RPG"
-date:   2022-04-25 15:07:43 -0500
+date:   2022-04-30 15:07:43 -0500
 categories: games, fitness
 ---
 
@@ -10,6 +10,9 @@ I made a simple phone game that draws on fitness stats from your wearable. The g
 My goal is to pull elements of the real world into a fantastical game world. Fitness stats like cardiovascular strain and sleep determine a character's hit strength and health. Other real-world factors, such as current weather and moon phase, determine which monsters appear. By using mundane events in the real world to create fun game mechanics, I hope to encourage my players to view daily life with a layer of whimsey.
 
 [I published a demo. Try it out!](https://witch-game-text-adventure-i26wf.ondigitalocean.app/)
+
+| ------------- | ------------- | ------------- | ------------- |
+| ![IMG_9150.PNG](/assets/witch_game/IMG_9150.PNG) | ![IMG_9151.PNG](/assets/witch_game/IMG_9151.PNG) | ![IMG_9152.PNG](/assets/witch_game/IMG_9152.PNG) | ![IMG_9153.PNG](/assets/witch_game/IMG_9153.PNG) |
 
 ## How did I make this?
 
