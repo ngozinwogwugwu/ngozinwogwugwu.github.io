@@ -17,10 +17,8 @@ I'm fairly opinionated about books, and I love to talk about what I read. Here a
 - **Annihilation** Jeff VanderMeer
 - **Stories of Your Life and Others** Ted Chiang
 - **The Ocean at the End of the Lane** Neil Gaiman
-- **A Tale for the Time Being** Ruth Ozeki
 - **The Casual Vacancy** J.K. Rowling
 - **Island** Aldous Huxley
-- **The Remains of the Day** Kazuo Ishiguro
 - **World War Z: An Oral History of the Zombie War** by Max Brooks
 - **Piranesi** Susanna Clarke
 
@@ -30,7 +28,9 @@ I'm fairly opinionated about books, and I love to talk about what I read. Here a
 Fiction
 - **The Aleph** Jorge Luis Borges
 - **Klara and the Sun** Kazuo Ishiguro
+- **A Tale for the Time Being** Ruth Ozeki
 - **The City in the Middle of the Night** Charlie Jane Anders
+- **The Remains of the Day** Kazuo Ishiguro
 - **The Shobies' Story** Ursula K. Le Guin
 - **My Brilliant Friend** Elena Ferrante
 - **The Pugilist at Rest** Thom Jones
