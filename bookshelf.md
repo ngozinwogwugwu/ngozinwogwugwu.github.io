@@ -70,6 +70,8 @@ Fiction
 - **The Watchmaker of Filigree Street** Natasha Pulley
 - **Oryx and Crake** Margaret Atwood 
 - **The Girl with All the Gifts** M.R. Carey
+- **Hyperion** Dan Simmons
+- **American Gods** Neil Gaiman
 - **A Memory Called Empire** Arkady Martine
 
 ---
@@ -99,10 +101,8 @@ Nonfiction
 Fiction
 - **The Devotion of Suspect X** Keigo Higashino
 - **The Shadow of the Torturer** Gene Wolfe
-- **Hyperion** Dan Simmons
 - **Dune** Frank Herbert
 - **Seveneves** Neal Stephenson
-- **American Gods** Neil Gaiman
 - **The Three-Body Problem** Cixin Liu
 - **The Martian** Andy Weir
 - **The Final Empire** Brandon Sanderson
@@ -112,5 +112,3 @@ Fiction
 Nonfiction
 - **Homo Deus: A History of Tomorrow** Yuval Noah Harari
 - **12 Rules for Life: An Antidote to Chaos** Jordan B. Peterson
-
-
