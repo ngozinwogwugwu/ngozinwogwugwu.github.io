@@ -1,0 +1,96 @@
+---
+layout: post
+title:  "Some Articles from 2020"
+date:   2020-12-28 15:07:43 -0500
+permalink: /notes/articles-2020/
+---
+
+# [The Atlantic: Overlooked Variable](https://www.theatlantic.com/health/archive/2020/09/k-overlooked-variable-driving-pandemic/616548/)
+- R0 represents the *average* transmission rate. It's helpful for the flu but not covid
+
+**deterministic** - you can predict the output based on the inputs
+
+**stochastic** - you can't predict the output, because there's randomness in the system
+
+### Covid spreads in clusters
+
+- Because covid spreads in clusters, R0 is not a helpful metric
+- COVID19 is an **overdispersed** pathogen
+- 10-20% of cases are responsible for 80-90% of transmissions
+
+Because covid spreads in clusters, we're doing contact tracing wrong. We should be working backwards when we find cases to figure out who *they* got it from. Instead we're trying to find the people they infected
+
+We're also approaching testing wrong. **identifying transmission events is more important than finding a single transmitting individual.** We're using PCR tests, which are accurate, slow, expensive and inconvenient. They're good at finding individuals who have covid, when they get tested, but they're not testing many people. We should be using fast, cheap, effective tests to test many people. Once we find someone, we can use the more accurate PCR tests to find the people who got infected in the same cluster
+
+Japan & Sweden tried to tackle events, while the US tried to tackle cases one by one
+
+Warning: Because it's stochastic, a downward trend doesn't necessarily mean that the infections will continue to diminish
+
+# [NYT: How to be a better friend](https://www.nytimes.com/guides/smarterliving/how-to-be-a-better-friend)
+- logistical support
+    
+    research says friends matter more to physical health than romantic partners do
+    
+- lower stress levels
+- better network = better access to services
+- positive peer pressure
+
+Friendships have a half life of about seven years. Friendships often end because we neglect them
+
+**Passive friends** work on these by exchanging pleasantries
+
+**Active friends** decide who's an active friend by asking yourself who:
+
+- you learn from & challenges you
+- you confide in
+- is a joy to be around
+
+a balanced life has five equally important components:
+
+1. work
+2. family
+3. romantic partnerships
+4. friends
+5. self-care
+
+### Maintaining friendships
+
+- schedule regular friend dates. These don't need to be frequent, but they do need to be consistent
+- you can spend a few minutes of uninterrupted attention on a friend
+- activities you spend with friends can be productive (exercising, taking a class)
+- small gestures help - text things that make you think of them
+- listen for real
+- ask deeper questions
+
+### Dealing with conflict
+
+since friendships are relationships of choice, they're more easily undone than romantic or familial relationships. A broken friendship still takes its toll, though
+
+- accept your friends' flaws
+- it's important to know how to fight constructively
+
+# [Bloomberg: Earning the Right to Get Swindled](https://www.bloomberg.com/opinion/articles/2018-09-24/earning-the-right-to-get-swindled)
+- these private placements are not subject to the disclosure and auditing requirements for the public markets
+- requirements: you have a net worth of more than $1 million, or an annual income of more than $200k a year
+- generally not sophisticated investors
+
+One thing that could widen the divide between the rich and the poor is the fact that not everyone can invest in small companies
+
+- fast growing companies stay private longer and raise more capital from the private markets
+- it might be that the private placements accredited investors can invest in isn't the real good stuff. It might be that only billionaires and institutions have access to good investment opportunities
+
+Private equity firms will buy companies, improve their performance and capital structure, then sell them for a profit
+
+- They use money from investors to buy the companies
+- They also charge the companies they buy consulting fees
+- Because these firms control the companies, they can charge them whatever they want for the consulting fees
+
+You can make the assertion that when there is news about a company or resource, the price of the company/resource changes
+
+- you can make the same assertion about crypto
+- news about regulation affects crypto markets
+
+regulation isn't necessarily bad for companies
+
+- it increases public trust
+- makes it harder for new players to get into the market

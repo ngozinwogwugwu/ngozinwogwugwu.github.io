@@ -1,0 +1,89 @@
+---
+layout: post
+title:  "Some Articles from 2021"
+date:   2020-12-28 15:07:43 -0500
+permalink: /notes/articles-2021/
+---
+
+# [The Economist: Covid and Africa](https://www.economist.com/leaders/2021/02/06/the-pandemic-could-undercut-africas-precarious-progress)
+COVID is affecting Africa
+
+There are probably way more deaths and cases than are being reported
+
+governments will have debt crises, will need to cut infrastructure spending
+
+This will have a huge effect on education. Education affects family sizes and prosperity
+
+median age less than 20. Optimistic people
+
+78% of Kenyans thought their lives would improve over the next 15 years. Nigerians and Senegalese were more optimistic
+
+IMF predicts that Africa will be the slowest growing large region this year
+
+Between 2003 and 2018, Africa got less poor
+
+Africa won't have enough vaccines for herd immunity before 2024
+
+Africa needs money, and it's in everyone's interest to help. As long as the virus is active somewhere, it can **mutate and spread**
+
+# [The Economist: Myanmar’s coup](https://www.economist.com/briefing/2021/02/06/myanmars-coup-turns-the-clock-back-a-decade)
+There was a coup in Myanmar - the military put a bunch of politicians under house arrest
+
+### Timeline
+
+**1948 - independence**
+
+**1962 - army toppled democratically elected government**
+
+1988 - army savagely quashed a democratic uprising
+
+2008 - Cyclone Nargis. 140,00 people died, army had a terrible response
+
+**2011 - army allowed a civilian government**
+
+2015 - election (NLD won)
+
+**2017 - the Tatmadaw and Buddhist mobs sacked Rohingya villages**
+
+### Details
+
+The government shut down airports and the internet
+
+Army allowed civilian government because:
+
+1. A lot of the west was isolating the country
+2. They thought they wouldn't lose power
+
+Aung San Suu Kyi didn't lead very well
+
+- she brokked no dissent and refused to delegate
+- alienated minorities
+- surrounded herself with loyal old ministers, not competent ones
+
+International sanctions for the pogroms against Rohingyas might hurt the poorest people in Myanmar
+
+Myanmar doesn't want to be isolated when China is right there, but they can collaborate
+
+### Players
+
+**NLD** - National League for Democracy
+
+**USDP** - Union Solidarity and Development Party, a proxy for the Tatmadaw
+
+**Aung San Suu Kyi** - led the NLD from house arrest in the 1990s & 2000s
+
+**The Tatmadaw** - the army
+
+**Bamar** - ethnic majority
+
+# [Vox: Progressive Media Push](https://www.vox.com/recode/22296522/acronym-democrats-courier-progressive-news-tara-mcgowan-project-for-good-information)
+**PGI, Project for Good Information** - organization for local progressive news
+
+- related to efforts to create seemingly nonpartisan websites
+
+defenders of this effort say:
+
+"Democrats have ceded this information warfare [...] for too long"
+
+There's an effort to downplay links between news sources and political organizations
+

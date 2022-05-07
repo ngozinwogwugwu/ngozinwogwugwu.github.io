@@ -2,7 +2,7 @@
 layout: post
 title:  "SQLite as a Teacher"
 date:   2019-05-09 15:07:43 -0500
-categories: sqlite databases
+permalink: /programming/sqlite
 ---
 
 The University of Chicaco published a collection of programming assignments designed for teaching the internals of databases. It's called [chidb](http://chi.cs.uchicago.edu/chidb/index.html), and I'm giving it a try. I've been using relational databases for years, but chidb has been a great way for me to view database management systems as something other than a black box. Bonus: This'll help me get acquainted with C

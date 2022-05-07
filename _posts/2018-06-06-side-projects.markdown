@@ -1,8 +1,8 @@
 ---
-layout: page
-title: Projects
-date:   2018-06-06 15:07:43 -0500
-permalink: /projects/
+layout: post
+title: Recurse Center Projects
+date:   2019-06-06 15:07:43 -0500
+permalink: /programming/recurse-center
 ---
 
 ## NwoDB

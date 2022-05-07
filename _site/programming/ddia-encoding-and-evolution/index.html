@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1"><!-- Begin Jekyll SEO tag v2.6.1 -->
+<title>Notes: Encoding and Evolution | Ngozi Nwogwugwu</title>
+<meta name="generator" content="Jekyll v3.8.7" />
+<meta property="og:title" content="Notes: Encoding and Evolution" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="source: Designing Data Intensive Applications by Martin Kleppmann (Chapter 4)" />
+<meta property="og:description" content="source: Designing Data Intensive Applications by Martin Kleppmann (Chapter 4)" />
+<link rel="canonical" href="http://localhost:4000/programming/ddia-encoding-and-evolution/" />
+<meta property="og:url" content="http://localhost:4000/programming/ddia-encoding-and-evolution/" />
+<meta property="og:site_name" content="Ngozi Nwogwugwu" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2018-07-13T22:07:43+02:00" />
+<script type="application/ld+json">
+{"url":"http://localhost:4000/programming/ddia-encoding-and-evolution/","headline":"Notes: Encoding and Evolution","dateModified":"2018-07-13T22:07:43+02:00","datePublished":"2018-07-13T22:07:43+02:00","description":"source: Designing Data Intensive Applications by Martin Kleppmann (Chapter 4)","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/programming/ddia-encoding-and-evolution/"},"@type":"BlogPosting","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link rel="stylesheet" href="/assets/main.css"><link type="application/atom+xml" rel="alternate" href="http://localhost:4000/feed.xml" title="Ngozi Nwogwugwu" /></head>
+<body><header class="site-header" role="banner">
+
+  <div class="wrapper"><a class="site-title" rel="author" href="/">Ngozi Nwogwugwu</a><nav class="site-nav">
+        <input type="checkbox" id="nav-trigger" class="nav-trigger" />
+        <label for="nav-trigger">
+          <span class="menu-icon">
+            <svg viewBox="0 0 18 15" width="18px" height="15px">
+              <path d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.032C17.335,0,18,0.665,18,1.484L18,1.484z M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.032C17.335,6.031,18,6.696,18,7.516L18,7.516z M18,13.516C18,14.335,17.335,15,16.516,15H1.484 C0.665,15,0,14.335,0,13.516l0,0c0-0.82,0.665-1.483,1.484-1.483h15.032C17.335,12.031,18,12.695,18,13.516L18,13.516z"/>
+            </svg>
+          </span>
+        </label>
+
+        <div class="trigger"><a class="page-link" href="/bookshelf/">My Bookshelf</a><a class="page-link" href="/notes/">Notes</a><a class="page-link" href="/programming/">Programming</a></div>
+      </nav></div>
+</header>
+<main class="page-content" aria-label="Content">
+      <div class="wrapper">
+        <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
+
+  <header class="post-header">
+    <h1 class="post-title p-name" itemprop="name headline">Notes:  Encoding and Evolution</h1>
+    <p class="post-meta">
+      <time class="dt-published" datetime="2018-07-13T22:07:43+02:00" itemprop="datePublished">Jul 13, 2018
+      </time></p>
+  </header>
+
+  <div class="post-content e-content" itemprop="articleBody">
+    <p>source: <a href="https://www.oreilly.com/library/view/designing-data-intensive-applications/9781491903063/">Designing Data Intensive Applications</a> by Martin Kleppmann (Chapter 4)</p>
+
+<hr />
+
+<p>Since applications change over time, we need a good way to roll out the changes</p>
+<ul>
+  <li><strong>Rolling upgrade</strong> (or <strong>staged rollout</strong>): if you have a server-side application, and it’s running on multiple nodes, you can deploy the new version to a few nodes at a time. That way, you can check to see if everything is okay before continuing</li>
+  <li><strong>Backward Compatibility</strong>: New code that reads old data</li>
+  <li><strong>Forward Compatibility</strong>: Old code that reads new data</li>
+</ul>
+
+<h2 id="formats-for-encoding-data">Formats for Encoding Data</h2>
+<p><em>in-memory data</em> is usually kept in a data structure, using pointers. <em>data on disk</em>, on the other hand, is generally stored as self-contained byte sequences. We need a way to get data from one format to the other.</p>
+<ul>
+  <li><strong>encoding</strong> (or <strong>serialization</strong>, <strong>marshalling</strong>): translation from in-memory data to a byte sequence</li>
+  <li><strong>decoding</strong> (or <strong>deserialization</strong>, <strong>unmarshalling</strong>): the reverse of encoding</li>
+</ul>
+
+<p>There are three main formats for encoded data:</p>
+<ol>
+  <li>Language-Specific</li>
+  <li>Text-based formats (JSON/XML/CSV)</li>
+  <li>Binary Encoding</li>
+</ol>
+
+<h3 id="language-specific-data-encoding">Language-Specific Data Encoding</h3>
+<p>programming language can come with built-in serialization, but there are a lot of drawbacks</p>
+<ul>
+  <li>it ties your serialized data to a programming language, which makes it hard to de-serialize if theres a different programming language on the other end</li>
+  <li>there’s a security issue: because the decoding process will decode an arbitrary sequence of bytes to instantiate an arbitrary class, an attacker could get your application to do basically anything</li>
+  <li>Versioning is kind of an afterthought. Bad forward/backward compatibility</li>
+  <li>Efficiency is also an afterthought</li>
+</ul>
+
+<h3 id="text-based-data-encoding">Text-Based Data Encoding</h3>
+<ul>
+  <li><strong>XML</strong>: drawbacks: it’s quite verbose. Also, it doesn’t distinguish variable types. Ints look like strings</li>
+  <li><strong>JSON</strong>: popular because of built-in web browser support, and it differentiates numbers/strings, but not ints/floats</li>
+  <li><strong>CSV</strong>: good for large, unique, controlled datasets, but CSV is less powerful than JSON, and there can be parsing errors</li>
+</ul>
+
+<h3 id="binary-encoding">Binary Encoding</h3>
+<p>Binary encoding makes messages more compact, and it’s easier to parse.</p>
+<ul>
+  <li>there are some binary encodings for JSON</li>
+  <li>one benefit is that you can distinguish between types</li>
+</ul>
+
+<h4 id="protocol-buffers-and-thrift">Protocol Buffers and Thrift</h4>
+<p>Protocol Buffers and Thrift are <em>binary encoding libraries</em> that require <em>schema</em> to encode data.</p>
+<ul>
+  <li>They come with code generation tools. The generated code will encode and decode data based on the schema you made</li>
+  <li><strong>Protocol Buffers</strong> were developed at Google</li>
+  <li><strong>Apache Thrift</strong> was developed at Facebook, and it has two binary encoding formats (one is more compact than the other)</li>
+  <li><strong>field tags</strong>: analogous to keys in JSON objects. You define them in schema definitions</li>
+  <li>In an encoded message, each field has a <em>type annotation</em>, and some fields have length annotations</li>
+  <li><em>Schema</em> include the following: field tags, types, names, optional/required bool
+    <ul>
+      <li>the optional/required flag doesn’t make a difference in the encoded data, but it’s used at runtime to catch bugs</li>
+    </ul>
+  </li>
+</ul>
+
+<h4 id="schema-evolution">Schema Evolution</h4>
+<p><strong>Schema evolution</strong> is when schemas change over time. Binary encoding libraries need a way to handle this, and they use field tags.</p>
+<ul>
+  <li>to handle <em>forward capability</em>, just ignore unrecognized field tags</li>
+  <li>to handle <em>backward capability</em>, you need to make sure that any new fields in the schema are either optional or have a default value
+    <ul>
+      <li>you can also remove fields, but you can never remove a required field, and you can never reuse a tag</li>
+    </ul>
+  </li>
+</ul>
+
+<h4 id="avro">Avro</h4>
+<p>A binary encoding format with <em>no field tags</em>. Instead of field tags, reads rely on field placement within the byte sequence. This means that the app that reads the data must have <em>the exact same schema</em> as the app that writes it</p>
+<ul>
+  <li><strong>Schema Resolution</strong>: How Avro handles cases where the writer’s schema is different from the reader’s schema. It compares both schemas side by side, and matches up fields by field name. This means you can only remove a field if it has a default value, and new fields must have default values</li>
+</ul>
+
+<p>Situations where Avro is great:</p>
+<ul>
+  <li>If you’re sending over a big file with lots of records, just include the schema in the beginning</li>
+  <li>If you’re sending messages to a database with individually written records, make sure the database has a list of  all possible schemas, and include the schema version number in your message. This is also just great for documentation</li>
+  <li>If you have a network connection, negotiate schema when connecting, and just use that schema for the lifetime of the connection</li>
+</ul>
+
+<p>Avro can be used without code generation, but it doesn’t have to be. Avro’s boject container files embed an objects schema, including all its metadata.</p>
+
+<h4 id="code-generation">Code Generation</h4>
+<p>Code generation for binary encoding works best for statically-typed languages. It allows for in-memory structures to be used.</p>
+
+<p>For dynamically-typed languages, there’s not compile-time checker. This means that code generation is an extra step, and doesn’t provide extra value. Avro is good for dynamically-typed languages, because it doesn’t require code generation</p>
+
+<h4 id="merits-of-schema">Merits of Schema</h4>
+<ul>
+  <li>Schemas are <em>simple to use</em> because they don’t support complex validation rules (as opposed to XML and JSON)</li>
+  <li>Schema make binary encodings <em>more compact</em> because you can predefine formats</li>
+  <li>Schemas make for <em>good documentation</em>. They provide the source of truth</li>
+</ul>
+
+<h2 id="dataflow">Dataflow</h2>
+<p>When processes don’t share memory, but still share data, they need a way to handle dataflow. Here are some ways:</p>
+<ol>
+  <li>Databases</li>
+  <li>Service calls (REST, RPC)</li>
+  <li>Asynchronous message passing</li>
+</ol>
+
+<h3 id="dataflow-through-databases">Dataflow through Databases</h3>
+<p>Databases are used by new processes and old processe, sometimes at the same time. This means that they need to have forwards and backwards compatibility.</p>
+<ul>
+  <li>ALSO: if an old program reads new data, it needs to make sure not to inadvertantly leave out data it’s not aware of</li>
+</ul>
+
+<p>You should assume that <em>data outlives code</em>, so you need to sometimes <strong>migrate</strong> data.</p>
+<ul>
+  <li>This is expensive, so most relational databases allow simple schema updates: just add a new column instead of updating a whole row. The database fills in null for missing columns on read</li>
+</ul>
+
+<p>This schema evolution makes it look like the whole database has always had the same schema. When you take snapshots of your database, just use the same schema for everything</p>
+
+<h3 id="dataflow-through-services">Dataflow through Services</h3>
+<ul>
+  <li><strong>Servers</strong>: Expose an API through a network (like a web server)</li>
+  <li><strong>Services</strong>: APIs exposed by services</li>
+  <li><strong>Clients</strong>: Connect to the service (like a web browser)</li>
+  <li><strong>Microservice Architecture</strong>: (or service-oriented architecture) a way of building applications, where you decompose an application into smaller <em>services</em> by area of functionality. They’re easier to maintain than monoliths</li>
+  <li><strong>Web services</strong>: services that use HTTP for the underlying protocol</li>
+  <li><strong>Middleware</strong>: one service talking to another, in the same datacenter, as a part of the same microservice architecture</li>
+</ul>
+
+<h4 id="rest">REST</h4>
+<p>REST, or <em>Representational State Transfer</em>, is a design philosophy that builds on HTTP principles. A service built with these principles is described as <em>RESTful</em>, and RESTful services are often associated with microservices.</p>
+<ul>
+  <li>RESTful APIs use URLs to identify resources, use HTTP features for cache control, authentication and content type negotiation</li>
+</ul>
+
+<h4 id="soap">SOAP</h4>
+<p>SOAP, or <em>Simple Object Access Protocol</em> is an XML-based protocol for making network API requests</p>
+<ul>
+  <li>uses the <strong>web service framework</strong> and the <strong>web service description language</strong></li>
+  <li>SOAP is less popular because it can be difficult to work with</li>
+</ul>
+
+<h4 id="rpcs">RPCs</h4>
+<p><em>Remote Procedure Calls</em> act like normal functions, but they actually make a requests to a different network. This abstraction is called <strong>location transparency</strong> (the use of names to identify network resources, rather than their actual location).</p>
+
+<p>RPC are fundamentally flawed, because network requests are fundamentally different from function calls</p>
+<ul>
+  <li>network requests are way less predictable, so you need to handle them using timeouts</li>
+  <li>the <a href="DDIA-Reliable-Maintainable-Scalable-Applications#latency-vs-response-time">response time</a> for network requests can also vary pretty wildly, so you need to take that into account</li>
+  <li>You need to handle cases where you send the message more than once (if the reply was lost, for instance) using idempotence or deduplication
+    <ul>
+      <li><strong>idempotence</strong>: how you would describe a system whose state remains the same after duplicate messages</li>
+      <li><strong>deduplication</strong>: the process of removing duplicate information</li>
+    </ul>
+  </li>
+  <li>you need to <em>encode</em> your data before sending it</li>
+  <li>you need to deal with the fact that data types are slightly different in different languages</li>
+</ul>
+
+<p><strong>Evolvability</strong>: we can assume that the server gets upgraded before the client does, so we only need to worry about compatibility in one direction, BUT: since RPCs often happen between organizations, it’s hard to control a client’s version.</p>
+<ul>
+  <li>a solution to this is to include the client’s version in the header, or keep it associated with an API key</li>
+</ul>
+
+<h3 id="asynchronous-message-passing">Asynchronous Message Passing</h3>
+<p>One way to handle data flow is with an <strong>asynchronouse communication pattern</strong>, which uses a <strong>message broker</strong> (AKA <strong>message queue</strong>). It’s an intermediary between client &amp; server</p>
+<ul>
+  <li>adds resilliency by handling cases where a recipient is unavailable. Will automatically retry</li>
+  <li>abstracts away information about senders and recipients. This is especially handy when there is more than one recipient, or when the IP address is fluid</li>
+  <li><strong>queue/topic</strong>: What a sender sends a message to</li>
+  <li><strong>consumer/subscriber</strong>: what the message broker eventually sends the message to</li>
+</ul>
+
+<p>Consumers don’t publish replies directly back to the sender. They either reuse the original queue, or use a separate message queue for replies.</p>
+<ul>
+  <li><em>note</em>: to handle cases of forward compatibility, make sure to perserve unknown fields</li>
+</ul>
+
+<h3 id="distributed-actor-frameworks">Distributed Actor Frameworks</h3>
+<ul>
+  <li><strong>Actor Model</strong>: programming model, provides concurrency in a single process. Alternative to using threads, which can be messy</li>
+  <li><strong>Actors</strong>: contain logic for handing messages. Each actor may have an internal state.</li>
+  <li>Actors communicate with each other with async messages, and they assume the messages can be lost</li>
+  <li><strong>distributed actor frameworks</strong>: programming model used to scale applications across multiple notes. Location transparency works well this way, because actors assume that their messages can be lost</li>
+  <li>drawback: This model isn’t great for forward/backward compatibility</li>
+</ul>
+
+  </div><a class="u-url" href="/programming/ddia-encoding-and-evolution/" hidden></a>
+</article>
+
+      </div>
+    </main><footer class="site-footer h-card">
+  <data class="u-url" href="/"></data>
+
+  <div class="wrapper">
+
+    <h2 class="footer-heading">Ngozi Nwogwugwu</h2>
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col footer-col-1">
+        <ul class="contact-list">
+          <li class="p-name">Ngozi Nwogwugwu</li><li><a class="u-email" href="mailto:ngozi.n.nwogwugwu@gmail.com">ngozi.n.nwogwugwu@gmail.com</a></li></ul>
+      </div>
+
+      <div class="footer-col footer-col-2"><ul class="social-media-list"><li><a href="https://github.com/ngozinwogwugwu"><svg class="svg-icon"><use xlink:href="/assets/minima-social-icons.svg#github"></use></svg> <span class="username">ngozinwogwugwu</span></a></li></ul>
+</div>
+
+      <div class="footer-col footer-col-3">
+        <p>nwogwugwu.eth</p>
+      </div>
+    </div>
+
+  </div>
+
+</footer>
+</body>
+
+</html>

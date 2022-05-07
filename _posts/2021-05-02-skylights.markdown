@@ -2,7 +2,7 @@
 layout: post
 title:  "I want skylights"
 date:   2021-05-02 15:07:43 -0500
-categories: architecture
+permalink: /notes/skylights
 ---
 
 If I build a home, I want to include skylights in spaces that are generally neglected.

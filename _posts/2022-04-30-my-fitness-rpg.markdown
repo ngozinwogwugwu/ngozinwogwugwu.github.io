@@ -2,7 +2,7 @@
 layout: post
 title:  "My Fitness RPG"
 date:   2022-04-30 15:07:43 -0500
-categories: games, fitness
+permalink: /programming/fitness-rpg/
 ---
 
 I made a simple phone game that draws on fitness stats from your wearable. The game's concept is quite simple: Fight monsters to gain experience points and gold, while using real-life factors to determine its behavior.

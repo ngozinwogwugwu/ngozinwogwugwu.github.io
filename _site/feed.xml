@@ -1,6 +1,6 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.7">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2022-05-01T14:47:13+02:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Ngozi Nwogwugwu</title><subtitle>New York based software engineer</subtitle><entry><title type="html">My Fitness RPG</title><link href="http://localhost:4000/games,/fitness/2022/04/30/my-fitness-rpg.html" rel="alternate" type="text/html" title="My Fitness RPG" /><published>2022-04-30T22:07:43+02:00</published><updated>2022-04-30T22:07:43+02:00</updated><id>http://localhost:4000/games,/fitness/2022/04/30/my-fitness-rpg</id><content type="html" xml:base="http://localhost:4000/games,/fitness/2022/04/30/my-fitness-rpg.html">&lt;p&gt;I made a simple phone game that draws on fitness stats from your wearable. The game’s concept is quite simple: Fight monsters to gain experience points and gold. The game uses several out-of-game factors to determine its behavior.&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.7">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2022-05-07T17:11:59+02:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Ngozi Nwogwugwu</title><subtitle>nwogwugwu.eth</subtitle><entry><title type="html">My Fitness RPG</title><link href="http://localhost:4000/programming/fitness-rpg/" rel="alternate" type="text/html" title="My Fitness RPG" /><published>2022-04-30T22:07:43+02:00</published><updated>2022-04-30T22:07:43+02:00</updated><id>http://localhost:4000/programming/my-fitness-rpg</id><content type="html" xml:base="http://localhost:4000/programming/fitness-rpg/">&lt;p&gt;I made a simple phone game that draws on fitness stats from your wearable. The game’s concept is quite simple: Fight monsters to gain experience points and gold, while using real-life factors to determine its behavior.&lt;/p&gt;
 
-&lt;p&gt;My goal is to pull elements of the real world into a fantastical game world. Fitness stats like cardiovascular strain and sleep determine a character’s hit strength and health. Other real-world factors, such as current weather and moon phase, determine which monsters appear. By using mundane events in the real world to create fun game mechanics, I hope to encourage my players to view daily life with a layer of whimsey.&lt;/p&gt;
+&lt;p&gt;Fitness stats like cardiovascular strain and sleep determine a character’s strength and health. Other real-world factors, such as current weather and moon phase, determine which monsters appear. By using mundane events in the real world to create fun game mechanics, I hope to encourage my players to view daily life with a layer of whimsey. Naturally, this would also encourage players to form better habits.&lt;/p&gt;
 
 &lt;p&gt;&lt;a href=&quot;https://witch-game-text-adventure-i26wf.ondigitalocean.app/&quot;&gt;I published a demo. Try it out!&lt;/a&gt;&lt;/p&gt;
 
@@ -17,11 +17,11 @@
 
 &lt;h2 id=&quot;how-did-i-make-this&quot;&gt;How did I make this?&lt;/h2&gt;
 
-&lt;p&gt;The tech stack I used for this is quite straightforward. I used &lt;strong&gt;PostgreSQL&lt;/strong&gt; to store data, &lt;strong&gt;Django&lt;/strong&gt; to create a REST API. I used &lt;strong&gt;Expo/ReactNative&lt;/strong&gt; to generate a mobile-friendly frontend because I want the option to publish my game as an iOS app. I’m using &lt;strong&gt;DigitalOcean&lt;/strong&gt; to host the entire app.&lt;/p&gt;
+&lt;p&gt;The tech stack I used for this is quite straightforward. I used &lt;strong&gt;PostgreSQL&lt;/strong&gt; to store data and &lt;strong&gt;Django&lt;/strong&gt; to create the REST API. I chose &lt;strong&gt;Expo/ReactNative&lt;/strong&gt; to generate a mobile-friendly frontend as I wanted the option to publish my game as an iOS app. Lastly, I decided to use  &lt;strong&gt;DigitalOcean&lt;/strong&gt; to host the entire app because it was fairly straightforward to set up automated deployment for the frontend and the backend of my project.&lt;/p&gt;
 
 &lt;h2 id=&quot;aspirations&quot;&gt;Aspirations&lt;/h2&gt;
 
-&lt;p&gt;I want to pull in more real-time data and make the game more complex and story-driven. I would also consider adding NFT items as a way for the game to generate profit.&lt;/p&gt;
+&lt;p&gt;I want to pull in more real-time data, such as user location or meditation minutes. Additionally, I want to make the gameplay more complex, and use a storyline and art to make the game more compelling. I would also consider adding NFT items as a way for the game to generate profit. A player could pay to mint a weapon, for example.&lt;/p&gt;
 
 &lt;h2 id=&quot;learnings&quot;&gt;Learnings&lt;/h2&gt;
 
@@ -29,8 +29,2401 @@
 &lt;ul&gt;
   &lt;li&gt;&lt;strong&gt;Deploy early and often&lt;/strong&gt; - I want to publish a live version of my game as early as possible so I can get feedback at every step of development.&lt;/li&gt;
   &lt;li&gt;&lt;strong&gt;Start with the integrations&lt;/strong&gt; - I’m moving from Whoop to Apple Health, since Apple Health has far more users and allows for developer integration.&lt;/li&gt;
-  &lt;li&gt;&lt;strong&gt;Mobile first, but web is too!&lt;/strong&gt; - Getting published on the App Store is a whole thing. I want immediate feedback on my app, so I’ll publish my game to the web before I focus on creating an iOS app&lt;/li&gt;
-&lt;/ul&gt;</content><author><name></name></author><summary type="html">I made a simple phone game that draws on fitness stats from your wearable. The game’s concept is quite simple: Fight monsters to gain experience points and gold. The game uses several out-of-game factors to determine its behavior.</summary></entry><entry><title type="html">I want skylights</title><link href="http://localhost:4000/architecture/2021/05/02/skylights.html" rel="alternate" type="text/html" title="I want skylights" /><published>2021-05-02T22:07:43+02:00</published><updated>2021-05-02T22:07:43+02:00</updated><id>http://localhost:4000/architecture/2021/05/02/skylights</id><content type="html" xml:base="http://localhost:4000/architecture/2021/05/02/skylights.html">&lt;p&gt;If I build a home, I want to include skylights in spaces that are generally neglected.&lt;/p&gt;
+  &lt;li&gt;&lt;strong&gt;Web is okay!&lt;/strong&gt; - Getting published on the App Store is a whole thing. I want immediate feedback on my app, so I’ll publish my game to the web before I focus on creating an iOS app&lt;/li&gt;
+&lt;/ul&gt;</content><author><name></name></author><summary type="html">I made a simple phone game that draws on fitness stats from your wearable. The game’s concept is quite simple: Fight monsters to gain experience points and gold, while using real-life factors to determine its behavior.</summary></entry><entry><title type="html">Notes: Writing Smart Contracts</title><link href="http://localhost:4000/programming/cryptozombies/" rel="alternate" type="text/html" title="Notes: Writing Smart Contracts" /><published>2022-01-16T21:07:43+01:00</published><updated>2022-01-16T21:07:43+01:00</updated><id>http://localhost:4000/programming/cryptozombies</id><content type="html" xml:base="http://localhost:4000/programming/cryptozombies/">&lt;p&gt;source: &lt;a href=&quot;https://cryptozombies.io/&quot;&gt;CryptoZombies&lt;/a&gt;&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;h1 id=&quot;cryptozombies&quot;&gt;CryptoZombies&lt;/h1&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://cryptozombies.io/en/lesson/1/chapter/1&quot;&gt;https://cryptozombies.io&lt;/a&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;make-a-zombie-factory&quot;&gt;make a zombie factory&lt;/h3&gt;
+
+&lt;h3 id=&quot;goal--pragma&quot;&gt;goal &amp;amp; pragma&lt;/h3&gt;
+
+&lt;p&gt;requirements for a zombie factory&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;database with all zombies&lt;/li&gt;
+  &lt;li&gt;function to create zombies&lt;/li&gt;
+  &lt;li&gt;each zombie will be unique&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;strong&gt;zombie dna&lt;/strong&gt; represented as an int. Different parts of the int map to different zombie traits&lt;/p&gt;
+
+&lt;p&gt;a &lt;strong&gt;contract&lt;/strong&gt; is the fundamental building block of ethereum applications&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;all variables and functions belong to a contract&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;solidarity&lt;/strong&gt; object oriented programming language&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;strong&gt;version pragma&lt;/strong&gt; declaration of the version for the compiler&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;all solidarity code starts with this, prevents issues with future compiler versions&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;example contract&lt;/p&gt;
+
+&lt;div class=&quot;language-solidity highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;k&quot;&gt;pragma&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;solidity&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;gt;=&lt;/span&gt;&lt;span class=&quot;mf&quot;&gt;0.5&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;mf&quot;&gt;0.6&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+
+&lt;span class=&quot;k&quot;&gt;contract&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;ZombieFactory&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h3 id=&quot;variables-and-math&quot;&gt;variables and math&lt;/h3&gt;
+
+&lt;p&gt;&lt;strong&gt;state variables&lt;/strong&gt; permanently stored in contract storage. They’re written to the blockchain, similar to writing to a database&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;uint&lt;/strong&gt; unsigned int, can’t be negative&lt;/p&gt;
+
+&lt;p&gt;math operations in solidity are pretty straightforward&lt;/p&gt;
+
+&lt;h3 id=&quot;structs--arrays&quot;&gt;structs &amp;amp; arrays&lt;/h3&gt;
+
+&lt;p&gt;&lt;strong&gt;structs&lt;/strong&gt;&lt;/p&gt;
+
+&lt;div class=&quot;language-solidity highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;k&quot;&gt;struct&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Person&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+	&lt;span class=&quot;kt&quot;&gt;uint&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;age&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+	&lt;span class=&quot;kt&quot;&gt;string&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;&lt;strong&gt;arrays&lt;/strong&gt; there are &lt;strong&gt;fixed&lt;/strong&gt; and &lt;strong&gt;dynamic&lt;/strong&gt; arrays. To make an array dynamic, don’t specify the length. You can also create arrays out of structs&lt;/p&gt;
+
+&lt;div class=&quot;language-solidity highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kt&quot;&gt;uint&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;fixedArray&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;kt&quot;&gt;uint&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[]&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;dynamicArray&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;Person&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[]&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;people&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;if you create a dynamic array of structs, it gets stored in the blockchain. It’s like storing structured data in a database&lt;/p&gt;
+
+&lt;p&gt;if you declare an array as &lt;code class=&quot;highlighter-rouge&quot;&gt;public&lt;/code&gt;, solidity will create a &lt;code class=&quot;highlighter-rouge&quot;&gt;getter&lt;/code&gt; method for it. Makes them readable but not writable by other contracts&lt;/p&gt;
+
+&lt;p&gt;you can &lt;code class=&quot;highlighter-rouge&quot;&gt;push&lt;/code&gt; structs and variables to arrays&lt;/p&gt;
+
+&lt;h3 id=&quot;functions&quot;&gt;functions&lt;/h3&gt;
+
+&lt;p&gt;&lt;strong&gt;functions&lt;/strong&gt; look like this&lt;/p&gt;
+
+&lt;div class=&quot;language-solidity highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;k&quot;&gt;function&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;eatHamburgers&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;string&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;memory&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;_name&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;uint&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;_amount&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{}&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;function&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;sayHello&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;view&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;returns&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;string&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;memory&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;public&lt;/code&gt; specifies the visibility of the function. Functions are public by default&lt;/li&gt;
+  &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;public&lt;/code&gt; functions are only visible by other functions within the contract. Private functions start with an underscore&lt;/li&gt;
+  &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;memory&lt;/code&gt; indicates that &lt;code class=&quot;highlighter-rouge&quot;&gt;_name&lt;/code&gt; should be stored in memory. This is &lt;strong&gt;required for reference types&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;strong&gt;types of arguments&lt;/strong&gt; - you can pass them in &lt;strong&gt;by value&lt;/strong&gt; or &lt;strong&gt;by reference&lt;/strong&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;any variable that you pass around by reference (arrays, strings, structs, mappings) vs&lt;/li&gt;
+  &lt;li&gt;any variable that you pass into the function. &lt;strong&gt;Changes to these variables are limited to the function&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;strong&gt;return values&lt;/strong&gt; - the function declaration contains the return value type&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;function modifiers&lt;/strong&gt; - a way to document the type of function you’re writing&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;strong&gt;view&lt;/strong&gt; - it’s viewing data from the blockchain but not modifying it&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;pure&lt;/strong&gt; - not even accessing data from the app&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;using-keccak256-to-create-a-random-zombie&quot;&gt;using &lt;code class=&quot;highlighter-rouge&quot;&gt;Keccak256&lt;/code&gt; to create a random zombie&lt;/h3&gt;
+
+&lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;keccak256&lt;/code&gt; is a hash function that outputs a 256-bit hex number&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;input of type bytes&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;strong&gt;to pack a string into bytes&lt;/strong&gt; use the function &lt;code class=&quot;highlighter-rouge&quot;&gt;abi.encodePacked&lt;/code&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;code so far&lt;/p&gt;
+
+    &lt;div class=&quot;language-solidity highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;  &lt;span class=&quot;k&quot;&gt;pragma&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;solidity&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;gt;=&lt;/span&gt;&lt;span class=&quot;mf&quot;&gt;0.5&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;mf&quot;&gt;0.6&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+    
+  &lt;span class=&quot;k&quot;&gt;contract&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;ZombieFactory&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+    
+      &lt;span class=&quot;c1&quot;&gt;// declare our event here
+&lt;/span&gt;    
+      &lt;span class=&quot;kt&quot;&gt;uint&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;dnaDigits&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;16&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+      &lt;span class=&quot;kt&quot;&gt;uint&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;dnaModulus&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;10&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;**&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;dnaDigits&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+    
+      &lt;span class=&quot;k&quot;&gt;struct&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Zombie&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+          &lt;span class=&quot;kt&quot;&gt;string&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+          &lt;span class=&quot;kt&quot;&gt;uint&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;dna&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+      &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+    
+      &lt;span class=&quot;n&quot;&gt;Zombie&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[]&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;zombies&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+    
+      &lt;span class=&quot;k&quot;&gt;function&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;_createZombie&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;string&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;memory&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;_name&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;uint&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;_dna&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;private&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+          &lt;span class=&quot;n&quot;&gt;zombies&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;push&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Zombie&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;_name&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;_dna&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;));&lt;/span&gt;
+          &lt;span class=&quot;c1&quot;&gt;// and fire it here
+&lt;/span&gt;      &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+    
+      &lt;span class=&quot;k&quot;&gt;function&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;_generateRandomDna&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;string&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;memory&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;_str&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;private&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;view&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;returns&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;uint&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+          &lt;span class=&quot;kt&quot;&gt;uint&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;rand&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;uint&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;keccak256&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;abi&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;encodePacked&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;_str&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)));&lt;/span&gt;
+          &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;rand&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;%&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;dnaModulus&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+      &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+    
+      &lt;span class=&quot;k&quot;&gt;function&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;createRandomZombie&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;string&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;memory&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;_name&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+          &lt;span class=&quot;kt&quot;&gt;uint&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;randDna&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;_generateRandomDna&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;_name&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+          &lt;span class=&quot;n&quot;&gt;_createZombie&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;_name&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;randDna&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+      &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+    
+  &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;events&quot;&gt;events&lt;/h3&gt;
+
+&lt;p&gt;your contract can listen to &lt;strong&gt;events&lt;/strong&gt; on the blockchain and take an action&lt;/p&gt;
+
+&lt;h3 id=&quot;the-frontend&quot;&gt;the frontend&lt;/h3&gt;
+
+&lt;p&gt;Ethereum has a Javascript library called &lt;strong&gt;Web3.js&lt;/strong&gt;&lt;/p&gt;
+
+&lt;h1 id=&quot;make-the-zombie-app-more-game&quot;&gt;Make the zombie app more game&lt;/h1&gt;
+
+&lt;h3 id=&quot;addresses-and-mappings&quot;&gt;Addresses and Mappings&lt;/h3&gt;
+
+&lt;p&gt;&lt;strong&gt;accounts&lt;/strong&gt; similar to bank accounts&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;owned by an individual or contract&lt;/li&gt;
+  &lt;li&gt;holds a balance of &lt;strong&gt;ether&lt;/strong&gt;, can send or receive ether&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;strong&gt;addresses&lt;/strong&gt; hex identifiers for the accounts.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;mappings&lt;/strong&gt; key-values stores. Defined like this:&lt;/p&gt;
+
+&lt;div class=&quot;language-solidity highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;k&quot;&gt;mapping&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;account&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&amp;gt;&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;uint&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;accountBalance&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h3 id=&quot;msgsender&quot;&gt;msg.sender&lt;/h3&gt;
+
+&lt;p&gt;this function returns the address of whatever (person or contract) that called the current function&lt;/p&gt;
+
+&lt;h3 id=&quot;require&quot;&gt;require&lt;/h3&gt;
+
+&lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;require&lt;/code&gt; makes the function throw an exception if some conditions are not met&lt;/p&gt;
+
+&lt;h3 id=&quot;inheritance-and-import&quot;&gt;inheritance and import&lt;/h3&gt;
+
+&lt;p&gt;the syntax &lt;code class=&quot;highlighter-rouge&quot;&gt;contract descendentContract is ancestorContract {}&lt;/code&gt; will create an inherited contract&lt;/p&gt;
+
+&lt;p&gt;the syntax &lt;code class=&quot;highlighter-rouge&quot;&gt;import &quot;./another_file.sol&quot;;&lt;/code&gt; will import a file&lt;/p&gt;
+
+&lt;h3 id=&quot;storage-and-memory&quot;&gt;storage and memory&lt;/h3&gt;
+
+&lt;p&gt;&lt;strong&gt;storage&lt;/strong&gt; gets stored on the blockchain. This is analogous to writing to disk&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;memory&lt;/strong&gt; variables in memory are temporary, and disappear when the function ends&lt;/p&gt;
+
+&lt;p&gt;you include these as keywords when you declare variables&lt;/p&gt;
+
+&lt;h3 id=&quot;internal--external&quot;&gt;Internal &amp;amp; External&lt;/h3&gt;
+
+&lt;p&gt;functions in solidity have different visibilities:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;internal&lt;/code&gt; is the same as &lt;code class=&quot;highlighter-rouge&quot;&gt;private&lt;/code&gt;, except it includes inherited classes&lt;/li&gt;
+  &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;external&lt;/code&gt; is like &lt;code class=&quot;highlighter-rouge&quot;&gt;public&lt;/code&gt; - except &lt;code class=&quot;highlighter-rouge&quot;&gt;external&lt;/code&gt; functions are &lt;strong&gt;only&lt;/strong&gt; accessible from outside the contract&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;reading-from-other-contracts&quot;&gt;reading from other contracts&lt;/h3&gt;
+
+&lt;p&gt;we need to define an &lt;strong&gt;interface&lt;/strong&gt; to interact with other contracts. Interfaces look like this:&lt;/p&gt;
+
+&lt;div class=&quot;language-solidity highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;k&quot;&gt;contract&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;exampleInterface&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+	&lt;span class=&quot;k&quot;&gt;function&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;otherFunction&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;uint&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;inputVar&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;view&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;returns&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;uint&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h3 id=&quot;cryptokitties&quot;&gt;cryptokitties&lt;/h3&gt;
+
+&lt;p&gt;source code is here (&lt;a href=&quot;https://github.com/dapperlabs/cryptokitties-bounty/blob/master/contracts/KittyCore.sol#L91&quot;&gt;github&lt;/a&gt;)&lt;/p&gt;
+
+&lt;p&gt;we initialize the contract using the address of the contract&lt;/p&gt;
+
+&lt;h1 id=&quot;ethereum&quot;&gt;Ethereum&lt;/h1&gt;
+
+&lt;p&gt;Ethereum contracts are &lt;strong&gt;immutable&lt;/strong&gt;. This makes security a huge concern. Because of this, it make sense to have getters and setters for some contract variables, like &lt;code class=&quot;highlighter-rouge&quot;&gt;setKittyContractAddress&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;constructors&lt;/strong&gt; - optional functions that get executed when an object gets created&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;function modieifer&lt;/strong&gt; modify other functions, usually to check some requirements before the execution (like &lt;code class=&quot;highlighter-rouge&quot;&gt;onlyOwner&lt;/code&gt;)&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;uses the keyword &lt;code class=&quot;highlighter-rouge&quot;&gt;modifier&lt;/code&gt;
+    &lt;ul&gt;
+      &lt;li&gt;uses &lt;code class=&quot;highlighter-rouge&quot;&gt;_;&lt;/code&gt; - when this gets run, it jumps to the modified function&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;ownable-contracts&quot;&gt;ownable contracts&lt;/h3&gt;
+
+&lt;p&gt;In order to prevent randos from changing the contract, you make a contract &lt;code class=&quot;highlighter-rouge&quot;&gt;ownable&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;OpenZeppelin&lt;/code&gt; solidity library&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;has secure smart contracts that you can use in your own dapps&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;It makes sense to be careful with ownable contracts. The owners can add backdoors for themselves&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;this means you should read code before you trust it&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;gas&quot;&gt;gas&lt;/h2&gt;
+
+&lt;p&gt;you can buy gas with ether&lt;/p&gt;
+
+&lt;p&gt;gas required to execute a function depends on the function’s complexity. This encourages code optimization&lt;/p&gt;
+
+&lt;h3 id=&quot;struct-packing&quot;&gt;struct packing&lt;/h3&gt;
+
+&lt;p&gt;Solidity reserves 256 bits for all uints (8, 16, 32…)&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;exception&lt;/strong&gt;: inside of structs. You’ll want to use the smallest possible integer sub-types and cluster identically-typed fields&lt;/p&gt;
+
+&lt;h3 id=&quot;time&quot;&gt;time&lt;/h3&gt;
+
+&lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;now&lt;/code&gt; - built in&lt;/p&gt;
+
+&lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;days&lt;/code&gt;, &lt;code class=&quot;highlighter-rouge&quot;&gt;months&lt;/code&gt;, &lt;code class=&quot;highlighter-rouge&quot;&gt;minutes&lt;/code&gt; - you can say &lt;code class=&quot;highlighter-rouge&quot;&gt;now + 5 minutes&lt;/code&gt; to mean five minutes from now&lt;/p&gt;
+
+&lt;p&gt;the &lt;strong&gt;2038 problem&lt;/strong&gt; - it will be so many seconds since 1970 that we’ll have overflows from a &lt;code class=&quot;highlighter-rouge&quot;&gt;uint32&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;default is &lt;code class=&quot;highlighter-rouge&quot;&gt;uint256&lt;/code&gt;, so we should cast dates to &lt;code class=&quot;highlighter-rouge&quot;&gt;uint32&lt;/code&gt;s&lt;/p&gt;
+
+&lt;h3 id=&quot;passing-references-to-structs&quot;&gt;passing references to structs&lt;/h3&gt;
+
+&lt;p&gt;You can pass a pointer to a struct in a function like this&lt;/p&gt;
+
+&lt;div class=&quot;language-solidity highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;k&quot;&gt;function&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;myFunc&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;MyStruct&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;storage&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;_myStruct&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h3 id=&quot;function-modifiers-can-take-input-variables&quot;&gt;function modifiers can take input variables&lt;/h3&gt;
+
+&lt;p&gt;You declare them like any other function with input variables&lt;/p&gt;
+
+&lt;div class=&quot;language-solidity highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;k&quot;&gt;modifier&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;olderThan&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;uint&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;_age&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;User&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;storage&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;_user&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+	&lt;span class=&quot;nb&quot;&gt;require&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;user&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;age&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;_age&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+	&lt;span class=&quot;n&quot;&gt;_&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;And you’d input the variables in your function definition&lt;/p&gt;
+
+&lt;div class=&quot;language-solidity highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;k&quot;&gt;function&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;DrinkAlcohol&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;User&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;storaage&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;_user&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;olderThan&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;16&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;_user&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h3 id=&quot;gas--view-functions&quot;&gt;gas &amp;amp; view functions&lt;/h3&gt;
+
+&lt;p&gt;If you call a view function externally, it will just find the value on your local ethereum node. &lt;strong&gt;This does not cost you gas&lt;/strong&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;if you call a view function from &lt;em&gt;inside&lt;/em&gt; a contract, &lt;strong&gt;it will cost you gas&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;gas--building-variables-on-the-fly&quot;&gt;gas &amp;amp; building variables on the fly&lt;/h3&gt;
+
+&lt;p&gt;writing data to storage is one of the most expensive things you can do on the blockchain, so in a lot of cases it makes sense to create things on the fly&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;in order to make sure your arrays stay in memory, use the &lt;code class=&quot;highlighter-rouge&quot;&gt;memory&lt;/code&gt; tag when you declare them&lt;/p&gt;
+
+    &lt;div class=&quot;language-solidity highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;  &lt;span class=&quot;kt&quot;&gt;uint&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[]&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;memory&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;values&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;uint&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[][&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;3&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;
+  &lt;span class=&quot;k&quot;&gt;for&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;uint&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;3&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;++&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+  	&lt;span class=&quot;n&quot;&gt;values&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;+&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;3&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+  &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Also for loop look like this&lt;/p&gt;
+
+&lt;h1 id=&quot;erc271-crypto-collectibles&quot;&gt;ERC271, Crypto collectibles&lt;/h1&gt;
+
+&lt;h2 id=&quot;tokens-on-ethereum&quot;&gt;Tokens on Ethereum&lt;/h2&gt;
+
+&lt;p&gt;Tokens are basically contracts that follow a standard set of rules&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;implements the same functions (&lt;code class=&quot;highlighter-rouge&quot;&gt;transferFrom&lt;/code&gt;, &lt;code class=&quot;highlighter-rouge&quot;&gt;balanceOf&lt;/code&gt;…)&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Now that we have a standard, we can build on top of tokens more easily. For example, and exchange can work with any kind of ERC20 token&lt;/p&gt;
+
+&lt;p&gt;We have ERC20 tokens (similar to currencies) and ERC271 tokens (NFTs). NFTs are not interchangeable or divisible&lt;/p&gt;
+
+&lt;h2 id=&quot;erc271-standard-multiple-inheritance&quot;&gt;ERC271 standard, multiple inheritance&lt;/h2&gt;
+
+&lt;p&gt;If we want to make an NFT, we inherit from ERC271. This means we need to implement &lt;strong&gt;multiple inheritance&lt;/strong&gt; by using the following syntax:&lt;/p&gt;
+
+&lt;div class=&quot;language-solidity highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;k&quot;&gt;contract&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;ChildClass&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;is&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;ParentA&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;ParentB&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h2 id=&quot;transfer-logic&quot;&gt;Transfer Logic&lt;/h2&gt;
+
+&lt;p&gt;We have two different ways to transfer NFTs here:&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;&lt;strong&gt;transferFrom&lt;/strong&gt; - the owner transfers the NFT to the recipient&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;approve&lt;/strong&gt; and &lt;strong&gt;transferFrom&lt;/strong&gt; - the owner approves a transfer to a specific address, then the recipient calls the &lt;code class=&quot;highlighter-rouge&quot;&gt;transferFrom&lt;/code&gt; fununction&lt;/li&gt;
+&lt;/ol&gt;</content><author><name></name></author><summary type="html">source: CryptoZombies</summary></entry><entry><title type="html">Notes: The Bad Guys Are Winning</title><link href="http://localhost:4000/notes/bad-guys-winning/" rel="alternate" type="text/html" title="Notes: The Bad Guys Are Winning" /><published>2021-12-18T21:07:43+01:00</published><updated>2021-12-18T21:07:43+01:00</updated><id>http://localhost:4000/notes/bad-guys-winning</id><content type="html" xml:base="http://localhost:4000/notes/bad-guys-winning/">&lt;p&gt;source: &lt;a href=&quot;https://www.theatlantic.com/magazine/archive/2021/12/the-autocrats-are-winning/620526/&quot;&gt;The Atlantic&lt;/a&gt;&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;h2 id=&quot;sviatlana-tsikhanouskaya&quot;&gt;Sviatlana Tsikhanouskaya&lt;/h2&gt;
+
+&lt;p&gt;Probably won the 2020 presidential election in &lt;strong&gt;Belarus&lt;/strong&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Immediately afterward, &lt;strong&gt;Alexander Lukashenko&lt;/strong&gt; forced her out of the country&lt;/li&gt;
+  &lt;li&gt;Her husband, &lt;strong&gt;Siarhei Tskhanouski&lt;/strong&gt;, is imprisoned in Belarus&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;the-campaign&quot;&gt;the campaign&lt;/h3&gt;
+
+&lt;p&gt;Siarhei ran for president because he was &lt;strong&gt;frustrated with bureucracy and corruption&lt;/strong&gt;. The regime ended his campaign and imprisoned him. Sviatlana ran in his place&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;the campaign was about ordinary people standing up to the regime&lt;/li&gt;
+  &lt;li&gt;two prominent opposition polititions endorsed her campaign (their campaigns were blocked)&lt;/li&gt;
+  &lt;li&gt;She continued dispite death threats&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;results-of-the-election&quot;&gt;Results of the election&lt;/h3&gt;
+
+&lt;p&gt;officials announced that Lukashenko won 80% of the vote (no one believed this). Right afterward:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;the internet was cut off&lt;/li&gt;
+  &lt;li&gt;Sviatlana was detained by police and forced out of the country&lt;/li&gt;
+  &lt;li&gt;Mass demonstrations across Belarus&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Sviatlana thought that the regime would give way to pressure, but it didn’t&lt;/p&gt;
+
+&lt;h3 id=&quot;sviatlana-in-the-eu&quot;&gt;Sviatlana in the EU&lt;/h3&gt;
+
+&lt;p&gt;she wants to &lt;strong&gt;pressure the regime&lt;/strong&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;sanctions, democratic unity&lt;/li&gt;
+  &lt;li&gt;anything that makes it expensive for Lukashenko to stay in power&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;She met with &lt;strong&gt;Merkel, Macron and Biden. They broadened sanctions&lt;/strong&gt; on Belarus&lt;/p&gt;
+
+&lt;p&gt;Stayed in Lithuania, which was proud to host her dispite the trouble at the Border&lt;/p&gt;
+
+&lt;p&gt;She now has the entire free world backing her, but it’s not enough to&lt;/p&gt;
+
+&lt;h2 id=&quot;lukashenkos-rescue-package&quot;&gt;Lukashenko’s rescue package&lt;/h2&gt;
+
+&lt;p&gt;When protests first broke out after the election, he didn’t have a plan, but he got help from Moscow&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;FSB: Russian security services&lt;/strong&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;flew from Moscow to Minsk - helped Lukashenko quell the dissent&lt;/li&gt;
+  &lt;li&gt;shift to a more sophisticated, more controlled way to repress the population&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;strong&gt;Russian television journalists&lt;/strong&gt; replaced some Belarusian journalists&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;portrayed demonstrations as the work of America&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;strong&gt;Russian police&lt;/strong&gt; supplemented Belarusian police&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;mass arrests are unnecessary if you can jail, torture or murder the right people&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;strong&gt;Russian companies&lt;/strong&gt; offered markets for Belarusian products that had been banned in the democratic west&lt;/p&gt;
+
+&lt;p&gt;This rescue package was very similar to the one Putin sent Bashar al-Assad in Syria six years earlier&lt;/p&gt;
+
+&lt;h3 id=&quot;why-did-putin-do-this&quot;&gt;Why did Putin do this?&lt;/h3&gt;
+
+&lt;p&gt;the Arab Spring (and the fall of the Berlin wall) made it clear that &lt;strong&gt;democratic revolutions are contagious&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;regime change means death, imprisonment or exile&lt;/strong&gt; in an authoritarian country&lt;/p&gt;
+
+&lt;p&gt;If Putin can influence Belarus to remain authoritarian, regime change in Russia is less likely&lt;/p&gt;
+
+&lt;h3 id=&quot;lukashenkos-brazen--illegal-actions&quot;&gt;&lt;strong&gt;Lukashenko’s&lt;/strong&gt; brazen &amp;amp; illegal actions&lt;/h3&gt;
+
+&lt;p&gt;he’s active as if he was untouchable&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;In May 2021, Belarusian air traffic control &lt;strong&gt;forced an Irish passenger plane to land&lt;/strong&gt; in Minsk
+    &lt;ul&gt;
+      &lt;li&gt;this was in order to &lt;strong&gt;arrest Roman Protasevich&lt;/strong&gt;, a young exiled dissident&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;In August, &lt;strong&gt;Vitaly Shishov was hanged&lt;/strong&gt; in Kyiv park&lt;/li&gt;
+  &lt;li&gt;Lukashenko’s regime tried to destabalize its EU neighbors by &lt;strong&gt;forcing streams of refugees across their borders&lt;/strong&gt;
+    &lt;ul&gt;
+      &lt;li&gt;&lt;strong&gt;lured&lt;/strong&gt; Afghan and Iraqi &lt;strong&gt;refugees to Minsk&lt;/strong&gt; with tourist visas&lt;/li&gt;
+      &lt;li&gt;&lt;strong&gt;Forced them across the borders&lt;/strong&gt; of Lithuania, Latvia and Poland &lt;strong&gt;at gunpoint&lt;/strong&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h1 id=&quot;networks-of-despots&quot;&gt;Networks of despots&lt;/h1&gt;
+
+&lt;p&gt;&lt;strong&gt;Modern autocracies&lt;/strong&gt; are not run by one bad guy. They’re &lt;strong&gt;run by sophisticated networks&lt;/strong&gt; of:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;kleptocratic financial structures&lt;/li&gt;
+  &lt;li&gt;security services (police, surveillance, military)&lt;/li&gt;
+  &lt;li&gt;propagandists&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;These networks are often &lt;strong&gt;international and do not have a unifying ideology.&lt;/strong&gt; There is no leader and they’re connected by economic deals&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;this eases the pressure sanctions and makes everyone rich&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;In theory, Belarus is an international pariah. In practice, it’s a member of Autocracy Inc&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;strong&gt;China&lt;/strong&gt; is working on a large development project there&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Iran&lt;/strong&gt; has expanded its relationship with Belarus&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Cuba&lt;/strong&gt;n officials have called for an end to “foreign interference”&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;strong&gt;Venezuela&lt;/strong&gt; is in a similar position. The United States, Canada, the EU and many of its neighbors have &lt;strong&gt;sanctions&lt;/strong&gt; against it. &lt;strong&gt;Millions of people protest&lt;/strong&gt; in the streets&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;strong&gt;Russia and China&lt;/strong&gt; invest in Marudo’s Regime&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Turkey&lt;/strong&gt; helps with an illicit gold trade&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Cuba&lt;/strong&gt; provides security advisors and technology&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;strong&gt;If Venezuela’s regime were acting alone, it would fall&lt;/strong&gt;, but it’s receiving &lt;strong&gt;help from other autocracies&lt;/strong&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;impervious-to-criticism&quot;&gt;Impervious to Criticism&lt;/h3&gt;
+
+&lt;p&gt;The leaders of the Soviet Union cared deeply about how the world perceived them, but today &lt;strong&gt;autocracies don’t care about criticism&lt;/strong&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;this enables them to use aggressive tactics against mass protests&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;the &lt;strong&gt;Maduro Model&lt;/strong&gt; of governence means that autocrats are willing to pay the price of becoming a totally failed country&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;means economic collaps, isolation and mass poverty&lt;/li&gt;
+  &lt;li&gt;but the autocrat stays in power&lt;/li&gt;
+  &lt;li&gt;might be what’s in store for Belarus&lt;/li&gt;
+  &lt;li&gt;The west won’t provide money, so they depend on China, Pakistan, Russia and Saudi Arabia&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;This might explain the &lt;strong&gt;pathetic reaction to the fall of Kabul&lt;/strong&gt;&lt;/p&gt;
+
+&lt;h1 id=&quot;uyghurs&quot;&gt;Uyghurs&lt;/h1&gt;
+
+&lt;p&gt;50,000 exiled Uyghers live in Turkey. In another era, these exiles would have sympathy from the Turkish government&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;in 2009, &lt;strong&gt;Erdogan called Chinese repression of Uyghurs a genocide&lt;/strong&gt;&lt;/li&gt;
+  &lt;li&gt;He has strengthened ties with China since becoming president&lt;/li&gt;
+  &lt;li&gt;recently, the Turkish government has surveilled and detained Uyghurs on bogus terrorism charges. Deported some to China&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;In late 2020, a delayed shipment of covid vaccines from China looked suspiciously like a ransom for Uyghur extridition, even though both governments deny it&lt;/p&gt;
+
+&lt;h3 id=&quot;surprisingly-muslim-countries-are-turning-a-blind-eye-to-uyghurs-in-china&quot;&gt;Surprisingly, Muslim countries are turning a blind eye to Uyghurs in China&lt;/h3&gt;
+
+&lt;p&gt;Pakistani Primi Minister accepts the Chinese version of events&lt;/p&gt;
+
+&lt;p&gt;Saudis, Emiratis and Egyptians have all arrested and deported Uyghurs&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;all these countries have purchased Chinese surveillance technology&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;It’s as if these countries agree to accept China’s action on Hong Kong, Tibet, Uygurs and human rights in exchange for investment and equipment&lt;/p&gt;
+
+&lt;h1 id=&quot;it-happened-here&quot;&gt;It happened here&lt;/h1&gt;
+
+&lt;p&gt;We didn’t learn much after 2016 Russian election interference&lt;/p&gt;
+
+&lt;h3 id=&quot;the-united-front&quot;&gt;&lt;strong&gt;The United Front&lt;/strong&gt;&lt;/h3&gt;
+
+&lt;p&gt;an influence projet for the CCP. Meant to shape global opinion about china&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;faculty in American universities tried to shape academic debates in China’s favor. This was in the context of calligraphy courses&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Chinese democracy activists &lt;em&gt;in America&lt;/em&gt; are harrased by Chinese agents&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;some have had strange car accidents&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;american-industry&quot;&gt;American Industry&lt;/h3&gt;
+
+&lt;p&gt;lots of personal, financial, business links to China and Russia&lt;/p&gt;
+
+&lt;p&gt;Hollywood and sports appeal to CCP&lt;/p&gt;
+
+&lt;h1 id=&quot;liberal-democracy-vs-authoritarianism-around-the-world&quot;&gt;Liberal Democracy vs Authoritarianism around the world&lt;/h1&gt;
+
+&lt;p&gt;&lt;strong&gt;Srdja Popovic&lt;/strong&gt; democracy activist&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;says democratic movements are becoming better organized&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;were-not-doing-too-well&quot;&gt;We’re not doing too well&lt;/h3&gt;
+
+&lt;p&gt;The diplomatic tools we used to use against autocrats don’t work anymore&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Sanctions don’t have the same impact&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;strong&gt;Democracy assistance&lt;/strong&gt; America spends money on this, but it’s not a lot in comparison to what the Authoritarian leaders will spend&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;We still have American foreign-language broadcasters&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Russia spends billions on state media, seen all over Europe&lt;/p&gt;
+
+&lt;p&gt;China spends billions on media globally&lt;/p&gt;
+
+&lt;p&gt;We don’t have an answer to:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;the silk road initiative&lt;/li&gt;
+  &lt;li&gt;the United Front&lt;/li&gt;
+  &lt;li&gt;Russian disinformation&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;actions-to-take-today&quot;&gt;Actions to take today&lt;/h3&gt;
+
+&lt;p&gt;Biden hosted a &lt;strong&gt;summit for democracy&lt;/strong&gt; Dec 9-10 (&lt;a href=&quot;https://www.economist.com/graphic-detail/2021/12/06/joe-bidens-summit-for-democracy-is-not-all-that-democratic&quot;&gt;The Economist focused more on who was invited than the content&lt;/a&gt;)&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;means very little&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Real actions we should take:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;shut down tax havens, enforce money-laundering laws&lt;/li&gt;
+  &lt;li&gt;Stop selling surveillance tech to autocracies&lt;/li&gt;
+  &lt;li&gt;Divest from vicious regimes&lt;/li&gt;
+  &lt;li&gt;figure out how to respond when autocracies commit crimes outside their borders&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;how-americas-doing-now&quot;&gt;How America’s doing now&lt;/h3&gt;
+
+&lt;p&gt;Our actions on the global stage have been declining. So has global respect for American democracy&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Trump&lt;/strong&gt; seems okay with global autocracy, and he eroded rules and norms that strengthen democracy in the United States&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;The American left&lt;/strong&gt; has become dissolusioned with democracy at home&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;focused on America’s problems, convinced that democracy doesn’t work, or that it’s not working here&lt;/li&gt;
+  &lt;li&gt;When protesters in Hong Kong asked for help, American activists didn’t do much&lt;/li&gt;
+&lt;/ul&gt;</content><author><name></name></author><summary type="html">source: The Atlantic</summary></entry><entry><title type="html">Notes: How Galileo Created the Problem of Consiousness</title><link href="http://localhost:4000/notes/galileo-consiousness/" rel="alternate" type="text/html" title="Notes: How Galileo Created the Problem of Consiousness" /><published>2021-12-18T21:07:43+01:00</published><updated>2021-12-18T21:07:43+01:00</updated><id>http://localhost:4000/notes/playing-monogamy%20copy</id><content type="html" xml:base="http://localhost:4000/notes/galileo-consiousness/">&lt;p&gt;source: &lt;a href=&quot;https://www.penguinrandomhouse.com/books/599229/galileos-error-by-philip-goff/&quot;&gt;Galileo’s Error&lt;/a&gt;, by Philip Goff (Chapter 1)&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;p&gt;The book is about &lt;strong&gt;conscious experience&lt;/strong&gt;, and states that characterize our &lt;strong&gt;subjective inner lives&lt;/strong&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;experiences are what make life worth living&lt;/li&gt;
+  &lt;li&gt;it’s the only thing we know for sure is real&lt;/li&gt;
+  &lt;li&gt;Rene Descarte - “Cogito ergo sum” (I think therefor I am)&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;but we have not incorporated it into our scientific picture of the world&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;at this point, neuroscience hasn’t even started to explain it&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;well-get-there-in-the-end&quot;&gt;We’ll get there in the end&lt;/h3&gt;
+
+&lt;p&gt;In other branches of science (like biochemistry), we can focus on the answerable questions first. Then we might have the tools to get to the harder questions&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;the real problem of consciousness&lt;/strong&gt;: mapping brain activity to conscious experience&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;we should take this problem seriously&lt;/li&gt;
+  &lt;li&gt;we’ve started working on a theoretical framework to address the problem&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;strong&gt;Patricia Churchland&lt;/strong&gt; - neurophilosopher, “get out of the armchair and into the lab” proponent&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;strong&gt;eliminative materialism&lt;/strong&gt; the mind doesn’t exist and we shouldn’t try to explain it&lt;/li&gt;
+  &lt;li&gt;thinks that complex functions of the mind (”thought”, “desire”) are outdated concepts&lt;/li&gt;
+  &lt;li&gt;thinks we should talk about human behavior in terms of electrochemical processes in the brain&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Science can tell us counterintuitive things about the world, but it &lt;strong&gt;can’t tell us we don’t have experiences&lt;/strong&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;what-is-science&quot;&gt;What is Science?&lt;/h3&gt;
+
+&lt;p&gt;Science helps us reimagine nature&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;example: gravity is responsible for apples falling to the ground &lt;em&gt;and&lt;/em&gt; the orbit of the moon&lt;/li&gt;
+  &lt;li&gt;example: space and time aren’t two distinct entities. They’re both spacetime&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;We think of science as driven by experiments but thought experiments are powerful tools&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Einstein used thought experiments to identify gravitational force as the result of curvature in the fabric of spacetime&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;The scientific revolution worked because it &lt;strong&gt;excluded consciousness from the domain of science&lt;/strong&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;philosophical-foundations-of-science&quot;&gt;Philosophical Foundations of Science&lt;/h3&gt;
+
+&lt;p&gt;&lt;strong&gt;Galileo Galilei&lt;/strong&gt; (1564-1642) - father of modern science&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;declared that math is the language of science&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;strong&gt;Aristotelian orthodoxy&lt;/strong&gt; acceptance of Aristotle’s worldview&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;strong&gt;Ptolemaic&lt;/strong&gt; view of the universe (earth at the center)&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;teleological&lt;/strong&gt; theory (inanimate objects have goals)&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;We all assume that Galileo disproved Aristotle’s view through scientific method, but he did it using a thought experiment&lt;/p&gt;
+
+&lt;p&gt;Before Galileo, philosophers thought the world was full of &lt;em&gt;sensory qualities.&lt;/em&gt; After, scientists thought of material objects as existing without sensory qualities&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;example: lemons aren’t yellow. We perceive the yellowness in our souls&lt;/li&gt;
+  &lt;li&gt;example: sound exists in the material world only as waves. It only exists as sound when we listen to it&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Galileo divided the world into &lt;strong&gt;material objects&lt;/strong&gt; and &lt;strong&gt;souls&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;This was meant to be a &lt;strong&gt;partial description of reality&lt;/strong&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;by narrowing the scope of inquiry, we’ve been able to achieve a lot using science&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;This means that science as we know it might not solve the problem of consciousness&lt;/p&gt;
+
+&lt;h3 id=&quot;first-option-naturalistic-dualism&quot;&gt;First Option: Naturalistic Dualism&lt;/h3&gt;
+
+&lt;p&gt;&lt;strong&gt;dualism&lt;/strong&gt; divides nature into two categories:&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;physical objects&lt;/li&gt;
+  &lt;li&gt;incorporeal consciousness&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;&lt;strong&gt;naturalistic dualism&lt;/strong&gt; says the mind is not magical, but it’s part of the natural order&lt;/p&gt;
+
+&lt;h3 id=&quot;second-option-materialism&quot;&gt;Second Option: Materialism&lt;/h3&gt;
+
+&lt;p&gt;Radical materialists argue that consciousness is an illusion&lt;/p&gt;
+
+&lt;h3 id=&quot;third-option-panpsychism&quot;&gt;Third Option: Panpsychism&lt;/h3&gt;
+
+&lt;p&gt;Panpsychists believe that consciousness is a fundamental and ubiquitous feature of the physical world&lt;/p&gt;</content><author><name></name></author><summary type="html">source: Galileo’s Error, by Philip Goff (Chapter 1)</summary></entry><entry><title type="html">Notes: The Spanish Civil War</title><link href="http://localhost:4000/notes/spanish-civil-war/" rel="alternate" type="text/html" title="Notes: The Spanish Civil War" /><published>2021-10-27T22:07:43+02:00</published><updated>2021-10-27T22:07:43+02:00</updated><id>http://localhost:4000/notes/spanish-civil-war</id><content type="html" xml:base="http://localhost:4000/notes/spanish-civil-war/">&lt;p&gt;source: &lt;a href=&quot;https://www.veryshortintroductions.com/view/10.1093/actrade/9780192803771.001.0001/actrade-9780192803771&quot;&gt;The Spanish Civil War: A Very Short Introduction&lt;/a&gt;, Helen Graham&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;p&gt;The civil war started with a coup on July 17-18th, 1936&lt;/p&gt;
+
+&lt;h1 id=&quot;1-origins&quot;&gt;1: Origins&lt;/h1&gt;
+
+&lt;p&gt;Three crucial factors:&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;There were &lt;strong&gt;extremely uneven levels of development&lt;/strong&gt; within Spain&lt;/li&gt;
+  &lt;li&gt;the &lt;strong&gt;cultural influence of Catholicism&lt;/strong&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Spain’s army&lt;/strong&gt; had an intolerant political culture in its officer corps&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;Traditional order was coming under strain&lt;/p&gt;
+
+&lt;p&gt;1923: soft military coup by General Miguel Primo de Rivera (had backing of the king)&lt;/p&gt;
+
+&lt;p&gt;1930: army opposition brought Primo down&lt;/p&gt;
+
+&lt;p&gt;1931: republic was declared peacefully&lt;/p&gt;
+
+&lt;h3 id=&quot;uneven-levels-of-development&quot;&gt;Uneven Levels of Development&lt;/h3&gt;
+
+&lt;p&gt;There was a debate over how Spain should modernize itself economically&lt;/p&gt;
+
+&lt;p&gt;The WWI caused social change - economic boom, severe inflation and dislocation&lt;/p&gt;
+
+&lt;p&gt;Political parties were illegal in the 1920s, so professional associations became more powerful&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;progressive industrial elites (based in Catalan textile sector)&lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;large landowners in souther half of Spain&lt;/p&gt;
+
+    &lt;p&gt;It was similar to the American deep south - landless peasants lived like slaves&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;urban professional sector &amp;amp; industrial workers - wanted political voice&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;CNT: anarcho-syndicalist trade union movement&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;catholicism&quot;&gt;Catholicism&lt;/h3&gt;
+
+&lt;p&gt;embraced order and hierarchy&lt;/p&gt;
+
+&lt;p&gt;church’s monopoly on truth was challenged by political liberalism and cultural pluralism&lt;/p&gt;
+
+&lt;p&gt;local priests were allies of landowners and souther police - &lt;strong&gt;made rural poor anticlerical&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;Catholics didn’t like being constrained, but had no tolerance for non-catholics&lt;/p&gt;
+
+&lt;h3 id=&quot;spains-army&quot;&gt;Spain’s Army&lt;/h3&gt;
+
+&lt;p&gt;Spain lost its empire in 1898 - deprived the over-large officer corps of any meaningful external role&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;powerful myth that civilian politicians had been responsible for the final loss of empire&lt;/li&gt;
+  &lt;li&gt;disliked metropolitan Spanish society and politics&lt;/li&gt;
+  &lt;li&gt;took charge of Spain’s main military academy at Zaragoza&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Spain’s military class was becoming increasingly isolated&lt;/p&gt;
+
+&lt;p&gt;Junior officers stood to lose a lot of money from the Republican reforms&lt;/p&gt;
+
+&lt;h3 id=&quot;large-southern-landowners&quot;&gt;Large Southern Landowners&lt;/h3&gt;
+
+&lt;p&gt;used religious issues to mobilize poor northern smallholders to act against their own interests&lt;/p&gt;
+
+&lt;h3 id=&quot;franco&quot;&gt;Franco&lt;/h3&gt;
+
+&lt;p&gt;entered the military academy in 1907 (at the age of 15)&lt;/p&gt;
+
+&lt;p&gt;Made his career in the colonial Army of Africa&lt;/p&gt;
+
+&lt;h2 id=&quot;progressive-republicans-in-power&quot;&gt;&lt;strong&gt;Progressive Republicans in Power&lt;/strong&gt;&lt;/h2&gt;
+
+&lt;p&gt;Coalition of socially progressive Republicans and Socialists&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Republicans wanted social reform: land ownership, education, state-church relations, the army&lt;/li&gt;
+  &lt;li&gt;Socialists wanted welfare&lt;/li&gt;
+  &lt;li&gt;The coalition was less effective because of big ideological differences between republicans and socialists&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Republican Reforms were designed to increase &lt;strong&gt;economic democracy,&lt;/strong&gt; which is a &lt;strong&gt;prerequisite for political democracy&lt;/strong&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;strong&gt;Agrarian reform&lt;/strong&gt; intended to create smallholding peasantry in souther Spain. They’d be loyal to repluclicans&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;separation of church and state&lt;/strong&gt; - no more subsidy to clergy (alienated many poor priests)
+    &lt;ul&gt;
+      &lt;li&gt;unpopular interference with Catholic culture&lt;/li&gt;
+      &lt;li&gt;opposition to women’s suffrage. Thought women would be influenced by the church&lt;/li&gt;
+      &lt;li&gt;&lt;strong&gt;secularization was impolitic, ill thought-out and counterproductive&lt;/strong&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;education&lt;/strong&gt; - more money to non-religious primary education&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;army reform&lt;/strong&gt; - to bring the army under civilian and constitutional control
+    &lt;ul&gt;
+      &lt;li&gt;Tried to close down military academy at Zaragoza, enraging &lt;em&gt;Africanistas&lt;/em&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;These reforms were extremely ambitious&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;too many at once&lt;/li&gt;
+  &lt;li&gt;attempted during a depression&lt;/li&gt;
+  &lt;li&gt;opposed by Spain’s traditional elites (landowners, church, millitary)&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Their reforms made them enemies, but never actually went into affect&lt;/p&gt;
+
+&lt;h1 id=&quot;2-rebellion&quot;&gt;2: Rebellion&lt;/h1&gt;
+
+&lt;p&gt;The coup began on July 17th, 1936&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;started in Spanish North Africa (Morocco)&lt;/li&gt;
+  &lt;li&gt;spread to mainland Spain the next day (provincial garrison revolts)&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;one result was the government in Madrid didn’t have a functioning army&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;trade unions and political parties had to find an army&lt;/li&gt;
+  &lt;li&gt;used a combination of the (loyal) police and the worker militia&lt;/li&gt;
+  &lt;li&gt;quelled the urban garrison revolts&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Republican/progressive areas tended to be areas where the rebellion didn’t take hold&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Catalonia and Valencia stayed Republican throughout the war&lt;/li&gt;
+  &lt;li&gt;Madrid was the capital of the Republic&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;No area of Spain was entirely conservative&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;people with Republican sympathies in conservative areas had to publicly embrace the rebellion&lt;/li&gt;
+  &lt;li&gt;often led to betrayals&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;A week after the initial coup, the rebels got planes from Hitler and Mussolini&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;used to transport their troops to Spain&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;The government didn’t have power outside of Madrid&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;people used the chaos to settle personal vendettas (post-coup violence and pre-war conflicts)&lt;/li&gt;
+  &lt;li&gt;lots of violence against the powerful. Priests and monks were killed&lt;/li&gt;
+  &lt;li&gt;the violence damaged the Republic’s credibility abroad when it needed external support&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Violence in rebel areas: goal was purification&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;local civilian elites declared this&lt;/li&gt;
+  &lt;li&gt;fascists saw killings as cleansing the community of pollution&lt;/li&gt;
+  &lt;li&gt;this applied to anyone who benefited from the Republic, whether they were political or not: teachers and intellectuals, “new” women, self-educated workers&lt;/li&gt;
+  &lt;li&gt;at first, vigilantes killed people. However, these vigilantes usually either had close links to rightist organizations, or they were working with the authorities&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;This meant that there was killing on both sides, but there was an asymmetry to it: the republicans didn’t have the ability to stop the violence. The rebels did, but they chose not to&lt;/p&gt;
+
+&lt;p&gt;For rebels, liberal politics were the problem, and the solution was terror&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;it undid the Republic’s redistribution of social and economic power&lt;/li&gt;
+  &lt;li&gt;it created a complicity between the rebel authorities and everyone who turned against their friends &amp;amp; family&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Home was no longer safe&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;people migrated back home after the coup, but their former neighbors killed them&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;strong&gt;General Francisco Franco&lt;/strong&gt; headed &lt;strong&gt;The Army of Africa&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;As the Army of Africa moved through the souther half of Spain, large landowners reclaimed their land. They killed Rural laborers&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;This warfare was similar to colonial campaigns agains insubordinate indigenous peoples&lt;/li&gt;
+  &lt;li&gt;They faced a local civilian population with no real weapons, so they tore through the southern half of Spain&lt;/li&gt;
+  &lt;li&gt;Spain had used poison gas against people in Morocco&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Franco’s political belief was that alien political ideas had &lt;em&gt;occupied&lt;/em&gt; Spain&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;“I will save Spain from Marxism whatever the cost” “And if that means shooting half of Spain” “As I said, whatever the cost”&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;The Catholic Church provided legitimacy to the rebels, so they got very little bad press abroad&lt;/p&gt;
+
+&lt;p&gt;The Spanish left cared more about workers’ rights than the wrongs of colonization&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;General Emilio Mola&lt;/strong&gt; nominal leader of the rebellion&lt;/p&gt;
+
+&lt;h1 id=&quot;3-the-republic-at-war&quot;&gt;3: The Republic at War&lt;/h1&gt;
+
+&lt;p&gt;&lt;strong&gt;Non-Intervention treaty&lt;/strong&gt; (August 1936) that Britain and France signed with Germany and Italy&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;said they wouldn’t deliver war material to Spain&lt;/li&gt;
+  &lt;li&gt;Britain and France honored it. Germany and Italy didn’t&lt;/li&gt;
+  &lt;li&gt;This gave the rebels a huge advantage over the republic&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Why did Britain &amp;amp; France allow this to happen?&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Idea was to prevent Spanish war from escalating into a European conflict&lt;/li&gt;
+  &lt;li&gt;Also, the British thought that a rebel victory would preserve more capital, which affected British investments&lt;/li&gt;
+  &lt;li&gt;&lt;em&gt;Also&lt;/em&gt;, Britain’s governing elite had political, personal and financial connections to conservative Spain&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Britain and France were screwing the republic over&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;They &lt;em&gt;knew&lt;/em&gt; Germany and Italy were not honoring the treaty, but they didn’t do anything about it&lt;/li&gt;
+  &lt;li&gt;Britain refused the republic’s navy the right to review in Gibraltar or Tangier&lt;/li&gt;
+  &lt;li&gt;France reneged on its initial promise to send war material&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Hitler and Mussolini’s aid was strategically motivated, although ideology also played apart&lt;/p&gt;
+
+&lt;p&gt;The Soviet Union provisioned military aid in &lt;strong&gt;November 1936.&lt;/strong&gt; This aid was just in time&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;At first, the Soviets backed Non-Intervention&lt;/li&gt;
+  &lt;li&gt;They thought the Republic would win under these circumstances if the fascists honored the agreement&lt;/li&gt;
+  &lt;li&gt;The soviets never acknowledged the military assistance&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;anti-fascists-came-to-spain-to-fight&quot;&gt;anti-fascists came to Spain to fight&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;strong&gt;International Brigrades&lt;/strong&gt; (about 35,000)&lt;/li&gt;
+  &lt;li&gt;most were already political exiles&lt;/li&gt;
+  &lt;li&gt;a quarter of the volunteers were Jewish - were actively anti-fascist&lt;/li&gt;
+  &lt;li&gt;Example: Canadian volunteers who had fled Finland’s nationalist leader around 1918&lt;/li&gt;
+  &lt;li&gt;The brigades were diverse, which made them antithetical to the fascist ideals of purification&lt;/li&gt;
+  &lt;li&gt;brigades were used as shock troops and sustained high casualties&lt;/li&gt;
+  &lt;li&gt;The &lt;strong&gt;Abraham Lincoln Brigade&lt;/strong&gt; included 90 black Americans
+    &lt;ul&gt;
+      &lt;li&gt;&lt;strong&gt;Oliver Law -&lt;/strong&gt; first military commander in US history to lead a nonsegregated unit of troops&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Foreign medical volunteers joined too&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;developed new types of emergency treatment, like blood transfusion techniques&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Women generally weren’t recruited to help fight&lt;/p&gt;
+
+&lt;p&gt;The European communist movement organized most of the international brigades and lobbied governments to lift non-intervention&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;strong&gt;Comintern (Communist International)&lt;/strong&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;PCF (French Communist Party)&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;The Republican military command were hostile to the international brigades&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;because reasons&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Volunteers weren’t prepared for the war&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;military discipline&lt;/li&gt;
+  &lt;li&gt;harsh warfare&lt;/li&gt;
+  &lt;li&gt;antiquated weaponry&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;conditions-in-madrid&quot;&gt;Conditions in Madrid&lt;/h2&gt;
+
+&lt;p&gt;the first &lt;strong&gt;air raids&lt;/strong&gt; of their kind to happen anywhere in Europe&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;War Refugees&lt;/strong&gt; first went to Madrid, then Barcelona and Valencia - severe culture shock&lt;/p&gt;
+
+&lt;p&gt;The rebel army &lt;strong&gt;besieged&lt;/strong&gt; Madrid&lt;/p&gt;
+
+&lt;h2 id=&quot;fascist-help&quot;&gt;Fascist Help&lt;/h2&gt;
+
+&lt;p&gt;Hitler and Mussolini recognized rebel Spain in November 1936, provided weaponry and manpower (75,000 troops)&lt;/p&gt;
+
+&lt;h2 id=&quot;internal-fighting&quot;&gt;Internal fighting&lt;/h2&gt;
+
+&lt;p&gt;The Republic distrusted their professional army officers, and the coup had shattered &lt;strong&gt;army unity&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;There were political tensions between &lt;strong&gt;the center and periphery&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;the &lt;strong&gt;central Republican government&lt;/strong&gt; clashed with the &lt;strong&gt;Basque regional authority&lt;/strong&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;strong&gt;PNV (Basque Nationalist Party)&lt;/strong&gt; sought sovereign rights&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Before the war, there had already been political rivalries between different groups&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;the war intensified them&lt;/li&gt;
+  &lt;li&gt;clashes between socialists-led trade unions, communists and Catalan communists&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;basque-fell-in-the-summer-of-1937&quot;&gt;Basque fell in the summer of 1937&lt;/h3&gt;
+
+&lt;p&gt;this happened just as the republican military was beginning to cohere&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;also guerrilla fighters behind enemy lines&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;republics-propaganda&quot;&gt;Republic’s Propaganda&lt;/h2&gt;
+
+&lt;p&gt;used &lt;strong&gt;photomontage&lt;/strong&gt; as a weapon&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;depicted their own soldiers as mechanized and modernist&lt;/li&gt;
+  &lt;li&gt;the fascists didn’t do this because &lt;strong&gt;photomontage was modernist and cosmopolitan&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;cultural-bolshevism&quot;&gt;Cultural Bolshevism&lt;/h2&gt;
+
+&lt;p&gt;the Nazis coined this term to describe &lt;strong&gt;avant-garde cultural production&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;degenerate art&lt;/strong&gt; - Nazi Germany’s term for modern art&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;idea that a culture can degenerate like a biological organism was widespread, especially among conservative sectors in Europe&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Soviet fashion became popular&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;the styles were superficial and had little to do with Marxist-Leninism&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;wartime-madrid&quot;&gt;Wartime Madrid&lt;/h2&gt;
+
+&lt;p&gt;The government tried to centralize power&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;local governments and trade unions had gained more power since the war had started&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;The government re-introduced market forces to the food supply&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;this hit the urban poor the hardest. They couldn’t afford the black market and they had no contacts in the countryside&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;strong&gt;Housing shortage&lt;/strong&gt; - 350,000 refugees by the end of 1936 meant a 10% population increase&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;extra pressure on housing and food in the poorest inner city areas&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;strong&gt;May Days&lt;/strong&gt; - period of time where [radicalized workers and the urban poor] staged [social and political protests] in Barcelona&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;these caused sectarian political struggles&lt;/li&gt;
+  &lt;li&gt;Soviet intelligence was involved somehow&lt;/li&gt;
+  &lt;li&gt;Italian secret police assassinated an Italian anarchist in Barcelona during this time&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;strong&gt;Andrue Nin&lt;/strong&gt; - leader of Catalan-based dissent party&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Spanish/Catalan communists worked with the Comintern to assassinate hime&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;strong&gt;Checas&lt;/strong&gt; - illegal prisons, appeared in Republican territory in the aftermath of the military uprising&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;political parties, unions and militia established their on detention agencies&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;It became more common to incorporate women and young people into the war effort&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;this was partly due the the increased popularity of the Soviet Union&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h1 id=&quot;4-rebel-spain&quot;&gt;4: Rebel Spain&lt;/h1&gt;
+
+&lt;p&gt;Francoist Spain was much more ideologically homogeneous&lt;/p&gt;
+
+&lt;h2 id=&quot;franco-1&quot;&gt;Franco&lt;/h2&gt;
+
+&lt;p&gt;People in power died by accident or got executed by the rebels. Also &lt;strong&gt;Franco had control of the Army of Africa&lt;/strong&gt; at the beginning of the war&lt;/p&gt;
+
+&lt;p&gt;Franco’s mission was to “save Spain”&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;this shaped his military strategy&lt;/li&gt;
+  &lt;li&gt;he probably thought he was justified in terrorizing civilians&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Franco’s military strategy:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;colonize the metropolis&lt;/li&gt;
+  &lt;li&gt;destroy the “alien” republican culture in the cities&lt;/li&gt;
+  &lt;li&gt;purify Spain from everything that didn’t align with his values&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Franco thought that industrial cities caused moral pollution&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;The war was more about controlling people than about controlling territory&lt;/li&gt;
+  &lt;li&gt;Franco was prepared to incur losses among his troops&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Franco thought that the Army had an absolute right to impose its will on society&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Thought that military organization was the best way to structure a society&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Franco deported Spanish Republicans to Nazi concentration camps in 1940&lt;/p&gt;
+
+&lt;h2 id=&quot;wartime-stuff&quot;&gt;Wartime stuff&lt;/h2&gt;
+
+&lt;p&gt;&lt;strong&gt;Estado Campamental&lt;/strong&gt; - “Battlefield state”&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;By mobilizing Spain’s armies, Franco was achieving the “ideal Spain”&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;The rebels used a lot of air raides&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;they backfired. Caused more hatred than fear&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;strong&gt;Falange&lt;/strong&gt; - a group&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;leader got executed by Republicans&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;strong&gt;Blue Division&lt;/strong&gt; fought with the German armies on the eastern front (1941)&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;old shirt Falangists joined this&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;strong&gt;Seccion Femenina (SF)&lt;/strong&gt; - women’s section of the Falange. An “army” of unmarried, economically independent women&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Urban and provincial middle class women joined this&lt;/li&gt;
+  &lt;li&gt;Women were mobilized for health and welfare needs&lt;/li&gt;
+  &lt;li&gt;not used for industrial war work&lt;/li&gt;
+  &lt;li&gt;valued domesticity and subservience&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;strong&gt;Anti-Comintern pact&lt;/strong&gt; - (February 1939) agreement between Germany, Japan and Italy&lt;/p&gt;
+
+&lt;h3 id=&quot;after-the-victory&quot;&gt;After the victory&lt;/h3&gt;
+
+&lt;p&gt;Spaniards had to &lt;strong&gt;denounce&lt;/strong&gt; their neighbors to military tribunals&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;this happened after Franco’s military victory in April 1936&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;The government took all the wealth and property by passing legislation&lt;/p&gt;
+
+&lt;h3 id=&quot;captured-republican-soldiers&quot;&gt;Captured Republican Soldiers&lt;/h3&gt;
+
+&lt;p&gt;they were often recycled&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;especially the ones who had been conscripts in the first place&lt;/li&gt;
+  &lt;li&gt;after the war, they faced political investigation&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;strong&gt;Political commissars&lt;/strong&gt; were usually shot&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;international brigaders&lt;/strong&gt; were usually shot&lt;/p&gt;
+
+&lt;p&gt;This meant that Franco was breaking the Geneva Conventions&lt;/p&gt;
+
+&lt;h3 id=&quot;propoganda&quot;&gt;Propoganda&lt;/h3&gt;
+
+&lt;p&gt;Commercial cinema was becoming more popular&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Francoist authorities censored them carefully&lt;/li&gt;
+  &lt;li&gt;Hollywood productions were an important component of popular cinema&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;help-from-germany-and-italy&quot;&gt;Help from Germany and Italy&lt;/h2&gt;
+
+&lt;p&gt;Hitler and Mussolini wanted a fast victory&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;They increased their aid for this outcome&lt;/li&gt;
+  &lt;li&gt;Franco advanced his army slowly and deliberately&lt;/li&gt;
+  &lt;li&gt;This caused political tension&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Franco depended heavily on Italian military hardware&lt;/p&gt;
+
+&lt;p&gt;Germany and Italy provided airpower, and Franco needed it&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Why did this alliance happen?&lt;/strong&gt; All three dictators wanted to expand their territories&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;they would turn a blind eye to each other’s imperial actions&lt;/li&gt;
+  &lt;li&gt;Nazi Germany was disrupting the international status quo, which meant more opportunities to gain territory&lt;/li&gt;
+  &lt;li&gt;Spain would disrupt French and English imperial interests, since it was in an important strategic position&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;There was an ideological divide between Francoists and Nazis over the Catholic church&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Nazis were trying to take society beyond sectarian allegiances&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;passive-france-and-britain&quot;&gt;Passive France and Britain&lt;/h3&gt;
+
+&lt;p&gt;British government didn’t think that a Francoist victory would pose a threat to their interests. They didn’t help much&lt;/p&gt;
+
+&lt;h2 id=&quot;the-church&quot;&gt;The Church&lt;/h2&gt;
+
+&lt;p&gt;the Vatican didn’t like the radical aspects of fascism, or its exaltation of the state&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;opposed Nazism for its atheistic dimension&lt;/li&gt;
+  &lt;li&gt;this is why the Vatican publicly condemned Hitler’s racism&lt;/li&gt;
+  &lt;li&gt;This was very bad for Franco&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;The Vatican attempted to broker peace settlements with Franco&lt;/p&gt;
+
+&lt;p&gt;The Vatican established full diplomatic relations in 1938, when a rebel victory seemed imminent&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Spain’s Catholic hierarchy&lt;/strong&gt; aligned itself with Franco&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;shared hostility with rationalism, liberalism, socialism and communism&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Franco’s government would mix in fascist symbols during ceremonial occasions&lt;/p&gt;
+
+&lt;h1 id=&quot;5-the-republic-besieged&quot;&gt;5: The Republic besieged&lt;/h1&gt;
+
+&lt;p&gt;The rebels were way better equipped than the Republic&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Portuguese authorities unloaded German and Italian supplies at their ports&lt;/li&gt;
+  &lt;li&gt;most of the middle-ranking officers were on Franco’s side&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Stalin sent materiel to the republic (including planes and tanks)&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;This was crucial for their survival&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Non-Intervention prevented the Republic from buying war material on its own behalf&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;this is a big reason why it needed Soviet help&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;The Republic also didn’t have access to its money&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;the outgoing cabinet transferred Spain’s gold reserves out of the country right before the war (two weeks after the coup)&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Mexico was the only country that helped the Republic as a broker&lt;/p&gt;
+
+&lt;p&gt;Eastern European countries (mainly Poland) sold armaments to the Republic&lt;/p&gt;
+
+&lt;p&gt;The Republic had to overpay for everything because of Non-Intervention&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Had to pay cash up front (unlike the rebels, which bought everything on credit)&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;delivery-was-a-nightmare&quot;&gt;Delivery was a nightmare&lt;/h3&gt;
+
+&lt;p&gt;The Soviets made the Republic transport everything they bought&lt;/p&gt;
+
+&lt;p&gt;Germans and Italians illegally attacked all ships bound for Republic ports&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;They allowed Franco to set up a blockade&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;french-help&quot;&gt;French help&lt;/h3&gt;
+
+&lt;p&gt;The blockade meant that all military aid had to go over land, through France&lt;/p&gt;
+
+&lt;p&gt;The French were afraid of being surrounded by fascists, so they practiced “relaxed Non-Intervention”&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;goods could go over the French border to Spain, but this route was unpredictable&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;a-fractured-republic&quot;&gt;A Fractured Republic&lt;/h3&gt;
+
+&lt;p&gt;There were “five armies, not one”, mainly due to regional groupings&lt;/p&gt;
+
+&lt;p&gt;During 1938, the Republican camp had many political divisions&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;the more defeats it suffered, the more divisions there were&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;central Republican versus the regional government of Catalonia&lt;/p&gt;
+
+&lt;p&gt;Catalonia had one of the deepest independent political and cultural traditions in Spain. When &lt;strong&gt;Negrin assumed control of the Catalan war industry&lt;/strong&gt;, he caused another fracture&lt;/p&gt;
+
+&lt;h3 id=&quot;the-fall-of-asturias&quot;&gt;The Fall of Asturias&lt;/h3&gt;
+
+&lt;p&gt;October 1937 - made it clear that the Republic wouldn’t win&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;no more coal industry&lt;/li&gt;
+  &lt;li&gt;no more northern army (200k soldiers)&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;battle-of-teruel&quot;&gt;Battle of Teruel&lt;/h3&gt;
+
+&lt;p&gt;winter 1937-8 - made it even more clear that the Republic wouldn’t win&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;was a diversionary campaign&lt;/li&gt;
+  &lt;li&gt;that was an especially cold winter&lt;/li&gt;
+  &lt;li&gt;Republicans captured the city in January, but Franco got it back in a counter offensive&lt;/li&gt;
+  &lt;li&gt;clear turning point of the war&lt;/li&gt;
+  &lt;li&gt;Franco captured the city, 15k prisoners and lots of military equipment&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;the-rebels-took-vinaros&quot;&gt;The rebels took Vinaros&lt;/h3&gt;
+
+&lt;p&gt;The rebels separated Catalonia from the central-south Republican zone&lt;/p&gt;
+
+&lt;p&gt;this was &lt;em&gt;very bad&lt;/em&gt; for the Republic, but Franco diverted troops south to Valencia because he thought that France would have to intervene if he sent troops to Catalonia&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;The point was to attack the Republic’s human resources as much as possible&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;anglo-italian-agreement&quot;&gt;Anglo-Italian agreement&lt;/h3&gt;
+
+&lt;p&gt;April 1938 Britain signed this right after the rebels took a significant victory&lt;/p&gt;
+
+&lt;p&gt;Britain pressured France to close its frontier to Spain&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Italy was still sinking Britain’s merchant ships, so this didn’t make much sense&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;soviet-help&quot;&gt;Soviet help&lt;/h3&gt;
+
+&lt;p&gt;Soviet technical advisors (about 700 of them) helped Spanish commanders and officers&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;military engineers, technicians, strategists and experts in irregular warfare&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;By 1938, Stalin thought that the Republic couldn’t win, so he stopped helping in any significant way&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;there were foreign volunteers, but they were basically symbolic&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;The longer the Republic resisted, the longer it distracted Germany, so Stalin did continue to help&lt;/p&gt;
+
+&lt;h2 id=&quot;internal-fracturing&quot;&gt;Internal Fracturing&lt;/h2&gt;
+
+&lt;p&gt;When Negrin did the following, he damaged morale in Catalonia:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;move the Republican government to Barcelona&lt;/li&gt;
+  &lt;li&gt;assumed direct control of Catalan war industry&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Catalonia had the deepest independent political and cultural traditions in Spain&lt;/p&gt;
+
+&lt;h3 id=&quot;socialists-vs-communists&quot;&gt;socialists vs communists&lt;/h3&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;these were the two mass movements sustaining the war effort&lt;/li&gt;
+  &lt;li&gt;had rivalies before the war that grew more intense during the war&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;juan-negrin&quot;&gt;Juan Negrin&lt;/h2&gt;
+
+&lt;p&gt;Republican prime minister, took office in May 1937&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;tried to get Non-Intervention lifted&lt;/li&gt;
+  &lt;li&gt;good at international diplomacy&lt;/li&gt;
+  &lt;li&gt;Non-Intervention basically ended when Hitler occupied Austria in March 1938, but it was too late by then&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;values&quot;&gt;Values&lt;/h3&gt;
+
+&lt;p&gt;Negrin prioritized Republican morale, tried to strengthen Spain’s constitutional order&lt;/p&gt;
+
+&lt;p&gt;Designed his wartime measures to reinforce &lt;strong&gt;liberal market-based values&lt;/strong&gt;, instead of collectivist or anti-capitalist values&lt;/p&gt;
+
+&lt;p&gt;Wanted to &lt;strong&gt;normalize the Catholic Church&lt;/strong&gt;, even though he was a secular rationalist&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;wanted to reintroduce public worship&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;The communist ideology did not appeal to him&lt;/p&gt;
+
+&lt;h3 id=&quot;actions-aborad&quot;&gt;Actions Aborad&lt;/h3&gt;
+
+&lt;p&gt;Britain and France were afraid of the conflict extending to the rest of Europe, so &lt;strong&gt;they opposed Negrin’s bid to have Non-Intervention lifted&lt;/strong&gt; at the league of Nations&lt;/p&gt;
+
+&lt;p&gt;Negrin made a number of trips abroad in 1938 to meet with fascists&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;he wanted to prevent reprisals and guarantee the integrity of Spain&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;politics-at-home&quot;&gt;Politics at home&lt;/h3&gt;
+
+&lt;p&gt;Negrin was starting to rely on the communists more than on his own party, which caused problems&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;He needed the communists because of their &lt;strong&gt;commitment to a policy of resistance&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;downfall&quot;&gt;Downfall&lt;/h2&gt;
+
+&lt;p&gt;By spring 1938, the Republic couldn’t serve its civilian population effectively&lt;/p&gt;
+
+&lt;h3 id=&quot;catalonia-isolated&quot;&gt;Catalonia Isolated&lt;/h3&gt;
+
+&lt;p&gt;Communication between Catalonia and the central zone was hazardous&lt;/p&gt;
+
+&lt;p&gt;It was difficult to travel there, since the rebels controlled sea and air between the two zones&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;rebels torpedoed sea traffic&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Food had to come from France, but there wasn’t enough food coming across the border. Also, whether it came at all depended on politics&lt;/p&gt;
+
+&lt;h3 id=&quot;militarization&quot;&gt;Militarization&lt;/h3&gt;
+
+&lt;p&gt;The Republican zone was militarizing under the pressure of war, which backfired&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;conscription was becoming more aggressive, which made communities resentful&lt;/li&gt;
+  &lt;li&gt;soldiers were living off the land, which increased social tension&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;the-fifth-column&quot;&gt;The fifth column&lt;/h3&gt;
+
+&lt;p&gt;All major Republican cities had organized networks of spies and saboteurs&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;it was difficult for the Republic to deal with these spies without resorting to fascistic surveillance and interrogation techniques&lt;/li&gt;
+  &lt;li&gt;this contrasted with how the Francoists dealth with spies, which gave the fascists an advantage&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Played a major role in the eventual hand over to Franco&lt;/p&gt;
+
+&lt;h3 id=&quot;battle-at-ebro&quot;&gt;Battle at Ebro&lt;/h3&gt;
+
+&lt;p&gt;July - November 1938. The last big battle during the war&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Republic’s last gamble&lt;/li&gt;
+  &lt;li&gt;three objectives:
+    &lt;ul&gt;
+      &lt;li&gt;protect Valencia from Franco&lt;/li&gt;
+      &lt;li&gt;restore contact with Catalonia&lt;/li&gt;
+      &lt;li&gt;demonstrate to the world that the Republican army was resilient (success - the Brits noticed the victory, and noticed how reliant Franco was on Italy and Germany)&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Franco paid the Nazi’s in mining rights. In exchange, they guaranteed his air superiority during the battle at Ebro&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;This was a testing ground for Blitzkrieg tactics&lt;/li&gt;
+  &lt;li&gt;also for Soviet armored vehicles&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;the republicans retreated in November because of the Munich agreement&lt;/p&gt;
+
+&lt;h3 id=&quot;the-agreement&quot;&gt;The agreement&lt;/h3&gt;
+
+&lt;p&gt;Britain and France signed a deal with Germany and Italy&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;strong&gt;It said that Hitler could invade Czechoslovakia&lt;/strong&gt;, which was the last functioning democracy in central eastern Europe&lt;/li&gt;
+  &lt;li&gt;this undermined Negrin’s credibility and his resistance strategy&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;poum-trial&quot;&gt;POUM Trial&lt;/h3&gt;
+
+&lt;p&gt;October 1938 (so duing the battle of Ebro) - POUM leaders publicly supported a rebellion&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;the trial observed the constitutional process&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;the-downfall&quot;&gt;The downfall&lt;/h3&gt;
+
+&lt;p&gt;Negrin knew that if he surrendured, Franco would not negotiate&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;he planned on resisting&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;strong&gt;Las of Political Responsibilities&lt;/strong&gt; law pushed by Franco in February 1939&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;blanket repression, meant that there would be reprisals against Republican population&lt;/li&gt;
+  &lt;li&gt;retroactively punished people&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Other republican and socialist leaders thought that they could negotiate pease with Franco, even though it was clear they couldn’t&lt;/p&gt;
+
+&lt;p&gt;Armies surrendured to Franco in &lt;strong&gt;March 1939&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;Negrin had continued resisting because he believed that Britain and France would help Republican Spain&lt;/p&gt;
+
+&lt;h3 id=&quot;refugees&quot;&gt;Refugees&lt;/h3&gt;
+
+&lt;p&gt;There were about 600k refugees trying to escape from Republican Spain at the end of the war&lt;/p&gt;</content><author><name></name></author><summary type="html">source: The Spanish Civil War: A Very Short Introduction, Helen Graham</summary></entry><entry><title type="html">Notes: Genetics and Politics</title><link href="http://localhost:4000/notes/genetics-politics/" rel="alternate" type="text/html" title="Notes: Genetics and Politics" /><published>2021-09-25T22:07:43+02:00</published><updated>2021-09-25T22:07:43+02:00</updated><id>http://localhost:4000/notes/genetics-politics</id><content type="html" xml:base="http://localhost:4000/notes/genetics-politics/">&lt;p&gt;source: &lt;a href=&quot;https://www.newyorker.com/magazine/2021/09/13/can-progressives-be-convinced-that-genetics-matters&quot;&gt;The New Yorker&lt;/a&gt;&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;p&gt;&lt;strong&gt;Kathryn Paige Harden&lt;/strong&gt; works in the field of behavior genetics&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;psych professor, University of Texas at Austin&lt;/li&gt;
+  &lt;li&gt;mentored by Eric Turkheimer&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;strong&gt;behavior genetics&lt;/strong&gt; investigates influence of genes on &lt;strong&gt;character traits&lt;/strong&gt; and &lt;strong&gt;life outcomes&lt;/strong&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;pushback-from-hardens-colleagues&quot;&gt;pushback from Harden’s colleagues&lt;/h3&gt;
+
+&lt;p&gt;there’s a possible link between behavior genetics and eugenics&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Harden was ostracized by her liberal colleagues for her work&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;strong&gt;polygenic score&lt;/strong&gt; a weighted sum of an individuals relevant genetic variants&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Harden shared &lt;a href=&quot;https://journals.sagepub.com/doi/abs/10.1177/0956797616643070&quot;&gt;a paper&lt;/a&gt; that used polygenic score to explain population variance&lt;/li&gt;
+  &lt;li&gt;the paper emphasized that it’s difficult to distinguish between genetic and environmental effects on social outcomes&lt;/li&gt;
+  &lt;li&gt;There was a lot of pushback to this paper. professor of public policy at Duke: “there will be no reason to pursue these types of research programs at all, and they can be rendered to the same location as Holocaust denial research”&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;strong&gt;The Bell Curve&lt;/strong&gt;, Charles Murray &amp;amp; Richard Herrnstein - includes claims about:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;genetic basis for racial hierarchy in intelligence&lt;/li&gt;
+  &lt;li&gt;genetic foundation for poverty and inequality&lt;/li&gt;
+  &lt;li&gt;Harden’s colleagues compared the paper she shared to the bell curve&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;they considered refusing to fund research into effects of genes on behavior or social outcomes&lt;/p&gt;
+
+&lt;p&gt;We can’t commit to egalitarianism by declaring genetic uniformity&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;The left isn’t talking about this, so the only voices are on the right&lt;/strong&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;“red pill” claims to expose liberal hypocrisy&lt;/li&gt;
+  &lt;li&gt;Harden is trying to fight back&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;strong&gt;The Genetic Lottery: Why DNA Matters for Social Equality&lt;/strong&gt; - Harden’s new book&lt;/p&gt;
+
+&lt;h3 id=&quot;behavioralism-vs-determinism&quot;&gt;&lt;strong&gt;behavioralism vs determinism&lt;/strong&gt;&lt;/h3&gt;
+
+&lt;p&gt;&lt;strong&gt;behavioralism&lt;/strong&gt; - claims that environmental manipulation can produce any desired outcome&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;aligns with postwar liberal principles&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;strong&gt;&lt;a href=&quot;https://en.wikipedia.org/wiki/How_Much_Can_We_Boost_IQ_and_Scholastic_Achievement%3F&quot;&gt;How Much Can We Boost IQ and Scholastic Achievement?&lt;/a&gt;&lt;/strong&gt; - 1969 article&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;argued that there was an IQ gap between races in America, and the reason was at least partly genetic&lt;/li&gt;
+  &lt;li&gt;argued that policy interventions were unlikely shift this hierarchy&lt;/li&gt;
+  &lt;li&gt;Got a lot of criticism&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;IQ is flexible&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Poor children gain IQ after wealthy families adopt them&lt;/li&gt;
+  &lt;li&gt;populations gain IQ over time&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Just because outcomes are partly genetic doesn’t mean they’re inevitable&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://www.gwern.net/docs/iq/1997-turkheimer.pdf&quot;&gt;&lt;strong&gt;The Search for a Psychometric left&lt;/strong&gt;&lt;/a&gt; - Terkheimer argued that the left has nothing to fear from genes&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;We don’t need to deny heritability to oppose determinism, reductionism and racism&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;the-limits-of-behavior-genetics&quot;&gt;the limits of behavior genetics&lt;/h3&gt;
+
+&lt;p&gt;Some studies found genes for aggression, depression, homosexuality, but &lt;strong&gt;the studies couldn’t be replicated&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;Complex traits are governed by multiple genes&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;genome-wide association study&lt;/strong&gt; (GWAS)- attempt to identify thousands of places in the genome where DNA differences correlate to traits/outcomes&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;can predict population variance for height, weight and some diseases&lt;/li&gt;
+  &lt;li&gt;can predict some complex behavioral traits&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;A GWA for educational attainment found ~1300 sites on the genome that correlate with scholastic success&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;individual sites have a negligible predictive ability, but the sum is very predictive&lt;/li&gt;
+  &lt;li&gt;people with the highest scores are 5x more likely to graduate from college&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;GWAS show correlation, but not causation&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;depend on populations within a specific society&lt;/li&gt;
+  &lt;li&gt;results are not portable - results from the UK will not tell you anything about populations in Estonia&lt;/li&gt;
+  &lt;li&gt;not a good predictor for individuals&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;GWAS reveal a lot much about geography and culture&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;example: you could conduct a GWAS for chopstick use. It would tell you more about culture than individual’s dexterity&lt;/li&gt;
+  &lt;li&gt;possible solution: compare GWAS results within families&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Social outcomes also depend on plenty of factors (conscientiousness, risk-aversion, physical features…)&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Harden thinks we’ll be stuck forever if we consider this question to have a binary answer&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;One benefit of GWAS: they help you account for genetic differences when trying to do studies on environmental factors&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Parents have significant impact on environmental effects, even if they don’t pass on all of their genes&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Another benefit: We can see how treatments interact with genetics&lt;/p&gt;
+
+&lt;h3 id=&quot;clash-with-sam-harris&quot;&gt;Clash with Sam Harris&lt;/h3&gt;
+
+&lt;p&gt;Sam Harris had Charles Murray on as a guest in April 2017&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;they said that people don’t want to hear that IQ differs across ethnic groups&lt;/li&gt;
+  &lt;li&gt;Harris mostly had him on because he’d been caught up in the culture war&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Harden and Turkheimer wrote a &lt;a href=&quot;https://www.vox.com/the-big-idea/2017/5/18/15655638/charles-murray-race-iq-sam-harris-science-free-speech&quot;&gt;piece for vox&lt;/a&gt; meant to confront Harris’ podcast&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;They had to make a nuanced argument to separate the truths from the falsehoods in the podcast&lt;/li&gt;
+  &lt;li&gt;We can’t deny that genetics have an impact on human academic scores&lt;/li&gt;
+  &lt;li&gt;However there’s &lt;strong&gt;no reason to think that racial IQ gaps are anything but the result of racism&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Harris eventually had Harden on his podcast. It was actually pretty awkward&lt;/p&gt;
+
+&lt;h3 id=&quot;blowback-from-the-left&quot;&gt;blowback from the left&lt;/h3&gt;
+
+&lt;p&gt;There are more voices on the left that are trying to acknowledge inherited intelligence&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;strong&gt;the cult of smart&lt;/strong&gt; asserts that improving the education system won’t help until we acknowledge that some students are just smarter than others&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Harden is getting dragged on twitter&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Dorothy Roberts&lt;/strong&gt; professor of law, sociology, Africana studies - responded to a 2018 Op-Ed that Harden wrote in the NYT, which said we should use genetics to inform education policy&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;“There’s no way that genetic testing is going to lead to a restructuring of society in a just way in the future. &lt;strong&gt;We have a hundred years of evidence for what happens when social outcomes are attributed to genetic differences&lt;/strong&gt;, and it is always to stigmatize, control and punish the people predicted to have socially devalued traits”&lt;/p&gt;
+
+&lt;/blockquote&gt;
+
+&lt;p&gt;There is a push from the right to pay more attention to genetics&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;blueprint says that polygenic scores should be understood as “fortune tellers”, and white supremacists love it&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;the-genetic-lottery&quot;&gt;The genetic lottery&lt;/h3&gt;
+
+&lt;p&gt;assersions:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;just because we value some traits more than others doesn’t mean we value some people more than others&lt;/li&gt;
+  &lt;li&gt;We should view inherent qualities as something you were lucky to get&lt;/li&gt;
+  &lt;li&gt;We should get better at separating the questions of nature and nurture&lt;/li&gt;
+  &lt;li&gt;If we don’t acknowledge how genes played a part in our success, we assume that we did it all through hard work&lt;/li&gt;
+  &lt;li&gt;If genes play a significant role in our success, maybe we shouldn’t design our society so that you need a college degree to get health care&lt;/li&gt;
+&lt;/ul&gt;</content><author><name></name></author><summary type="html">source: The New Yorker</summary></entry><entry><title type="html">Notes: Maxwell’s Demon</title><link href="http://localhost:4000/notes/maxwell-demon/" rel="alternate" type="text/html" title="Notes: Maxwell’s Demon" /><published>2021-05-03T22:07:43+02:00</published><updated>2021-05-03T22:07:43+02:00</updated><id>http://localhost:4000/notes/maxwell-demon</id><content type="html" xml:base="http://localhost:4000/notes/maxwell-demon/">&lt;p&gt;source: &lt;a href=&quot;https://nautil.us/how-maxwells-demon-continues-to-startle-scientists-9725/&quot;&gt;Nautilus&lt;/a&gt;&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;p&gt;&lt;strong&gt;Quasiparticles&lt;/strong&gt; a kind of particle&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;emerge out of complicated interactions between huge numbers of fundamental particles (quarks, photons, electrons)&lt;/li&gt;
+  &lt;li&gt;can be stable. Two reasons
+    &lt;ol&gt;
+      &lt;li&gt;they emerge at very low temperatures&lt;/li&gt;
+      &lt;li&gt;they only interact with each other weakly&lt;/li&gt;
+    &lt;/ol&gt;
+  &lt;/li&gt;
+  &lt;li&gt;can have properties like mass and charge&lt;/li&gt;
+  &lt;li&gt;some physicists think fundamental particles are emergent as well&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;example: &lt;strong&gt;polarons&lt;/strong&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;discovered in 1933&lt;/li&gt;
+  &lt;li&gt;materialize when many electrons get trapped inside a crystal&lt;/li&gt;
+  &lt;li&gt;push and pull between electrons “dress” an electron. It acts like a quasiparticle with larger mass&lt;/li&gt;
+  &lt;li&gt;mixture of matter and light&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;condensed matter is related&lt;/p&gt;
+
+&lt;p&gt;Researchers can create quasiparticles that have a fraction of electron’s spin or charge&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;a “hole”:&lt;/strong&gt; the absence of an electron where it should exist&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;exciton:&lt;/strong&gt; quasiparticle made of an electron and a hole that orbit each other&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;photons blend with exitons to form &lt;strong&gt;polaritons&lt;/strong&gt;, which behave like liquid light en masse - frictionless, doesn’t scatter&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;strong&gt;Majorana quasiparticles&lt;/strong&gt; hypothesized, half electron and half hole at the same time&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;could be used to create supercomputers&lt;/li&gt;
+  &lt;li&gt;zero energy, zero charge. This could allow them to exist inside of a superconductor&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;strong&gt;magnon&lt;/strong&gt; - a quasiparticle made from bits of a magnetic field on motion across a material&lt;/p&gt;</content><author><name></name></author><summary type="html">source: Nautilus</summary></entry><entry><title type="html">Notes: Feminism is for Everybody</title><link href="http://localhost:4000/notes/bell-hooks-feminism/" rel="alternate" type="text/html" title="Notes: Feminism is for Everybody" /><published>2021-05-03T22:07:43+02:00</published><updated>2021-05-03T22:07:43+02:00</updated><id>http://localhost:4000/notes/bell-hooks-feminism</id><content type="html" xml:base="http://localhost:4000/notes/bell-hooks-feminism/">&lt;p&gt;source: &lt;a href=&quot;https://www.plutobooks.com/9780745317335/feminism-is-for-everybody/&quot;&gt;Feminism is for Everybody&lt;/a&gt;&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;h1 id=&quot;1-feminist-politics-where-we-stand&quot;&gt;1: Feminist Politics: Where We Stand&lt;/h1&gt;
+
+&lt;p&gt;&lt;strong&gt;Feminism&lt;/strong&gt;: A movement to end &lt;strong&gt;sexism, sexist exploitation&lt;/strong&gt; and &lt;strong&gt;oppression&lt;/strong&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Feminism does not imply that men are the enemy&lt;/li&gt;
+  &lt;li&gt;Sexist thinking and action are the problem, whether people who perpetuate it are male or female&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;The more common understanding of feminism is women who are committed to &lt;strong&gt;gender equality&lt;/strong&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;equal pay for equal work&lt;/li&gt;
+  &lt;li&gt;shared household and parenting work&lt;/li&gt;
+  &lt;li&gt;reproductive rights&lt;/li&gt;
+  &lt;li&gt;preventing rape &amp;amp; domestic violence&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;This version of feminism misses the point that sexist thinking can be present in spaces that are female&lt;/p&gt;
+
+&lt;p&gt;Early feminists thought about the nature of male domination in settings where people were working to fight classism and racism&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;The very leaders who “were telling the world about the importance of freedom” were “subordinating women in their ranks”&lt;/li&gt;
+  &lt;li&gt;struggles for class or racial equality led to struggles for gender equality&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Sisterhood cannot be powerful when women are competitively at war with one another&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;feminist discussions were often disrupted by discussions about class and race&lt;/li&gt;
+  &lt;li&gt;we can only become “sisters in struggle” if we confront the ways women dominate and exploit other women&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;strong&gt;Reformist Feminism:&lt;/strong&gt; emphasize gender equality&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;an easier task is to alter the system so that women have more rights&lt;/li&gt;
+  &lt;li&gt;Bell asserts that white suprematists benefit from granting women’s rights, so they’re more likely to go with reformist feminism than radical feminism&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;strong&gt;Revolutionary/Radical Feminism:&lt;/strong&gt; want to bring and end to patriarchy and sexism&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;not content to alter the system&lt;/li&gt;
+  &lt;li&gt;most women stop considering radical feminist visions once they start to gain power within the existing structure&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;strong&gt;Lifestyle Feminism:&lt;/strong&gt; Idea that feminism is apolitical&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;assumption that someone can be feminist without challenging themselves or their culture&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;The feminism we know about is either explicitly anti male, or it’s reformist. This benefits people currently in power&lt;/p&gt;
+
+&lt;h1 id=&quot;2-consciousness-raising-a-constant-change-of-heart&quot;&gt;2: Consciousness-Raising: A Constant Change of Heart&lt;/h1&gt;
+
+&lt;p&gt;Being born female doesn’t make you a feminist&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Women are socialized just as much as men&lt;/li&gt;
+  &lt;li&gt;don’t benefit from sexist thinking as much as men do&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Feminists emphasize patriarchy as a system of domination&lt;/p&gt;
+
+&lt;h3 id=&quot;some-history&quot;&gt;Some history&lt;/h3&gt;
+
+&lt;p&gt;&lt;strong&gt;consciousness-raising groups:&lt;/strong&gt; groups of women, usually, in people’s homes, talking about feminism and sexism&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;often led by seasoned feminists, used to recruit new converts&lt;/li&gt;
+  &lt;li&gt;women often used these groups therapeutically&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Soon feminists circles became bigger&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;printed ideas into books&lt;/li&gt;
+  &lt;li&gt;became an academic discipline&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;by the late 70s, women’s studies was on it’s way to becoming an accepted academic discipline. The downside was that radical feminism was being replaced by reformist feminism&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;academic circles became a site of class privilege&lt;/li&gt;
+  &lt;li&gt;universities are conservative corporate structures&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;The accepted definition of feminism began to change&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;women would call themselves feminist when trying to improve their economic positions&lt;/li&gt;
+  &lt;li&gt;there was a shift to equality in the workforce&lt;/li&gt;
+  &lt;li&gt;confronting internalized sexism lost currency&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;By the early 80s, “politicized sisterhood” became less common, and “lifestyle feminism” became more common&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;going forward&lt;/strong&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;it’s important to conduct consciousness-raising groups for men&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h1 id=&quot;3-sisterhood-is-still-powerful&quot;&gt;3: Sisterhood is still powerful&lt;/h1&gt;
+
+&lt;p&gt;Woman have internalized sexism&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;we’re in competition with each other for patriarchal approval&lt;/li&gt;
+  &lt;li&gt;we judge and punish each other&lt;/li&gt;
+  &lt;li&gt;as long as women use class and race to dominate other women, feminist sisterhood cannot be realized&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;It’s important to bond. Not against men, but for the protection of women. &lt;strong&gt;Political solidarity between women undermines sexism and sets the stage for the overthrow of the patriarchy&lt;/strong&gt;&lt;/p&gt;
+
+&lt;h1 id=&quot;4-feminist-education-for-critical-consciousness&quot;&gt;4: Feminist Education for Critical Consciousness&lt;/h1&gt;
+
+&lt;p&gt;early feminist theory included:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;analysis of sexism&lt;/li&gt;
+  &lt;li&gt;strategies for challenging patriarchy&lt;/li&gt;
+  &lt;li&gt;new models of social interaction&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;women’s studies programs in colleges made it possible to focus on work by women.&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;feminists criticized all-male canons of scholarship&lt;/li&gt;
+  &lt;li&gt;most academic programs focused on race and class in by late 80s&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;downside: feminist theory began to become exclusive&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;more attention on theory that was metalinguistic&lt;/li&gt;
+  &lt;li&gt;feminist theory no longer tied to feminist movement&lt;/li&gt;
+  &lt;li&gt;it was deradicalized. It became more similar to other academic studies&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Bell Hooks is calling for:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;feminists going door to door, passing out literature and talking to people face to face&lt;/li&gt;
+  &lt;li&gt;similar to religious movements&lt;/li&gt;
+  &lt;li&gt;feminism in children’s literature&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;This is because it will make feminism more accessible&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;if feminists don’t make their case to everyone, the media will&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h1 id=&quot;5-reproductive-rights&quot;&gt;5: Reproductive Rights&lt;/h1&gt;
+
+&lt;p&gt;&lt;strong&gt;in order to&lt;/strong&gt; have gender equity around the issue of free love, &lt;strong&gt;women needed&lt;/strong&gt; access to contraception and abortion&lt;/p&gt;
+
+&lt;p&gt;highlighting &lt;em&gt;abortion **&lt;/em&gt;&lt;em&gt;*rather than *reproductive rights&lt;/em&gt; - this highlighted class bias of women at the forefront of the movement&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;wealthy white women had access to contraception, most women did not&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;We’re still dealing with this! The anti-abortion platform has &lt;strong&gt;mainly targeted state-funded abortions&lt;/strong&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;This means that poor women suffer most&lt;/li&gt;
+  &lt;li&gt;This means that we lose ground on &lt;strong&gt;all reproductive issues&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h1 id=&quot;6-beauty&quot;&gt;6: Beauty&lt;/h1&gt;
+
+&lt;p&gt;All women reaped the benefit of feminist interventions (pants are great), but most women are embracing sexist beauty standards&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Critique in and of itself does not lead to change&lt;/strong&gt; - feminist critique of beauty has left many women with no alternative&lt;/p&gt;
+
+&lt;h1 id=&quot;7-class-struggle&quot;&gt;7: Class Struggle&lt;/h1&gt;
+
+&lt;p&gt;goals for feminists:&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;become economically self-sufficient&lt;/li&gt;
+  &lt;li&gt;help other women better themselves economically&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;Class was the biggest difference between most women in the women’s liberation movement, class interests superseded feminist issues, and privileged women acted as if the feminist movement was for them&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;reformist vision demanded equal rights &lt;em&gt;within &lt;strong&gt;existing&lt;/strong&gt; class structures&lt;/em&gt;&lt;/li&gt;
+  &lt;li&gt;revolutionary models called for &lt;em&gt;fundamental change of existing structure&lt;/em&gt;&lt;/li&gt;
+  &lt;li&gt;when women gain power and act like men, it undermines feminist politics&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;The media didn’t highlight working class feminist issues&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;only middle and upper class women were housewives&lt;/li&gt;
+  &lt;li&gt;low-paying jobs already existed for women. Middle class women just didn’t want to do them&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Only middle class women become economically self sufficient when they work outside the home.&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Affluent women thought that economic gains for them translated to progress for all women&lt;/li&gt;
+  &lt;li&gt;Just because women work outside the home, this doesn’t mean housework is equally shared between partners&lt;/li&gt;
+  &lt;li&gt;“power feminism”&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Ways we made life worse for working class women:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;dismantling the welfare system&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h1 id=&quot;8-global-feminism&quot;&gt;8: Global Feminism&lt;/h1&gt;
+
+&lt;p&gt;Feminism isn’t a response to neocolonialism, but it needs to address it&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Feminists should strengthen political solidarity with women internationally&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;power feminism -&lt;/strong&gt; straight privileged white women are displayed as examples of success, however power feminism is aligned with the ruling class&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;many power feminists are projecting their ideals globally&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;it’s easy to address global issues of gender exploitation from a perspective of neocolonialism&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;label other cultures as “barbaric”&lt;/li&gt;
+  &lt;li&gt;ignore parallel issues happening at home&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h1 id=&quot;9-women-at-work&quot;&gt;9: Women at work&lt;/h1&gt;
+
+&lt;p&gt;Work doesn’t mean liberation&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;1/3 of the workforce was female back in the 60s&lt;/li&gt;
+  &lt;li&gt;if you work for low wages, you’re not economically self sufficient&lt;/li&gt;
+  &lt;li&gt;if you use your money to consume instead of to enhance your quality of life, you’re not liberated&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;The right careers might mean liberation&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;self sufficient women can leave abusive relationships&lt;/li&gt;
+  &lt;li&gt;increases self-esteem&lt;/li&gt;
+  &lt;li&gt;participation in a community&lt;/li&gt;
+  &lt;li&gt;the home becomes a place of relaxation&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;“equal pay for equal work”&lt;/p&gt;
+
+&lt;p&gt;Some women blame feminism for making them work, but the thing that makes us work so hard is consumer capitalism&lt;/p&gt;
+
+&lt;p&gt;Poverty is a central woman’s issue&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;welfare - has a stigma&lt;/li&gt;
+  &lt;li&gt;unemployment is becoming more common&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Some men blame unemployment on women in the workforce&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;they see it as their role to be providers&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h1 id=&quot;10-race--gender&quot;&gt;10: Race &amp;amp; Gender&lt;/h1&gt;
+
+&lt;p&gt;A feminist movement will be incomplete if it’s not anti-racist. This is because there can’t be real sisterhood between white women and women of color if we ignore white supremacy&lt;/p&gt;
+
+&lt;p&gt;Just because someone participates in an anti-racist struggle doesn’t mean they’ve divested in white supremacy&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;abolitionists, for example, could still be racist&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;When activists emphasize gender, race is deemphasized&lt;/p&gt;
+
+&lt;p&gt;it’s difficult to be anti-racist if society is racially segregated&lt;/p&gt;
+
+&lt;h1 id=&quot;11-ending-violence&quot;&gt;11: Ending Violence&lt;/h1&gt;
+
+&lt;p&gt;it’s vital that parents raise their kids nonviolently&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;domestic violence&lt;/strong&gt; happens because of the following belief: it’s acceptable for one person to control another through coercive force&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;the term makes it sound unthreatening, but people are being beaten and murdered in their homes&lt;/li&gt;
+  &lt;li&gt;it’s important to recognize that men and women use violence&lt;/li&gt;
+  &lt;li&gt;domestic violence is a direct outcome of sexism
+    &lt;ul&gt;
+      &lt;li&gt;“that will not end until sexism ends” neither will end. It might be unrealistic to make the goal the “end of sexism” or the “end of domestic violence”&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;often, perpetrators of domestic violence are themselves dominated in other spaces&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;a feminist movement must have a goal of ending all forms of violence&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;once again, this is unrealistic&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;domestic violence against children:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;many parents use physical or verbal violence against children. This teaches children that use of violence to dominate and control is acceptable&lt;/li&gt;
+  &lt;li&gt;children have no way to organize against this&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;sexist thinking socializes boys to be “killers” as soldiers&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;imperialism maintains coercive power over other nations&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h1 id=&quot;12-feminist-masculinity&quot;&gt;12: Feminist Masculinity&lt;/h1&gt;
+
+&lt;p&gt;A feminist vision embraces feminist masculinity, and we need new strategies and theories to achieve this&lt;/p&gt;
+
+&lt;p&gt;sexism against men is still sexism. Men are not the problem&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Both men and women perpetuate sexism&lt;/li&gt;
+  &lt;li&gt;the patriarchy is harmful to both men and women&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;The idea that men are the problem comes from the following:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;anti-feminist men have a strong public voice&lt;/li&gt;
+  &lt;li&gt;many women have intimate relationships with sexist men&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Problem within the feminist movement: anti-male factions&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;insist that all men are oppressors&lt;/li&gt;
+  &lt;li&gt;resent presence of anti-sexist men&lt;/li&gt;
+  &lt;li&gt;portray men as the enemy&lt;/li&gt;
+  &lt;li&gt;represent all women as victims&lt;/li&gt;
+  &lt;li&gt;ignore class privilege&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Feminism was portrayed as anti-male, which led to an anti-female men’s movement&lt;/p&gt;
+
+&lt;p&gt;Feminist theory should have offered more liberatory visions of masculinity&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;this would have made it difficult to portray the movement as anti-male&lt;/li&gt;
+  &lt;li&gt;feminist theory doesn’t present a good alternative to patriarchal masculinity, except for a more “feminine” version of men&lt;/li&gt;
+  &lt;li&gt;we need a version of masculinity where self esteem and self love are central (as opposed to deriving value from domination)&lt;/li&gt;
+  &lt;li&gt;men’s movement teaches men to connect with their feelings&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h1 id=&quot;13-feminist-parenting&quot;&gt;13: Feminist Parenting&lt;/h1&gt;
+
+&lt;p&gt;Feminist goals:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;end patriarchal domination of children (by men or women)&lt;/li&gt;
+  &lt;li&gt;make a family where children are safe and free&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;There’s a hope that if feminists can raise children without sexism, we can create a future world where an anti-sexist movement isn’t needed&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;there’s been a focus on girls because of the assumption that boys had more privilege&lt;/li&gt;
+  &lt;li&gt;female parents can transmit sexist thinking&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;In a culture of dominance (white supremacist capitalist patriarchal cultures), children don’t have rights&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;adult violence against children is seen as normal&lt;/li&gt;
+  &lt;li&gt;women (the primary caregivers) are often the primary culprits of this violence&lt;/li&gt;
+  &lt;li&gt;ethics of domination: the powerful can subordinate over the powerless however they want&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;motherhood&quot;&gt;Motherhood&lt;/h3&gt;
+
+&lt;p&gt;we need a greater cultural appreciation of motherhood&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;there had been a devaluation of motherhood within feminism in favor to working outside the home&lt;/li&gt;
+  &lt;li&gt;feminist thinkers challenged this&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;societal disparagement of single mothers&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;this has been hugely damaging to the feminist movement&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h1 id=&quot;14-marriage--partnership&quot;&gt;14: Marriage &amp;amp; Partnership&lt;/h1&gt;
+
+&lt;p&gt;gender equity creates a context where each member of a couple is likely to be affirmed&lt;/p&gt;
+
+&lt;p&gt;there’s a feminist critique of marriage&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;this is strengthened by the sexual liberation movement and the demand for birth control&lt;/li&gt;
+  &lt;li&gt;contemporary feminists called traditional marriage a form of sexual slavery&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;sexual liberation leads to better sex for everyone&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;idea that “virtuous women” are not sexually active makes for bad sex&lt;/li&gt;
+  &lt;li&gt;when women expect sexual pleasure, it’s better sex&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;non-monogamous relationships can lead to power imbalances within patriarchy&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;housework&lt;/strong&gt; - most young people expect to split the housework between partners&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;parenting&lt;/strong&gt; - we don’t think of women as primarily mothers, so our perception of the nature of marriages has changed&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;when there are no children in a relationship, it’s easier for a couple to be peers&lt;/li&gt;
+  &lt;li&gt;since a patriarchal society expects women to do most of the parenting, things tend to become less equal when kids are born&lt;/li&gt;
+  &lt;li&gt;parenting is better when both parents participate equally&lt;/li&gt;
+  &lt;li&gt;generally, women have to choose between a career and children. This is not the case for men, which indicates that our society is still sexist&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Feminists critique biological determinism in every area except motherhood&lt;/p&gt;
+
+&lt;h1 id=&quot;15-sexual-freedom&quot;&gt;15: Sexual Freedom&lt;/h1&gt;
+
+&lt;p&gt;&lt;strong&gt;mutual respect is essential for sexual freedom&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;it’s important for women to see ourselves as having value. This must be independent of being an object of male desire&lt;/p&gt;
+
+&lt;p&gt;sexist thinking divides women into madonna/whore roles&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;no basis for constructing a healthy sexual self&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;sexual freedom requires:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;dependable, safe birth control&lt;/li&gt;
+  &lt;li&gt;a working understanding of one’s own body&lt;/li&gt;
+  &lt;li&gt;an understanding of the meaning of sexual integrity (what?)&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;sexual promiscuity and sexual liberation are not the same thing&lt;/p&gt;
+
+&lt;p&gt;a culture of domination assumes that every relationship has a dominant and submissive party&lt;/p&gt;
+
+&lt;p&gt;there’s a subset of feminists that opposes all heterosexual sex&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;makes the argument that all sex was coercive&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;strong&gt;sexuality is tied to power&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;porn&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;the feminist movement is divided on this issue&lt;/li&gt;
+  &lt;li&gt;opposition of porn has made the movement seem anti-sex&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Some women want sex, and others don’t. What happens when men in a relationship don’t get sex when they want it?&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;no one is responsible for making sure they get sex&lt;/li&gt;
+  &lt;li&gt;women should feel free to say no to sex without fear of punishment (men finding sex elsewhere)&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;strong&gt;prostitution -&lt;/strong&gt; if a woman sells her body because it’s the only way to get what she needs, she doesn’t have control over her own body&lt;/p&gt;
+
+&lt;p&gt;sexual liberation can include&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;same-sex encounters&lt;/li&gt;
+  &lt;li&gt;masturbation&lt;/li&gt;
+  &lt;li&gt;celibacy&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h1 id=&quot;16-lesbianism--feminism&quot;&gt;16: Lesbianism &amp;amp; Feminism&lt;/h1&gt;
+
+&lt;p&gt;women don’t need to depend on men for well-being and happiness&lt;/p&gt;
+
+&lt;p&gt;“&lt;strong&gt;man-identified woman&lt;/strong&gt;” - drop feminist principles if they interfere with romantic concerns with men&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;most straight women place more emphasis on romantic relationship than feminism&lt;/li&gt;
+  &lt;li&gt;it’s easier to get by without seeking male approval if you don’t try to get into relationships with men&lt;/li&gt;
+  &lt;li&gt;however, lesbians can be just as sexist as straight women&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;building mutually satisfying bonds is just as difficult for lesbians&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;there’s always a danger of one party dominating the other&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;women who claim to be feminist while perpetuating homophobia are misguided&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;anyone who demands that lesbians follow a set of rigid moral standards  to make straight people comfortable is perpetuating homophobia&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h1 id=&quot;17-the-heart-of-feminism&quot;&gt;17: The Heart of Feminism&lt;/h1&gt;
+
+&lt;p&gt;Feminism gives us the foundation to create loving bonds. Love can never take root in a relationship based on domination and coercion. Mutual partnership is the foundation of love&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Because of this, women in heterosexual relationships must make sure their partners are feminists&lt;/li&gt;
+  &lt;li&gt;Early feminist though surrounding love was not complex enough, and it accepted many patriarchal assumptions surrounding love&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Patriarchal understanding of romantic love is something that makes someone powerless&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;the deal: emotional women provide love, powerful men provide protection&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Motherhood without feminism: a situation where a woman tries to live vicariously through her children. Moms become dominating&lt;/p&gt;
+
+&lt;h1 id=&quot;18-spirituality--feminism&quot;&gt;18: Spirituality &amp;amp; Feminism&lt;/h1&gt;
+
+&lt;p&gt;There can be no feminist transformation of our culture without a transformation in our religious beliefs&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;requires control of the female body&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;early feminist criticized patriarchal religion. Fundamentalist patriarchal religion prevents the spread of feminism&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;metaphysical dualism:&lt;/strong&gt; assumption that the world can be understood by binary categories, and each of these has a good and a bad&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;idealogical foundation of all forms of group oppression&lt;/li&gt;
+  &lt;li&gt;encourages belief that inequality is “natural”&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;alternative: creation spirituality, liberation theologies&lt;/p&gt;
+
+&lt;h1 id=&quot;19-visionary-feminism&quot;&gt;19: Visionary Feminism&lt;/h1&gt;
+
+&lt;p&gt;Dream of feminism: replace culture of domination with a fold of communalism and social democracy. &lt;strong&gt;This is inherently a radical ideology&lt;/strong&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;no discrimination based on race or gender&lt;/li&gt;
+  &lt;li&gt;mutuality and interdependency&lt;/li&gt;
+  &lt;li&gt;planet survives, everyone has access to peace and well-being&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Fewer women are interested in dismantling the current system&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;result of class power within the system&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;strong&gt;fundamental goal&lt;/strong&gt;: enhance personal power for all women&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;equal rights isn’t good enough. We need to lift up all women, especially poor women&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;strong&gt;educating the public&lt;/strong&gt;: we need diverse material that’s easy to read&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;challenges&lt;/strong&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;perception that anything related to women is feminist&lt;/li&gt;
+  &lt;li&gt;link between male violence and male domination is not understood&lt;/li&gt;
+  &lt;li&gt;alternative and reformist “feminist” ideologies&lt;/li&gt;
+  &lt;li&gt;anti-feminist backlash&lt;/li&gt;
+  &lt;li&gt;feminists who won’t accept men as comrades&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;The government in the current system gave us rights, but that same government can take them away&lt;/p&gt;</content><author><name></name></author><summary type="html">source: Feminism is for Everybody</summary></entry><entry><title type="html">I want skylights</title><link href="http://localhost:4000/notes/skylights" rel="alternate" type="text/html" title="I want skylights" /><published>2021-05-02T22:07:43+02:00</published><updated>2021-05-02T22:07:43+02:00</updated><id>http://localhost:4000/notes/skylights</id><content type="html" xml:base="http://localhost:4000/notes/skylights">&lt;p&gt;If I build a home, I want to include skylights in spaces that are generally neglected.&lt;/p&gt;
 
 &lt;h1 id=&quot;in-the-bathroom&quot;&gt;In the Bathroom&lt;/h1&gt;
 
@@ -67,54 +2460,81 @@
       &lt;td&gt;&lt;img src=&quot;/assets/skylights/AF7C39C8-B34E-4A26-9804-AE3ABFBE199C.jpeg&quot; alt=&quot;AF7C39C8-B34E-4A26-9804-AE3ABFBE199C.jpeg&quot; /&gt;&lt;/td&gt;
     &lt;/tr&gt;
   &lt;/tbody&gt;
-&lt;/table&gt;</content><author><name></name></author><summary type="html">If I build a home, I want to include skylights in spaces that are generally neglected.</summary></entry><entry><title type="html">Unemployment 2020</title><link href="http://localhost:4000/architecture/2020/07/02/unemployment.html" rel="alternate" type="text/html" title="Unemployment 2020" /><published>2020-07-02T22:07:43+02:00</published><updated>2020-07-02T22:07:43+02:00</updated><id>http://localhost:4000/architecture/2020/07/02/unemployment</id><content type="html" xml:base="http://localhost:4000/architecture/2020/07/02/unemployment.html">&lt;p&gt;I wanted to review computer science fundametals during quarentine, so I took an &lt;a href=&quot;https://www.coursera.org/learn/algorithms-part1&quot;&gt;algorithms course&lt;/a&gt;. I decided to do my homework using Python rather than Java, and I published my work &lt;a href=&quot;https://github.com/ngozinwogwugwu/exercises/tree/master/data_structures_homeworks&quot;&gt;here&lt;/a&gt;&lt;/p&gt;
+&lt;/table&gt;</content><author><name></name></author><summary type="html">If I build a home, I want to include skylights in spaces that are generally neglected.</summary></entry><entry><title type="html">Notes: The Vulnerable World Hypothesis</title><link href="http://localhost:4000/notes/vulnerable-world/" rel="alternate" type="text/html" title="Notes: The Vulnerable World Hypothesis" /><published>2021-03-21T21:07:43+01:00</published><updated>2021-03-21T21:07:43+01:00</updated><id>http://localhost:4000/notes/vulnerable-world</id><content type="html" xml:base="http://localhost:4000/notes/vulnerable-world/">&lt;p&gt;source: &lt;a href=&quot;https://onlinelibrary.wiley.com/doi/10.1111/1758-5899.12718&quot;&gt;The Vulnerable World Hypothesis&lt;/a&gt;, by Nick Bostrom&lt;/p&gt;
 
-&lt;p&gt;The homework I had the most fun with was &lt;a href=&quot;https://github.com/ngozinwogwugwu/exercises/tree/master/data_structures_homeworks/percolation&quot;&gt;percolation&lt;/a&gt;&lt;/p&gt;
+&lt;hr /&gt;
 
-&lt;h1 id=&quot;percolation&quot;&gt;Percolation&lt;/h1&gt;
-&lt;p&gt;&lt;img src=&quot;/assets/unemployment/percolation_animation.png&quot; alt=&quot;percolation_animation.png&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;vulnerable world&lt;/strong&gt; — a world where there is a technology almost certainly destroys civilization. Makes us reconsider:&lt;/p&gt;
 
-&lt;p&gt;I model &lt;a href=&quot;https://en.wikipedia.org/wiki/Percolation&quot;&gt;percolation&lt;/a&gt; here using an &lt;em&gt;n&lt;/em&gt; by &lt;em&gt;n&lt;/em&gt; grid. The grid percolates if there is a path from the top to the bottom through open nodes.&lt;/p&gt;
-
-&lt;p&gt;The goal is to use a Monte Carlo simulation to determine the value &lt;em&gt;p&lt;/em&gt;, which represents the ratio of open nodes to total nodes in the system where we can expect the system to percolate.&lt;/p&gt;</content><author><name></name></author><summary type="html">I wanted to review computer science fundametals during quarentine, so I took an algorithms course. I decided to do my homework using Python rather than Java, and I published my work here</summary></entry><entry><title type="html">SQLite as a Teacher</title><link href="http://localhost:4000/sqlite/databases/2019/05/09/sqlite-as-a-teacher.html" rel="alternate" type="text/html" title="SQLite as a Teacher" /><published>2019-05-09T22:07:43+02:00</published><updated>2019-05-09T22:07:43+02:00</updated><id>http://localhost:4000/sqlite/databases/2019/05/09/sqlite-as-a-teacher</id><content type="html" xml:base="http://localhost:4000/sqlite/databases/2019/05/09/sqlite-as-a-teacher.html">&lt;p&gt;The University of Chicaco published a collection of programming assignments designed for teaching the internals of databases. It’s called &lt;a href=&quot;http://chi.cs.uchicago.edu/chidb/index.html&quot;&gt;chidb&lt;/a&gt;, and I’m giving it a try. I’ve been using relational databases for years, but chidb has been a great way for me to view database management systems as something other than a black box. Bonus: This’ll help me get acquainted with C&lt;/p&gt;
-
-&lt;h3 id=&quot;chidb-quickstart&quot;&gt;Chidb Quickstart&lt;/h3&gt;
-&lt;p&gt;One drawback to this online course is that there’s not a lot of guidance. This means that it took me a couple days to get set up. If you want to give chidb a try, and you &lt;em&gt;don’t&lt;/em&gt; want to spend a couple days getting setup, try using my &lt;a href=&quot;https://github.com/ngozinwogwugwu/chidb_quickstart&quot;&gt;chidb quickstart repo&lt;/a&gt;. If you clone it and follow the steps in the readme, you’ll have a working docker container with a chidb bind mount in about five minutes. This means that you’ll be able to make changes to the chidb repo on your own machine, and use a docker container to install and run it. My favorite part about this is that you won’t need to install any mystery software on your own machine.&lt;/p&gt;
-
-&lt;h3 id=&quot;sqlite-header-viewer&quot;&gt;SQLite Header Viewer&lt;/h3&gt;
-&lt;p&gt;Getting though the unit tests for &lt;a href=&quot;http://chi.cs.uchicago.edu/chidb/assignment_btree.html#step-1-opening-a-chidb-file&quot;&gt;Assignment 1, Step 1&lt;/a&gt; takes quite a bit of time if you’re starting from scratch. If you want to view the SQLite headers that chidb uses for the unit tests, you can use &lt;a href=&quot;http://man7.org/linux/man-pages/man1/hexdump.1.html&quot;&gt;hexdump&lt;/a&gt;, or you can try out my &lt;a href=&quot;https://ngozinwogwugwu.github.io/mini_frontend_projects/&quot;&gt;SQLite Header Viewer&lt;/a&gt;, which will tell you exactly what is wrong with a corrupted SQLite header&lt;/p&gt;
-
-&lt;h3 id=&quot;notes&quot;&gt;Notes&lt;/h3&gt;
-&lt;p&gt;If you’d like to check out &lt;a href=&quot;https://github.com/ngozinwogwugwu/chidb_quickstart/blob/master/ngozis_notes.md&quot;&gt;my notes&lt;/a&gt; or &lt;a href=&quot;https://github.com/ngozinwogwugwu/chidb_quickstart/tree/master/ngozis_work&quot;&gt;my work&lt;/a&gt;, they’re both on the chidb quickstart github repo&lt;/p&gt;
-
-&lt;h3 id=&quot;quick-shoutout&quot;&gt;Quick Shoutout!&lt;/h3&gt;
-&lt;p&gt;I wouldn’t have made it this far if it weren’t for &lt;a href=&quot;https://github.com/bajh&quot;&gt;Brandon Hopkins&lt;/a&gt;, who’s attending the same &lt;a href=&quot;https://recurse.com&quot;&gt;Recurse Center&lt;/a&gt; batch as me. He helped me get set up and was there to answer questions whenever I got stuck&lt;/p&gt;</content><author><name></name></author><summary type="html">The University of Chicaco published a collection of programming assignments designed for teaching the internals of databases. It’s called chidb, and I’m giving it a try. I’ve been using relational databases for years, but chidb has been a great way for me to view database management systems as something other than a black box. Bonus: This’ll help me get acquainted with C</summary></entry><entry><title type="html">How I Keep Notes</title><link href="http://localhost:4000/notes/wikis/2019/04/20/how-I-keep-notes.html" rel="alternate" type="text/html" title="How I Keep Notes" /><published>2019-04-20T22:07:43+02:00</published><updated>2019-04-20T22:07:43+02:00</updated><id>http://localhost:4000/notes/wikis/2019/04/20/how-I-keep-notes</id><content type="html" xml:base="http://localhost:4000/notes/wikis/2019/04/20/how-I-keep-notes.html">&lt;p&gt;You might notice that this blog is pretty empty.&lt;/p&gt;
-
-&lt;p&gt;I haven’t found a topic that’s perfect for my first blog post yet, but I do keep pretty detailed notes on &lt;a href=&quot;https://github.com/ngozinwogwugwu/ngozinwogwugwu.github.io/wiki&quot;&gt;a wiki&lt;/a&gt;, so check it out if you’re curious about what I’ve been up to.&lt;/p&gt;</content><author><name></name></author><summary type="html">You might notice that this blog is pretty empty.</summary></entry><entry><title type="html">Projects</title><link href="http://localhost:4000/projects/" rel="alternate" type="text/html" title="Projects" /><published>2018-06-06T22:07:43+02:00</published><updated>2018-06-06T22:07:43+02:00</updated><id>http://localhost:4000/side-projects</id><content type="html" xml:base="http://localhost:4000/projects/">&lt;h2 id=&quot;nwodb&quot;&gt;NwoDB&lt;/h2&gt;
-&lt;p&gt;I wanted to learn more about databases, so I made one.&lt;/p&gt;
-
-&lt;p&gt;Going off of &lt;a href=&quot;https://github.com/cstack&quot;&gt;Connor Stack&lt;/a&gt;’s tutorial, &lt;a href=&quot;https://cstack.github.io/db_tutorial/&quot;&gt;Let’s Build a Simple Database&lt;/a&gt;, I decided to make my own. I followed along with Stack’s tutorial using C, then I recreated the functionality in Python.&lt;/p&gt;
-
-&lt;p&gt;If you want to see my code or try it for yourself, go &lt;a href=&quot;https://github.com/ngozinwogwugwu/nwodb&quot;&gt;here&lt;/a&gt;.&lt;/p&gt;
-
-&lt;h2 id=&quot;quick-hits&quot;&gt;Quick Hits&lt;/h2&gt;
-&lt;p&gt;I compiled some of the smaller one-off projects that I’ve made onto one page&lt;/p&gt;
 &lt;ul&gt;
-  &lt;li&gt;&lt;strong&gt;Markdown Viewer&lt;/strong&gt;: let’s you see the results of your markdown text in real time&lt;/li&gt;
-  &lt;li&gt;&lt;strong&gt;SQLite Header Viewer&lt;/strong&gt;: displays the header of a SQLite file, as defined in the &lt;a href=&quot;http://chi.cs.uchicago.edu/chidb/fileformat.html#file-header&quot;&gt;ChiDB course&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;strong&gt;Coffee Clicker&lt;/strong&gt;: helps you decide what kind of coffee to get&lt;/li&gt;
-  &lt;li&gt;&lt;strong&gt;Scooter Table&lt;/strong&gt;: displays a real-time list of Coup scooters in Berlin&lt;/li&gt;
+  &lt;li&gt;ubiquitous surveillance&lt;/li&gt;
+  &lt;li&gt;unipolar world order&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;p&gt;check them out &lt;a href=&quot;https://ngozinwogwugwu.github.io/mini_frontend_projects/&quot;&gt;here&lt;/a&gt;&lt;/p&gt;
+&lt;h3 id=&quot;the-urn-and-the-black-ball&quot;&gt;The Urn and the Black Ball&lt;/h3&gt;
 
-&lt;h2 id=&quot;my-personal-wiki&quot;&gt;My Personal Wiki&lt;/h2&gt;
-&lt;p&gt;I’ve been taking notes of some of the things I’ve been learning.&lt;/p&gt;
+&lt;p&gt;Developing a technology is like pulling balls out of an urn. The majority of them are “white”, or benign. A &lt;strong&gt;black ball&lt;/strong&gt; is a technology that will destroy civilization. We haven’t pulled any black balls out the urn yet&lt;/p&gt;
+
 &lt;ul&gt;
-  &lt;li&gt;&lt;a href=&quot;https://github.com/ngozinwogwugwu/ngozinwogwugwu.github.io/wiki#designing-data-intensive-applications&quot;&gt;Designing Data Intensive Applications Notes&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://github.com/ngozinwogwugwu/ngozinwogwugwu.github.io/wiki#recurse-center-learning&quot;&gt;Things I’ve been Learning at RC&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://github.com/ngozinwogwugwu/ngozinwogwugwu.github.io/wiki#databases&quot;&gt;Databases&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;you can’t “put a ball back into the urn”&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;h2 id=&quot;rc-robot&quot;&gt;RC-Robot&lt;/h2&gt;
-&lt;p&gt;I paired with &lt;a href=&quot;https://github.com/tvieregge/&quot;&gt;another RC-er&lt;/a&gt; to build &lt;a href=&quot;https://github.com/tvieregge/rc-robot&quot;&gt;RC-Robot&lt;/a&gt;, the robot that tries to follow you around.&lt;/p&gt;</content><author><name></name></author><summary type="html">NwoDB I wanted to learn more about databases, so I made one.</summary></entry></feed>
+&lt;h3 id=&quot;easy-nukes&quot;&gt;easy nukes&lt;/h3&gt;
+
+&lt;p&gt;&lt;strong&gt;Leo Szilard&lt;/strong&gt; - Physicist. Tried to persuade other physicists not to develop nukes because nukes are dangerous. Scientific knowledge will make dangerous insights more accessible&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;easy nukes&lt;/strong&gt; - what if all you needed to make a nuke was to electrify a wire between two panes of glass. &lt;em&gt;Someone&lt;/em&gt; would use it to make a nuke and attack a city.  Would we need to get rid of glass? Wire? Electricity? What would we do to people who we found with glass? Would we need to be an authoritarian society to prevent people from getting glass?&lt;/p&gt;
+
+&lt;h3 id=&quot;vulnerable-world-hypothesis&quot;&gt;Vulnerable world hypothesis&lt;/h3&gt;
+
+&lt;p&gt;If technological development continues, then at some point we’ll develop a technology that will make it extremely likely that we destroy civilization&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;semi-anarchic default condition -&lt;/strong&gt; a world with&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;insufficient preventative policing&lt;/li&gt;
+  &lt;li&gt;insufficient global governance&lt;/li&gt;
+  &lt;li&gt;diverse motivations&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;&lt;strong&gt;existential risk vulnerable world hypothesis&lt;/strong&gt; - the technology would by default destroy life on earth or destroy our potential for future value&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;when would the risk and the catastrophe justify government surveillance&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Vulnerable periods can open and close. They’d close when we develop a new protective technology that could stop the dangerous tech. A world can also be &lt;em&gt;stabilized.&lt;/em&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;types-of-vulnerabilities&quot;&gt;Types of Vulnerabilities&lt;/h2&gt;
+
+&lt;h3 id=&quot;type-1-easy-nukes&quot;&gt;Type-1: easy nukes&lt;/h3&gt;
+
+&lt;p&gt;tech that’s destructive and easy to use. If we have a semi-anarchic condition, they’ll probably destroy civilization&lt;/p&gt;
+
+&lt;p&gt;We should consider &lt;em&gt;ease&lt;/em&gt; and &lt;em&gt;destructiveness&lt;/em&gt; of different technologies&lt;/p&gt;
+
+&lt;p&gt;Another factor is the diversity of motivations within a population. Most people don’t want to use nukes on anyone, but you only need one&lt;/p&gt;
+
+&lt;h3 id=&quot;type-2a-safe-first-strike&quot;&gt;Type-2a: safe first strike&lt;/h3&gt;
+
+&lt;p&gt;Tech that incentivizes powerful actors to cause destruction (like during the cold war. One of the things that saved us during the cold war was the ability of the superpowers to strike back after an initial attack)&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;If there’s a case where there’s a benefit to nuclear aggression, nuclear war becomes more likely&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;type-2b-worse-global-warming&quot;&gt;Type-2b: worse global warming&lt;/h3&gt;
+
+&lt;p&gt;some tech where many actors (like, half of people on earth) are incentivized to take a slightly damaging action. The combined effect of all these actions becomes a problem that could devastate civilization&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;what if, for instance, we didn’t know that global warming was happening until it was too late, or if there were multiple positive feedback loops&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;type-0-surprising-strangelets&quot;&gt;Type-0: surprising strangelets&lt;/h3&gt;
+
+&lt;p&gt;Tech that carries a hidden risk, so we destroy civilization on accident&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;what if nukes set the atmosphere on fire and we all died? What if a high energy physics experiment caused a black hole and sucked in the planet?&lt;/li&gt;
+&lt;/ul&gt;</content><author><name></name></author><summary type="html">source: The Vulnerable World Hypothesis, by Nick Bostrom</summary></entry></feed>

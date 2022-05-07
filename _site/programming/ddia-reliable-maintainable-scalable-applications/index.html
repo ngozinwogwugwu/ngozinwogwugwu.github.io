@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1"><!-- Begin Jekyll SEO tag v2.6.1 -->
+<title>Notes: Reliable, Maintainable &amp; Scalable Applications | Ngozi Nwogwugwu</title>
+<meta name="generator" content="Jekyll v3.8.7" />
+<meta property="og:title" content="Notes: Reliable, Maintainable &amp; Scalable Applications" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="source: Designing Data Intensive Applications by Martin Kleppmann (Chapter 1)" />
+<meta property="og:description" content="source: Designing Data Intensive Applications by Martin Kleppmann (Chapter 1)" />
+<link rel="canonical" href="http://localhost:4000/programming/ddia-reliable-maintainable-scalable-applications/" />
+<meta property="og:url" content="http://localhost:4000/programming/ddia-reliable-maintainable-scalable-applications/" />
+<meta property="og:site_name" content="Ngozi Nwogwugwu" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2018-07-13T22:07:43+02:00" />
+<script type="application/ld+json">
+{"url":"http://localhost:4000/programming/ddia-reliable-maintainable-scalable-applications/","headline":"Notes: Reliable, Maintainable &amp; Scalable Applications","dateModified":"2018-07-13T22:07:43+02:00","datePublished":"2018-07-13T22:07:43+02:00","description":"source: Designing Data Intensive Applications by Martin Kleppmann (Chapter 1)","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/programming/ddia-reliable-maintainable-scalable-applications/"},"@type":"BlogPosting","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link rel="stylesheet" href="/assets/main.css"><link type="application/atom+xml" rel="alternate" href="http://localhost:4000/feed.xml" title="Ngozi Nwogwugwu" /></head>
+<body><header class="site-header" role="banner">
+
+  <div class="wrapper"><a class="site-title" rel="author" href="/">Ngozi Nwogwugwu</a><nav class="site-nav">
+        <input type="checkbox" id="nav-trigger" class="nav-trigger" />
+        <label for="nav-trigger">
+          <span class="menu-icon">
+            <svg viewBox="0 0 18 15" width="18px" height="15px">
+              <path d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.032C17.335,0,18,0.665,18,1.484L18,1.484z M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.032C17.335,6.031,18,6.696,18,7.516L18,7.516z M18,13.516C18,14.335,17.335,15,16.516,15H1.484 C0.665,15,0,14.335,0,13.516l0,0c0-0.82,0.665-1.483,1.484-1.483h15.032C17.335,12.031,18,12.695,18,13.516L18,13.516z"/>
+            </svg>
+          </span>
+        </label>
+
+        <div class="trigger"><a class="page-link" href="/bookshelf/">My Bookshelf</a><a class="page-link" href="/notes/">Notes</a><a class="page-link" href="/programming/">Programming</a></div>
+      </nav></div>
+</header>
+<main class="page-content" aria-label="Content">
+      <div class="wrapper">
+        <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
+
+  <header class="post-header">
+    <h1 class="post-title p-name" itemprop="name headline">Notes: Reliable, Maintainable &amp; Scalable Applications</h1>
+    <p class="post-meta">
+      <time class="dt-published" datetime="2018-07-13T22:07:43+02:00" itemprop="datePublished">Jul 13, 2018
+      </time></p>
+  </header>
+
+  <div class="post-content e-content" itemprop="articleBody">
+    <p>source: <a href="https://www.oreilly.com/library/view/designing-data-intensive-applications/9781491903063/">Designing Data Intensive Applications</a> by Martin Kleppmann (Chapter 1)</p>
+
+<hr />
+
+<p>Data has replaced raw CPU power as the limiting factor for computer systems. It’s more of a problem to solve when data is:</p>
+<ul>
+  <li>high volume</li>
+  <li>complex</li>
+  <li>changing in real time</li>
+</ul>
+
+<h3 id="thinking-about-data-systems">Thinking about Data Systems</h3>
+<p>Lots of tools (like databases, queues, caches) are types of data systems, so it’s a pretty broad category. They’re important to think about, though, because <em>applications are usually just a collection of data systems</em>.</p>
+
+<p>When building a product, it’s important to consider both <em>functional</em> and <em>nonfunctional</em> requirements.</p>
+<ul>
+  <li><em>functional requirements</em> describe what a system should do</li>
+  <li><em>nonfunctional requirements</em> include security, reliability, scalability and maintainability</li>
+</ul>
+
+<p>For data intensive applications, we need five things:</p>
+<ol>
+  <li>Databases</li>
+  <li>Caches</li>
+  <li>Search Indexes</li>
+  <li>Stream Processing</li>
+  <li>Batch Processing</li>
+</ol>
+
+<h2 id="reliability">Reliability</h2>
+<p>Reliable systems tolerate user error, abuse and large loads.</p>
+<h3 id="fault-vs-failure"><strong>fault</strong> vs <strong>failure</strong>:</h3>
+<ul>
+  <li><em>Faults</em> are when a component in a system deviates from its specifications</li>
+  <li><em>Failures</em> are when a while system stops providing the required service
+We want fault-tolerant (resillient) systems, as opposed to fault-free systems. Faults are to some degree inevitable, and when a system isn’t fault tolerant, it just fails.</li>
+</ul>
+
+<p>An exception to this would be matters of security. The goal is prevention for security features.</p>
+
+<h3 id="hardware-faults">Hardware Faults</h3>
+<p>These happen all the time, especially when more machines are involved. Solve that problem using <strong>redundancy</strong> and <strong>backups</strong>. If we have multiple machines for a given system, the system should (ideally) be tolerant of one more more machines going down</p>
+
+<h3 id="software-errors">Software Errors</h3>
+<p>Software errors are harder to anticipate, and tend to be more likely to cause system failures.</p>
+<ul>
+  <li>they can affect shared resources more easily</li>
+  <li>they can also cause cascading failures
+<strong>lots of software bugs are caused when assuptions about an environment are wrong</strong>
+There’s not quick fix, but partial solutions include:</li>
+  <li>thinking ahead</li>
+  <li>unit tests, integration tests</li>
+  <li>monitoring</li>
+</ul>
+
+<h3 id="human-errors">Human Errors</h3>
+<p>Humans are <em>really</em> unreliable. To get areound this, use good UIs, sandboxes, failing hard/loudly, integration/unit tests, detailed monitoring and good processes</p>
+
+<h2 id="scalability">Scalability</h2>
+<p>when measuring scalability, think of it as: <code class="highlighter-rouge">(resources)/(load) = performance</code>
+So if you want to investigate scalability, you can do it in a couple of ways</p>
+<ol>
+  <li>increase load but keep resources the same. See how that affects performance</li>
+  <li>increase load, increase resources to keep performance the same. Keep track of what you need to change</li>
+</ol>
+
+<h3 id="determining-load">Determining Load</h3>
+<p>In Twitter’s case, the key metric to determine load is either users or followers. What’s the best way to design for a user with 30 million followers? What about dealing with millions of users, each with about 70 followers? The algorithm (to deliver tweets to mailboxes) that scales well depends on the type of user.</p>
+
+<h3 id="measuring-performance">Measuring Performance</h3>
+<p>There are lots of good metrics for performance, like throughput and response time. It’s best to look at these metrics in terms of percentiles (rather than average or median), since looking at the 99th percentile can be more instructive than looking at the 55th percentile.</p>
+<ul>
+  <li>reason for this: queing delays, head-of-line blocking. Bottlenecks in your system can exaserbate outliers</li>
+  <li>Even when you’re runnign things in parallel, the longest running process determines response time for the whole application</li>
+  <li>Shorthand for 99th percentile: P99. 99.9th percentile -&gt; P999, 50th percentile -&gt; P50</li>
+</ul>
+
+<h4 id="latency-vs-response-time">latency vs response time</h4>
+<p><em>response time</em> (or how long it takes for a user to get a reponse) often depends on the <em>latency</em> (amount of time an operation waits to be handled) of a set of systems.</p>
+
+<h3 id="strategies-for-scaling">Strategies for Scaling</h3>
+<p>The architecture you use to scale <em>depends on your system</em>, and you typically have a mix of the following:</p>
+<ul>
+  <li><strong>scaling up</strong> (vertical scaling): using a more powerful machine
+    <ul>
+      <li>this is better for stateful services</li>
+    </ul>
+  </li>
+  <li><strong>scaling out</strong> (horizontal scaling): using more machines
+    <ul>
+      <li>this is better for stateless services</li>
+    </ul>
+  </li>
+</ul>
+
+<p><strong>Elastic Systems</strong>: scale automatically when load changes. This is opposed to more simple systems, where humans anticipate changes to load and manually scale the system. Elastic systems are not nessecary for a lot of applications, but they’re better for unpredictable environments.</p>
+
+<h2 id="maintainability">Maintainability</h2>
+<p>You can determine maintainability based on how happy your developers are. You make systems maintainable to reduce headache. The three methods are:</p>
+<ol>
+  <li>operability</li>
+  <li>simplicity</li>
+  <li>evolvability</li>
+</ol>
+
+<h3 id="operability">Operability</h3>
+<p>Ops teams do a lot (monitering system health, dealing with issues, security patches, maintenance, capacity planning…) so <em>good data systems should make life easier for operations teams</em>. Good tools for this include:</p>
+<ul>
+  <li>runtime visibility tools</li>
+  <li>automization</li>
+  <li>documentation</li>
+  <li>redundancy</li>
+  <li>predictability</li>
+</ul>
+
+<h3 id="simplicity">Simplicity</h3>
+<p>complexity causes all sorts of problems that lead to software bugs.</p>
+<ul>
+  <li><strong>Accidental Complexity</strong> isn’t inherent to the problem that a piece of software is solving, but it comes from implementation</li>
+  <li><strong>Abstraction</strong>: tool for removing accidental complexity. Just hide the implementation behind a facade.</li>
+</ul>
+
+<h3 id="evolvability">Evolvability</h3>
+<p>Most systems, obviously, change over time. Use <strong>Agile working patterns</strong> to provide a framework for change. <strong>simplicity and operability</strong> are also super helpful</p>
+
+
+  </div><a class="u-url" href="/programming/ddia-reliable-maintainable-scalable-applications/" hidden></a>
+</article>
+
+      </div>
+    </main><footer class="site-footer h-card">
+  <data class="u-url" href="/"></data>
+
+  <div class="wrapper">
+
+    <h2 class="footer-heading">Ngozi Nwogwugwu</h2>
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col footer-col-1">
+        <ul class="contact-list">
+          <li class="p-name">Ngozi Nwogwugwu</li><li><a class="u-email" href="mailto:ngozi.n.nwogwugwu@gmail.com">ngozi.n.nwogwugwu@gmail.com</a></li></ul>
+      </div>
+
+      <div class="footer-col footer-col-2"><ul class="social-media-list"><li><a href="https://github.com/ngozinwogwugwu"><svg class="svg-icon"><use xlink:href="/assets/minima-social-icons.svg#github"></use></svg> <span class="username">ngozinwogwugwu</span></a></li></ul>
+</div>
+
+      <div class="footer-col footer-col-3">
+        <p>nwogwugwu.eth</p>
+      </div>
+    </div>
+
+  </div>
+
+</footer>
+</body>
+
+</html>

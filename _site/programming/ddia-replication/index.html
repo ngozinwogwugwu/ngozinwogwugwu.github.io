@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1"><!-- Begin Jekyll SEO tag v2.6.1 -->
+<title>Notes: Replication | Ngozi Nwogwugwu</title>
+<meta name="generator" content="Jekyll v3.8.7" />
+<meta property="og:title" content="Notes: Replication" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="source: Designing Data Intensive Applications by Martin Kleppmann (Chapter 5)" />
+<meta property="og:description" content="source: Designing Data Intensive Applications by Martin Kleppmann (Chapter 5)" />
+<link rel="canonical" href="http://localhost:4000/programming/ddia-replication/" />
+<meta property="og:url" content="http://localhost:4000/programming/ddia-replication/" />
+<meta property="og:site_name" content="Ngozi Nwogwugwu" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2018-07-13T22:07:43+02:00" />
+<script type="application/ld+json">
+{"url":"http://localhost:4000/programming/ddia-replication/","headline":"Notes: Replication","dateModified":"2018-07-13T22:07:43+02:00","datePublished":"2018-07-13T22:07:43+02:00","description":"source: Designing Data Intensive Applications by Martin Kleppmann (Chapter 5)","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/programming/ddia-replication/"},"@type":"BlogPosting","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link rel="stylesheet" href="/assets/main.css"><link type="application/atom+xml" rel="alternate" href="http://localhost:4000/feed.xml" title="Ngozi Nwogwugwu" /></head>
+<body><header class="site-header" role="banner">
+
+  <div class="wrapper"><a class="site-title" rel="author" href="/">Ngozi Nwogwugwu</a><nav class="site-nav">
+        <input type="checkbox" id="nav-trigger" class="nav-trigger" />
+        <label for="nav-trigger">
+          <span class="menu-icon">
+            <svg viewBox="0 0 18 15" width="18px" height="15px">
+              <path d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.032C17.335,0,18,0.665,18,1.484L18,1.484z M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.032C17.335,6.031,18,6.696,18,7.516L18,7.516z M18,13.516C18,14.335,17.335,15,16.516,15H1.484 C0.665,15,0,14.335,0,13.516l0,0c0-0.82,0.665-1.483,1.484-1.483h15.032C17.335,12.031,18,12.695,18,13.516L18,13.516z"/>
+            </svg>
+          </span>
+        </label>
+
+        <div class="trigger"><a class="page-link" href="/bookshelf/">My Bookshelf</a><a class="page-link" href="/notes/">Notes</a><a class="page-link" href="/programming/">Programming</a></div>
+      </nav></div>
+</header>
+<main class="page-content" aria-label="Content">
+      <div class="wrapper">
+        <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
+
+  <header class="post-header">
+    <h1 class="post-title p-name" itemprop="name headline">Notes:  Replication</h1>
+    <p class="post-meta">
+      <time class="dt-published" datetime="2018-07-13T22:07:43+02:00" itemprop="datePublished">Jul 13, 2018
+      </time></p>
+  </header>
+
+  <div class="post-content e-content" itemprop="articleBody">
+    <p>source: <a href="https://www.oreilly.com/library/view/designing-data-intensive-applications/9781491903063/">Designing Data Intensive Applications</a> by Martin Kleppmann (Chapter 5)</p>
+
+<hr />
+
+<p>When you scale a database out, it’s normal to have some sort of combination of replication and partitioning. <strong>Partitioning</strong> (sharding) is when you split a big database up, and is discussed in chapter 6. <strong>Replication</strong> is when you keep a copy of the same database on two different nodes.</p>
+
+<ul>
+  <li><strong>Replication</strong>: keeping a copy of the same date on multiple machines that are connected by a network. Advantages:
+    <ul>
+      <li>reduced latency</li>
+      <li>increased availability</li>
+      <li>increased read throughput</li>
+    </ul>
+  </li>
+</ul>
+
+<p>Replication is easy when your data doesn’t change over time, but in the case of most databases, it does. You can use different types of replication to handle the changes:</p>
+<ul>
+  <li>single-leader</li>
+  <li>multi-leader</li>
+  <li>leaderless</li>
+</ul>
+
+<p>You also have the choice between synchronous and asynchronous replication</p>
+
+<h2 id="single-leader-replication">Single Leader Replication</h2>
+<ul>
+  <li><strong>replica</strong>: a node that stores a copy of a database</li>
+  <li><strong>Single Leader Replication</strong> (also called master-slave replication, or active-passive replication): one replica gets designated as leader, and clients can only write to that replica. The leader replica sends write updates to follower replicas whenever a client writes to it. This is used for relational databases and distributed message brokers like Kafka or RabitMQ</li>
+  <li><strong>Synchronous Replication</strong>: leader waits until a follower responds before reporting success to a client
+    <ul>
+      <li>this way, the follower <em>always</em> has and up-to-date copy of the data</li>
+      <li>synchronous replication is susceptible to network faults. If a follower crashes, the whole system grinds to a halt</li>
+    </ul>
+  </li>
+  <li><strong>Asynchronous Replication</strong>: Leader sends a write message without waiting for a response
+    <ul>
+      <li>way faster, but writes aren’t guaranteed</li>
+      <li>advantage: leader node can continue operations regardless of follower node status</li>
+    </ul>
+  </li>
+  <li><strong>Semi-Synchronous Replication</strong>: replication where only one follower is synchronous. If that follower isn’t available, just send a synchronous write to the next node</li>
+</ul>
+
+<h3 id="setting-up-new-followers">Setting Up New Followers</h3>
+<p>If you want to set up a new follower node, you can’t just copy/paste the leader node. It’s in flux, so you’d have to lock it. Here’s how to spin up a new node without locking the database:</p>
+<ol>
+  <li>Make <em>periodic snapshots</em> of the database. In between snapshots, continuously write updates to <em>logs</em>. These logs should indicate which snapshots they correspond to.</li>
+  <li>Spin up a new node and copy the latest database snapshot to it.</li>
+  <li>Apply all the changes from the logfile to the node until it’s up to date</li>
+  <li>All set! You can now start processing write requests from the leader node</li>
+</ol>
+
+<h3 id="handling-node-outages">Handling Node Outages</h3>
+<p>Nodes fail all the time, sometimes as part of routine updates.</p>
+
+<h4 id="follower-failure">Follower Failure</h4>
+<p>If a follower fails, it’s pretty easy to get it back online. If it has a <em>logfile</em>, it’s easy to know the last transaction it received. Just request all of the transactions it missed until it’s up to date.</p>
+
+<h4 id="leader-failure">Leader Failure</h4>
+<ul>
+  <li><strong>Failover</strong>: Process for when a leader fails. One of the followers needs to be promoted to be the new leader, and if you automate this process, it happens in stages:
+a. <em>determine that the old leader has failed.</em> This is usually done with a timeout
+b. <em>choose a new leader</em>. This can be done a few different ways:
+    <ul>
+      <li>election process, or a <em>controller node</em> picks the new leader</li>
+      <li>whichever node is the most up-to-date
+c. reconfigure the system to use the new leader</li>
+      <li>You need to make sure that clients will send write requests to the new leader</li>
+      <li>The old leader needs to know that it’s not the leader anymore</li>
+    </ul>
+  </li>
+</ul>
+
+<p>Things can go wrong during failover</p>
+<ul>
+  <li>if asynchronous replication was being used, the old leader will need to discard all of the writes that it didn’t pass on, so you lose some data.</li>
+  <li><em>discarding writes can be dangerous</em> if there’s a chance that a separate storage system got the data. You’ll have conflicting data</li>
+  <li><strong>split brain</strong>: a case where two nodes both think they’re the leader</li>
+  <li>Unnecessary failovers can cause more harm than good. For example, if a leader doesn’t respond in time due to a load spike</li>
+</ul>
+
+<h3 id="replication-log-implementation">Replication Log Implementation</h3>
+<ul>
+  <li><strong>Statement-based Replication</strong>: Just pass on the INSERT/UPDATE/DELETE statements.
+    <ul>
+      <li>not great if you’re using any nondeterministic statements like NOW(), RAND(), or anything with side-effects</li>
+    </ul>
+  </li>
+  <li><strong>Write-Ahead Log Shipping</strong>: Use the append-only log file that describes the database writes (either log segments or WAL)
+    <ul>
+      <li>drawback: This describes writes for that specific data structure. Prevents you from using follower nodes with any other database structure, which is something you want to do if you want the ability to make rolling updates</li>
+    </ul>
+  </li>
+  <li><strong>Logical Replication</strong> (Row-based replication): use a <em>logical log</em> for replication, as opposed to a <em>physical log</em>
+    <ul>
+      <li>this represents updates for reach row, and allows the <em>replication log</em> to be decoupled from the leader’s physical database, allows for flexibility</li>
+      <li>stores writes with <em>row granularity</em></li>
+      <li><strong>data change capture</strong>: when an external application parses your logical log</li>
+    </ul>
+  </li>
+  <li><strong>Trigger-based Replication</strong>: You can use built-in trigger functions to replicate data when a row is updated
+    <ul>
+      <li>more flexible, but more prone to bugs. Also, more overhead</li>
+    </ul>
+  </li>
+</ul>
+
+<h3 id="replication-lag">Replication Lag</h3>
+<p><em>Replication lag</em> is the delay in write from leader to follower</p>
+<ul>
+  <li><strong>eventual consistency</strong>: Leaders and followers have inconsistent data, but it will become consistent when you stop writing to the leader… <em>eventually</em>
+    <ul>
+      <li>An effect caused by replication lag</li>
+      <li>Happens when you have asynchronous followers</li>
+    </ul>
+  </li>
+</ul>
+
+<h4 id="reading-your-own-writes">Reading your own writes</h4>
+<p>Replication lag might cause a user to see data that feel behind the very update they <em>just</em> made, which is a problem. Possible solutions:</p>
+<ul>
+  <li>You could give your user permissions to read from the leader node, or…</li>
+  <li>you could track the time of the most recent update and compare it to the follower</li>
+</ul>
+
+<h4 id="monotonic-reads">Monotonic Reads</h4>
+<p>If you don’t deal with replication lag properly, a user could refresh a page and see information “go back in time”. This happens if, on their first viewing, they see a more up-to-date node, and see an outdated node after refreshing.</p>
+<ul>
+  <li>One way to avoid this: Make sure that a user reads from the same replica for every page refresh</li>
+</ul>
+
+<h4 id="consistent-prefix-reads">Consistent Prefix Reads</h4>
+<p>This is a way to prevent users from reading events out of order. It prevents violations of causality</p>
+<ul>
+  <li>This is especially a problem for partitioned databases</li>
+  <li><strong>transactions</strong>: Ways for databases to provide guarantees. Might be expensive for replicated databases</li>
+</ul>
+
+<h2 id="multi-leader-replication">Multi-Leader Replication</h2>
+<p>More than one leader (each leader follows every other leader)</p>
+<ul>
+  <li>good for multiple datacenters</li>
+  <li>you need to make sure to handle conflicts</li>
+  <li>good for clients that go offline sometimes (like collaborative editing, or calendar clients)</li>
+</ul>
+
+<h3 id="write-conflicts">Write Conflicts</h3>
+<p>synchronous conflict detection makes writes take just as long as they would in a single-leader system, but with asynchronous detection, you might find a conflict <em>after</em> you told the user that the change was confirmed</p>
+<ul>
+  <li>you can avoid conflicts by routing all writes <em>for a particular record</em> to a single leader</li>
+  <li>databases must resolve conflicts in a <strong>convergent</strong> way. This can be prone to data loss, but you can prompt applications or users to resolve conflicts on read or write</li>
+</ul>
+
+<h3 id="multi-leader-replication-topologies">Multi-Leader Replication Topologies</h3>
+<ul>
+  <li><strong>Topologies</strong> describe communication paths along which writes are propagated
+    <ul>
+      <li>All-to-all (most common)</li>
+      <li>circular (default for MySQL): all leaders have one parent and one child</li>
+      <li>star (can be generalized to a tree)</li>
+    </ul>
+  </li>
+  <li>you need to include <em>node IDs</em> to prevent infinite loops</li>
+  <li>circular and star topologies are susceptible to node failures</li>
+  <li>all-to-all topologies need to handle cases where messages overtake each other</li>
+</ul>
+
+<h2 id="leaderless-replication">Leaderless Replication</h2>
+<p><strong>Dynamo-Style Databases</strong>: open datastores with leaderless replication models</p>
+<ul>
+  <li>clients send write-requests to all replicas, and also send read-requests to all replicas. These requests happen in parallel</li>
+  <li><strong>Read-Repair</strong>: Clients detect stale data when they read</li>
+  <li><strong>Anti-entropy process</strong>: background process that looks for discrepancies</li>
+  <li><strong>quorum read/writes</strong>: the minimum number of votes it takes to make a read/write valid. In order for a system to tolerate unavailable nodes:
+    <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>w + r &gt; n
+</code></pre></div>    </div>
+    <p>where <em>w</em>= writeable nodes, <em>r</em>= readable nodes, and <em>n</em> = total nodes</p>
+  </li>
+  <li>it’s generally difficult to monitor staleness.</li>
+  <li>if you can configure <em>w</em> to be big, it might make the database more fault tolerant, but it could make your writes slower</li>
+</ul>
+
+
+  </div><a class="u-url" href="/programming/ddia-replication/" hidden></a>
+</article>
+
+      </div>
+    </main><footer class="site-footer h-card">
+  <data class="u-url" href="/"></data>
+
+  <div class="wrapper">
+
+    <h2 class="footer-heading">Ngozi Nwogwugwu</h2>
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col footer-col-1">
+        <ul class="contact-list">
+          <li class="p-name">Ngozi Nwogwugwu</li><li><a class="u-email" href="mailto:ngozi.n.nwogwugwu@gmail.com">ngozi.n.nwogwugwu@gmail.com</a></li></ul>
+      </div>
+
+      <div class="footer-col footer-col-2"><ul class="social-media-list"><li><a href="https://github.com/ngozinwogwugwu"><svg class="svg-icon"><use xlink:href="/assets/minima-social-icons.svg#github"></use></svg> <span class="username">ngozinwogwugwu</span></a></li></ul>
+</div>
+
+      <div class="footer-col footer-col-3">
+        <p>nwogwugwu.eth</p>
+      </div>
+    </div>
+
+  </div>
+
+</footer>
+</body>
+
+</html>

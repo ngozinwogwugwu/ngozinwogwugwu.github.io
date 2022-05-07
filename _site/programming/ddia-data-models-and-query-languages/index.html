@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1"><!-- Begin Jekyll SEO tag v2.6.1 -->
+<title>Notes: Data Models and Query Languages | Ngozi Nwogwugwu</title>
+<meta name="generator" content="Jekyll v3.8.7" />
+<meta property="og:title" content="Notes: Data Models and Query Languages" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="source: Designing Data Intensive Applications by Martin Kleppmann (Chapter 2)" />
+<meta property="og:description" content="source: Designing Data Intensive Applications by Martin Kleppmann (Chapter 2)" />
+<link rel="canonical" href="http://localhost:4000/programming/ddia-data-models-and-query-languages/" />
+<meta property="og:url" content="http://localhost:4000/programming/ddia-data-models-and-query-languages/" />
+<meta property="og:site_name" content="Ngozi Nwogwugwu" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2018-07-13T22:07:43+02:00" />
+<script type="application/ld+json">
+{"url":"http://localhost:4000/programming/ddia-data-models-and-query-languages/","headline":"Notes: Data Models and Query Languages","dateModified":"2018-07-13T22:07:43+02:00","datePublished":"2018-07-13T22:07:43+02:00","description":"source: Designing Data Intensive Applications by Martin Kleppmann (Chapter 2)","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/programming/ddia-data-models-and-query-languages/"},"@type":"BlogPosting","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link rel="stylesheet" href="/assets/main.css"><link type="application/atom+xml" rel="alternate" href="http://localhost:4000/feed.xml" title="Ngozi Nwogwugwu" /></head>
+<body><header class="site-header" role="banner">
+
+  <div class="wrapper"><a class="site-title" rel="author" href="/">Ngozi Nwogwugwu</a><nav class="site-nav">
+        <input type="checkbox" id="nav-trigger" class="nav-trigger" />
+        <label for="nav-trigger">
+          <span class="menu-icon">
+            <svg viewBox="0 0 18 15" width="18px" height="15px">
+              <path d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.032C17.335,0,18,0.665,18,1.484L18,1.484z M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.032C17.335,6.031,18,6.696,18,7.516L18,7.516z M18,13.516C18,14.335,17.335,15,16.516,15H1.484 C0.665,15,0,14.335,0,13.516l0,0c0-0.82,0.665-1.483,1.484-1.483h15.032C17.335,12.031,18,12.695,18,13.516L18,13.516z"/>
+            </svg>
+          </span>
+        </label>
+
+        <div class="trigger"><a class="page-link" href="/bookshelf/">My Bookshelf</a><a class="page-link" href="/notes/">Notes</a><a class="page-link" href="/programming/">Programming</a></div>
+      </nav></div>
+</header>
+<main class="page-content" aria-label="Content">
+      <div class="wrapper">
+        <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
+
+  <header class="post-header">
+    <h1 class="post-title p-name" itemprop="name headline">Notes: Data Models and Query Languages</h1>
+    <p class="post-meta">
+      <time class="dt-published" datetime="2018-07-13T22:07:43+02:00" itemprop="datePublished">Jul 13, 2018
+      </time></p>
+  </header>
+
+  <div class="post-content e-content" itemprop="articleBody">
+    <p>source: <a href="https://www.oreilly.com/library/view/designing-data-intensive-applications/9781491903063/">Designing Data Intensive Applications</a> by Martin Kleppmann (Chapter 2)</p>
+
+<hr />
+
+<p>Data models help you abstract out information, which helps you present it efficiently the next level up (or the next level down).</p>
+
+<h2 id="relational-vs-document-models">Relational vs Document Models</h2>
+
+<h3 id="relational-model">Relational Model</h3>
+<p>Proposed in 1970, the basis for SQL. Data is organized into:</p>
+<ul>
+  <li>relations (tables)</li>
+  <li>tuples (rows)</li>
+</ul>
+
+<p>The goal of the relational model is to <strong>hide implementation details</strong>. The relational model is <strong>remarkably adaptive</strong>. You can compare it to the <em>network model</em> and the <em>hierarchical model</em>.</p>
+
+<h3 id="nosql">NoSQL</h3>
+<p><strong>Document Model</strong>. NoSQL databases will probably exist alongside relational databases. This is called <strong>polyglot persistence</strong>. Advantages of NoSQL:</p>
+<ul>
+  <li>number of open source tools</li>
+  <li>scalability (for for large datasets and datasets with high write throughput)</li>
+  <li>there are some specific query operations that don’t exist for relational databases</li>
+  <li>they don’t have restrictive schemas</li>
+</ul>
+
+<h3 id="the-object-relational-mismatch">The Object-Relational Mismatch</h3>
+<p>One disadvantage of relational databases is that they don’t play well with object-oriented applications. This disconnect is called the <strong>impedance mismatch</strong></p>
+<ul>
+  <li>In order to represent an object that an application needs, your database often has to do a fair amount of joining</li>
+  <li>Solution: <strong>Object-Relational Mapping Framworks</strong> (ORMs), tools to reduce the translation layer</li>
+  <li>Another Solution: JSON models (or document databases) can reduce the impedance mismatch.
+    <ul>
+      <li>These work best when data is contained in one place(<strong>locality</strong>)</li>
+    </ul>
+  </li>
+</ul>
+
+<h3 id="many-to-manyone-relationships">Many-to-Many/One Relationships</h3>
+<p>Plenty of fields that can be stored as a string can also be stored as an ID that you can join on. Advantages:</p>
+<ul>
+  <li>creates a single source of truth. This reduces redundant data and ambiguity</li>
+  <li>Makes updating easier</li>
+  <li>called <strong>Normalizing</strong> data</li>
+</ul>
+
+<h4 id="hierarchical-models">Hierarchical Models</h4>
+<p>model of storing data from the 1960’s, similar to JSON. This model was bad for many-to-many relationships and bad for normalization, because you often had to duplicate data</p>
+<ul>
+  <li><strong>Denormalization</strong>: duplicating data and storing it in different places (like using a string, instead of an ID and just joining the tables)</li>
+</ul>
+
+<h4 id="the-network-model">The Network Model</h4>
+<p>A different old data model. Links between records were basically like pointers, and you had to travers the path to get all the information</p>
+<ul>
+  <li><strong>Access path</strong>: path from the <em>root</em> of a <em>chain of nodes</em>
+The network model is basically dead</li>
+</ul>
+
+<h4 id="query-optimizers">Query Optimizers</h4>
+<p>These are for relational databases. Since the structure of a relational database isn’t too different from a database that uses the network model, <em>query optimizers are used to determine the access path</em>. This means:</p>
+<ul>
+  <li>which parts of the query to execute in which order</li>
+  <li>which indexes to use
+Note: When you declare a new index, you give your query optimizer a new option when it comes to creating an access path and querying the data</li>
+</ul>
+
+<h4 id="document-databases-and-joins">Document Databases and Joins</h4>
+<p>Document databases will use <strong>references</strong> (foreign keys) to handle many-to-many/many-to-one relationships</p>
+
+<h4 id="optimizing-for-simple-code">Optimizing for Simple Code</h4>
+<ul>
+  <li><strong>Document Models</strong>: Might fit an application better if loading a managably-sized tree of one-to-many relationships. It reduces the need for joins by denormalizing data
+    <ul>
+      <li>disadvantage: Difficult to refer to objects that are nested within a document</li>
+      <li>disadvantage: You might emulate a join by handling it with your application. This is less performative and makes your application more complex</li>
+    </ul>
+  </li>
+  <li><strong>Relational Models</strong>: Good fit if you have a lot of many-to-many relationships
+    <ul>
+      <li>shredding: splitting a document up into several tables. This can be a disadvantage of the relational model</li>
+    </ul>
+  </li>
+</ul>
+
+<h2 id="query-languages-for-data">Query Languages for Data</h2>
+<p><strong>declarative</strong> vs <strong>imperative</strong>: In a declarative query language, you just <em>declare</em> what you want, and the database takes care of the implementation. This is opposed to an imperative language, where you tell the database exactly how to get the information.</p>
+
+<h3 id="declarative-queries">Declarative Queries</h3>
+<p>SQL is an example of a declarative language, but not the only one. CSS is also declarative. Advantages of declarative languages:</p>
+<ul>
+  <li>easier to work with and learn</li>
+  <li>implementation details are hidden from the user. This means that they can be updated without the user noticing</li>
+  <li>easier to <strong>parallelize</strong>. Imperative operations must run in a sequence</li>
+</ul>
+
+<h3 id="mapreduce-querying">MapReduce Querying</h3>
+<p>Made to process large amounts of data in bulk across machines. It’s not quite declarative or imperative, but kind of in the middle. <em>It uses a series of pure functions to <strong>mold</strong> and <strong>aggregate</strong> data</em>, then present that data neatly.</p>
+<ul>
+  <li>pure functions are required so that the database can run them in any order without messing things up</li>
+  <li>MapReduce uses javascript</li>
+  <li>A little more difficult to learn and use</li>
+  <li>alternative: aggregation pipeline (MongoDB)</li>
+</ul>
+
+<h2 id="graph-like-data-models">Graph-like Data Models</h2>
+<p>good for handling complex many-to-many relationships, like social networks or links between pages on the internet.</p>
+<ul>
+  <li><strong>vertices</strong> (nodes, entities)</li>
+  <li><strong>edges</strong> (relationships, arcs)</li>
+</ul>
+
+<h3 id="property-graphs">Property Graphs</h3>
+<p>A combination of <em>vertices</em> and <em>edges</em>, makes for flexible arrangements. You can build up a graph that you can traverse that represents complex relationships very simply</p>
+
+<h3 id="the-cypher-query-language">The Cypher Query Language</h3>
+<p>A declarative query language for property graphs. One alternative to cypher query languages is to store the information in relational databases and use SQL’s recursive joins, but the queries end up being imperative, so they’re longer, harder to read/maintain, and less performative.</p>
+
+<h3 id="triple-stores-sparql">Triple Stores, SPARQL</h3>
+<p>The triple store model is similar to the property graph model, but the data is arranged in a slightly different mannner (subject, predicate/verb, object). The predicate here is like an edge that connects two vertices</p>
+
+<h4 id="the-semantic-web">The Semantic Web</h4>
+<p>Concept of making pages machine readable</p>
+
+<h4 id="the-rdf-data-model">The RDF Data Model</h4>
+<p><strong>Resource Description Framework</strong> (RDF) - mechanism for websites to publish data in a consisten format. The goal of RDF is to create a “web of data”, or a “database of everything”. Examples of this include Turtle language, or XML</p>
+<ul>
+  <li>designed to use triple stores, but in a format that is tolerant to different predicates. This makes it easier for two organizations to work together</li>
+</ul>
+
+<h4 id="sparql">SPARQL</h4>
+<p>Query language for triple stores using the RDF data model. Structure is similar to <a href="#the-cypher-query-language">Cypher</a> because RDF doesn’t distinguish between properties and edges (both are predicates)</p>
+
+<h3 id="datalog">Datalog</h3>
+<p>from the 1980’s, uses triple store model. The Rules define what to do</p>
+
+  </div><a class="u-url" href="/programming/ddia-data-models-and-query-languages/" hidden></a>
+</article>
+
+      </div>
+    </main><footer class="site-footer h-card">
+  <data class="u-url" href="/"></data>
+
+  <div class="wrapper">
+
+    <h2 class="footer-heading">Ngozi Nwogwugwu</h2>
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col footer-col-1">
+        <ul class="contact-list">
+          <li class="p-name">Ngozi Nwogwugwu</li><li><a class="u-email" href="mailto:ngozi.n.nwogwugwu@gmail.com">ngozi.n.nwogwugwu@gmail.com</a></li></ul>
+      </div>
+
+      <div class="footer-col footer-col-2"><ul class="social-media-list"><li><a href="https://github.com/ngozinwogwugwu"><svg class="svg-icon"><use xlink:href="/assets/minima-social-icons.svg#github"></use></svg> <span class="username">ngozinwogwugwu</span></a></li></ul>
+</div>
+
+      <div class="footer-col footer-col-3">
+        <p>nwogwugwu.eth</p>
+      </div>
+    </div>
+
+  </div>
+
+</footer>
+</body>
+
+</html>

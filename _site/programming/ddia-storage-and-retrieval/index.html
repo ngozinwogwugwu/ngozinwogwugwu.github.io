@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1"><!-- Begin Jekyll SEO tag v2.6.1 -->
+<title>Notes: Storage and Retrieval | Ngozi Nwogwugwu</title>
+<meta name="generator" content="Jekyll v3.8.7" />
+<meta property="og:title" content="Notes: Storage and Retrieval" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="source: Designing Data Intensive Applications by Martin Kleppmann (Chapter 3)" />
+<meta property="og:description" content="source: Designing Data Intensive Applications by Martin Kleppmann (Chapter 3)" />
+<link rel="canonical" href="http://localhost:4000/programming/ddia-storage-and-retrieval/" />
+<meta property="og:url" content="http://localhost:4000/programming/ddia-storage-and-retrieval/" />
+<meta property="og:site_name" content="Ngozi Nwogwugwu" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2018-07-13T22:07:43+02:00" />
+<script type="application/ld+json">
+{"url":"http://localhost:4000/programming/ddia-storage-and-retrieval/","headline":"Notes: Storage and Retrieval","dateModified":"2018-07-13T22:07:43+02:00","datePublished":"2018-07-13T22:07:43+02:00","description":"source: Designing Data Intensive Applications by Martin Kleppmann (Chapter 3)","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/programming/ddia-storage-and-retrieval/"},"@type":"BlogPosting","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link rel="stylesheet" href="/assets/main.css"><link type="application/atom+xml" rel="alternate" href="http://localhost:4000/feed.xml" title="Ngozi Nwogwugwu" /></head>
+<body><header class="site-header" role="banner">
+
+  <div class="wrapper"><a class="site-title" rel="author" href="/">Ngozi Nwogwugwu</a><nav class="site-nav">
+        <input type="checkbox" id="nav-trigger" class="nav-trigger" />
+        <label for="nav-trigger">
+          <span class="menu-icon">
+            <svg viewBox="0 0 18 15" width="18px" height="15px">
+              <path d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.032C17.335,0,18,0.665,18,1.484L18,1.484z M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.032C17.335,6.031,18,6.696,18,7.516L18,7.516z M18,13.516C18,14.335,17.335,15,16.516,15H1.484 C0.665,15,0,14.335,0,13.516l0,0c0-0.82,0.665-1.483,1.484-1.483h15.032C17.335,12.031,18,12.695,18,13.516L18,13.516z"/>
+            </svg>
+          </span>
+        </label>
+
+        <div class="trigger"><a class="page-link" href="/bookshelf/">My Bookshelf</a><a class="page-link" href="/notes/">Notes</a><a class="page-link" href="/programming/">Programming</a></div>
+      </nav></div>
+</header>
+<main class="page-content" aria-label="Content">
+      <div class="wrapper">
+        <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
+
+  <header class="post-header">
+    <h1 class="post-title p-name" itemprop="name headline">Notes: Storage and Retrieval</h1>
+    <p class="post-meta">
+      <time class="dt-published" datetime="2018-07-13T22:07:43+02:00" itemprop="datePublished">Jul 13, 2018
+      </time></p>
+  </header>
+
+  <div class="post-content e-content" itemprop="articleBody">
+    <p>source: <a href="https://www.oreilly.com/library/view/designing-data-intensive-applications/9781491903063/">Designing Data Intensive Applications</a> by Martin Kleppmann (Chapter 3)</p>
+
+<hr />
+
+<p>A database has two jobs:</p>
+<ol>
+  <li>store data</li>
+  <li>retrieve data
+it’s important to pick the most appropriate storage engine for your application. Main types optimize for one of two things:
+    <ul>
+      <li>transactional workloads</li>
+      <li>analytics</li>
+    </ul>
+  </li>
+</ol>
+
+<h2 id="database-data-structures">Database Data Structures</h2>
+<p><strong>Log File:</strong> <em>an append only sequence of records</em>. This is the simplest form of a database. Appending takes O(1), but reading takes O(n), so let’s not.</p>
+
+<p>Solution? The <strong>index</strong>, <em>a data structure to help you find a key in a database</em>. This structure is <em>derived</em> from primary data. It makes it so that writing takes a little longer, but it’s almost always worth it.</p>
+
+<h3 id="hash-indexes">Hash Indexes</h3>
+<p><em>A <strong>hash index</strong> is an in-memory hash map of <strong>keys</strong> and <strong>byte offsets</strong></em>. The database uses the hash index to read values from disk.</p>
+<ul>
+  <li><strong>Segment Files</strong>: What you get when you separate out your database into a set of files. Because segment files are separated out and can exist without getting read, we can <em>merge</em> and <em>compact</em> them in the background</li>
+  <li><strong>Compaction</strong>: getting rid of duplicates in a log file. You do this to decrease the amount of space your database takes up</li>
+  <li><strong>tombstones</strong>: a deletion record for an append-only log file</li>
+</ul>
+
+<p>There are a few ways we can make log files more resilient and efficient:</p>
+<ul>
+  <li>it saves space to safe log files in binary format</li>
+  <li>if you store a hash map for each segment on disk, you can recover after a crash more quickly</li>
+  <li>Use checksums to prevent corrupted data</li>
+</ul>
+
+<p>Append only design is nice because it’s so simple. This means that you can write quickly, and crash recovery is straightforward. Also, you can merge segments quickly because you don’t have to worry about them being updated while you’re merging them.</p>
+
+<p>On the other hand, append-only design has some limitations. The hash table must fit in memory for this to work, so append only design is better for situations where you have lots of writes to a view keys. Also, range queries are pretty inefficient</p>
+
+<h3 id="sstables--lsm-trees">SSTables &amp; LSM-Trees</h3>
+<p><strong>Sorted String Table</strong> (SSTable), <strong>Log-Structured Merge-Tree</strong> (LSM-Tree): What we get when we sort a segment file by key. In order to make sure the LSM-Tree is sorted, you need the following:</p>
+<ol>
+  <li>An in-memory memtable
+    <ul>
+      <li>The memtable represents a tree structure, so you insert key/value pairs in order</li>
+      <li>When the memtable gets too big, you save it to disk as a segment file</li>
+    </ul>
+  </li>
+  <li>On-disk Segment files
+    <ul>
+      <li>You merge and compact these segment files from time to time</li>
+      <li>in the event of a tie on merge, the most recent key/value pair is what you pay attention to</li>
+    </ul>
+  </li>
+  <li>An on-disk log file
+    <ul>
+      <li>write to this log file every time you insert a value into the memtable</li>
+      <li>this protects agains crashes
+If you want to read from this type of database structure, you conduct a search starting with the most recent thing. This means that you start with the memtable, then move on to the on-disk segments.</li>
+    </ul>
+  </li>
+</ol>
+
+<p>There are a few ways to optimize LSM-Trees:</p>
+<ul>
+  <li><strong>Bloom filters</strong>: memory efficient data structures. Use these to approximate the contents of a data set</li>
+  <li><strong>Size-tiered compaction</strong>: Newer SSTables are smaller, and they get bigger as they get older. These older SSTables get accessed less often, so merging is less disruptive</li>
+  <li>You can also infer the location of a key’s byte offset based on the location ok keys around it, so you don’t need to keep all of the keys in memory</li>
+</ul>
+
+<p>LSM Trees have faster writes and better compression than B-Trees.</p>
+<ul>
+  <li>BUT if you end up compressing data, and the process coincides with that data being queried, it will cause a bottleneck</li>
+  <li>compressing data takes longer for big databases, so LSM trees don’t really scale</li>
+</ul>
+
+<h3 id="b-trees">B-Trees</h3>
+<p>The standard implementation for almost all relational databases (and many non-relational databases)</p>
+<ul>
+  <li>information is stored in key/value pairs. These key/value pairs are stored in pages</li>
+  <li>to find the value of a key, you traverse the tree</li>
+  <li>to add a key, you find a page whose range the key is in. If it fits, great. Add it to the page. Otherwise, you’ll need to split the page into two half pages, add the new value, and update the parent of the original page to point to the new pages</li>
+</ul>
+
+<p>Important things to know about B-Trees:</p>
+<ul>
+  <li><strong>pages</strong> (blocks): chunks of data (usually 4kb chunks). These act as nodes for the tree</li>
+  <li><strong>the root</strong>: entry point for tree traversal. Contains references to other pages in the tree</li>
+  <li><strong>leaf pages</strong>: endpoint of a tree traversal. Contains values (or at least pointers to values)</li>
+  <li><strong>branching factor</strong>: number of references per page. This usually determines the key depth. <em>A B-tree with n keys has a depth of O(log(n))</em></li>
+  <li>B-Trees have faster reads than LSM Trees, but slower writes. This is because of <strong>write amplification</strong>, the fact that you often have to make several writes to several locations for each update because of the structure of B-Trees.</li>
+</ul>
+
+<h4 id="making-b-trees-reliable-optimized">Making B-Trees Reliable, Optimized</h4>
+<p>A <strong>Write-Ahead Log</strong> (WAL, redo log): is an additional append-only file on disk</p>
+<ul>
+  <li>every time you update a B-Tree, you also update this WAL</li>
+  <li>protects against crashes. You can use the WAL to reconstruct updates</li>
+</ul>
+
+<p>You can use a <strong>Copy-on-write Scheme</strong> as an alternative to a WAL</p>
+<ul>
+  <li>Instead of inserting to a page, just make a new page with all of the original data, plus the key/value pair you want to insert</li>
+  <li>When you’re done with that, update the references of the parent page</li>
+</ul>
+
+<p>You can also abbreviate keys to increase the branching factor.</p>
+
+<p>It’s also good to keep pages close to each other. This decreases the overhead required to jump from one page to another when you’re traversing the tree</p>
+
+<h3 id="other-indexing-structures">Other Indexing Structures</h3>
+<p>Secondary indexes (as opposed to primary keys) are usually used to perform <em>efficient joins</em></p>
+<ul>
+  <li>you have to get around the fact that these second indexes are not unique. You do this by including a row identifier</li>
+  <li>you can represent secondary indexes using B-Trees or LSM trees</li>
+</ul>
+
+<h4 id="storing-values-in-the-index">Storing values in the index</h4>
+<ul>
+  <li><strong>Clustered Index</strong>: an index that stores an entire row. These make for faster reads, but require more storage and write overhead</li>
+  <li><strong>Nonclustered Index</strong>: an index that stores references to rows. These require less storage and are faster to write to, but a query has to jump to the <em>heap file</em>, which takes more time</li>
+  <li><strong>Heap File</strong>: Place where the rows are stored. Often unordered. References in a nonclustered index point to the heap</li>
+  <li><strong>Covering Index</strong>: (AKA <strong>Index with included columns</strong>) a compromise between a clustered and nonclustered index. It stores <em>some</em> of the columns in a row, but not all</li>
+</ul>
+
+<h4 id="multi-column-indexes">Multi Column Indexes</h4>
+<ul>
+  <li><strong>Concatenated Index</strong>: most common multi-column index, and it just combines columns in a specific order</li>
+  <li><strong>R-Trees</strong>: specialized spacial indexes. One alternative to R-Trees is to transalte 2-D spacial indexes into a single number</li>
+</ul>
+
+<h4 id="fuzzy-indexes">Fuzzy Indexes</h4>
+<p>These allow for mispelling and assume you don’t have the exact key. One way to do this is to use an in-memory SSTable to determine the offset (or how bad your mispelling can be)</p>
+<ul>
+  <li>Full-text search engines (like lucene) do this</li>
+</ul>
+
+<h4 id="in-memory-databases">In-memory Databases</h4>
+<p>Using disk for databases is a little awkward (because you have to format data to go on disk), and the cost-per-gigabyte in RAM is going down, so in-memory databases is a thing</p>
+<ul>
+  <li>advantage: they can offer more data structures (redis uses priority queues, for example)</li>
+  <li>to keep in mind: they must protect against power outages</li>
+</ul>
+
+<h2 id="data-warehousing">Data Warehousing</h2>
+<ul>
+  <li><strong>Online Transaction Processing</strong> (OLTP): exist for daily transactions, like item sales or inventory
+    <ul>
+      <li>reads and writes happen on close to a human scale</li>
+      <li>used in real time, so they should be responsive</li>
+      <li>use cases usually include reading/writing one row at a time</li>
+    </ul>
+  </li>
+  <li><strong>Online Analytics Processing</strong> (OLAP):
+    <ul>
+      <li>used for business intellegence</li>
+      <li>users generally want to aggregate a <em>lot</em> of data at once</li>
+    </ul>
+  </li>
+</ul>
+
+<p>Because OLAP might interfere with OLTP, create a separate database for it. These separate databases are <strong>data warehouses</strong>. Data warehouses are generally read-only, and the data comes initially from the OLTP database</p>
+<ul>
+  <li><strong>extract</strong> (you <em>extract</em> data from the OLTP DB. Either batch it or stream it)</li>
+  <li><strong>transform</strong> (<em>transform</em> the data you grabbed to an analysis-friendly schema)</li>
+  <li><strong>load</strong> (<em>load</em> the data to the warehouse)</li>
+</ul>
+
+<p>Once it’s in a data warehouse, analysts run computationally heavy queries without interfering with operations. Warehouses are usually relational</p>
+
+<h4 id="star-schema">Star Schema</h4>
+<p>data warehouse setup where there’s a <strong>fact table</strong> (usually represents events that you’re interested in) and <strong>dimention tables</strong> (which act as picklists). If you map this out, it’ll look like a star.</p>
+
+<p>One mutation on star schema is the <strong>snowflake schema</strong>, which is a star schema, but where the dimention tables are broken down into subdimentions</p>
+
+<h2 id="column-oriented-storage">Column Oriented Storage</h2>
+<p>warehouse databases are gigantic, so we have to find a faster way to query them. Thankfully, the typical analytical qeury is really only interested in a few columns, so we can use that. If each column is <em>in its own file</em>, a query only needs to parse columns in that file</p>
+<ul>
+  <li>column-based storage advantage: helps reduce the bottleneck of moving things from disk to memory</li>
+</ul>
+
+<h3 id="column-compression">Column Compression</h3>
+<p>Because data in columns is often repetative, its a good candiate for <em>column compression</em>.</p>
+<ul>
+  <li><strong>Bitmap encoding</strong>: a compression technique where we break a bitwise representation of a value down based on the locations of ones and zeroes</li>
+  <li>representing data in this way makes it possible to use bitwise operations, which makes queries faster</li>
+  <li><strong>Vectorized processing</strong>: when you use bitwise operations (on a vector/one dimentional array) to process data quickly</li>
+</ul>
+
+<h3 id="sorting-columns">Sorting Columns</h3>
+<p>Now that the columns are all in their own files, we can sort them. We have the constraint of making sure not to scramble the information. Information in the <em>nth</em> row of once column file must correspond with information in the <em>nth</em> row of every other column file</p>
+<ul>
+  <li><strong>primary columm</strong>: if you know which column you query most often (like a SKU), that’s the one you sort. We can also compress it to make it faster to query</li>
+  <li><strong>secondary column</strong>: because sorted values in the primary column are often pretty repetitive (like, if there are several instances of a SKU being sold), we can sort the next-most-queried column within that.</li>
+  <li>a drawback to this is that you can’t insert new rows efficiently. These databases use LSM trees and merge in the background</li>
+  <li><strong>neat thing</strong>: Vertica introduced the idea of having several primary columns. Since it already stores redundant data warehouses, there’s no reason for each instance of the warehouse to have the same primary column</li>
+</ul>
+
+<h3 id="views-and-cubes">Views and Cubes</h3>
+<p>Another way to get around the huge amount of raw data is to precompute it. If, for instance, you precompute the total sales per day, you can use the results to power more complex calculations</p>
+<ul>
+  <li><strong>Materialized Views</strong>: A cache of results in the form of a table. A drawback to these is that you need to update them every time you enter new information (write overhead).</li>
+  <li><strong>Virtual Views</strong>: A shortcut for writing queries</li>
+  <li><strong>Data Cubes</strong>: A grid of aggregates grouped by dimention. This makes a lot of queries faster, but it’s not good for edge cases. The edge cases just use the raw data</li>
+</ul>
+
+
+  </div><a class="u-url" href="/programming/ddia-storage-and-retrieval/" hidden></a>
+</article>
+
+      </div>
+    </main><footer class="site-footer h-card">
+  <data class="u-url" href="/"></data>
+
+  <div class="wrapper">
+
+    <h2 class="footer-heading">Ngozi Nwogwugwu</h2>
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col footer-col-1">
+        <ul class="contact-list">
+          <li class="p-name">Ngozi Nwogwugwu</li><li><a class="u-email" href="mailto:ngozi.n.nwogwugwu@gmail.com">ngozi.n.nwogwugwu@gmail.com</a></li></ul>
+      </div>
+
+      <div class="footer-col footer-col-2"><ul class="social-media-list"><li><a href="https://github.com/ngozinwogwugwu"><svg class="svg-icon"><use xlink:href="/assets/minima-social-icons.svg#github"></use></svg> <span class="username">ngozinwogwugwu</span></a></li></ul>
+</div>
+
+      <div class="footer-col footer-col-3">
+        <p>nwogwugwu.eth</p>
+      </div>
+    </div>
+
+  </div>
+
+</footer>
+</body>
+
+</html>

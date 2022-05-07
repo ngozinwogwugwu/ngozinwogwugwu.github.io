@@ -1,0 +1,44 @@
+---
+layout: post
+title:  "Some Articles from 2019"
+date:   2019-12-27 15:07:43 -0500
+permalink: /notes/articles-2019/
+---
+
+[NYT Obituary: Rafi Eitan, Israeli Spymaster](https://www.nytimes.com/2019/03/23/obituaries/rafi-eitan-dead.html?smid=nytcore-ios-share)
+- known for kidnapping Adolf Eichmann (a Nazi war criminal) from Argentina (Argentina protested it as a violation of their soverenty)
+- Eitan tracked him down and snatched him as he got off a bus!
+- He got him out of the country by forcing him to change into an El Al crewmember's clothes and drink a bottle of whisky. They said he was a crewmember who was "under the weather" and got him on the plane
+- Eichmann was tried and hung in Jerusalem in 1961/1962
+
+
+[Vogue: Self Respect](https://www.vogue.com/article/joan-didion-self-respect-essay-1961)
+- It was uncomfortable when the author realized that she had been assuming, wrongly, that "passive virtues which had won [her] approval as a child automatically guaranteed" her a good life
+- "The charms that work on others count for nothing" when you're examining yourself
+- "people with self-respect have the courage of their mistakes". When they've made a mistake, they don't look to others to absolve them.
+- People with self respect engage in things, even if the outcome isn't assured
+- The ability to say *no* to others "without drowning in self-reproach" is one benefit to self respect
+- *" If we do not respect ourselves, we are on the one hand forced to despise those who have so few resources as to consort with us, so little perception as to remain blind to our fatal weak- nesses."*
+- When we present a version of ourselves that doesn
+t exist to the people around us, we are "determined to live out their false notions of us"
+
+[NYT: Tech and Doctors](https://www.nytimes.com/interactive/2018/05/16/magazine/health-issue-what-we-lose-with-data-driven-medicine.html?auth=login-email)
+- *"For every one hour we spend cumulatively with patients, studies have shown, we spend nearly two hours on our primitive Electronic Health Records, or “E.H.R.s,” and another hour or two during sacred personal time."*
+- EHRs are good because they are handwriting agnostic, they're a good repo for lab/imaging info, and they help reduce medication errors
+- downsides: incentivizes doctors to complete online forms, not check patients. Doctors run on autopilot and miss things they shouldn't
+- *"Our $3.4 trillion health care system is responsible for more than a quarter of a million deaths per year because of medical error, the rough equivalent of, say, a jumbo jet’s crashing every day."*
+- *"For all the effort that goes into data gathering and entering, too often the data is ignored."*
+- doctors are starting to burn out and move to other industries
+- AI will be limited by the data we feed it, and often won't have access to context like a human doctor would
+
+[Fortune: Tuna and the Blockchain](http://fortune.com/2019/03/08/tuna-blockchain-bumble-bee-sap/)
+- a canned tuna company is using blockchain tech to track its supply chain
+- it's trying to add transparency to its supply chain and avoid mislabeled fish
+- customers will be able to scan a barcode to see the history of the fish they're eating
+- opponents say that they could acheive the same results using a relational database
+
+[Reusable bags and the Environment](https://qz.com/1585027/when-it-comes-to-climate-change-cotton-totes-might-be-worse-than-plastic/)
+- plastic bags contribute a lot to litter, but production of cheap plastic bags has a low environmental impact in comparison to reusable ones
+- Reusable cotton bags are biodegradable, but you'd need to reuse a cotton bag thousands of times in order to make up for the damage that was done making it
+
+

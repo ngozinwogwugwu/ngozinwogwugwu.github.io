@@ -1,0 +1,436 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1"><!-- Begin Jekyll SEO tag v2.6.1 -->
+<title>Notes: Writing Smart Contracts | Ngozi Nwogwugwu</title>
+<meta name="generator" content="Jekyll v3.8.7" />
+<meta property="og:title" content="Notes: Writing Smart Contracts" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="source: CryptoZombies" />
+<meta property="og:description" content="source: CryptoZombies" />
+<link rel="canonical" href="http://localhost:4000/programming/cryptozombies/" />
+<meta property="og:url" content="http://localhost:4000/programming/cryptozombies/" />
+<meta property="og:site_name" content="Ngozi Nwogwugwu" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2022-01-16T21:07:43+01:00" />
+<script type="application/ld+json">
+{"url":"http://localhost:4000/programming/cryptozombies/","headline":"Notes: Writing Smart Contracts","dateModified":"2022-01-16T21:07:43+01:00","datePublished":"2022-01-16T21:07:43+01:00","description":"source: CryptoZombies","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/programming/cryptozombies/"},"@type":"BlogPosting","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link rel="stylesheet" href="/assets/main.css"><link type="application/atom+xml" rel="alternate" href="http://localhost:4000/feed.xml" title="Ngozi Nwogwugwu" /></head>
+<body><header class="site-header" role="banner">
+
+  <div class="wrapper"><a class="site-title" rel="author" href="/">Ngozi Nwogwugwu</a><nav class="site-nav">
+        <input type="checkbox" id="nav-trigger" class="nav-trigger" />
+        <label for="nav-trigger">
+          <span class="menu-icon">
+            <svg viewBox="0 0 18 15" width="18px" height="15px">
+              <path d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.032C17.335,0,18,0.665,18,1.484L18,1.484z M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.032C17.335,6.031,18,6.696,18,7.516L18,7.516z M18,13.516C18,14.335,17.335,15,16.516,15H1.484 C0.665,15,0,14.335,0,13.516l0,0c0-0.82,0.665-1.483,1.484-1.483h15.032C17.335,12.031,18,12.695,18,13.516L18,13.516z"/>
+            </svg>
+          </span>
+        </label>
+
+        <div class="trigger"><a class="page-link" href="/bookshelf/">My Bookshelf</a><a class="page-link" href="/notes/">Notes</a><a class="page-link" href="/programming/">Programming</a></div>
+      </nav></div>
+</header>
+<main class="page-content" aria-label="Content">
+      <div class="wrapper">
+        <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
+
+  <header class="post-header">
+    <h1 class="post-title p-name" itemprop="name headline">Notes: Writing Smart Contracts</h1>
+    <p class="post-meta">
+      <time class="dt-published" datetime="2022-01-16T21:07:43+01:00" itemprop="datePublished">Jan 16, 2022
+      </time></p>
+  </header>
+
+  <div class="post-content e-content" itemprop="articleBody">
+    <p>source: <a href="https://cryptozombies.io/">CryptoZombies</a></p>
+
+<hr />
+
+<h1 id="cryptozombies">CryptoZombies</h1>
+
+<p><a href="https://cryptozombies.io/en/lesson/1/chapter/1">https://cryptozombies.io</a></p>
+
+<h3 id="make-a-zombie-factory">make a zombie factory</h3>
+
+<h3 id="goal--pragma">goal &amp; pragma</h3>
+
+<p>requirements for a zombie factory</p>
+
+<ul>
+  <li>database with all zombies</li>
+  <li>function to create zombies</li>
+  <li>each zombie will be unique</li>
+</ul>
+
+<p><strong>zombie dna</strong> represented as an int. Different parts of the int map to different zombie traits</p>
+
+<p>a <strong>contract</strong> is the fundamental building block of ethereum applications</p>
+
+<ul>
+  <li>all variables and functions belong to a contract</li>
+  <li><strong>solidarity</strong> object oriented programming language</li>
+</ul>
+
+<p><strong>version pragma</strong> declaration of the version for the compiler</p>
+
+<ul>
+  <li>all solidarity code starts with this, prevents issues with future compiler versions</li>
+</ul>
+
+<p>example contract</p>
+
+<div class="language-solidity highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">pragma</span> <span class="n">solidity</span> <span class="o">&gt;=</span><span class="mf">0.5</span><span class="p">.</span><span class="mi">0</span> <span class="o">&lt;</span><span class="mf">0.6</span><span class="p">.</span><span class="mi">0</span><span class="p">;</span>
+
+<span class="k">contract</span> <span class="n">ZombieFactory</span> <span class="p">{}</span>
+</code></pre></div></div>
+
+<h3 id="variables-and-math">variables and math</h3>
+
+<p><strong>state variables</strong> permanently stored in contract storage. They’re written to the blockchain, similar to writing to a database</p>
+
+<p><strong>uint</strong> unsigned int, can’t be negative</p>
+
+<p>math operations in solidity are pretty straightforward</p>
+
+<h3 id="structs--arrays">structs &amp; arrays</h3>
+
+<p><strong>structs</strong></p>
+
+<div class="language-solidity highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">struct</span> <span class="n">Person</span> <span class="p">{</span>
+	<span class="kt">uint</span> <span class="n">age</span><span class="p">;</span>
+	<span class="kt">string</span> <span class="n">name</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<p><strong>arrays</strong> there are <strong>fixed</strong> and <strong>dynamic</strong> arrays. To make an array dynamic, don’t specify the length. You can also create arrays out of structs</p>
+
+<div class="language-solidity highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kt">uint</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span> <span class="n">fixedArray</span><span class="p">;</span>
+<span class="kt">uint</span><span class="p">[]</span> <span class="n">dynamicArray</span><span class="p">;</span>
+<span class="n">Person</span><span class="p">[]</span> <span class="k">public</span> <span class="n">people</span><span class="p">;</span>
+</code></pre></div></div>
+
+<p>if you create a dynamic array of structs, it gets stored in the blockchain. It’s like storing structured data in a database</p>
+
+<p>if you declare an array as <code class="highlighter-rouge">public</code>, solidity will create a <code class="highlighter-rouge">getter</code> method for it. Makes them readable but not writable by other contracts</p>
+
+<p>you can <code class="highlighter-rouge">push</code> structs and variables to arrays</p>
+
+<h3 id="functions">functions</h3>
+
+<p><strong>functions</strong> look like this</p>
+
+<div class="language-solidity highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">function</span> <span class="n">eatHamburgers</span><span class="p">(</span><span class="kt">string</span> <span class="k">memory</span> <span class="n">_name</span><span class="p">,</span> <span class="kt">uint</span> <span class="n">_amount</span><span class="p">)</span> <span class="k">public</span> <span class="p">{}</span>
+<span class="k">function</span> <span class="n">sayHello</span><span class="p">()</span> <span class="k">public</span> <span class="k">view</span> <span class="k">returns</span> <span class="p">(</span><span class="kt">string</span> <span class="k">memory</span><span class="p">)</span> <span class="p">{}</span>
+</code></pre></div></div>
+
+<ul>
+  <li><code class="highlighter-rouge">public</code> specifies the visibility of the function. Functions are public by default</li>
+  <li><code class="highlighter-rouge">public</code> functions are only visible by other functions within the contract. Private functions start with an underscore</li>
+  <li><code class="highlighter-rouge">memory</code> indicates that <code class="highlighter-rouge">_name</code> should be stored in memory. This is <strong>required for reference types</strong></li>
+</ul>
+
+<p><strong>types of arguments</strong> - you can pass them in <strong>by value</strong> or <strong>by reference</strong></p>
+
+<ul>
+  <li>any variable that you pass around by reference (arrays, strings, structs, mappings) vs</li>
+  <li>any variable that you pass into the function. <strong>Changes to these variables are limited to the function</strong></li>
+</ul>
+
+<p><strong>return values</strong> - the function declaration contains the return value type</p>
+
+<p><strong>function modifiers</strong> - a way to document the type of function you’re writing</p>
+
+<ul>
+  <li><strong>view</strong> - it’s viewing data from the blockchain but not modifying it</li>
+  <li><strong>pure</strong> - not even accessing data from the app</li>
+</ul>
+
+<h3 id="using-keccak256-to-create-a-random-zombie">using <code class="highlighter-rouge">Keccak256</code> to create a random zombie</h3>
+
+<p><code class="highlighter-rouge">keccak256</code> is a hash function that outputs a 256-bit hex number</p>
+
+<ul>
+  <li>input of type bytes</li>
+</ul>
+
+<p><strong>to pack a string into bytes</strong> use the function <code class="highlighter-rouge">abi.encodePacked</code></p>
+
+<ul>
+  <li>
+    <p>code so far</p>
+
+    <div class="language-solidity highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  <span class="k">pragma</span> <span class="n">solidity</span> <span class="o">&gt;=</span><span class="mf">0.5</span><span class="p">.</span><span class="mi">0</span> <span class="o">&lt;</span><span class="mf">0.6</span><span class="p">.</span><span class="mi">0</span><span class="p">;</span>
+    
+  <span class="k">contract</span> <span class="n">ZombieFactory</span> <span class="p">{</span>
+    
+      <span class="c1">// declare our event here
+</span>    
+      <span class="kt">uint</span> <span class="n">dnaDigits</span> <span class="o">=</span> <span class="mi">16</span><span class="p">;</span>
+      <span class="kt">uint</span> <span class="n">dnaModulus</span> <span class="o">=</span> <span class="mi">10</span> <span class="o">**</span> <span class="n">dnaDigits</span><span class="p">;</span>
+    
+      <span class="k">struct</span> <span class="n">Zombie</span> <span class="p">{</span>
+          <span class="kt">string</span> <span class="n">name</span><span class="p">;</span>
+          <span class="kt">uint</span> <span class="n">dna</span><span class="p">;</span>
+      <span class="p">}</span>
+    
+      <span class="n">Zombie</span><span class="p">[]</span> <span class="k">public</span> <span class="n">zombies</span><span class="p">;</span>
+    
+      <span class="k">function</span> <span class="n">_createZombie</span><span class="p">(</span><span class="kt">string</span> <span class="k">memory</span> <span class="n">_name</span><span class="p">,</span> <span class="kt">uint</span> <span class="n">_dna</span><span class="p">)</span> <span class="k">private</span> <span class="p">{</span>
+          <span class="n">zombies</span><span class="p">.</span><span class="n">push</span><span class="p">(</span><span class="n">Zombie</span><span class="p">(</span><span class="n">_name</span><span class="p">,</span> <span class="n">_dna</span><span class="p">));</span>
+          <span class="c1">// and fire it here
+</span>      <span class="p">}</span>
+    
+      <span class="k">function</span> <span class="n">_generateRandomDna</span><span class="p">(</span><span class="kt">string</span> <span class="k">memory</span> <span class="n">_str</span><span class="p">)</span> <span class="k">private</span> <span class="k">view</span> <span class="k">returns</span> <span class="p">(</span><span class="kt">uint</span><span class="p">)</span> <span class="p">{</span>
+          <span class="kt">uint</span> <span class="n">rand</span> <span class="o">=</span> <span class="kt">uint</span><span class="p">(</span><span class="nb">keccak256</span><span class="p">(</span><span class="n">abi</span><span class="p">.</span><span class="n">encodePacked</span><span class="p">(</span><span class="n">_str</span><span class="p">)));</span>
+          <span class="k">return</span> <span class="n">rand</span> <span class="o">%</span> <span class="n">dnaModulus</span><span class="p">;</span>
+      <span class="p">}</span>
+    
+      <span class="k">function</span> <span class="n">createRandomZombie</span><span class="p">(</span><span class="kt">string</span> <span class="k">memory</span> <span class="n">_name</span><span class="p">)</span> <span class="k">public</span> <span class="p">{</span>
+          <span class="kt">uint</span> <span class="n">randDna</span> <span class="o">=</span> <span class="n">_generateRandomDna</span><span class="p">(</span><span class="n">_name</span><span class="p">);</span>
+          <span class="n">_createZombie</span><span class="p">(</span><span class="n">_name</span><span class="p">,</span> <span class="n">randDna</span><span class="p">);</span>
+      <span class="p">}</span>
+    
+  <span class="p">}</span>
+</code></pre></div>    </div>
+  </li>
+</ul>
+
+<h3 id="events">events</h3>
+
+<p>your contract can listen to <strong>events</strong> on the blockchain and take an action</p>
+
+<h3 id="the-frontend">the frontend</h3>
+
+<p>Ethereum has a Javascript library called <strong>Web3.js</strong></p>
+
+<h1 id="make-the-zombie-app-more-game">Make the zombie app more game</h1>
+
+<h3 id="addresses-and-mappings">Addresses and Mappings</h3>
+
+<p><strong>accounts</strong> similar to bank accounts</p>
+
+<ul>
+  <li>owned by an individual or contract</li>
+  <li>holds a balance of <strong>ether</strong>, can send or receive ether</li>
+</ul>
+
+<p><strong>addresses</strong> hex identifiers for the accounts.</p>
+
+<p><strong>mappings</strong> key-values stores. Defined like this:</p>
+
+<div class="language-solidity highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">mapping</span> <span class="p">(</span><span class="n">account</span> <span class="o">=&gt;</span> <span class="kt">uint</span><span class="p">)</span> <span class="k">public</span> <span class="n">accountBalance</span><span class="p">;</span>
+</code></pre></div></div>
+
+<h3 id="msgsender">msg.sender</h3>
+
+<p>this function returns the address of whatever (person or contract) that called the current function</p>
+
+<h3 id="require">require</h3>
+
+<p><code class="highlighter-rouge">require</code> makes the function throw an exception if some conditions are not met</p>
+
+<h3 id="inheritance-and-import">inheritance and import</h3>
+
+<p>the syntax <code class="highlighter-rouge">contract descendentContract is ancestorContract {}</code> will create an inherited contract</p>
+
+<p>the syntax <code class="highlighter-rouge">import "./another_file.sol";</code> will import a file</p>
+
+<h3 id="storage-and-memory">storage and memory</h3>
+
+<p><strong>storage</strong> gets stored on the blockchain. This is analogous to writing to disk</p>
+
+<p><strong>memory</strong> variables in memory are temporary, and disappear when the function ends</p>
+
+<p>you include these as keywords when you declare variables</p>
+
+<h3 id="internal--external">Internal &amp; External</h3>
+
+<p>functions in solidity have different visibilities:</p>
+
+<ul>
+  <li><code class="highlighter-rouge">internal</code> is the same as <code class="highlighter-rouge">private</code>, except it includes inherited classes</li>
+  <li><code class="highlighter-rouge">external</code> is like <code class="highlighter-rouge">public</code> - except <code class="highlighter-rouge">external</code> functions are <strong>only</strong> accessible from outside the contract</li>
+</ul>
+
+<h3 id="reading-from-other-contracts">reading from other contracts</h3>
+
+<p>we need to define an <strong>interface</strong> to interact with other contracts. Interfaces look like this:</p>
+
+<div class="language-solidity highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">contract</span> <span class="n">exampleInterface</span> <span class="p">{</span>
+	<span class="k">function</span> <span class="n">otherFunction</span><span class="p">(</span><span class="kt">uint</span> <span class="n">inputVar</span><span class="p">)</span> <span class="k">public</span> <span class="k">view</span> <span class="k">returns</span> <span class="p">(</span><span class="kt">uint</span><span class="p">);</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<h3 id="cryptokitties">cryptokitties</h3>
+
+<p>source code is here (<a href="https://github.com/dapperlabs/cryptokitties-bounty/blob/master/contracts/KittyCore.sol#L91">github</a>)</p>
+
+<p>we initialize the contract using the address of the contract</p>
+
+<h1 id="ethereum">Ethereum</h1>
+
+<p>Ethereum contracts are <strong>immutable</strong>. This makes security a huge concern. Because of this, it make sense to have getters and setters for some contract variables, like <code class="highlighter-rouge">setKittyContractAddress</code></p>
+
+<p><strong>constructors</strong> - optional functions that get executed when an object gets created</p>
+
+<p><strong>function modieifer</strong> modify other functions, usually to check some requirements before the execution (like <code class="highlighter-rouge">onlyOwner</code>)</p>
+
+<ul>
+  <li>uses the keyword <code class="highlighter-rouge">modifier</code>
+    <ul>
+      <li>uses <code class="highlighter-rouge">_;</code> - when this gets run, it jumps to the modified function</li>
+    </ul>
+  </li>
+</ul>
+
+<h3 id="ownable-contracts">ownable contracts</h3>
+
+<p>In order to prevent randos from changing the contract, you make a contract <code class="highlighter-rouge">ownable</code></p>
+
+<p><code class="highlighter-rouge">OpenZeppelin</code> solidity library</p>
+
+<ul>
+  <li>has secure smart contracts that you can use in your own dapps</li>
+</ul>
+
+<p>It makes sense to be careful with ownable contracts. The owners can add backdoors for themselves</p>
+
+<ul>
+  <li>this means you should read code before you trust it</li>
+</ul>
+
+<h2 id="gas">gas</h2>
+
+<p>you can buy gas with ether</p>
+
+<p>gas required to execute a function depends on the function’s complexity. This encourages code optimization</p>
+
+<h3 id="struct-packing">struct packing</h3>
+
+<p>Solidity reserves 256 bits for all uints (8, 16, 32…)</p>
+
+<p><strong>exception</strong>: inside of structs. You’ll want to use the smallest possible integer sub-types and cluster identically-typed fields</p>
+
+<h3 id="time">time</h3>
+
+<p><code class="highlighter-rouge">now</code> - built in</p>
+
+<p><code class="highlighter-rouge">days</code>, <code class="highlighter-rouge">months</code>, <code class="highlighter-rouge">minutes</code> - you can say <code class="highlighter-rouge">now + 5 minutes</code> to mean five minutes from now</p>
+
+<p>the <strong>2038 problem</strong> - it will be so many seconds since 1970 that we’ll have overflows from a <code class="highlighter-rouge">uint32</code></p>
+
+<p>default is <code class="highlighter-rouge">uint256</code>, so we should cast dates to <code class="highlighter-rouge">uint32</code>s</p>
+
+<h3 id="passing-references-to-structs">passing references to structs</h3>
+
+<p>You can pass a pointer to a struct in a function like this</p>
+
+<div class="language-solidity highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">function</span> <span class="n">myFunc</span><span class="p">(</span><span class="n">MyStruct</span> <span class="k">storage</span> <span class="n">_myStruct</span><span class="p">)</span> <span class="p">{}</span>
+</code></pre></div></div>
+
+<h3 id="function-modifiers-can-take-input-variables">function modifiers can take input variables</h3>
+
+<p>You declare them like any other function with input variables</p>
+
+<div class="language-solidity highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">modifier</span> <span class="n">olderThan</span><span class="p">(</span><span class="kt">uint</span> <span class="n">_age</span><span class="p">,</span> <span class="n">User</span> <span class="k">storage</span> <span class="n">_user</span><span class="p">)</span> <span class="p">{</span>
+	<span class="nb">require</span><span class="p">(</span><span class="n">user</span><span class="p">.</span><span class="n">age</span> <span class="o">&gt;</span> <span class="n">_age</span><span class="p">)</span>
+	<span class="n">_</span><span class="p">;</span>
+<span class="p">}</span>
+
+</code></pre></div></div>
+
+<p>And you’d input the variables in your function definition</p>
+
+<div class="language-solidity highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">function</span> <span class="n">DrinkAlcohol</span><span class="p">(</span><span class="n">User</span> <span class="n">storaage</span> <span class="n">_user</span><span class="p">)</span> <span class="k">public</span> <span class="n">olderThan</span><span class="p">(</span><span class="mi">16</span><span class="p">,</span> <span class="n">_user</span><span class="p">)</span> <span class="p">{</span> <span class="p">}</span>
+</code></pre></div></div>
+
+<h3 id="gas--view-functions">gas &amp; view functions</h3>
+
+<p>If you call a view function externally, it will just find the value on your local ethereum node. <strong>This does not cost you gas</strong></p>
+
+<ul>
+  <li>if you call a view function from <em>inside</em> a contract, <strong>it will cost you gas</strong></li>
+</ul>
+
+<h3 id="gas--building-variables-on-the-fly">gas &amp; building variables on the fly</h3>
+
+<p>writing data to storage is one of the most expensive things you can do on the blockchain, so in a lot of cases it makes sense to create things on the fly</p>
+
+<ul>
+  <li>
+    <p>in order to make sure your arrays stay in memory, use the <code class="highlighter-rouge">memory</code> tag when you declare them</p>
+
+    <div class="language-solidity highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  <span class="kt">uint</span><span class="p">[]</span> <span class="k">memory</span> <span class="n">values</span> <span class="o">=</span> <span class="k">new</span> <span class="kt">uint</span><span class="p">[][</span><span class="mi">3</span><span class="p">]</span>
+  <span class="k">for</span><span class="p">(</span><span class="kt">uint</span> <span class="n">i</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span> <span class="n">i</span><span class="o">&lt;</span><span class="mi">3</span><span class="p">;</span> <span class="n">i</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
+  	<span class="n">values</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="n">i</span><span class="o">+</span><span class="mi">3</span><span class="p">;</span>
+  <span class="p">}</span>
+</code></pre></div>    </div>
+  </li>
+</ul>
+
+<p>Also for loop look like this</p>
+
+<h1 id="erc271-crypto-collectibles">ERC271, Crypto collectibles</h1>
+
+<h2 id="tokens-on-ethereum">Tokens on Ethereum</h2>
+
+<p>Tokens are basically contracts that follow a standard set of rules</p>
+
+<ul>
+  <li>implements the same functions (<code class="highlighter-rouge">transferFrom</code>, <code class="highlighter-rouge">balanceOf</code>…)</li>
+</ul>
+
+<p>Now that we have a standard, we can build on top of tokens more easily. For example, and exchange can work with any kind of ERC20 token</p>
+
+<p>We have ERC20 tokens (similar to currencies) and ERC271 tokens (NFTs). NFTs are not interchangeable or divisible</p>
+
+<h2 id="erc271-standard-multiple-inheritance">ERC271 standard, multiple inheritance</h2>
+
+<p>If we want to make an NFT, we inherit from ERC271. This means we need to implement <strong>multiple inheritance</strong> by using the following syntax:</p>
+
+<div class="language-solidity highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">contract</span> <span class="n">ChildClass</span> <span class="k">is</span> <span class="n">ParentA</span><span class="p">,</span> <span class="n">ParentB</span> <span class="p">{</span> <span class="p">}</span>
+</code></pre></div></div>
+
+<h2 id="transfer-logic">Transfer Logic</h2>
+
+<p>We have two different ways to transfer NFTs here:</p>
+
+<ol>
+  <li><strong>transferFrom</strong> - the owner transfers the NFT to the recipient</li>
+  <li><strong>approve</strong> and <strong>transferFrom</strong> - the owner approves a transfer to a specific address, then the recipient calls the <code class="highlighter-rouge">transferFrom</code> fununction</li>
+</ol>
+
+  </div><a class="u-url" href="/programming/cryptozombies/" hidden></a>
+</article>
+
+      </div>
+    </main><footer class="site-footer h-card">
+  <data class="u-url" href="/"></data>
+
+  <div class="wrapper">
+
+    <h2 class="footer-heading">Ngozi Nwogwugwu</h2>
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col footer-col-1">
+        <ul class="contact-list">
+          <li class="p-name">Ngozi Nwogwugwu</li><li><a class="u-email" href="mailto:ngozi.n.nwogwugwu@gmail.com">ngozi.n.nwogwugwu@gmail.com</a></li></ul>
+      </div>
+
+      <div class="footer-col footer-col-2"><ul class="social-media-list"><li><a href="https://github.com/ngozinwogwugwu"><svg class="svg-icon"><use xlink:href="/assets/minima-social-icons.svg#github"></use></svg> <span class="username">ngozinwogwugwu</span></a></li></ul>
+</div>
+
+      <div class="footer-col footer-col-3">
+        <p>nwogwugwu.eth</p>
+      </div>
+    </div>
+
+  </div>
+
+</footer>
+</body>
+
+</html>
