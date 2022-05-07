@@ -21,11 +21,5 @@ I compiled some of the smaller one-off projects that I've made onto one page
 
 check them out [here](https://ngozinwogwugwu.github.io/mini_frontend_projects/)
 
-## My Personal Wiki
-I've been taking notes of some of the things I've been learning.
-- [Designing Data Intensive Applications Notes](https://github.com/ngozinwogwugwu/ngozinwogwugwu.github.io/wiki#designing-data-intensive-applications)
-- [Things I've been Learning at RC](https://github.com/ngozinwogwugwu/ngozinwogwugwu.github.io/wiki#recurse-center-learning)
-- [Databases](https://github.com/ngozinwogwugwu/ngozinwogwugwu.github.io/wiki#databases)
-
 ## RC-Robot
 I paired with [another RC-er](https://github.com/tvieregge/) to build [RC-Robot](https://github.com/tvieregge/rc-robot), the robot that tries to follow you around.
