@@ -5,7 +5,7 @@ date:   2018-07-13 15:07:43 -0500
 permalink: /programming/dockerize-project/
 ---
 
-source: [Docker's Website](https://docs.docker.com/get-started/)
+sources: [Docker's Website](https://docs.docker.com/get-started/), [Tutorial from Node.js](https://nodejs.org/en/docs/guides/nodejs-docker-webapp/)
 
 ---
 
@@ -51,7 +51,6 @@ Note: the -d flag runs the docker image in the background. the -p flag lets you 
 
 To view the dockerized application, go to http://localhost:49160/
 
-### Examples of Projects that I've dockerized
+### Example of Projects that I've dockerized
 [Scooter table repo](https://github.com/ngozinwogwugwu/scooter_table)
-[Tutorial from Node.js](https://nodejs.org/en/docs/guides/nodejs-docker-webapp/)
 
