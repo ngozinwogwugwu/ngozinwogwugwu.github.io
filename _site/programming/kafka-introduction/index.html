@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1"><!-- Begin Jekyll SEO tag v2.6.1 -->
+<title>Notes: Kafka Introduction | Ngozi Nwogwugwu</title>
+<meta name="generator" content="Jekyll v3.8.7" />
+<meta property="og:title" content="Notes: Kafka Introduction" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="source: Kafka: The Definitive Guide by Neha Narkhede, Gwen Shapira, Todd Palino (Chapter 1)" />
+<meta property="og:description" content="source: Kafka: The Definitive Guide by Neha Narkhede, Gwen Shapira, Todd Palino (Chapter 1)" />
+<link rel="canonical" href="http://localhost:4000/programming/kafka-introduction/" />
+<meta property="og:url" content="http://localhost:4000/programming/kafka-introduction/" />
+<meta property="og:site_name" content="Ngozi Nwogwugwu" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2022-06-03T04:07:43+08:00" />
+<script type="application/ld+json">
+{"url":"http://localhost:4000/programming/kafka-introduction/","headline":"Notes: Kafka Introduction","dateModified":"2022-06-03T04:07:43+08:00","datePublished":"2022-06-03T04:07:43+08:00","description":"source: Kafka: The Definitive Guide by Neha Narkhede, Gwen Shapira, Todd Palino (Chapter 1)","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/programming/kafka-introduction/"},"@type":"BlogPosting","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link rel="stylesheet" href="/assets/main.css"><link type="application/atom+xml" rel="alternate" href="http://localhost:4000/feed.xml" title="Ngozi Nwogwugwu" /></head>
+<body><header class="site-header" role="banner">
+
+  <div class="wrapper"><a class="site-title" rel="author" href="/">Ngozi Nwogwugwu</a><nav class="site-nav">
+        <input type="checkbox" id="nav-trigger" class="nav-trigger" />
+        <label for="nav-trigger">
+          <span class="menu-icon">
+            <svg viewBox="0 0 18 15" width="18px" height="15px">
+              <path d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.032C17.335,0,18,0.665,18,1.484L18,1.484z M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.032C17.335,6.031,18,6.696,18,7.516L18,7.516z M18,13.516C18,14.335,17.335,15,16.516,15H1.484 C0.665,15,0,14.335,0,13.516l0,0c0-0.82,0.665-1.483,1.484-1.483h15.032C17.335,12.031,18,12.695,18,13.516L18,13.516z"/>
+            </svg>
+          </span>
+        </label>
+
+        <div class="trigger"><a class="page-link" href="/bookshelf/">My Bookshelf</a><a class="page-link" href="/notes/">Notes</a><a class="page-link" href="/programming/">Programming</a></div>
+      </nav></div>
+</header>
+<main class="page-content" aria-label="Content">
+      <div class="wrapper">
+        <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
+
+  <header class="post-header">
+    <h1 class="post-title p-name" itemprop="name headline">Notes: Kafka Introduction</h1>
+    <p class="post-meta">
+      <time class="dt-published" datetime="2022-06-03T04:07:43+08:00" itemprop="datePublished">Jun 3, 2022
+      </time></p>
+  </header>
+
+  <div class="post-content e-content" itemprop="articleBody">
+    <p>source: <a href="https://www.oreilly.com/library/view/kafka-the-definitive/9781491936153//">Kafka: The Definitive Guide</a> by Neha Narkhede, Gwen Shapira, Todd Palino (Chapter 1)</p>
+
+<hr />
+<h1 id="publishsubscribe-messaging">Publish/Subscribe Messaging</h1>
+
+<ul>
+  <li><strong>message</strong> - a base unit of information. Often has a category</li>
+  <li><strong>publisher</strong> - sends and classifies messages, but does not direct them anywhere</li>
+  <li><strong>subscriber</strong> - receives certain classes of messages</li>
+  <li><strong>broker</strong> - central point where messages are published to</li>
+</ul>
+
+<h1 id="enter-kafka">Enter Kafka</h1>
+
+<p>a “distributed commit log”, or a “distributed streaming platform”</p>
+
+<p>Designed to store data <em>durably</em> and <em>in order</em>. This means that it can be read deterministically</p>
+
+<p>Another key feature of Kafka is that the <em>data is distributed</em></p>
+
+<h2 id="messages-and-batches">Messages and Batches</h2>
+
+<p><strong>message</strong> - unit of data within Kafka. Kafka has no knowledge about the content of the message</p>
+
+<p><strong>key</strong> - an optional component of a message. Used to control how messages are written to partition</p>
+
+<p><strong>batch</strong> - collection of messages being produced to the same topic and partition</p>
+
+<ul>
+  <li>larger batches lead to messages being handled more efficiently, but individual messages take longer to propagate</li>
+</ul>
+
+<h2 id="schemas">Schemas</h2>
+
+<p>Optional, but recommended. Allow engineers to decouple writing and reading messages</p>
+
+<ul>
+  <li>human-readable schemas (JSON, XML) lack type handling and schema versions</li>
+  <li>alternatives, like <strong>Apache Avro</strong>, have compact serialization formats, type handling and separate schemas</li>
+</ul>
+
+<h2 id="topics--partitions">Topics &amp; Partitions</h2>
+
+<p><strong>topics</strong> - how messages in Kafka are organized. Can be broken down into partitions</p>
+
+<p><strong>partitions</strong> - a single log that messages are appended to</p>
+
+<ul>
+  <li>can be hosted on different servers</li>
+  <li>time ordering is guaranteed within a partition but not a topic</li>
+</ul>
+
+<p><strong>stream</strong> - represent data moving from the producers to consumers for a given topic</p>
+
+<h2 id="producers--consumers">Producers &amp; Consumers</h2>
+
+<p>Kafka clients can be users or consumers</p>
+
+<ul>
+  <li>Kafka Connect API - advanced client API for data integration</li>
+  <li>Kafka Streams - for stream processing</li>
+</ul>
+
+<h3 id="producers">producers</h3>
+
+<p>create new messages. Generally publish messages to specific topics and usually don’t care which partition the message goes to</p>
+
+<h3 id="consumers">consumers</h3>
+
+<p>consume messages. Can be subscribed to one or more topics, reads messages in order</p>
+
+<p><strong>offset</strong> - metadata (a counter) given to each message within a partition</p>
+
+<ul>
+  <li>a consumer will use this to keep track of which messages it’s already consumed</li>
+</ul>
+
+<p><strong>consumer group</strong> - a set of consumers reading from a topic. Each partition is read by a single consumer</p>
+
+<p><strong>ownership</strong> - mapping of a consumer to a partition</p>
+
+<h2 id="brokers--clusters">Brokers &amp; Clusters</h2>
+
+<p>A <strong>broker</strong> is a single Kafka server</p>
+
+<ul>
+  <li>it receives messages from producers, assigns offsets to them, and commits them to disk</li>
+  <li>services fetch requests from consumers</li>
+  <li>owns a partition</li>
+</ul>
+
+<p>A <strong>cluster</strong> is a group of brokers</p>
+
+<p>A <strong>controller</strong> is responsible for administrative operations</p>
+
+<p>A broker that is the <strong>leader</strong> of a partition is responsible for receiving messages from producers and for replicating the partition to other brokers in its cluster</p>
+
+<p><strong>retention</strong> - durable storage of messages</p>
+
+<ul>
+  <li>can be for a period of time <em>or</em> dictated by a data limit</li>
+  <li>expired messages are deleted</li>
+</ul>
+
+<h2 id="multiple-clusters">Multiple Clusters</h2>
+
+<p>You might want multiple clusters for</p>
+
+<ul>
+  <li>data segregation</li>
+  <li>security isolation</li>
+  <li>redundancy</li>
+</ul>
+
+<p><strong>Mirror Maker</strong> - like a mega-kafka. Messages are consumed from one cluster and produced for another</p>
+
+<h1 id="why-kafka">Why Kafka?</h1>
+
+<ul>
+  <li>multiple producers and consumers</li>
+  <li>data is easy to retain</li>
+  <li>scalable and performant</li>
+</ul>
+
+<h2 id="use-cases-for-kafka">Use Cases for Kafka</h2>
+
+<ul>
+  <li>activity tracking</li>
+  <li>messaging</li>
+  <li>metrics &amp; logging</li>
+  <li>stream processing</li>
+</ul>
+
+<h1 id="kafkas-origin">Kafka’s Origin</h1>
+
+<p>created at LinkedIn to address a data pipeline problem</p>
+
+<p>released as an open source project on GitHub in 2010</p>
+
+<p>It’s named after Franz Kafka, but for no particular reason. Just because it sounded cool</p>
+
+  </div><a class="u-url" href="/programming/kafka-introduction/" hidden></a>
+</article>
+
+      </div>
+    </main><footer class="site-footer h-card">
+  <data class="u-url" href="/"></data>
+
+  <div class="wrapper">
+
+    <h2 class="footer-heading">Ngozi Nwogwugwu</h2>
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col footer-col-1">
+        <ul class="contact-list">
+          <li class="p-name">Ngozi Nwogwugwu</li><li><a class="u-email" href="mailto:ngozi.n.nwogwugwu@gmail.com">ngozi.n.nwogwugwu@gmail.com</a></li></ul>
+      </div>
+
+      <div class="footer-col footer-col-2"><ul class="social-media-list"><li><a href="https://github.com/ngozinwogwugwu"><svg class="svg-icon"><use xlink:href="/assets/minima-social-icons.svg#github"></use></svg> <span class="username">ngozinwogwugwu</span></a></li></ul>
+</div>
+
+      <div class="footer-col footer-col-3">
+        <p>nwogwugwu.eth</p>
+      </div>
+    </div>
+
+  </div>
+
+</footer>
+</body>
+
+</html>

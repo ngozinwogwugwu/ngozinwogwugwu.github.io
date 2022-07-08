@@ -1,4 +1,635 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.7">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2022-05-07T17:15:45+02:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Ngozi Nwogwugwu</title><subtitle>nwogwugwu.eth</subtitle><entry><title type="html">My Fitness RPG</title><link href="http://localhost:4000/programming/fitness-rpg/" rel="alternate" type="text/html" title="My Fitness RPG" /><published>2022-04-30T22:07:43+02:00</published><updated>2022-04-30T22:07:43+02:00</updated><id>http://localhost:4000/programming/my-fitness-rpg</id><content type="html" xml:base="http://localhost:4000/programming/fitness-rpg/">&lt;p&gt;I made a simple phone game that draws on fitness stats from your wearable. The game’s concept is quite simple: Fight monsters to gain experience points and gold, while using real-life factors to determine its behavior.&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.7">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2022-07-08T19:45:07+08:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Ngozi Nwogwugwu</title><subtitle>nwogwugwu.eth</subtitle><entry><title type="html">Notes: Operating Systems Overview</title><link href="http://localhost:4000/programming/operating-systems-overview/" rel="alternate" type="text/html" title="Notes: Operating Systems Overview" /><published>2022-07-07T04:07:43+08:00</published><updated>2022-07-07T04:07:43+08:00</updated><id>http://localhost:4000/programming/Operating-Systems-Overview</id><content type="html" xml:base="http://localhost:4000/programming/operating-systems-overview/">&lt;p&gt;source: &lt;a href=&quot;https://codex.cs.yale.edu/avi/os-book/OS10/index.html&quot;&gt;Operating System Concepts&lt;/a&gt; by Avi Silberschatz, Peter Baer Galvin, Greg Gagne (Chapter 1)&lt;/p&gt;
+
+&lt;hr /&gt;
+&lt;h1 id=&quot;introduction&quot;&gt;Introduction&lt;/h1&gt;
+
+&lt;p&gt;An &lt;strong&gt;Operating System&lt;/strong&gt; is software that manages a computer’s hardware&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;provides basis for application programs&lt;/li&gt;
+  &lt;li&gt;acts as intermediary between user and hardware&lt;/li&gt;
+  &lt;li&gt;allocates resources to computer programs&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;what-operating-systems-do&quot;&gt;What Operating Systems Do&lt;/h2&gt;
+
+&lt;p&gt;Components to a computer system:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;hardware&lt;/li&gt;
+  &lt;li&gt;operating system&lt;/li&gt;
+  &lt;li&gt;application systems&lt;/li&gt;
+  &lt;li&gt;user&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;system-view&quot;&gt;System View&lt;/h3&gt;
+
+&lt;p&gt;from a computer’s point of view, the OS is the program most intimately involved with the hardware. It’s a &lt;strong&gt;resource allocator&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;A &lt;strong&gt;control program&lt;/strong&gt; manages the execution of user programs&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;prevents improper use of the computer&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;defining-operating-systems&quot;&gt;Defining Operating Systems&lt;/h3&gt;
+
+&lt;p&gt;Can be defined as a combination of the kernel and system programs&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;strong&gt;the kernel&lt;/strong&gt;: the operating system is the one program that’s always running. This is one possible definition of an operating system&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;system programs:&lt;/strong&gt; associated with the operating system, but not part of the kernel&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;strong&gt;middleware:&lt;/strong&gt; a set of software frameworks that provide additional services to application developers&lt;/p&gt;
+
+&lt;h2 id=&quot;computer-system-organization&quot;&gt;Computer-System Organization&lt;/h2&gt;
+
+&lt;h3 id=&quot;interrupts&quot;&gt;Interrupts&lt;/h3&gt;
+
+&lt;p&gt;An interrupt is a signal from the hardware to the CPU, usually by the system bus, which causes the CPU to stop what it’s doing and transfer execution to a fixed location. These locations could be hardcoded, or stored in a table of pointers called the &lt;strong&gt;interrupt vector&lt;/strong&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;storage-structure&quot;&gt;Storage Structure&lt;/h3&gt;
+
+&lt;p&gt;Computers run most of their programs from main memory (or &lt;strong&gt;RAM&lt;/strong&gt;), which is volatile. You have to load the program to main memory beforehand&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;strong&gt;DRAM:&lt;/strong&gt; Dynamic Random-Access Memory&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;strong&gt;Bootstrap Program&lt;/strong&gt; - the first program to run on a computer. Uses firmware storage to store the program, since RAM is volatile&lt;/p&gt;
+
+&lt;p&gt;We can’t store programs in main memory for two reasons&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Main memory is too small to store all our programs&lt;/li&gt;
+  &lt;li&gt;Main memory is volatile&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;io-structure&quot;&gt;I/O Structure&lt;/h3&gt;
+
+&lt;p&gt;Operating systems handle I/O&lt;/p&gt;
+
+&lt;h2 id=&quot;computer-system-architecture&quot;&gt;Computer-System Architecture&lt;/h2&gt;
+
+&lt;p&gt;There are single processor systems and multi processor systems&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;strong&gt;core&lt;/strong&gt; - the component that executes instructions&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;multiprocessor-systems&quot;&gt;Multiprocessor systems&lt;/h3&gt;
+
+&lt;p&gt;have processors that share resources (clock, memory, etc)&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Primary advantage: increased throughput&lt;/li&gt;
+  &lt;li&gt;Disadvantage: One processor could sit idle&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;strong&gt;Multicore Systems&lt;/strong&gt; - have multiple cores on a single chip (for faster communication)&lt;/p&gt;
+
+&lt;h3 id=&quot;clustered-systems&quot;&gt;Clustered Systems&lt;/h3&gt;
+
+&lt;p&gt;composed of two more more &lt;strong&gt;nodes&lt;/strong&gt; (individual systems) that are loosely coupled&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;redundancy leads to high availability&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;strong&gt;Parallelization&lt;/strong&gt; - a technique which divides a program into separate components so they can be run in parallel&lt;/p&gt;
+
+&lt;h2 id=&quot;operating-system-operations&quot;&gt;Operating System Operations&lt;/h2&gt;
+
+&lt;p&gt;&lt;strong&gt;system daemons&lt;/strong&gt; programs that are loaded into memory at boot time. Services that are provided outside of the kernel&lt;/p&gt;
+
+&lt;h3 id=&quot;multiprogramming-and-multitasking&quot;&gt;Multiprogramming and Multitasking&lt;/h3&gt;
+
+&lt;p&gt;&lt;strong&gt;Multiprogramming&lt;/strong&gt; increases CPU utilization by keeping several processes in memory simultaneously. Gives processing time to a new program when the current program is idle&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Multitasking&lt;/strong&gt; &lt;strong&gt;-&lt;/strong&gt; when the CPU switches between programs&lt;/p&gt;
+
+&lt;h3 id=&quot;dual-mode-and-multi-mode-operation&quot;&gt;Dual-Mode and Multi-Mode Operation&lt;/h3&gt;
+
+&lt;p&gt;Computers must distinguish between operating-system code and user-defined code. This prevents misuse of the computer.&lt;/p&gt;
+
+&lt;p&gt;To implement this, we need two &lt;strong&gt;modes of operation&lt;/strong&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Kernel mode (AKA supervisor mode, system mode, privileged mode)&lt;/li&gt;
+  &lt;li&gt;user mode&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;strong&gt;mode bit&lt;/strong&gt; - indicates the current mode, added to the hardware of the computer&lt;/p&gt;
+
+&lt;h3 id=&quot;timer&quot;&gt;Timer&lt;/h3&gt;
+
+&lt;p&gt;a timer can be set to interrupt the computer after a specified period&lt;/p&gt;
+
+&lt;h2 id=&quot;resource-management&quot;&gt;Resource Management&lt;/h2&gt;
+
+&lt;h1 id=&quot;operating-system-structures&quot;&gt;Operating-System Structures&lt;/h1&gt;</content><author><name></name></author><summary type="html">source: Operating System Concepts by Avi Silberschatz, Peter Baer Galvin, Greg Gagne (Chapter 1)</summary></entry><entry><title type="html">Notes: Stream Processing</title><link href="http://localhost:4000/programming/ddia-stream-processing/" rel="alternate" type="text/html" title="Notes: Stream Processing" /><published>2022-07-07T04:07:43+08:00</published><updated>2022-07-07T04:07:43+08:00</updated><id>http://localhost:4000/programming/DDIA-Stream-Processing</id><content type="html" xml:base="http://localhost:4000/programming/ddia-stream-processing/">&lt;p&gt;source: &lt;a href=&quot;https://www.oreilly.com/library/view/designing-data-intensive-applications/9781491903063/&quot;&gt;Designing Data Intensive Applications&lt;/a&gt; by Martin Kleppmann (Chapter 11)&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;p&gt;A lot of data is unbounded - it arrives gradually over time. Processing unbounded data in batches might not make sense in every situation&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Stream Processing&lt;/strong&gt; - run processing continuously. Alternative to batch processing&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;strong&gt;event streams&lt;/strong&gt; - data made incrementally available over time&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h1 id=&quot;transmitting-event-streams&quot;&gt;Transmitting Event Streams&lt;/h1&gt;
+&lt;p&gt;&lt;strong&gt;event&lt;/strong&gt; - small, self-contained immutable object. Contains the details for something that happened at some point in time&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;can be encoded&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;producer (publisher)&lt;/strong&gt; generates events&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;consumers (subscribers)&lt;/strong&gt; process events&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;topic&lt;/strong&gt; &lt;strong&gt;(stream)&lt;/strong&gt; a group of related events&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;messaging-systems&quot;&gt;Messaging Systems&lt;/h2&gt;
+&lt;p&gt;In a &lt;strong&gt;messaging system&lt;/strong&gt;, producers send events to consumers. In a &lt;strong&gt;publish/subscribe model&lt;/strong&gt;, we can have multiple producers and consumers:&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;one or more &lt;strong&gt;producers&lt;/strong&gt; sends a message with an event to a &lt;strong&gt;topic&lt;/strong&gt;&lt;/li&gt;
+  &lt;li&gt;the message gets pushed to one or more consumers&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;Solutions to cases where consumers aren’t fast enough to process all of the messages:&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;drop messages&lt;/li&gt;
+  &lt;li&gt;buffer messages in a queue&lt;/li&gt;
+  &lt;li&gt;apply &lt;strong&gt;backpressure&lt;/strong&gt; (blocking producer from sending messages)&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h3 id=&quot;direct-messaging-from-producers-to-consumers&quot;&gt;Direct messaging from producers to consumers&lt;/h3&gt;
+&lt;p&gt;possibility of message loss, and there’s no recovering data if a consumer goes offline. Examples:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;UDP multicast (finance)&lt;/li&gt;
+  &lt;li&gt;brokerless messaging libraries (ZeroMQ)&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;message-brokers&quot;&gt;Message brokers&lt;/h3&gt;
+&lt;p&gt;a database - optimized for handling event streams&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;better fault tolerance&lt;/li&gt;
+  &lt;li&gt;consumers are async&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;message-brokers-compared-to-databases&quot;&gt;Message brokers compared to databases&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;message brokers automatically delete messages once they get consumed&lt;/li&gt;
+  &lt;li&gt;topics are analogous to DB indexes&lt;/li&gt;
+  &lt;li&gt;message brokers don’t support arbitrary queries&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;multiple-consumers&quot;&gt;Multiple consumers&lt;/h3&gt;
+&lt;p&gt;&lt;strong&gt;load balancing&lt;/strong&gt; - each message gets delivered to one consumer. Allows for parallel processing&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;fan out&lt;/strong&gt; - each message is delivered to all consumers. Allows different consumers to process the same data in different ways&lt;/p&gt;
+
+&lt;h3 id=&quot;acknowledgement-and-redelivery&quot;&gt;Acknowledgement and redelivery&lt;/h3&gt;
+&lt;p&gt;a broker will only delete a message from its queue if it gets an ack from the consumer. If the consumer consumes the message, then breaks before it can send the ack, the broker will send the message to another consumer&lt;/p&gt;
+
+&lt;p&gt;This can lead to messages being processed out of order. One way to avoid this issue is to route all related messages to a single consumer&lt;/p&gt;
+
+&lt;h2 id=&quot;partitioned-logs&quot;&gt;Partitioned Logs&lt;/h2&gt;
+&lt;p&gt;&lt;strong&gt;log-based message brokers&lt;/strong&gt; are a hybrid of:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;databases (durable storage) - this means that messages don’t get deleted when consumers process them&lt;/li&gt;
+  &lt;li&gt;messaging - means low-latency notifications&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;using-logs-for-message-storage&quot;&gt;Using logs for message storage&lt;/h3&gt;
+&lt;p&gt;A log is an &lt;strong&gt;append-only sequence of records&lt;/strong&gt; on disk&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;we can use this for message brokers&lt;/li&gt;
+  &lt;li&gt;these logs can be partitioned&lt;/li&gt;
+  &lt;li&gt;each partition has an &lt;strong&gt;offset&lt;/strong&gt; for every message. These are ordered within a partition&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;products: Kafka, Amazon Kenesis, DistributedLog&lt;/p&gt;
+
+&lt;h3 id=&quot;logs-compared-to-traditional-messaging&quot;&gt;Logs compared to traditional messaging&lt;/h3&gt;
+&lt;p&gt;No need for fan-out messaging, since each consumer can read the log independently&lt;/p&gt;
+
+&lt;p&gt;A consumer consumes &lt;em&gt;all&lt;/em&gt; the logs for a specific topic. Downsides:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;max num nodes for a topic is the number of the topic’s log partition&lt;/li&gt;
+  &lt;li&gt;slow messages can cause lags for all the subsequent messages&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;consumer-offsets&quot;&gt;Consumer Offsets&lt;/h3&gt;
+&lt;p&gt;Consumers pay attention to message offsets as they work through a log&lt;/p&gt;
+
+&lt;h3 id=&quot;disk-space-usage&quot;&gt;Disk space usage&lt;/h3&gt;
+&lt;p&gt;We don’t have infinite disk space. One way to deal with this is to delete expired data as the log gets too big&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;circular buffer&lt;/strong&gt; - bounded-size buffer that deletes old messages when it gets full&lt;/p&gt;
+
+&lt;h3 id=&quot;when-consumers-cant-keep-up-with-producers&quot;&gt;When consumers can’t keep up with producers&lt;/h3&gt;
+&lt;p&gt;options: drop messages, buffer, apply backpressure&lt;/p&gt;
+
+&lt;p&gt;it’s normal to monitor consumers to make sure they don’t get too far behind&lt;/p&gt;
+
+&lt;p&gt;one advantage to partitioned logs: if one consumer falls behind, it doesn’t affect the others in any way&lt;/p&gt;
+
+&lt;h3 id=&quot;replaying-old-messages&quot;&gt;Replaying old messages&lt;/h3&gt;
+&lt;p&gt;If you want to replay old messages, just reset the consumer offset. The message broker doesn’t know anything about the offset, so it won’t affect anything else&lt;/p&gt;
+
+&lt;h1 id=&quot;databases-and-streams&quot;&gt;Databases and Streams&lt;/h1&gt;
+&lt;p&gt;there’s a fundamental connection between databases and streams&lt;/p&gt;
+
+&lt;h2 id=&quot;keeping-systems-in-sync&quot;&gt;Keeping Systems in Sync&lt;/h2&gt;
+&lt;p&gt;related (or replicated) data in different locations needs to be kept in sync. Some possible solutions:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;strong&gt;dual writes&lt;/strong&gt; write to both systems at once - we get problems if one fails while the other succeeds&lt;/li&gt;
+  &lt;li&gt;periodic database dumps - downside is that there’s high latency&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;change-data-capture-cdc&quot;&gt;Change Data Capture (CDC)&lt;/h2&gt;
+&lt;p&gt;the process of observing all data changes written to a database and extracting those changes in a form that is readable to other systems&lt;/p&gt;
+
+&lt;h3 id=&quot;implementing-change-data-capture&quot;&gt;Implementing change data capture&lt;/h3&gt;
+&lt;p&gt;&lt;strong&gt;derived data systems&lt;/strong&gt; log consumers for CDC&lt;/p&gt;
+
+&lt;p&gt;you can use DB triggers to implement CDC, but this is fragile&lt;/p&gt;
+
+&lt;p&gt;CDC is usually async, so you have to keep in mind that there might be lag&lt;/p&gt;
+
+&lt;h3 id=&quot;initial-snapshot&quot;&gt;Initial snapshot&lt;/h3&gt;
+&lt;p&gt;a DB snapshot should correspond to a known position in the change log&lt;/p&gt;
+
+&lt;h3 id=&quot;log-compaction&quot;&gt;Log compaction&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;throw away duplicate logs to free up space&lt;/li&gt;
+  &lt;li&gt;if a key is frequently overwritten, garbage-collect old values&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;event-sourcing&quot;&gt;Event Sourcing&lt;/h2&gt;
+&lt;p&gt;technique: store all the changes to the application state as a log of events&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;developed by the domain-driven design community&lt;/li&gt;
+  &lt;li&gt;application logic is built on immutable events written to a log (append only)&lt;/li&gt;
+  &lt;li&gt;Deriving current state from the event log&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Applications that use event sources should be able to take a stream of events and turn it into an application state&lt;/p&gt;
+
+&lt;p&gt;Log compaction isn’t possible with event sourcing (as opposed to CDC) because events are modeled on a higher level&lt;/p&gt;
+
+&lt;h3 id=&quot;commands-and-events&quot;&gt;Commands and events&lt;/h3&gt;
+&lt;p&gt;a &lt;strong&gt;command&lt;/strong&gt; is a request when it first arrives. Once that requests gets saved, it’s considered an &lt;strong&gt;event&lt;/strong&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;once a command becomes an event, it’s in the app’s history&lt;/li&gt;
+  &lt;li&gt;command validation should happen asynchronously&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;state-streams-and-immutability&quot;&gt;State, Streams and Immutability&lt;/h2&gt;
+&lt;p&gt;a math-y way of thinking about this is that&lt;/p&gt;
+
+&lt;p&gt;$state(now) = \int_{t=0}^{now}stream(t)dt$&lt;/p&gt;
+
+&lt;p&gt;and&lt;/p&gt;
+
+&lt;p&gt;$stream(t) = {d state(t)}/dt$&lt;/p&gt;
+
+&lt;h3 id=&quot;advantages-of-immutable-events&quot;&gt;advantages of immutable events&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;auditability - data is never deleted&lt;/li&gt;
+  &lt;li&gt;more information - you have an app’s entire history&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;deriving-several-views-from-the-same-event-log&quot;&gt;Deriving several views from the same event log&lt;/h3&gt;
+&lt;p&gt;You can use the same data for different features&lt;/p&gt;
+
+&lt;p&gt;one advantage of keeping the event log around is that you can use it if you want to develop a new feature. The new feature has the entire history of the app’s events, so it’s up to date immediately&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Command Query Responsibility Segregation&lt;/strong&gt; - you get flexibility by separating write data from read data&lt;/p&gt;
+
+&lt;h3 id=&quot;concurrency-control&quot;&gt;Concurrency control&lt;/h3&gt;
+&lt;p&gt;event sourcing means async processes, which mean lag&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;if this is a problem, you might want to wrap log writes and reads in a transaction&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;limitations-of-immutability&quot;&gt;Limitations of immutability&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;you run out of space&lt;/li&gt;
+  &lt;li&gt;you might &lt;em&gt;want&lt;/em&gt; to delete some logs - it’s hard when the information is scattered all over the place&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h1 id=&quot;processing-streams&quot;&gt;Processing Streams&lt;/h1&gt;
+
+&lt;p&gt;&lt;strong&gt;operator (job)&lt;/strong&gt; piece of code that processes streams. It has three options for processing streams:&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;Save to DB&lt;/li&gt;
+  &lt;li&gt;Push the events to a user&lt;/li&gt;
+  &lt;li&gt;Process stream to make an output stream
+    &lt;ul&gt;
+      &lt;li&gt;option to combine it with other data sources, including other streams&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;Stream processors can be run in parallel on partitioned streams. This is similar to MapReduce dataflow engines - transforming and filtering records works the same&lt;/p&gt;
+
+&lt;p&gt;Stream processing never ends, so some things don’t make sense to do in stream processing (like sorting)&lt;/p&gt;
+
+&lt;h2 id=&quot;uses-of-stream-processing&quot;&gt;Uses of Stream Processing&lt;/h2&gt;
+&lt;p&gt;used to just be monitoring, but we have more use cases now&lt;/p&gt;
+
+&lt;h3 id=&quot;complex-event-processing&quot;&gt;complex event processing&lt;/h3&gt;
+&lt;p&gt;use a query language to describe a pattern of events to look for. When the processor sees a sequence of events that match, it emits a &lt;strong&gt;complex event&lt;/strong&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;stream-analytics&quot;&gt;stream analytics&lt;/h3&gt;
+&lt;p&gt;aggregations and statistical metrics over a large number of events&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;usually computed over fixed time intervals (&lt;strong&gt;windows&lt;/strong&gt;)
+    &lt;h3 id=&quot;maintaining-materialized-views&quot;&gt;Maintaining materialized views&lt;/h3&gt;
+    &lt;p&gt;&lt;strong&gt;materialized view&lt;/strong&gt; - an alternate view of a dataset&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;can be queried more efficiently&lt;/li&gt;
+  &lt;li&gt;updates when the underlying data changes&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;You need all events to make a materialized view&lt;/p&gt;
+
+&lt;h3 id=&quot;search-of-streams&quot;&gt;Search of streams&lt;/h3&gt;
+&lt;p&gt;When you search a stream (for something like string matching), you have to store it first&lt;/p&gt;
+
+&lt;h2 id=&quot;reasoning-about-time&quot;&gt;Reasoning about time&lt;/h2&gt;
+&lt;p&gt;this is hard, but most frameworks use the clock on the processing machine (&lt;strong&gt;processing time&lt;/strong&gt;)&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;you run into problems if there’s a lot of lag
+    &lt;h3 id=&quot;event-time-vs-processing-time&quot;&gt;Event time vs processing time&lt;/h3&gt;
+    &lt;p&gt;it’s important to model these as distinct, especially in situations where there’s some lag&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;knowing-when-youre-ready&quot;&gt;Knowing when you’re ready&lt;/h3&gt;
+&lt;p&gt;You can’t be sure when all events for a particular window have been delivered&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;unless all the publishers publish events that say “no more events for this time window”&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;ways to handle stragglers:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;ignore them&lt;/li&gt;
+  &lt;li&gt;publish a correction&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;which-clock-do-you-use&quot;&gt;Which clock do you use&lt;/h3&gt;
+&lt;p&gt;three possible timestamps:
+    1. time the event happened
+    2. time the event was sent
+    3. time the event was received by the server&lt;/p&gt;
+
+&lt;h3 id=&quot;types-of-windows&quot;&gt;Types of windows&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;&lt;strong&gt;tumbling window&lt;/strong&gt; - fixed length, every event belongs to exactly one window&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;hopping window&lt;/strong&gt; - fixed length, allows for windows to overlap a little&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;sliding window&lt;/strong&gt; - fixed length, contains events that happen within some interval of each other&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;session window&lt;/strong&gt; - no fixed duration, just group all the events that  happened close together in time&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;stream-joins&quot;&gt;Stream Joins&lt;/h2&gt;
+&lt;p&gt;Joining data on a stream is challenging because new events can appear any time&lt;/p&gt;
+
+&lt;h3 id=&quot;stream-stream-join-window-join&quot;&gt;Stream-stream join (window join)&lt;/h3&gt;
+&lt;p&gt;challenge: the two events might happen far apart from each other&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;you’ll have to save the first event in memory. You have to save &lt;strong&gt;state&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;stream-table-join-stream-enrichment&quot;&gt;Stream-table join (stream enrichment)&lt;/h3&gt;
+&lt;p&gt;for each event, query the DB&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;helps, because you can query old data&lt;/li&gt;
+  &lt;li&gt;to reduce roundtrip time, it might help to keep a copy of the DB on the processor&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;table-table-join-materialized-view-maintenance&quot;&gt;Table-table join (materialized view maintenance)&lt;/h3&gt;
+&lt;p&gt;Keep a cache of events, if they’re too expensive to push to the DB immediately&lt;/p&gt;
+
+&lt;h3 id=&quot;time-dependence-of-joins&quot;&gt;Time-dependence of joins&lt;/h3&gt;
+&lt;p&gt;The order of events is important, if they depend on each other&lt;/p&gt;
+
+&lt;h2 id=&quot;fault-tolerance&quot;&gt;Fault Tolerance&lt;/h2&gt;
+&lt;p&gt;with streams, you can’t wait for the processing to end before you make the results visible (because it’s infinite)&lt;/p&gt;
+
+&lt;h3 id=&quot;microbatching-and-checkpointing&quot;&gt;Microbatching and checkpointing&lt;/h3&gt;
+&lt;p&gt;Just make a batch out of one second of data and process it right away. Save the data&lt;/p&gt;
+
+&lt;p&gt;If your stream operator crashes, it can just start from the most recent saved data&lt;/p&gt;
+
+&lt;h3 id=&quot;atomic-commits&quot;&gt;Atomic commits&lt;/h3&gt;
+&lt;p&gt;Wrap processing and side effects in a transaction. We don’t want side effects to happen if the processing fails&lt;/p&gt;
+
+&lt;h3 id=&quot;idempotence&quot;&gt;Idempotence&lt;/h3&gt;
+&lt;p&gt;When you can perform an operation multiple times, and it has the same effect as if it was performed one time&lt;/p&gt;</content><author><name></name></author><summary type="html">source: Designing Data Intensive Applications by Martin Kleppmann (Chapter 11)</summary></entry><entry><title type="html">Notes: Kafka Producers</title><link href="http://localhost:4000/programming/kafka-producers/" rel="alternate" type="text/html" title="Notes: Kafka Producers" /><published>2022-07-03T04:07:43+08:00</published><updated>2022-07-03T04:07:43+08:00</updated><id>http://localhost:4000/programming/Kafka-Producers</id><content type="html" xml:base="http://localhost:4000/programming/kafka-producers/">&lt;p&gt;source: &lt;a href=&quot;https://www.oreilly.com/library/view/kafka-the-definitive/9781491936153//&quot;&gt;Kafka: The Definitive Guide&lt;/a&gt; by Neha Narkhede, Gwen Shapira, Todd Palino (Chapter 3)&lt;/p&gt;
+
+&lt;hr /&gt;
+&lt;p&gt;Producers write messages to Kafka&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;you can use the built-in API or use a third party one&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;strong&gt;ProducerRecord -&lt;/strong&gt; A key/value pair to be sent to Kafka&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;includes (required) &lt;strong&gt;topic name&lt;/strong&gt;, an (optional) &lt;strong&gt;partition number&lt;/strong&gt;, and an (optional) &lt;strong&gt;key and value&lt;/strong&gt;.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;The &lt;strong&gt;producer&lt;/strong&gt; serializes the key and value objects into ByteArrays, then sends it to a &lt;strong&gt;partitioner&lt;/strong&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;it adds the record to a &lt;strong&gt;batch of records&lt;/strong&gt;. All these records will be sent to the same topic and partition&lt;/li&gt;
+  &lt;li&gt;a separate thread actually sends the batches to the right Kafka brokers&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;The &lt;strong&gt;broker&lt;/strong&gt; acks when it gets the messages&lt;/p&gt;
+
+&lt;h3 id=&quot;serializers&quot;&gt;Serializers&lt;/h3&gt;
+
+&lt;p&gt;Kafka includes serializers for integers and byteArrays by default, but that doesn’t cover other types. It’s recommend that people use a generic serialization library (like Protobuf)&lt;/p&gt;
+
+&lt;h3 id=&quot;partitions&quot;&gt;Partitions&lt;/h3&gt;
+
+&lt;p&gt;Kafka uses a message’s &lt;strong&gt;keys&lt;/strong&gt; to determine which topic partition to put the message into&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;if you don’t include a key, the producer will chose a partition at random (round robin)&lt;/li&gt;
+  &lt;li&gt;if you do include a key, the producer hashes it and maps the hash to a partition&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Because the partition depends on the key:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;You can use this information to optimize your application&lt;/li&gt;
+  &lt;li&gt;if the partition is unavailable, you’ll get an error&lt;/li&gt;
+  &lt;li&gt;once you add more partitions, Kafka can’t guarantee that messages map to partitions&lt;/li&gt;
+&lt;/ul&gt;</content><author><name></name></author><summary type="html">source: Kafka: The Definitive Guide by Neha Narkhede, Gwen Shapira, Todd Palino (Chapter 3)</summary></entry><entry><title type="html">Notes: Kafka Introduction</title><link href="http://localhost:4000/programming/kafka-introduction/" rel="alternate" type="text/html" title="Notes: Kafka Introduction" /><published>2022-06-03T04:07:43+08:00</published><updated>2022-06-03T04:07:43+08:00</updated><id>http://localhost:4000/programming/Kafka-Introduction</id><content type="html" xml:base="http://localhost:4000/programming/kafka-introduction/">&lt;p&gt;source: &lt;a href=&quot;https://www.oreilly.com/library/view/kafka-the-definitive/9781491936153//&quot;&gt;Kafka: The Definitive Guide&lt;/a&gt; by Neha Narkhede, Gwen Shapira, Todd Palino (Chapter 1)&lt;/p&gt;
+
+&lt;hr /&gt;
+&lt;h1 id=&quot;publishsubscribe-messaging&quot;&gt;Publish/Subscribe Messaging&lt;/h1&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;strong&gt;message&lt;/strong&gt; - a base unit of information. Often has a category&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;publisher&lt;/strong&gt; - sends and classifies messages, but does not direct them anywhere&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;subscriber&lt;/strong&gt; - receives certain classes of messages&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;broker&lt;/strong&gt; - central point where messages are published to&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h1 id=&quot;enter-kafka&quot;&gt;Enter Kafka&lt;/h1&gt;
+
+&lt;p&gt;a “distributed commit log”, or a “distributed streaming platform”&lt;/p&gt;
+
+&lt;p&gt;Designed to store data &lt;em&gt;durably&lt;/em&gt; and &lt;em&gt;in order&lt;/em&gt;. This means that it can be read deterministically&lt;/p&gt;
+
+&lt;p&gt;Another key feature of Kafka is that the &lt;em&gt;data is distributed&lt;/em&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;messages-and-batches&quot;&gt;Messages and Batches&lt;/h2&gt;
+
+&lt;p&gt;&lt;strong&gt;message&lt;/strong&gt; - unit of data within Kafka. Kafka has no knowledge about the content of the message&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;key&lt;/strong&gt; - an optional component of a message. Used to control how messages are written to partition&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;batch&lt;/strong&gt; - collection of messages being produced to the same topic and partition&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;larger batches lead to messages being handled more efficiently, but individual messages take longer to propagate&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;schemas&quot;&gt;Schemas&lt;/h2&gt;
+
+&lt;p&gt;Optional, but recommended. Allow engineers to decouple writing and reading messages&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;human-readable schemas (JSON, XML) lack type handling and schema versions&lt;/li&gt;
+  &lt;li&gt;alternatives, like &lt;strong&gt;Apache Avro&lt;/strong&gt;, have compact serialization formats, type handling and separate schemas&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;topics--partitions&quot;&gt;Topics &amp;amp; Partitions&lt;/h2&gt;
+
+&lt;p&gt;&lt;strong&gt;topics&lt;/strong&gt; - how messages in Kafka are organized. Can be broken down into partitions&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;partitions&lt;/strong&gt; - a single log that messages are appended to&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;can be hosted on different servers&lt;/li&gt;
+  &lt;li&gt;time ordering is guaranteed within a partition but not a topic&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;strong&gt;stream&lt;/strong&gt; - represent data moving from the producers to consumers for a given topic&lt;/p&gt;
+
+&lt;h2 id=&quot;producers--consumers&quot;&gt;Producers &amp;amp; Consumers&lt;/h2&gt;
+
+&lt;p&gt;Kafka clients can be users or consumers&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Kafka Connect API - advanced client API for data integration&lt;/li&gt;
+  &lt;li&gt;Kafka Streams - for stream processing&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;producers&quot;&gt;producers&lt;/h3&gt;
+
+&lt;p&gt;create new messages. Generally publish messages to specific topics and usually don’t care which partition the message goes to&lt;/p&gt;
+
+&lt;h3 id=&quot;consumers&quot;&gt;consumers&lt;/h3&gt;
+
+&lt;p&gt;consume messages. Can be subscribed to one or more topics, reads messages in order&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;offset&lt;/strong&gt; - metadata (a counter) given to each message within a partition&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;a consumer will use this to keep track of which messages it’s already consumed&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;strong&gt;consumer group&lt;/strong&gt; - a set of consumers reading from a topic. Each partition is read by a single consumer&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;ownership&lt;/strong&gt; - mapping of a consumer to a partition&lt;/p&gt;
+
+&lt;h2 id=&quot;brokers--clusters&quot;&gt;Brokers &amp;amp; Clusters&lt;/h2&gt;
+
+&lt;p&gt;A &lt;strong&gt;broker&lt;/strong&gt; is a single Kafka server&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;it receives messages from producers, assigns offsets to them, and commits them to disk&lt;/li&gt;
+  &lt;li&gt;services fetch requests from consumers&lt;/li&gt;
+  &lt;li&gt;owns a partition&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;A &lt;strong&gt;cluster&lt;/strong&gt; is a group of brokers&lt;/p&gt;
+
+&lt;p&gt;A &lt;strong&gt;controller&lt;/strong&gt; is responsible for administrative operations&lt;/p&gt;
+
+&lt;p&gt;A broker that is the &lt;strong&gt;leader&lt;/strong&gt; of a partition is responsible for receiving messages from producers and for replicating the partition to other brokers in its cluster&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;retention&lt;/strong&gt; - durable storage of messages&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;can be for a period of time &lt;em&gt;or&lt;/em&gt; dictated by a data limit&lt;/li&gt;
+  &lt;li&gt;expired messages are deleted&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;multiple-clusters&quot;&gt;Multiple Clusters&lt;/h2&gt;
+
+&lt;p&gt;You might want multiple clusters for&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;data segregation&lt;/li&gt;
+  &lt;li&gt;security isolation&lt;/li&gt;
+  &lt;li&gt;redundancy&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;strong&gt;Mirror Maker&lt;/strong&gt; - like a mega-kafka. Messages are consumed from one cluster and produced for another&lt;/p&gt;
+
+&lt;h1 id=&quot;why-kafka&quot;&gt;Why Kafka?&lt;/h1&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;multiple producers and consumers&lt;/li&gt;
+  &lt;li&gt;data is easy to retain&lt;/li&gt;
+  &lt;li&gt;scalable and performant&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;use-cases-for-kafka&quot;&gt;Use Cases for Kafka&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;activity tracking&lt;/li&gt;
+  &lt;li&gt;messaging&lt;/li&gt;
+  &lt;li&gt;metrics &amp;amp; logging&lt;/li&gt;
+  &lt;li&gt;stream processing&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h1 id=&quot;kafkas-origin&quot;&gt;Kafka’s Origin&lt;/h1&gt;
+
+&lt;p&gt;created at LinkedIn to address a data pipeline problem&lt;/p&gt;
+
+&lt;p&gt;released as an open source project on GitHub in 2010&lt;/p&gt;
+
+&lt;p&gt;It’s named after Franz Kafka, but for no particular reason. Just because it sounded cool&lt;/p&gt;</content><author><name></name></author><summary type="html">source: Kafka: The Definitive Guide by Neha Narkhede, Gwen Shapira, Todd Palino (Chapter 1)</summary></entry><entry><title type="html">My Fitness RPG</title><link href="http://localhost:4000/programming/fitness-rpg/" rel="alternate" type="text/html" title="My Fitness RPG" /><published>2022-05-01T04:07:43+08:00</published><updated>2022-05-01T04:07:43+08:00</updated><id>http://localhost:4000/programming/my-fitness-rpg</id><content type="html" xml:base="http://localhost:4000/programming/fitness-rpg/">&lt;p&gt;I made a simple phone game that draws on fitness stats from your wearable. The game’s concept is quite simple: Fight monsters to gain experience points and gold, while using real-life factors to determine its behavior.&lt;/p&gt;
 
 &lt;p&gt;Fitness stats like cardiovascular strain and sleep determine a character’s strength and health. Other real-world factors, such as current weather and moon phase, determine which monsters appear. By using mundane events in the real world to create fun game mechanics, I hope to encourage my players to view daily life with a layer of whimsey. Naturally, this would also encourage players to form better habits.&lt;/p&gt;
 
@@ -30,7 +661,7 @@
   &lt;li&gt;&lt;strong&gt;Deploy early and often&lt;/strong&gt; - I want to publish a live version of my game as early as possible so I can get feedback at every step of development.&lt;/li&gt;
   &lt;li&gt;&lt;strong&gt;Start with the integrations&lt;/strong&gt; - I’m moving from Whoop to Apple Health, since Apple Health has far more users and allows for developer integration.&lt;/li&gt;
   &lt;li&gt;&lt;strong&gt;Web is okay!&lt;/strong&gt; - Getting published on the App Store is a whole thing. I want immediate feedback on my app, so I’ll publish my game to the web before I focus on creating an iOS app&lt;/li&gt;
-&lt;/ul&gt;</content><author><name></name></author><summary type="html">I made a simple phone game that draws on fitness stats from your wearable. The game’s concept is quite simple: Fight monsters to gain experience points and gold, while using real-life factors to determine its behavior.</summary></entry><entry><title type="html">Notes: Writing Smart Contracts</title><link href="http://localhost:4000/programming/cryptozombies/" rel="alternate" type="text/html" title="Notes: Writing Smart Contracts" /><published>2022-01-16T21:07:43+01:00</published><updated>2022-01-16T21:07:43+01:00</updated><id>http://localhost:4000/programming/cryptozombies</id><content type="html" xml:base="http://localhost:4000/programming/cryptozombies/">&lt;p&gt;source: &lt;a href=&quot;https://cryptozombies.io/&quot;&gt;CryptoZombies&lt;/a&gt;&lt;/p&gt;
+&lt;/ul&gt;</content><author><name></name></author><summary type="html">I made a simple phone game that draws on fitness stats from your wearable. The game’s concept is quite simple: Fight monsters to gain experience points and gold, while using real-life factors to determine its behavior.</summary></entry><entry><title type="html">Notes: Writing Smart Contracts</title><link href="http://localhost:4000/programming/cryptozombies/" rel="alternate" type="text/html" title="Notes: Writing Smart Contracts" /><published>2022-01-17T04:07:43+08:00</published><updated>2022-01-17T04:07:43+08:00</updated><id>http://localhost:4000/programming/cryptozombies</id><content type="html" xml:base="http://localhost:4000/programming/cryptozombies/">&lt;p&gt;source: &lt;a href=&quot;https://cryptozombies.io/&quot;&gt;CryptoZombies&lt;/a&gt;&lt;/p&gt;
 
 &lt;hr /&gt;
 
@@ -386,7 +1017,114 @@
 &lt;ol&gt;
   &lt;li&gt;&lt;strong&gt;transferFrom&lt;/strong&gt; - the owner transfers the NFT to the recipient&lt;/li&gt;
   &lt;li&gt;&lt;strong&gt;approve&lt;/strong&gt; and &lt;strong&gt;transferFrom&lt;/strong&gt; - the owner approves a transfer to a specific address, then the recipient calls the &lt;code class=&quot;highlighter-rouge&quot;&gt;transferFrom&lt;/code&gt; fununction&lt;/li&gt;
-&lt;/ol&gt;</content><author><name></name></author><summary type="html">source: CryptoZombies</summary></entry><entry><title type="html">Notes: The Bad Guys Are Winning</title><link href="http://localhost:4000/notes/bad-guys-winning/" rel="alternate" type="text/html" title="Notes: The Bad Guys Are Winning" /><published>2021-12-18T21:07:43+01:00</published><updated>2021-12-18T21:07:43+01:00</updated><id>http://localhost:4000/notes/bad-guys-winning</id><content type="html" xml:base="http://localhost:4000/notes/bad-guys-winning/">&lt;p&gt;source: &lt;a href=&quot;https://www.theatlantic.com/magazine/archive/2021/12/the-autocrats-are-winning/620526/&quot;&gt;The Atlantic&lt;/a&gt;&lt;/p&gt;
+&lt;/ol&gt;</content><author><name></name></author><summary type="html">source: CryptoZombies</summary></entry><entry><title type="html">Notes: How Galileo Created the Problem of Consiousness</title><link href="http://localhost:4000/notes/galileo-consiousness/" rel="alternate" type="text/html" title="Notes: How Galileo Created the Problem of Consiousness" /><published>2021-12-19T04:07:43+08:00</published><updated>2021-12-19T04:07:43+08:00</updated><id>http://localhost:4000/notes/playing-monogamy%20copy</id><content type="html" xml:base="http://localhost:4000/notes/galileo-consiousness/">&lt;p&gt;source: &lt;a href=&quot;https://www.penguinrandomhouse.com/books/599229/galileos-error-by-philip-goff/&quot;&gt;Galileo’s Error&lt;/a&gt;, by Philip Goff (Chapter 1)&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;p&gt;The book is about &lt;strong&gt;conscious experience&lt;/strong&gt;, and states that characterize our &lt;strong&gt;subjective inner lives&lt;/strong&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;experiences are what make life worth living&lt;/li&gt;
+  &lt;li&gt;it’s the only thing we know for sure is real&lt;/li&gt;
+  &lt;li&gt;Rene Descarte - “Cogito ergo sum” (I think therefor I am)&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;but we have not incorporated it into our scientific picture of the world&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;at this point, neuroscience hasn’t even started to explain it&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;well-get-there-in-the-end&quot;&gt;We’ll get there in the end&lt;/h3&gt;
+
+&lt;p&gt;In other branches of science (like biochemistry), we can focus on the answerable questions first. Then we might have the tools to get to the harder questions&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;the real problem of consciousness&lt;/strong&gt;: mapping brain activity to conscious experience&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;we should take this problem seriously&lt;/li&gt;
+  &lt;li&gt;we’ve started working on a theoretical framework to address the problem&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;strong&gt;Patricia Churchland&lt;/strong&gt; - neurophilosopher, “get out of the armchair and into the lab” proponent&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;strong&gt;eliminative materialism&lt;/strong&gt; the mind doesn’t exist and we shouldn’t try to explain it&lt;/li&gt;
+  &lt;li&gt;thinks that complex functions of the mind (”thought”, “desire”) are outdated concepts&lt;/li&gt;
+  &lt;li&gt;thinks we should talk about human behavior in terms of electrochemical processes in the brain&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Science can tell us counterintuitive things about the world, but it &lt;strong&gt;can’t tell us we don’t have experiences&lt;/strong&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;what-is-science&quot;&gt;What is Science?&lt;/h3&gt;
+
+&lt;p&gt;Science helps us reimagine nature&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;example: gravity is responsible for apples falling to the ground &lt;em&gt;and&lt;/em&gt; the orbit of the moon&lt;/li&gt;
+  &lt;li&gt;example: space and time aren’t two distinct entities. They’re both spacetime&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;We think of science as driven by experiments but thought experiments are powerful tools&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Einstein used thought experiments to identify gravitational force as the result of curvature in the fabric of spacetime&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;The scientific revolution worked because it &lt;strong&gt;excluded consciousness from the domain of science&lt;/strong&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;philosophical-foundations-of-science&quot;&gt;Philosophical Foundations of Science&lt;/h3&gt;
+
+&lt;p&gt;&lt;strong&gt;Galileo Galilei&lt;/strong&gt; (1564-1642) - father of modern science&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;declared that math is the language of science&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;strong&gt;Aristotelian orthodoxy&lt;/strong&gt; acceptance of Aristotle’s worldview&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;strong&gt;Ptolemaic&lt;/strong&gt; view of the universe (earth at the center)&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;teleological&lt;/strong&gt; theory (inanimate objects have goals)&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;We all assume that Galileo disproved Aristotle’s view through scientific method, but he did it using a thought experiment&lt;/p&gt;
+
+&lt;p&gt;Before Galileo, philosophers thought the world was full of &lt;em&gt;sensory qualities.&lt;/em&gt; After, scientists thought of material objects as existing without sensory qualities&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;example: lemons aren’t yellow. We perceive the yellowness in our souls&lt;/li&gt;
+  &lt;li&gt;example: sound exists in the material world only as waves. It only exists as sound when we listen to it&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Galileo divided the world into &lt;strong&gt;material objects&lt;/strong&gt; and &lt;strong&gt;souls&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;This was meant to be a &lt;strong&gt;partial description of reality&lt;/strong&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;by narrowing the scope of inquiry, we’ve been able to achieve a lot using science&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;This means that science as we know it might not solve the problem of consciousness&lt;/p&gt;
+
+&lt;h3 id=&quot;first-option-naturalistic-dualism&quot;&gt;First Option: Naturalistic Dualism&lt;/h3&gt;
+
+&lt;p&gt;&lt;strong&gt;dualism&lt;/strong&gt; divides nature into two categories:&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;physical objects&lt;/li&gt;
+  &lt;li&gt;incorporeal consciousness&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;&lt;strong&gt;naturalistic dualism&lt;/strong&gt; says the mind is not magical, but it’s part of the natural order&lt;/p&gt;
+
+&lt;h3 id=&quot;second-option-materialism&quot;&gt;Second Option: Materialism&lt;/h3&gt;
+
+&lt;p&gt;Radical materialists argue that consciousness is an illusion&lt;/p&gt;
+
+&lt;h3 id=&quot;third-option-panpsychism&quot;&gt;Third Option: Panpsychism&lt;/h3&gt;
+
+&lt;p&gt;Panpsychists believe that consciousness is a fundamental and ubiquitous feature of the physical world&lt;/p&gt;</content><author><name></name></author><summary type="html">source: Galileo’s Error, by Philip Goff (Chapter 1)</summary></entry><entry><title type="html">Notes: The Bad Guys Are Winning</title><link href="http://localhost:4000/notes/bad-guys-winning/" rel="alternate" type="text/html" title="Notes: The Bad Guys Are Winning" /><published>2021-12-19T04:07:43+08:00</published><updated>2021-12-19T04:07:43+08:00</updated><id>http://localhost:4000/notes/bad-guys-winning</id><content type="html" xml:base="http://localhost:4000/notes/bad-guys-winning/">&lt;p&gt;source: &lt;a href=&quot;https://www.theatlantic.com/magazine/archive/2021/12/the-autocrats-are-winning/620526/&quot;&gt;The Atlantic&lt;/a&gt;&lt;/p&gt;
 
 &lt;hr /&gt;
 
@@ -653,114 +1391,7 @@
 &lt;ul&gt;
   &lt;li&gt;focused on America’s problems, convinced that democracy doesn’t work, or that it’s not working here&lt;/li&gt;
   &lt;li&gt;When protesters in Hong Kong asked for help, American activists didn’t do much&lt;/li&gt;
-&lt;/ul&gt;</content><author><name></name></author><summary type="html">source: The Atlantic</summary></entry><entry><title type="html">Notes: How Galileo Created the Problem of Consiousness</title><link href="http://localhost:4000/notes/galileo-consiousness/" rel="alternate" type="text/html" title="Notes: How Galileo Created the Problem of Consiousness" /><published>2021-12-18T21:07:43+01:00</published><updated>2021-12-18T21:07:43+01:00</updated><id>http://localhost:4000/notes/playing-monogamy%20copy</id><content type="html" xml:base="http://localhost:4000/notes/galileo-consiousness/">&lt;p&gt;source: &lt;a href=&quot;https://www.penguinrandomhouse.com/books/599229/galileos-error-by-philip-goff/&quot;&gt;Galileo’s Error&lt;/a&gt;, by Philip Goff (Chapter 1)&lt;/p&gt;
-
-&lt;hr /&gt;
-
-&lt;p&gt;The book is about &lt;strong&gt;conscious experience&lt;/strong&gt;, and states that characterize our &lt;strong&gt;subjective inner lives&lt;/strong&gt;&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;experiences are what make life worth living&lt;/li&gt;
-  &lt;li&gt;it’s the only thing we know for sure is real&lt;/li&gt;
-  &lt;li&gt;Rene Descarte - “Cogito ergo sum” (I think therefor I am)&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;but we have not incorporated it into our scientific picture of the world&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;at this point, neuroscience hasn’t even started to explain it&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3 id=&quot;well-get-there-in-the-end&quot;&gt;We’ll get there in the end&lt;/h3&gt;
-
-&lt;p&gt;In other branches of science (like biochemistry), we can focus on the answerable questions first. Then we might have the tools to get to the harder questions&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;the real problem of consciousness&lt;/strong&gt;: mapping brain activity to conscious experience&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;we should take this problem seriously&lt;/li&gt;
-  &lt;li&gt;we’ve started working on a theoretical framework to address the problem&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;&lt;strong&gt;Patricia Churchland&lt;/strong&gt; - neurophilosopher, “get out of the armchair and into the lab” proponent&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;&lt;strong&gt;eliminative materialism&lt;/strong&gt; the mind doesn’t exist and we shouldn’t try to explain it&lt;/li&gt;
-  &lt;li&gt;thinks that complex functions of the mind (”thought”, “desire”) are outdated concepts&lt;/li&gt;
-  &lt;li&gt;thinks we should talk about human behavior in terms of electrochemical processes in the brain&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;Science can tell us counterintuitive things about the world, but it &lt;strong&gt;can’t tell us we don’t have experiences&lt;/strong&gt;&lt;/p&gt;
-
-&lt;h3 id=&quot;what-is-science&quot;&gt;What is Science?&lt;/h3&gt;
-
-&lt;p&gt;Science helps us reimagine nature&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;example: gravity is responsible for apples falling to the ground &lt;em&gt;and&lt;/em&gt; the orbit of the moon&lt;/li&gt;
-  &lt;li&gt;example: space and time aren’t two distinct entities. They’re both spacetime&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;We think of science as driven by experiments but thought experiments are powerful tools&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;Einstein used thought experiments to identify gravitational force as the result of curvature in the fabric of spacetime&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;The scientific revolution worked because it &lt;strong&gt;excluded consciousness from the domain of science&lt;/strong&gt;&lt;/p&gt;
-
-&lt;h3 id=&quot;philosophical-foundations-of-science&quot;&gt;Philosophical Foundations of Science&lt;/h3&gt;
-
-&lt;p&gt;&lt;strong&gt;Galileo Galilei&lt;/strong&gt; (1564-1642) - father of modern science&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;declared that math is the language of science&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;&lt;strong&gt;Aristotelian orthodoxy&lt;/strong&gt; acceptance of Aristotle’s worldview&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;&lt;strong&gt;Ptolemaic&lt;/strong&gt; view of the universe (earth at the center)&lt;/li&gt;
-  &lt;li&gt;&lt;strong&gt;teleological&lt;/strong&gt; theory (inanimate objects have goals)&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;We all assume that Galileo disproved Aristotle’s view through scientific method, but he did it using a thought experiment&lt;/p&gt;
-
-&lt;p&gt;Before Galileo, philosophers thought the world was full of &lt;em&gt;sensory qualities.&lt;/em&gt; After, scientists thought of material objects as existing without sensory qualities&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;example: lemons aren’t yellow. We perceive the yellowness in our souls&lt;/li&gt;
-  &lt;li&gt;example: sound exists in the material world only as waves. It only exists as sound when we listen to it&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;Galileo divided the world into &lt;strong&gt;material objects&lt;/strong&gt; and &lt;strong&gt;souls&lt;/strong&gt;&lt;/p&gt;
-
-&lt;p&gt;This was meant to be a &lt;strong&gt;partial description of reality&lt;/strong&gt;&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;by narrowing the scope of inquiry, we’ve been able to achieve a lot using science&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;This means that science as we know it might not solve the problem of consciousness&lt;/p&gt;
-
-&lt;h3 id=&quot;first-option-naturalistic-dualism&quot;&gt;First Option: Naturalistic Dualism&lt;/h3&gt;
-
-&lt;p&gt;&lt;strong&gt;dualism&lt;/strong&gt; divides nature into two categories:&lt;/p&gt;
-
-&lt;ol&gt;
-  &lt;li&gt;physical objects&lt;/li&gt;
-  &lt;li&gt;incorporeal consciousness&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;p&gt;&lt;strong&gt;naturalistic dualism&lt;/strong&gt; says the mind is not magical, but it’s part of the natural order&lt;/p&gt;
-
-&lt;h3 id=&quot;second-option-materialism&quot;&gt;Second Option: Materialism&lt;/h3&gt;
-
-&lt;p&gt;Radical materialists argue that consciousness is an illusion&lt;/p&gt;
-
-&lt;h3 id=&quot;third-option-panpsychism&quot;&gt;Third Option: Panpsychism&lt;/h3&gt;
-
-&lt;p&gt;Panpsychists believe that consciousness is a fundamental and ubiquitous feature of the physical world&lt;/p&gt;</content><author><name></name></author><summary type="html">source: Galileo’s Error, by Philip Goff (Chapter 1)</summary></entry><entry><title type="html">Notes: The Spanish Civil War</title><link href="http://localhost:4000/notes/spanish-civil-war/" rel="alternate" type="text/html" title="Notes: The Spanish Civil War" /><published>2021-10-27T22:07:43+02:00</published><updated>2021-10-27T22:07:43+02:00</updated><id>http://localhost:4000/notes/spanish-civil-war</id><content type="html" xml:base="http://localhost:4000/notes/spanish-civil-war/">&lt;p&gt;source: &lt;a href=&quot;https://www.veryshortintroductions.com/view/10.1093/actrade/9780192803771.001.0001/actrade-9780192803771&quot;&gt;The Spanish Civil War: A Very Short Introduction&lt;/a&gt;, Helen Graham&lt;/p&gt;
+&lt;/ul&gt;</content><author><name></name></author><summary type="html">source: The Atlantic</summary></entry><entry><title type="html">Notes: The Spanish Civil War</title><link href="http://localhost:4000/notes/spanish-civil-war/" rel="alternate" type="text/html" title="Notes: The Spanish Civil War" /><published>2021-10-28T04:07:43+08:00</published><updated>2021-10-28T04:07:43+08:00</updated><id>http://localhost:4000/notes/spanish-civil-war</id><content type="html" xml:base="http://localhost:4000/notes/spanish-civil-war/">&lt;p&gt;source: &lt;a href=&quot;https://www.veryshortintroductions.com/view/10.1093/actrade/9780192803771.001.0001/actrade-9780192803771&quot;&gt;The Spanish Civil War: A Very Short Introduction&lt;/a&gt;, Helen Graham&lt;/p&gt;
 
 &lt;hr /&gt;
 
@@ -1609,7 +2240,7 @@
 
 &lt;h3 id=&quot;refugees&quot;&gt;Refugees&lt;/h3&gt;
 
-&lt;p&gt;There were about 600k refugees trying to escape from Republican Spain at the end of the war&lt;/p&gt;</content><author><name></name></author><summary type="html">source: The Spanish Civil War: A Very Short Introduction, Helen Graham</summary></entry><entry><title type="html">Notes: Genetics and Politics</title><link href="http://localhost:4000/notes/genetics-politics/" rel="alternate" type="text/html" title="Notes: Genetics and Politics" /><published>2021-09-25T22:07:43+02:00</published><updated>2021-09-25T22:07:43+02:00</updated><id>http://localhost:4000/notes/genetics-politics</id><content type="html" xml:base="http://localhost:4000/notes/genetics-politics/">&lt;p&gt;source: &lt;a href=&quot;https://www.newyorker.com/magazine/2021/09/13/can-progressives-be-convinced-that-genetics-matters&quot;&gt;The New Yorker&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;There were about 600k refugees trying to escape from Republican Spain at the end of the war&lt;/p&gt;</content><author><name></name></author><summary type="html">source: The Spanish Civil War: A Very Short Introduction, Helen Graham</summary></entry><entry><title type="html">Notes: Genetics and Politics</title><link href="http://localhost:4000/notes/genetics-politics/" rel="alternate" type="text/html" title="Notes: Genetics and Politics" /><published>2021-09-26T04:07:43+08:00</published><updated>2021-09-26T04:07:43+08:00</updated><id>http://localhost:4000/notes/genetics-politics</id><content type="html" xml:base="http://localhost:4000/notes/genetics-politics/">&lt;p&gt;source: &lt;a href=&quot;https://www.newyorker.com/magazine/2021/09/13/can-progressives-be-convinced-that-genetics-matters&quot;&gt;The New Yorker&lt;/a&gt;&lt;/p&gt;
 
 &lt;hr /&gt;
 
@@ -1789,752 +2420,4 @@
   &lt;li&gt;We should get better at separating the questions of nature and nurture&lt;/li&gt;
   &lt;li&gt;If we don’t acknowledge how genes played a part in our success, we assume that we did it all through hard work&lt;/li&gt;
   &lt;li&gt;If genes play a significant role in our success, maybe we shouldn’t design our society so that you need a college degree to get health care&lt;/li&gt;
-&lt;/ul&gt;</content><author><name></name></author><summary type="html">source: The New Yorker</summary></entry><entry><title type="html">Notes: Maxwell’s Demon</title><link href="http://localhost:4000/notes/maxwell-demon/" rel="alternate" type="text/html" title="Notes: Maxwell’s Demon" /><published>2021-05-03T22:07:43+02:00</published><updated>2021-05-03T22:07:43+02:00</updated><id>http://localhost:4000/notes/maxwell-demon</id><content type="html" xml:base="http://localhost:4000/notes/maxwell-demon/">&lt;p&gt;source: &lt;a href=&quot;https://nautil.us/how-maxwells-demon-continues-to-startle-scientists-9725/&quot;&gt;Nautilus&lt;/a&gt;&lt;/p&gt;
-
-&lt;hr /&gt;
-
-&lt;p&gt;&lt;strong&gt;Quasiparticles&lt;/strong&gt; a kind of particle&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;emerge out of complicated interactions between huge numbers of fundamental particles (quarks, photons, electrons)&lt;/li&gt;
-  &lt;li&gt;can be stable. Two reasons
-    &lt;ol&gt;
-      &lt;li&gt;they emerge at very low temperatures&lt;/li&gt;
-      &lt;li&gt;they only interact with each other weakly&lt;/li&gt;
-    &lt;/ol&gt;
-  &lt;/li&gt;
-  &lt;li&gt;can have properties like mass and charge&lt;/li&gt;
-  &lt;li&gt;some physicists think fundamental particles are emergent as well&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;example: &lt;strong&gt;polarons&lt;/strong&gt;&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;discovered in 1933&lt;/li&gt;
-  &lt;li&gt;materialize when many electrons get trapped inside a crystal&lt;/li&gt;
-  &lt;li&gt;push and pull between electrons “dress” an electron. It acts like a quasiparticle with larger mass&lt;/li&gt;
-  &lt;li&gt;mixture of matter and light&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;condensed matter is related&lt;/p&gt;
-
-&lt;p&gt;Researchers can create quasiparticles that have a fraction of electron’s spin or charge&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;a “hole”:&lt;/strong&gt; the absence of an electron where it should exist&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;exciton:&lt;/strong&gt; quasiparticle made of an electron and a hole that orbit each other&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;photons blend with exitons to form &lt;strong&gt;polaritons&lt;/strong&gt;, which behave like liquid light en masse - frictionless, doesn’t scatter&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;&lt;strong&gt;Majorana quasiparticles&lt;/strong&gt; hypothesized, half electron and half hole at the same time&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;could be used to create supercomputers&lt;/li&gt;
-  &lt;li&gt;zero energy, zero charge. This could allow them to exist inside of a superconductor&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;&lt;strong&gt;magnon&lt;/strong&gt; - a quasiparticle made from bits of a magnetic field on motion across a material&lt;/p&gt;</content><author><name></name></author><summary type="html">source: Nautilus</summary></entry><entry><title type="html">Notes: Feminism is for Everybody</title><link href="http://localhost:4000/notes/bell-hooks-feminism/" rel="alternate" type="text/html" title="Notes: Feminism is for Everybody" /><published>2021-05-03T22:07:43+02:00</published><updated>2021-05-03T22:07:43+02:00</updated><id>http://localhost:4000/notes/bell-hooks-feminism</id><content type="html" xml:base="http://localhost:4000/notes/bell-hooks-feminism/">&lt;p&gt;source: &lt;a href=&quot;https://www.plutobooks.com/9780745317335/feminism-is-for-everybody/&quot;&gt;Feminism is for Everybody&lt;/a&gt;&lt;/p&gt;
-
-&lt;hr /&gt;
-
-&lt;h1 id=&quot;1-feminist-politics-where-we-stand&quot;&gt;1: Feminist Politics: Where We Stand&lt;/h1&gt;
-
-&lt;p&gt;&lt;strong&gt;Feminism&lt;/strong&gt;: A movement to end &lt;strong&gt;sexism, sexist exploitation&lt;/strong&gt; and &lt;strong&gt;oppression&lt;/strong&gt;&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;Feminism does not imply that men are the enemy&lt;/li&gt;
-  &lt;li&gt;Sexist thinking and action are the problem, whether people who perpetuate it are male or female&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;The more common understanding of feminism is women who are committed to &lt;strong&gt;gender equality&lt;/strong&gt;&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;equal pay for equal work&lt;/li&gt;
-  &lt;li&gt;shared household and parenting work&lt;/li&gt;
-  &lt;li&gt;reproductive rights&lt;/li&gt;
-  &lt;li&gt;preventing rape &amp;amp; domestic violence&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;This version of feminism misses the point that sexist thinking can be present in spaces that are female&lt;/p&gt;
-
-&lt;p&gt;Early feminists thought about the nature of male domination in settings where people were working to fight classism and racism&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;The very leaders who “were telling the world about the importance of freedom” were “subordinating women in their ranks”&lt;/li&gt;
-  &lt;li&gt;struggles for class or racial equality led to struggles for gender equality&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;Sisterhood cannot be powerful when women are competitively at war with one another&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;feminist discussions were often disrupted by discussions about class and race&lt;/li&gt;
-  &lt;li&gt;we can only become “sisters in struggle” if we confront the ways women dominate and exploit other women&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;&lt;strong&gt;Reformist Feminism:&lt;/strong&gt; emphasize gender equality&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;an easier task is to alter the system so that women have more rights&lt;/li&gt;
-  &lt;li&gt;Bell asserts that white suprematists benefit from granting women’s rights, so they’re more likely to go with reformist feminism than radical feminism&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;&lt;strong&gt;Revolutionary/Radical Feminism:&lt;/strong&gt; want to bring and end to patriarchy and sexism&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;not content to alter the system&lt;/li&gt;
-  &lt;li&gt;most women stop considering radical feminist visions once they start to gain power within the existing structure&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;&lt;strong&gt;Lifestyle Feminism:&lt;/strong&gt; Idea that feminism is apolitical&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;assumption that someone can be feminist without challenging themselves or their culture&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;The feminism we know about is either explicitly anti male, or it’s reformist. This benefits people currently in power&lt;/p&gt;
-
-&lt;h1 id=&quot;2-consciousness-raising-a-constant-change-of-heart&quot;&gt;2: Consciousness-Raising: A Constant Change of Heart&lt;/h1&gt;
-
-&lt;p&gt;Being born female doesn’t make you a feminist&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;Women are socialized just as much as men&lt;/li&gt;
-  &lt;li&gt;don’t benefit from sexist thinking as much as men do&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;Feminists emphasize patriarchy as a system of domination&lt;/p&gt;
-
-&lt;h3 id=&quot;some-history&quot;&gt;Some history&lt;/h3&gt;
-
-&lt;p&gt;&lt;strong&gt;consciousness-raising groups:&lt;/strong&gt; groups of women, usually, in people’s homes, talking about feminism and sexism&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;often led by seasoned feminists, used to recruit new converts&lt;/li&gt;
-  &lt;li&gt;women often used these groups therapeutically&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;Soon feminists circles became bigger&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;printed ideas into books&lt;/li&gt;
-  &lt;li&gt;became an academic discipline&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;by the late 70s, women’s studies was on it’s way to becoming an accepted academic discipline. The downside was that radical feminism was being replaced by reformist feminism&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;academic circles became a site of class privilege&lt;/li&gt;
-  &lt;li&gt;universities are conservative corporate structures&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;The accepted definition of feminism began to change&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;women would call themselves feminist when trying to improve their economic positions&lt;/li&gt;
-  &lt;li&gt;there was a shift to equality in the workforce&lt;/li&gt;
-  &lt;li&gt;confronting internalized sexism lost currency&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;By the early 80s, “politicized sisterhood” became less common, and “lifestyle feminism” became more common&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;going forward&lt;/strong&gt;&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;it’s important to conduct consciousness-raising groups for men&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h1 id=&quot;3-sisterhood-is-still-powerful&quot;&gt;3: Sisterhood is still powerful&lt;/h1&gt;
-
-&lt;p&gt;Woman have internalized sexism&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;we’re in competition with each other for patriarchal approval&lt;/li&gt;
-  &lt;li&gt;we judge and punish each other&lt;/li&gt;
-  &lt;li&gt;as long as women use class and race to dominate other women, feminist sisterhood cannot be realized&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;It’s important to bond. Not against men, but for the protection of women. &lt;strong&gt;Political solidarity between women undermines sexism and sets the stage for the overthrow of the patriarchy&lt;/strong&gt;&lt;/p&gt;
-
-&lt;h1 id=&quot;4-feminist-education-for-critical-consciousness&quot;&gt;4: Feminist Education for Critical Consciousness&lt;/h1&gt;
-
-&lt;p&gt;early feminist theory included:&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;analysis of sexism&lt;/li&gt;
-  &lt;li&gt;strategies for challenging patriarchy&lt;/li&gt;
-  &lt;li&gt;new models of social interaction&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;women’s studies programs in colleges made it possible to focus on work by women.&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;feminists criticized all-male canons of scholarship&lt;/li&gt;
-  &lt;li&gt;most academic programs focused on race and class in by late 80s&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;downside: feminist theory began to become exclusive&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;more attention on theory that was metalinguistic&lt;/li&gt;
-  &lt;li&gt;feminist theory no longer tied to feminist movement&lt;/li&gt;
-  &lt;li&gt;it was deradicalized. It became more similar to other academic studies&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;Bell Hooks is calling for:&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;feminists going door to door, passing out literature and talking to people face to face&lt;/li&gt;
-  &lt;li&gt;similar to religious movements&lt;/li&gt;
-  &lt;li&gt;feminism in children’s literature&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;This is because it will make feminism more accessible&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;if feminists don’t make their case to everyone, the media will&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h1 id=&quot;5-reproductive-rights&quot;&gt;5: Reproductive Rights&lt;/h1&gt;
-
-&lt;p&gt;&lt;strong&gt;in order to&lt;/strong&gt; have gender equity around the issue of free love, &lt;strong&gt;women needed&lt;/strong&gt; access to contraception and abortion&lt;/p&gt;
-
-&lt;p&gt;highlighting &lt;em&gt;abortion **&lt;/em&gt;&lt;em&gt;*rather than *reproductive rights&lt;/em&gt; - this highlighted class bias of women at the forefront of the movement&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;wealthy white women had access to contraception, most women did not&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;We’re still dealing with this! The anti-abortion platform has &lt;strong&gt;mainly targeted state-funded abortions&lt;/strong&gt;&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;This means that poor women suffer most&lt;/li&gt;
-  &lt;li&gt;This means that we lose ground on &lt;strong&gt;all reproductive issues&lt;/strong&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h1 id=&quot;6-beauty&quot;&gt;6: Beauty&lt;/h1&gt;
-
-&lt;p&gt;All women reaped the benefit of feminist interventions (pants are great), but most women are embracing sexist beauty standards&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;Critique in and of itself does not lead to change&lt;/strong&gt; - feminist critique of beauty has left many women with no alternative&lt;/p&gt;
-
-&lt;h1 id=&quot;7-class-struggle&quot;&gt;7: Class Struggle&lt;/h1&gt;
-
-&lt;p&gt;goals for feminists:&lt;/p&gt;
-
-&lt;ol&gt;
-  &lt;li&gt;become economically self-sufficient&lt;/li&gt;
-  &lt;li&gt;help other women better themselves economically&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;p&gt;Class was the biggest difference between most women in the women’s liberation movement, class interests superseded feminist issues, and privileged women acted as if the feminist movement was for them&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;reformist vision demanded equal rights &lt;em&gt;within &lt;strong&gt;existing&lt;/strong&gt; class structures&lt;/em&gt;&lt;/li&gt;
-  &lt;li&gt;revolutionary models called for &lt;em&gt;fundamental change of existing structure&lt;/em&gt;&lt;/li&gt;
-  &lt;li&gt;when women gain power and act like men, it undermines feminist politics&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;The media didn’t highlight working class feminist issues&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;only middle and upper class women were housewives&lt;/li&gt;
-  &lt;li&gt;low-paying jobs already existed for women. Middle class women just didn’t want to do them&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;Only middle class women become economically self sufficient when they work outside the home.&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;Affluent women thought that economic gains for them translated to progress for all women&lt;/li&gt;
-  &lt;li&gt;Just because women work outside the home, this doesn’t mean housework is equally shared between partners&lt;/li&gt;
-  &lt;li&gt;“power feminism”&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;Ways we made life worse for working class women:&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;dismantling the welfare system&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h1 id=&quot;8-global-feminism&quot;&gt;8: Global Feminism&lt;/h1&gt;
-
-&lt;p&gt;Feminism isn’t a response to neocolonialism, but it needs to address it&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;Feminists should strengthen political solidarity with women internationally&lt;/strong&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;power feminism -&lt;/strong&gt; straight privileged white women are displayed as examples of success, however power feminism is aligned with the ruling class&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;many power feminists are projecting their ideals globally&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;it’s easy to address global issues of gender exploitation from a perspective of neocolonialism&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;label other cultures as “barbaric”&lt;/li&gt;
-  &lt;li&gt;ignore parallel issues happening at home&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h1 id=&quot;9-women-at-work&quot;&gt;9: Women at work&lt;/h1&gt;
-
-&lt;p&gt;Work doesn’t mean liberation&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;1/3 of the workforce was female back in the 60s&lt;/li&gt;
-  &lt;li&gt;if you work for low wages, you’re not economically self sufficient&lt;/li&gt;
-  &lt;li&gt;if you use your money to consume instead of to enhance your quality of life, you’re not liberated&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;The right careers might mean liberation&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;self sufficient women can leave abusive relationships&lt;/li&gt;
-  &lt;li&gt;increases self-esteem&lt;/li&gt;
-  &lt;li&gt;participation in a community&lt;/li&gt;
-  &lt;li&gt;the home becomes a place of relaxation&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;“equal pay for equal work”&lt;/p&gt;
-
-&lt;p&gt;Some women blame feminism for making them work, but the thing that makes us work so hard is consumer capitalism&lt;/p&gt;
-
-&lt;p&gt;Poverty is a central woman’s issue&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;welfare - has a stigma&lt;/li&gt;
-  &lt;li&gt;unemployment is becoming more common&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;Some men blame unemployment on women in the workforce&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;they see it as their role to be providers&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h1 id=&quot;10-race--gender&quot;&gt;10: Race &amp;amp; Gender&lt;/h1&gt;
-
-&lt;p&gt;A feminist movement will be incomplete if it’s not anti-racist. This is because there can’t be real sisterhood between white women and women of color if we ignore white supremacy&lt;/p&gt;
-
-&lt;p&gt;Just because someone participates in an anti-racist struggle doesn’t mean they’ve divested in white supremacy&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;abolitionists, for example, could still be racist&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;When activists emphasize gender, race is deemphasized&lt;/p&gt;
-
-&lt;p&gt;it’s difficult to be anti-racist if society is racially segregated&lt;/p&gt;
-
-&lt;h1 id=&quot;11-ending-violence&quot;&gt;11: Ending Violence&lt;/h1&gt;
-
-&lt;p&gt;it’s vital that parents raise their kids nonviolently&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;domestic violence&lt;/strong&gt; happens because of the following belief: it’s acceptable for one person to control another through coercive force&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;the term makes it sound unthreatening, but people are being beaten and murdered in their homes&lt;/li&gt;
-  &lt;li&gt;it’s important to recognize that men and women use violence&lt;/li&gt;
-  &lt;li&gt;domestic violence is a direct outcome of sexism
-    &lt;ul&gt;
-      &lt;li&gt;“that will not end until sexism ends” neither will end. It might be unrealistic to make the goal the “end of sexism” or the “end of domestic violence”&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;often, perpetrators of domestic violence are themselves dominated in other spaces&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;a feminist movement must have a goal of ending all forms of violence&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;once again, this is unrealistic&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;domestic violence against children:&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;many parents use physical or verbal violence against children. This teaches children that use of violence to dominate and control is acceptable&lt;/li&gt;
-  &lt;li&gt;children have no way to organize against this&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;sexist thinking socializes boys to be “killers” as soldiers&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;imperialism maintains coercive power over other nations&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h1 id=&quot;12-feminist-masculinity&quot;&gt;12: Feminist Masculinity&lt;/h1&gt;
-
-&lt;p&gt;A feminist vision embraces feminist masculinity, and we need new strategies and theories to achieve this&lt;/p&gt;
-
-&lt;p&gt;sexism against men is still sexism. Men are not the problem&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;Both men and women perpetuate sexism&lt;/li&gt;
-  &lt;li&gt;the patriarchy is harmful to both men and women&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;The idea that men are the problem comes from the following:&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;anti-feminist men have a strong public voice&lt;/li&gt;
-  &lt;li&gt;many women have intimate relationships with sexist men&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;Problem within the feminist movement: anti-male factions&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;insist that all men are oppressors&lt;/li&gt;
-  &lt;li&gt;resent presence of anti-sexist men&lt;/li&gt;
-  &lt;li&gt;portray men as the enemy&lt;/li&gt;
-  &lt;li&gt;represent all women as victims&lt;/li&gt;
-  &lt;li&gt;ignore class privilege&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;Feminism was portrayed as anti-male, which led to an anti-female men’s movement&lt;/p&gt;
-
-&lt;p&gt;Feminist theory should have offered more liberatory visions of masculinity&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;this would have made it difficult to portray the movement as anti-male&lt;/li&gt;
-  &lt;li&gt;feminist theory doesn’t present a good alternative to patriarchal masculinity, except for a more “feminine” version of men&lt;/li&gt;
-  &lt;li&gt;we need a version of masculinity where self esteem and self love are central (as opposed to deriving value from domination)&lt;/li&gt;
-  &lt;li&gt;men’s movement teaches men to connect with their feelings&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h1 id=&quot;13-feminist-parenting&quot;&gt;13: Feminist Parenting&lt;/h1&gt;
-
-&lt;p&gt;Feminist goals:&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;end patriarchal domination of children (by men or women)&lt;/li&gt;
-  &lt;li&gt;make a family where children are safe and free&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;There’s a hope that if feminists can raise children without sexism, we can create a future world where an anti-sexist movement isn’t needed&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;there’s been a focus on girls because of the assumption that boys had more privilege&lt;/li&gt;
-  &lt;li&gt;female parents can transmit sexist thinking&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;In a culture of dominance (white supremacist capitalist patriarchal cultures), children don’t have rights&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;adult violence against children is seen as normal&lt;/li&gt;
-  &lt;li&gt;women (the primary caregivers) are often the primary culprits of this violence&lt;/li&gt;
-  &lt;li&gt;ethics of domination: the powerful can subordinate over the powerless however they want&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3 id=&quot;motherhood&quot;&gt;Motherhood&lt;/h3&gt;
-
-&lt;p&gt;we need a greater cultural appreciation of motherhood&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;there had been a devaluation of motherhood within feminism in favor to working outside the home&lt;/li&gt;
-  &lt;li&gt;feminist thinkers challenged this&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;societal disparagement of single mothers&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;this has been hugely damaging to the feminist movement&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h1 id=&quot;14-marriage--partnership&quot;&gt;14: Marriage &amp;amp; Partnership&lt;/h1&gt;
-
-&lt;p&gt;gender equity creates a context where each member of a couple is likely to be affirmed&lt;/p&gt;
-
-&lt;p&gt;there’s a feminist critique of marriage&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;this is strengthened by the sexual liberation movement and the demand for birth control&lt;/li&gt;
-  &lt;li&gt;contemporary feminists called traditional marriage a form of sexual slavery&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;sexual liberation leads to better sex for everyone&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;idea that “virtuous women” are not sexually active makes for bad sex&lt;/li&gt;
-  &lt;li&gt;when women expect sexual pleasure, it’s better sex&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;non-monogamous relationships can lead to power imbalances within patriarchy&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;housework&lt;/strong&gt; - most young people expect to split the housework between partners&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;parenting&lt;/strong&gt; - we don’t think of women as primarily mothers, so our perception of the nature of marriages has changed&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;when there are no children in a relationship, it’s easier for a couple to be peers&lt;/li&gt;
-  &lt;li&gt;since a patriarchal society expects women to do most of the parenting, things tend to become less equal when kids are born&lt;/li&gt;
-  &lt;li&gt;parenting is better when both parents participate equally&lt;/li&gt;
-  &lt;li&gt;generally, women have to choose between a career and children. This is not the case for men, which indicates that our society is still sexist&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;Feminists critique biological determinism in every area except motherhood&lt;/p&gt;
-
-&lt;h1 id=&quot;15-sexual-freedom&quot;&gt;15: Sexual Freedom&lt;/h1&gt;
-
-&lt;p&gt;&lt;strong&gt;mutual respect is essential for sexual freedom&lt;/strong&gt;&lt;/p&gt;
-
-&lt;p&gt;it’s important for women to see ourselves as having value. This must be independent of being an object of male desire&lt;/p&gt;
-
-&lt;p&gt;sexist thinking divides women into madonna/whore roles&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;no basis for constructing a healthy sexual self&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;sexual freedom requires:&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;dependable, safe birth control&lt;/li&gt;
-  &lt;li&gt;a working understanding of one’s own body&lt;/li&gt;
-  &lt;li&gt;an understanding of the meaning of sexual integrity (what?)&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;sexual promiscuity and sexual liberation are not the same thing&lt;/p&gt;
-
-&lt;p&gt;a culture of domination assumes that every relationship has a dominant and submissive party&lt;/p&gt;
-
-&lt;p&gt;there’s a subset of feminists that opposes all heterosexual sex&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;makes the argument that all sex was coercive&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;&lt;strong&gt;sexuality is tied to power&lt;/strong&gt;&lt;/p&gt;
-
-&lt;p&gt;porn&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;the feminist movement is divided on this issue&lt;/li&gt;
-  &lt;li&gt;opposition of porn has made the movement seem anti-sex&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;Some women want sex, and others don’t. What happens when men in a relationship don’t get sex when they want it?&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;no one is responsible for making sure they get sex&lt;/li&gt;
-  &lt;li&gt;women should feel free to say no to sex without fear of punishment (men finding sex elsewhere)&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;&lt;strong&gt;prostitution -&lt;/strong&gt; if a woman sells her body because it’s the only way to get what she needs, she doesn’t have control over her own body&lt;/p&gt;
-
-&lt;p&gt;sexual liberation can include&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;same-sex encounters&lt;/li&gt;
-  &lt;li&gt;masturbation&lt;/li&gt;
-  &lt;li&gt;celibacy&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h1 id=&quot;16-lesbianism--feminism&quot;&gt;16: Lesbianism &amp;amp; Feminism&lt;/h1&gt;
-
-&lt;p&gt;women don’t need to depend on men for well-being and happiness&lt;/p&gt;
-
-&lt;p&gt;“&lt;strong&gt;man-identified woman&lt;/strong&gt;” - drop feminist principles if they interfere with romantic concerns with men&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;most straight women place more emphasis on romantic relationship than feminism&lt;/li&gt;
-  &lt;li&gt;it’s easier to get by without seeking male approval if you don’t try to get into relationships with men&lt;/li&gt;
-  &lt;li&gt;however, lesbians can be just as sexist as straight women&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;building mutually satisfying bonds is just as difficult for lesbians&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;there’s always a danger of one party dominating the other&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;women who claim to be feminist while perpetuating homophobia are misguided&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;anyone who demands that lesbians follow a set of rigid moral standards  to make straight people comfortable is perpetuating homophobia&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h1 id=&quot;17-the-heart-of-feminism&quot;&gt;17: The Heart of Feminism&lt;/h1&gt;
-
-&lt;p&gt;Feminism gives us the foundation to create loving bonds. Love can never take root in a relationship based on domination and coercion. Mutual partnership is the foundation of love&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;Because of this, women in heterosexual relationships must make sure their partners are feminists&lt;/li&gt;
-  &lt;li&gt;Early feminist though surrounding love was not complex enough, and it accepted many patriarchal assumptions surrounding love&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;Patriarchal understanding of romantic love is something that makes someone powerless&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;the deal: emotional women provide love, powerful men provide protection&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;Motherhood without feminism: a situation where a woman tries to live vicariously through her children. Moms become dominating&lt;/p&gt;
-
-&lt;h1 id=&quot;18-spirituality--feminism&quot;&gt;18: Spirituality &amp;amp; Feminism&lt;/h1&gt;
-
-&lt;p&gt;There can be no feminist transformation of our culture without a transformation in our religious beliefs&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;requires control of the female body&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;early feminist criticized patriarchal religion. Fundamentalist patriarchal religion prevents the spread of feminism&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;metaphysical dualism:&lt;/strong&gt; assumption that the world can be understood by binary categories, and each of these has a good and a bad&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;idealogical foundation of all forms of group oppression&lt;/li&gt;
-  &lt;li&gt;encourages belief that inequality is “natural”&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;alternative: creation spirituality, liberation theologies&lt;/p&gt;
-
-&lt;h1 id=&quot;19-visionary-feminism&quot;&gt;19: Visionary Feminism&lt;/h1&gt;
-
-&lt;p&gt;Dream of feminism: replace culture of domination with a fold of communalism and social democracy. &lt;strong&gt;This is inherently a radical ideology&lt;/strong&gt;&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;no discrimination based on race or gender&lt;/li&gt;
-  &lt;li&gt;mutuality and interdependency&lt;/li&gt;
-  &lt;li&gt;planet survives, everyone has access to peace and well-being&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;Fewer women are interested in dismantling the current system&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;result of class power within the system&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;&lt;strong&gt;fundamental goal&lt;/strong&gt;: enhance personal power for all women&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;equal rights isn’t good enough. We need to lift up all women, especially poor women&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;&lt;strong&gt;educating the public&lt;/strong&gt;: we need diverse material that’s easy to read&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;challenges&lt;/strong&gt;&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;perception that anything related to women is feminist&lt;/li&gt;
-  &lt;li&gt;link between male violence and male domination is not understood&lt;/li&gt;
-  &lt;li&gt;alternative and reformist “feminist” ideologies&lt;/li&gt;
-  &lt;li&gt;anti-feminist backlash&lt;/li&gt;
-  &lt;li&gt;feminists who won’t accept men as comrades&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;The government in the current system gave us rights, but that same government can take them away&lt;/p&gt;</content><author><name></name></author><summary type="html">source: Feminism is for Everybody</summary></entry><entry><title type="html">I want skylights</title><link href="http://localhost:4000/notes/skylights" rel="alternate" type="text/html" title="I want skylights" /><published>2021-05-02T22:07:43+02:00</published><updated>2021-05-02T22:07:43+02:00</updated><id>http://localhost:4000/notes/skylights</id><content type="html" xml:base="http://localhost:4000/notes/skylights">&lt;p&gt;If I build a home, I want to include skylights in spaces that are generally neglected.&lt;/p&gt;
-
-&lt;h1 id=&quot;in-the-bathroom&quot;&gt;In the Bathroom&lt;/h1&gt;
-
-&lt;p&gt;Showering in sunlight is the way to go. The master bathroom in this condo in Venice, LA, included a full skylight&lt;/p&gt;
-
-&lt;table&gt;
-  &lt;tbody&gt;
-    &lt;tr&gt;
-      &lt;td&gt;&lt;img src=&quot;/assets/skylights/vencie-bathroom-skylight.jpg&quot; alt=&quot;vencie-bathroom-skylight.jpg&quot; /&gt;&lt;/td&gt;
-      &lt;td&gt;&lt;img src=&quot;/assets/skylights/venice-shower.jpg&quot; alt=&quot;venice-shower.jpg&quot; /&gt;&lt;/td&gt;
-    &lt;/tr&gt;
-  &lt;/tbody&gt;
-&lt;/table&gt;
-
-&lt;p&gt;This bath in Honolulu is situated underneath the veranda. Along with the regular veranda tiles, there are a few frosted glass ones.&lt;/p&gt;
-
-&lt;table&gt;
-  &lt;tbody&gt;
-    &lt;tr&gt;
-      &lt;td&gt;&lt;img src=&quot;/assets/skylights/FEA3026C-A19B-49C2-A2F3-F0B890160197.jpeg&quot; alt=&quot;FEA3026C-A19B-49C2-A2F3-F0B890160197.jpeg&quot; /&gt;&lt;/td&gt;
-      &lt;td&gt;&lt;img src=&quot;/assets/skylights/D1983EC3-C5BF-418C-B66E-807077F862FA.jpeg&quot; alt=&quot;D1983EC3-C5BF-418C-B66E-807077F862FA.jpeg&quot; /&gt;&lt;/td&gt;
-    &lt;/tr&gt;
-  &lt;/tbody&gt;
-&lt;/table&gt;
-
-&lt;h1 id=&quot;in-hallways&quot;&gt;In hallways&lt;/h1&gt;
-
-&lt;p&gt;The house in Honolulu used the same technique to light hallways. Even in spaces that didn’t get direct sunlight benefited from lights being on upstairs&lt;/p&gt;
-
-&lt;table&gt;
-  &lt;tbody&gt;
-    &lt;tr&gt;
-      &lt;td&gt;&lt;img src=&quot;/assets/skylights/37D1E2C2-ED1E-4A8A-8CDC-8352CEA40384.jpeg&quot; alt=&quot;37D1E2C2-ED1E-4A8A-8CDC-8352CEA40384.jpeg&quot; /&gt;&lt;/td&gt;
-      &lt;td&gt;&lt;img src=&quot;/assets/skylights/AF7C39C8-B34E-4A26-9804-AE3ABFBE199C.jpeg&quot; alt=&quot;AF7C39C8-B34E-4A26-9804-AE3ABFBE199C.jpeg&quot; /&gt;&lt;/td&gt;
-    &lt;/tr&gt;
-  &lt;/tbody&gt;
-&lt;/table&gt;</content><author><name></name></author><summary type="html">If I build a home, I want to include skylights in spaces that are generally neglected.</summary></entry><entry><title type="html">Notes: The Vulnerable World Hypothesis</title><link href="http://localhost:4000/notes/vulnerable-world/" rel="alternate" type="text/html" title="Notes: The Vulnerable World Hypothesis" /><published>2021-03-21T21:07:43+01:00</published><updated>2021-03-21T21:07:43+01:00</updated><id>http://localhost:4000/notes/vulnerable-world</id><content type="html" xml:base="http://localhost:4000/notes/vulnerable-world/">&lt;p&gt;source: &lt;a href=&quot;https://onlinelibrary.wiley.com/doi/10.1111/1758-5899.12718&quot;&gt;The Vulnerable World Hypothesis&lt;/a&gt;, by Nick Bostrom&lt;/p&gt;
-
-&lt;hr /&gt;
-
-&lt;p&gt;&lt;strong&gt;vulnerable world&lt;/strong&gt; — a world where there is a technology almost certainly destroys civilization. Makes us reconsider:&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;ubiquitous surveillance&lt;/li&gt;
-  &lt;li&gt;unipolar world order&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3 id=&quot;the-urn-and-the-black-ball&quot;&gt;The Urn and the Black Ball&lt;/h3&gt;
-
-&lt;p&gt;Developing a technology is like pulling balls out of an urn. The majority of them are “white”, or benign. A &lt;strong&gt;black ball&lt;/strong&gt; is a technology that will destroy civilization. We haven’t pulled any black balls out the urn yet&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;you can’t “put a ball back into the urn”&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3 id=&quot;easy-nukes&quot;&gt;easy nukes&lt;/h3&gt;
-
-&lt;p&gt;&lt;strong&gt;Leo Szilard&lt;/strong&gt; - Physicist. Tried to persuade other physicists not to develop nukes because nukes are dangerous. Scientific knowledge will make dangerous insights more accessible&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;easy nukes&lt;/strong&gt; - what if all you needed to make a nuke was to electrify a wire between two panes of glass. &lt;em&gt;Someone&lt;/em&gt; would use it to make a nuke and attack a city.  Would we need to get rid of glass? Wire? Electricity? What would we do to people who we found with glass? Would we need to be an authoritarian society to prevent people from getting glass?&lt;/p&gt;
-
-&lt;h3 id=&quot;vulnerable-world-hypothesis&quot;&gt;Vulnerable world hypothesis&lt;/h3&gt;
-
-&lt;p&gt;If technological development continues, then at some point we’ll develop a technology that will make it extremely likely that we destroy civilization&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;semi-anarchic default condition -&lt;/strong&gt; a world with&lt;/p&gt;
-
-&lt;ol&gt;
-  &lt;li&gt;insufficient preventative policing&lt;/li&gt;
-  &lt;li&gt;insufficient global governance&lt;/li&gt;
-  &lt;li&gt;diverse motivations&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;p&gt;&lt;strong&gt;existential risk vulnerable world hypothesis&lt;/strong&gt; - the technology would by default destroy life on earth or destroy our potential for future value&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;when would the risk and the catastrophe justify government surveillance&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;Vulnerable periods can open and close. They’d close when we develop a new protective technology that could stop the dangerous tech. A world can also be &lt;em&gt;stabilized.&lt;/em&gt;&lt;/p&gt;
-
-&lt;h2 id=&quot;types-of-vulnerabilities&quot;&gt;Types of Vulnerabilities&lt;/h2&gt;
-
-&lt;h3 id=&quot;type-1-easy-nukes&quot;&gt;Type-1: easy nukes&lt;/h3&gt;
-
-&lt;p&gt;tech that’s destructive and easy to use. If we have a semi-anarchic condition, they’ll probably destroy civilization&lt;/p&gt;
-
-&lt;p&gt;We should consider &lt;em&gt;ease&lt;/em&gt; and &lt;em&gt;destructiveness&lt;/em&gt; of different technologies&lt;/p&gt;
-
-&lt;p&gt;Another factor is the diversity of motivations within a population. Most people don’t want to use nukes on anyone, but you only need one&lt;/p&gt;
-
-&lt;h3 id=&quot;type-2a-safe-first-strike&quot;&gt;Type-2a: safe first strike&lt;/h3&gt;
-
-&lt;p&gt;Tech that incentivizes powerful actors to cause destruction (like during the cold war. One of the things that saved us during the cold war was the ability of the superpowers to strike back after an initial attack)&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;If there’s a case where there’s a benefit to nuclear aggression, nuclear war becomes more likely&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3 id=&quot;type-2b-worse-global-warming&quot;&gt;Type-2b: worse global warming&lt;/h3&gt;
-
-&lt;p&gt;some tech where many actors (like, half of people on earth) are incentivized to take a slightly damaging action. The combined effect of all these actions becomes a problem that could devastate civilization&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;what if, for instance, we didn’t know that global warming was happening until it was too late, or if there were multiple positive feedback loops&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3 id=&quot;type-0-surprising-strangelets&quot;&gt;Type-0: surprising strangelets&lt;/h3&gt;
-
-&lt;p&gt;Tech that carries a hidden risk, so we destroy civilization on accident&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;what if nukes set the atmosphere on fire and we all died? What if a high energy physics experiment caused a black hole and sucked in the planet?&lt;/li&gt;
-&lt;/ul&gt;</content><author><name></name></author><summary type="html">source: The Vulnerable World Hypothesis, by Nick Bostrom</summary></entry></feed>
+&lt;/ul&gt;</content><author><name></name></author><summary type="html">source: The New Yorker</summary></entry></feed>

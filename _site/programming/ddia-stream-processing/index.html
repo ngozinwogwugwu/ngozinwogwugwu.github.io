@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1"><!-- Begin Jekyll SEO tag v2.6.1 -->
+<title>Notes: Stream Processing | Ngozi Nwogwugwu</title>
+<meta name="generator" content="Jekyll v3.8.7" />
+<meta property="og:title" content="Notes: Stream Processing" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="source: Designing Data Intensive Applications by Martin Kleppmann (Chapter 11)" />
+<meta property="og:description" content="source: Designing Data Intensive Applications by Martin Kleppmann (Chapter 11)" />
+<link rel="canonical" href="http://localhost:4000/programming/ddia-stream-processing/" />
+<meta property="og:url" content="http://localhost:4000/programming/ddia-stream-processing/" />
+<meta property="og:site_name" content="Ngozi Nwogwugwu" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2022-07-07T04:07:43+08:00" />
+<script type="application/ld+json">
+{"url":"http://localhost:4000/programming/ddia-stream-processing/","headline":"Notes: Stream Processing","dateModified":"2022-07-07T04:07:43+08:00","datePublished":"2022-07-07T04:07:43+08:00","description":"source: Designing Data Intensive Applications by Martin Kleppmann (Chapter 11)","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/programming/ddia-stream-processing/"},"@type":"BlogPosting","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link rel="stylesheet" href="/assets/main.css"><link type="application/atom+xml" rel="alternate" href="http://localhost:4000/feed.xml" title="Ngozi Nwogwugwu" /></head>
+<body><header class="site-header" role="banner">
+
+  <div class="wrapper"><a class="site-title" rel="author" href="/">Ngozi Nwogwugwu</a><nav class="site-nav">
+        <input type="checkbox" id="nav-trigger" class="nav-trigger" />
+        <label for="nav-trigger">
+          <span class="menu-icon">
+            <svg viewBox="0 0 18 15" width="18px" height="15px">
+              <path d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.032C17.335,0,18,0.665,18,1.484L18,1.484z M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.032C17.335,6.031,18,6.696,18,7.516L18,7.516z M18,13.516C18,14.335,17.335,15,16.516,15H1.484 C0.665,15,0,14.335,0,13.516l0,0c0-0.82,0.665-1.483,1.484-1.483h15.032C17.335,12.031,18,12.695,18,13.516L18,13.516z"/>
+            </svg>
+          </span>
+        </label>
+
+        <div class="trigger"><a class="page-link" href="/bookshelf/">My Bookshelf</a><a class="page-link" href="/notes/">Notes</a><a class="page-link" href="/programming/">Programming</a></div>
+      </nav></div>
+</header>
+<main class="page-content" aria-label="Content">
+      <div class="wrapper">
+        <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
+
+  <header class="post-header">
+    <h1 class="post-title p-name" itemprop="name headline">Notes: Stream Processing</h1>
+    <p class="post-meta">
+      <time class="dt-published" datetime="2022-07-07T04:07:43+08:00" itemprop="datePublished">Jul 7, 2022
+      </time></p>
+  </header>
+
+  <div class="post-content e-content" itemprop="articleBody">
+    <p>source: <a href="https://www.oreilly.com/library/view/designing-data-intensive-applications/9781491903063/">Designing Data Intensive Applications</a> by Martin Kleppmann (Chapter 11)</p>
+
+<hr />
+
+<p>A lot of data is unbounded - it arrives gradually over time. Processing unbounded data in batches might not make sense in every situation</p>
+
+<p><strong>Stream Processing</strong> - run processing continuously. Alternative to batch processing</p>
+
+<ul>
+  <li><strong>event streams</strong> - data made incrementally available over time</li>
+</ul>
+
+<h1 id="transmitting-event-streams">Transmitting Event Streams</h1>
+<p><strong>event</strong> - small, self-contained immutable object. Contains the details for something that happened at some point in time</p>
+
+<ul>
+  <li>can be encoded</li>
+  <li><strong>producer (publisher)</strong> generates events</li>
+  <li><strong>consumers (subscribers)</strong> process events</li>
+  <li><strong>topic</strong> <strong>(stream)</strong> a group of related events</li>
+</ul>
+
+<h2 id="messaging-systems">Messaging Systems</h2>
+<p>In a <strong>messaging system</strong>, producers send events to consumers. In a <strong>publish/subscribe model</strong>, we can have multiple producers and consumers:</p>
+
+<ol>
+  <li>one or more <strong>producers</strong> sends a message with an event to a <strong>topic</strong></li>
+  <li>the message gets pushed to one or more consumers</li>
+</ol>
+
+<p>Solutions to cases where consumers aren’t fast enough to process all of the messages:</p>
+
+<ol>
+  <li>drop messages</li>
+  <li>buffer messages in a queue</li>
+  <li>apply <strong>backpressure</strong> (blocking producer from sending messages)</li>
+</ol>
+
+<h3 id="direct-messaging-from-producers-to-consumers">Direct messaging from producers to consumers</h3>
+<p>possibility of message loss, and there’s no recovering data if a consumer goes offline. Examples:</p>
+
+<ul>
+  <li>UDP multicast (finance)</li>
+  <li>brokerless messaging libraries (ZeroMQ)</li>
+</ul>
+
+<h3 id="message-brokers">Message brokers</h3>
+<p>a database - optimized for handling event streams</p>
+
+<ul>
+  <li>better fault tolerance</li>
+  <li>consumers are async</li>
+</ul>
+
+<h3 id="message-brokers-compared-to-databases">Message brokers compared to databases</h3>
+<ul>
+  <li>message brokers automatically delete messages once they get consumed</li>
+  <li>topics are analogous to DB indexes</li>
+  <li>message brokers don’t support arbitrary queries</li>
+</ul>
+
+<h3 id="multiple-consumers">Multiple consumers</h3>
+<p><strong>load balancing</strong> - each message gets delivered to one consumer. Allows for parallel processing</p>
+
+<p><strong>fan out</strong> - each message is delivered to all consumers. Allows different consumers to process the same data in different ways</p>
+
+<h3 id="acknowledgement-and-redelivery">Acknowledgement and redelivery</h3>
+<p>a broker will only delete a message from its queue if it gets an ack from the consumer. If the consumer consumes the message, then breaks before it can send the ack, the broker will send the message to another consumer</p>
+
+<p>This can lead to messages being processed out of order. One way to avoid this issue is to route all related messages to a single consumer</p>
+
+<h2 id="partitioned-logs">Partitioned Logs</h2>
+<p><strong>log-based message brokers</strong> are a hybrid of:</p>
+
+<ul>
+  <li>databases (durable storage) - this means that messages don’t get deleted when consumers process them</li>
+  <li>messaging - means low-latency notifications</li>
+</ul>
+
+<h3 id="using-logs-for-message-storage">Using logs for message storage</h3>
+<p>A log is an <strong>append-only sequence of records</strong> on disk</p>
+
+<ul>
+  <li>we can use this for message brokers</li>
+  <li>these logs can be partitioned</li>
+  <li>each partition has an <strong>offset</strong> for every message. These are ordered within a partition</li>
+</ul>
+
+<p>products: Kafka, Amazon Kenesis, DistributedLog</p>
+
+<h3 id="logs-compared-to-traditional-messaging">Logs compared to traditional messaging</h3>
+<p>No need for fan-out messaging, since each consumer can read the log independently</p>
+
+<p>A consumer consumes <em>all</em> the logs for a specific topic. Downsides:</p>
+
+<ul>
+  <li>max num nodes for a topic is the number of the topic’s log partition</li>
+  <li>slow messages can cause lags for all the subsequent messages</li>
+</ul>
+
+<h3 id="consumer-offsets">Consumer Offsets</h3>
+<p>Consumers pay attention to message offsets as they work through a log</p>
+
+<h3 id="disk-space-usage">Disk space usage</h3>
+<p>We don’t have infinite disk space. One way to deal with this is to delete expired data as the log gets too big</p>
+
+<p><strong>circular buffer</strong> - bounded-size buffer that deletes old messages when it gets full</p>
+
+<h3 id="when-consumers-cant-keep-up-with-producers">When consumers can’t keep up with producers</h3>
+<p>options: drop messages, buffer, apply backpressure</p>
+
+<p>it’s normal to monitor consumers to make sure they don’t get too far behind</p>
+
+<p>one advantage to partitioned logs: if one consumer falls behind, it doesn’t affect the others in any way</p>
+
+<h3 id="replaying-old-messages">Replaying old messages</h3>
+<p>If you want to replay old messages, just reset the consumer offset. The message broker doesn’t know anything about the offset, so it won’t affect anything else</p>
+
+<h1 id="databases-and-streams">Databases and Streams</h1>
+<p>there’s a fundamental connection between databases and streams</p>
+
+<h2 id="keeping-systems-in-sync">Keeping Systems in Sync</h2>
+<p>related (or replicated) data in different locations needs to be kept in sync. Some possible solutions:</p>
+
+<ul>
+  <li><strong>dual writes</strong> write to both systems at once - we get problems if one fails while the other succeeds</li>
+  <li>periodic database dumps - downside is that there’s high latency</li>
+</ul>
+
+<h2 id="change-data-capture-cdc">Change Data Capture (CDC)</h2>
+<p>the process of observing all data changes written to a database and extracting those changes in a form that is readable to other systems</p>
+
+<h3 id="implementing-change-data-capture">Implementing change data capture</h3>
+<p><strong>derived data systems</strong> log consumers for CDC</p>
+
+<p>you can use DB triggers to implement CDC, but this is fragile</p>
+
+<p>CDC is usually async, so you have to keep in mind that there might be lag</p>
+
+<h3 id="initial-snapshot">Initial snapshot</h3>
+<p>a DB snapshot should correspond to a known position in the change log</p>
+
+<h3 id="log-compaction">Log compaction</h3>
+<ul>
+  <li>throw away duplicate logs to free up space</li>
+  <li>if a key is frequently overwritten, garbage-collect old values</li>
+</ul>
+
+<h2 id="event-sourcing">Event Sourcing</h2>
+<p>technique: store all the changes to the application state as a log of events</p>
+
+<ul>
+  <li>developed by the domain-driven design community</li>
+  <li>application logic is built on immutable events written to a log (append only)</li>
+  <li>Deriving current state from the event log</li>
+</ul>
+
+<p>Applications that use event sources should be able to take a stream of events and turn it into an application state</p>
+
+<p>Log compaction isn’t possible with event sourcing (as opposed to CDC) because events are modeled on a higher level</p>
+
+<h3 id="commands-and-events">Commands and events</h3>
+<p>a <strong>command</strong> is a request when it first arrives. Once that requests gets saved, it’s considered an <strong>event</strong></p>
+
+<ul>
+  <li>once a command becomes an event, it’s in the app’s history</li>
+  <li>command validation should happen asynchronously</li>
+</ul>
+
+<h2 id="state-streams-and-immutability">State, Streams and Immutability</h2>
+<p>a math-y way of thinking about this is that</p>
+
+<p>$state(now) = \int_{t=0}^{now}stream(t)dt$</p>
+
+<p>and</p>
+
+<p>$stream(t) = {d state(t)}/dt$</p>
+
+<h3 id="advantages-of-immutable-events">advantages of immutable events</h3>
+<ul>
+  <li>auditability - data is never deleted</li>
+  <li>more information - you have an app’s entire history</li>
+</ul>
+
+<h3 id="deriving-several-views-from-the-same-event-log">Deriving several views from the same event log</h3>
+<p>You can use the same data for different features</p>
+
+<p>one advantage of keeping the event log around is that you can use it if you want to develop a new feature. The new feature has the entire history of the app’s events, so it’s up to date immediately</p>
+
+<p><strong>Command Query Responsibility Segregation</strong> - you get flexibility by separating write data from read data</p>
+
+<h3 id="concurrency-control">Concurrency control</h3>
+<p>event sourcing means async processes, which mean lag</p>
+
+<ul>
+  <li>if this is a problem, you might want to wrap log writes and reads in a transaction</li>
+</ul>
+
+<h3 id="limitations-of-immutability">Limitations of immutability</h3>
+<ul>
+  <li>you run out of space</li>
+  <li>you might <em>want</em> to delete some logs - it’s hard when the information is scattered all over the place</li>
+</ul>
+
+<h1 id="processing-streams">Processing Streams</h1>
+
+<p><strong>operator (job)</strong> piece of code that processes streams. It has three options for processing streams:</p>
+
+<ol>
+  <li>Save to DB</li>
+  <li>Push the events to a user</li>
+  <li>Process stream to make an output stream
+    <ul>
+      <li>option to combine it with other data sources, including other streams</li>
+    </ul>
+  </li>
+</ol>
+
+<p>Stream processors can be run in parallel on partitioned streams. This is similar to MapReduce dataflow engines - transforming and filtering records works the same</p>
+
+<p>Stream processing never ends, so some things don’t make sense to do in stream processing (like sorting)</p>
+
+<h2 id="uses-of-stream-processing">Uses of Stream Processing</h2>
+<p>used to just be monitoring, but we have more use cases now</p>
+
+<h3 id="complex-event-processing">complex event processing</h3>
+<p>use a query language to describe a pattern of events to look for. When the processor sees a sequence of events that match, it emits a <strong>complex event</strong></p>
+
+<h3 id="stream-analytics">stream analytics</h3>
+<p>aggregations and statistical metrics over a large number of events</p>
+
+<ul>
+  <li>usually computed over fixed time intervals (<strong>windows</strong>)
+    <h3 id="maintaining-materialized-views">Maintaining materialized views</h3>
+    <p><strong>materialized view</strong> - an alternate view of a dataset</p>
+  </li>
+  <li>can be queried more efficiently</li>
+  <li>updates when the underlying data changes</li>
+</ul>
+
+<p>You need all events to make a materialized view</p>
+
+<h3 id="search-of-streams">Search of streams</h3>
+<p>When you search a stream (for something like string matching), you have to store it first</p>
+
+<h2 id="reasoning-about-time">Reasoning about time</h2>
+<p>this is hard, but most frameworks use the clock on the processing machine (<strong>processing time</strong>)</p>
+
+<ul>
+  <li>you run into problems if there’s a lot of lag
+    <h3 id="event-time-vs-processing-time">Event time vs processing time</h3>
+    <p>it’s important to model these as distinct, especially in situations where there’s some lag</p>
+  </li>
+</ul>
+
+<h3 id="knowing-when-youre-ready">Knowing when you’re ready</h3>
+<p>You can’t be sure when all events for a particular window have been delivered</p>
+
+<ul>
+  <li>unless all the publishers publish events that say “no more events for this time window”</li>
+</ul>
+
+<p>ways to handle stragglers:</p>
+
+<ul>
+  <li>ignore them</li>
+  <li>publish a correction</li>
+</ul>
+
+<h3 id="which-clock-do-you-use">Which clock do you use</h3>
+<p>three possible timestamps:
+    1. time the event happened
+    2. time the event was sent
+    3. time the event was received by the server</p>
+
+<h3 id="types-of-windows">Types of windows</h3>
+<ul>
+  <li><strong>tumbling window</strong> - fixed length, every event belongs to exactly one window</li>
+  <li><strong>hopping window</strong> - fixed length, allows for windows to overlap a little</li>
+  <li><strong>sliding window</strong> - fixed length, contains events that happen within some interval of each other</li>
+  <li><strong>session window</strong> - no fixed duration, just group all the events that  happened close together in time</li>
+</ul>
+
+<h2 id="stream-joins">Stream Joins</h2>
+<p>Joining data on a stream is challenging because new events can appear any time</p>
+
+<h3 id="stream-stream-join-window-join">Stream-stream join (window join)</h3>
+<p>challenge: the two events might happen far apart from each other</p>
+
+<ul>
+  <li>you’ll have to save the first event in memory. You have to save <strong>state</strong></li>
+</ul>
+
+<h3 id="stream-table-join-stream-enrichment">Stream-table join (stream enrichment)</h3>
+<p>for each event, query the DB</p>
+
+<ul>
+  <li>helps, because you can query old data</li>
+  <li>to reduce roundtrip time, it might help to keep a copy of the DB on the processor</li>
+</ul>
+
+<h3 id="table-table-join-materialized-view-maintenance">Table-table join (materialized view maintenance)</h3>
+<p>Keep a cache of events, if they’re too expensive to push to the DB immediately</p>
+
+<h3 id="time-dependence-of-joins">Time-dependence of joins</h3>
+<p>The order of events is important, if they depend on each other</p>
+
+<h2 id="fault-tolerance">Fault Tolerance</h2>
+<p>with streams, you can’t wait for the processing to end before you make the results visible (because it’s infinite)</p>
+
+<h3 id="microbatching-and-checkpointing">Microbatching and checkpointing</h3>
+<p>Just make a batch out of one second of data and process it right away. Save the data</p>
+
+<p>If your stream operator crashes, it can just start from the most recent saved data</p>
+
+<h3 id="atomic-commits">Atomic commits</h3>
+<p>Wrap processing and side effects in a transaction. We don’t want side effects to happen if the processing fails</p>
+
+<h3 id="idempotence">Idempotence</h3>
+<p>When you can perform an operation multiple times, and it has the same effect as if it was performed one time</p>
+
+  </div><a class="u-url" href="/programming/ddia-stream-processing/" hidden></a>
+</article>
+
+      </div>
+    </main><footer class="site-footer h-card">
+  <data class="u-url" href="/"></data>
+
+  <div class="wrapper">
+
+    <h2 class="footer-heading">Ngozi Nwogwugwu</h2>
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col footer-col-1">
+        <ul class="contact-list">
+          <li class="p-name">Ngozi Nwogwugwu</li><li><a class="u-email" href="mailto:ngozi.n.nwogwugwu@gmail.com">ngozi.n.nwogwugwu@gmail.com</a></li></ul>
+      </div>
+
+      <div class="footer-col footer-col-2"><ul class="social-media-list"><li><a href="https://github.com/ngozinwogwugwu"><svg class="svg-icon"><use xlink:href="/assets/minima-social-icons.svg#github"></use></svg> <span class="username">ngozinwogwugwu</span></a></li></ul>
+</div>
+
+      <div class="footer-col footer-col-3">
+        <p>nwogwugwu.eth</p>
+      </div>
+    </div>
+
+  </div>
+
+</footer>
+</body>
+
+</html>

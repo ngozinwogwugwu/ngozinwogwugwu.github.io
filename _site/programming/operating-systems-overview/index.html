@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1"><!-- Begin Jekyll SEO tag v2.6.1 -->
+<title>Notes: Operating Systems Overview | Ngozi Nwogwugwu</title>
+<meta name="generator" content="Jekyll v3.8.7" />
+<meta property="og:title" content="Notes: Operating Systems Overview" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="source: Operating System Concepts by Avi Silberschatz, Peter Baer Galvin, Greg Gagne (Chapter 1)" />
+<meta property="og:description" content="source: Operating System Concepts by Avi Silberschatz, Peter Baer Galvin, Greg Gagne (Chapter 1)" />
+<link rel="canonical" href="http://localhost:4000/programming/operating-systems-overview/" />
+<meta property="og:url" content="http://localhost:4000/programming/operating-systems-overview/" />
+<meta property="og:site_name" content="Ngozi Nwogwugwu" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2022-07-07T04:07:43+08:00" />
+<script type="application/ld+json">
+{"url":"http://localhost:4000/programming/operating-systems-overview/","headline":"Notes: Operating Systems Overview","dateModified":"2022-07-07T04:07:43+08:00","datePublished":"2022-07-07T04:07:43+08:00","description":"source: Operating System Concepts by Avi Silberschatz, Peter Baer Galvin, Greg Gagne (Chapter 1)","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/programming/operating-systems-overview/"},"@type":"BlogPosting","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link rel="stylesheet" href="/assets/main.css"><link type="application/atom+xml" rel="alternate" href="http://localhost:4000/feed.xml" title="Ngozi Nwogwugwu" /></head>
+<body><header class="site-header" role="banner">
+
+  <div class="wrapper"><a class="site-title" rel="author" href="/">Ngozi Nwogwugwu</a><nav class="site-nav">
+        <input type="checkbox" id="nav-trigger" class="nav-trigger" />
+        <label for="nav-trigger">
+          <span class="menu-icon">
+            <svg viewBox="0 0 18 15" width="18px" height="15px">
+              <path d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.032C17.335,0,18,0.665,18,1.484L18,1.484z M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.032C17.335,6.031,18,6.696,18,7.516L18,7.516z M18,13.516C18,14.335,17.335,15,16.516,15H1.484 C0.665,15,0,14.335,0,13.516l0,0c0-0.82,0.665-1.483,1.484-1.483h15.032C17.335,12.031,18,12.695,18,13.516L18,13.516z"/>
+            </svg>
+          </span>
+        </label>
+
+        <div class="trigger"><a class="page-link" href="/bookshelf/">My Bookshelf</a><a class="page-link" href="/notes/">Notes</a><a class="page-link" href="/programming/">Programming</a></div>
+      </nav></div>
+</header>
+<main class="page-content" aria-label="Content">
+      <div class="wrapper">
+        <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
+
+  <header class="post-header">
+    <h1 class="post-title p-name" itemprop="name headline">Notes: Operating Systems Overview</h1>
+    <p class="post-meta">
+      <time class="dt-published" datetime="2022-07-07T04:07:43+08:00" itemprop="datePublished">Jul 7, 2022
+      </time></p>
+  </header>
+
+  <div class="post-content e-content" itemprop="articleBody">
+    <p>source: <a href="https://codex.cs.yale.edu/avi/os-book/OS10/index.html">Operating System Concepts</a> by Avi Silberschatz, Peter Baer Galvin, Greg Gagne (Chapter 1)</p>
+
+<hr />
+<h1 id="introduction">Introduction</h1>
+
+<p>An <strong>Operating System</strong> is software that manages a computer’s hardware</p>
+
+<ul>
+  <li>provides basis for application programs</li>
+  <li>acts as intermediary between user and hardware</li>
+  <li>allocates resources to computer programs</li>
+</ul>
+
+<h2 id="what-operating-systems-do">What Operating Systems Do</h2>
+
+<p>Components to a computer system:</p>
+
+<ul>
+  <li>hardware</li>
+  <li>operating system</li>
+  <li>application systems</li>
+  <li>user</li>
+</ul>
+
+<h3 id="system-view">System View</h3>
+
+<p>from a computer’s point of view, the OS is the program most intimately involved with the hardware. It’s a <strong>resource allocator</strong></p>
+
+<p>A <strong>control program</strong> manages the execution of user programs</p>
+
+<ul>
+  <li>prevents improper use of the computer</li>
+</ul>
+
+<h3 id="defining-operating-systems">Defining Operating Systems</h3>
+
+<p>Can be defined as a combination of the kernel and system programs</p>
+
+<ul>
+  <li><strong>the kernel</strong>: the operating system is the one program that’s always running. This is one possible definition of an operating system</li>
+  <li><strong>system programs:</strong> associated with the operating system, but not part of the kernel</li>
+</ul>
+
+<p><strong>middleware:</strong> a set of software frameworks that provide additional services to application developers</p>
+
+<h2 id="computer-system-organization">Computer-System Organization</h2>
+
+<h3 id="interrupts">Interrupts</h3>
+
+<p>An interrupt is a signal from the hardware to the CPU, usually by the system bus, which causes the CPU to stop what it’s doing and transfer execution to a fixed location. These locations could be hardcoded, or stored in a table of pointers called the <strong>interrupt vector</strong></p>
+
+<h3 id="storage-structure">Storage Structure</h3>
+
+<p>Computers run most of their programs from main memory (or <strong>RAM</strong>), which is volatile. You have to load the program to main memory beforehand</p>
+
+<ul>
+  <li><strong>DRAM:</strong> Dynamic Random-Access Memory</li>
+</ul>
+
+<p><strong>Bootstrap Program</strong> - the first program to run on a computer. Uses firmware storage to store the program, since RAM is volatile</p>
+
+<p>We can’t store programs in main memory for two reasons</p>
+
+<ul>
+  <li>Main memory is too small to store all our programs</li>
+  <li>Main memory is volatile</li>
+</ul>
+
+<h3 id="io-structure">I/O Structure</h3>
+
+<p>Operating systems handle I/O</p>
+
+<h2 id="computer-system-architecture">Computer-System Architecture</h2>
+
+<p>There are single processor systems and multi processor systems</p>
+
+<ul>
+  <li><strong>core</strong> - the component that executes instructions</li>
+</ul>
+
+<h3 id="multiprocessor-systems">Multiprocessor systems</h3>
+
+<p>have processors that share resources (clock, memory, etc)</p>
+
+<ul>
+  <li>Primary advantage: increased throughput</li>
+  <li>Disadvantage: One processor could sit idle</li>
+</ul>
+
+<p><strong>Multicore Systems</strong> - have multiple cores on a single chip (for faster communication)</p>
+
+<h3 id="clustered-systems">Clustered Systems</h3>
+
+<p>composed of two more more <strong>nodes</strong> (individual systems) that are loosely coupled</p>
+
+<ul>
+  <li>redundancy leads to high availability</li>
+</ul>
+
+<p><strong>Parallelization</strong> - a technique which divides a program into separate components so they can be run in parallel</p>
+
+<h2 id="operating-system-operations">Operating System Operations</h2>
+
+<p><strong>system daemons</strong> programs that are loaded into memory at boot time. Services that are provided outside of the kernel</p>
+
+<h3 id="multiprogramming-and-multitasking">Multiprogramming and Multitasking</h3>
+
+<p><strong>Multiprogramming</strong> increases CPU utilization by keeping several processes in memory simultaneously. Gives processing time to a new program when the current program is idle</p>
+
+<p><strong>Multitasking</strong> <strong>-</strong> when the CPU switches between programs</p>
+
+<h3 id="dual-mode-and-multi-mode-operation">Dual-Mode and Multi-Mode Operation</h3>
+
+<p>Computers must distinguish between operating-system code and user-defined code. This prevents misuse of the computer.</p>
+
+<p>To implement this, we need two <strong>modes of operation</strong></p>
+
+<ul>
+  <li>Kernel mode (AKA supervisor mode, system mode, privileged mode)</li>
+  <li>user mode</li>
+</ul>
+
+<p><strong>mode bit</strong> - indicates the current mode, added to the hardware of the computer</p>
+
+<h3 id="timer">Timer</h3>
+
+<p>a timer can be set to interrupt the computer after a specified period</p>
+
+<h2 id="resource-management">Resource Management</h2>
+
+<h1 id="operating-system-structures">Operating-System Structures</h1>
+
+  </div><a class="u-url" href="/programming/operating-systems-overview/" hidden></a>
+</article>
+
+      </div>
+    </main><footer class="site-footer h-card">
+  <data class="u-url" href="/"></data>
+
+  <div class="wrapper">
+
+    <h2 class="footer-heading">Ngozi Nwogwugwu</h2>
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col footer-col-1">
+        <ul class="contact-list">
+          <li class="p-name">Ngozi Nwogwugwu</li><li><a class="u-email" href="mailto:ngozi.n.nwogwugwu@gmail.com">ngozi.n.nwogwugwu@gmail.com</a></li></ul>
+      </div>
+
+      <div class="footer-col footer-col-2"><ul class="social-media-list"><li><a href="https://github.com/ngozinwogwugwu"><svg class="svg-icon"><use xlink:href="/assets/minima-social-icons.svg#github"></use></svg> <span class="username">ngozinwogwugwu</span></a></li></ul>
+</div>
+
+      <div class="footer-col footer-col-3">
+        <p>nwogwugwu.eth</p>
+      </div>
+    </div>
+
+  </div>
+
+</footer>
+</body>
+
+</html>

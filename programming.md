@@ -26,9 +26,13 @@ Designing Data Intensive Applications
 ### [Storage and Retrieval](ddia-storage-and-retrieval)
 ### [Encoding and Evolution](ddia-encoding-and-evolution)
 ### [Replication](ddia-replication)
+### [Stream Processing](ddia-stream-processing)
 
 ---
 Miscellaneous Notes
 
 ### [RSA Encryption](rsa-encryption)
 ### [How to Dockerize a Project](dockerize-project)
+### [Kafka: Introduction](kafka-introduction)
+### [Kafka: Producers](kafka-producers)
+### [Operating Systems Overview](operating-systems-overview)
