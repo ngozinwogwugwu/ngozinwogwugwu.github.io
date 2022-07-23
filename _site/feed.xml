@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.7">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2022-07-23T10:49:54+08:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Ngozi Nwogwugwu</title><subtitle>nwogwugwu.eth</subtitle><entry><title type="html">Notes: Operating Systems Overview</title><link href="http://localhost:4000/programming/operating-systems-overview/" rel="alternate" type="text/html" title="Notes: Operating Systems Overview" /><published>2022-07-07T04:07:43+08:00</published><updated>2022-07-07T04:07:43+08:00</updated><id>http://localhost:4000/programming/Operating-Systems-Overview</id><content type="html" xml:base="http://localhost:4000/programming/operating-systems-overview/">&lt;p&gt;source: &lt;a href=&quot;https://codex.cs.yale.edu/avi/os-book/OS10/index.html&quot;&gt;Operating System Concepts&lt;/a&gt; by Avi Silberschatz, Peter Baer Galvin, Greg Gagne (Chapter 1)&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.7">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2022-07-23T10:59:26+08:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Ngozi Nwogwugwu</title><subtitle>nwogwugwu.eth</subtitle><entry><title type="html">Notes: Operating Systems Overview</title><link href="http://localhost:4000/programming/operating-systems-overview/" rel="alternate" type="text/html" title="Notes: Operating Systems Overview" /><published>2022-07-07T04:07:43+08:00</published><updated>2022-07-07T04:07:43+08:00</updated><id>http://localhost:4000/programming/Operating-Systems-Overview</id><content type="html" xml:base="http://localhost:4000/programming/operating-systems-overview/">&lt;p&gt;source: &lt;a href=&quot;https://codex.cs.yale.edu/avi/os-book/OS10/index.html&quot;&gt;Operating System Concepts&lt;/a&gt; by Avi Silberschatz, Peter Baer Galvin, Greg Gagne (Chapter 1)&lt;/p&gt;
 
 &lt;hr /&gt;
 &lt;h1 id=&quot;introduction&quot;&gt;Introduction&lt;/h1&gt;
@@ -447,73 +447,7 @@
 &lt;p&gt;Wrap processing and side effects in a transaction. We don’t want side effects to happen if the processing fails&lt;/p&gt;
 
 &lt;h3 id=&quot;idempotence&quot;&gt;Idempotence&lt;/h3&gt;
-&lt;p&gt;When you can perform an operation multiple times, and it has the same effect as if it was performed one time&lt;/p&gt;</content><author><name></name></author><summary type="html">source: Designing Data Intensive Applications by Martin Kleppmann (Chapter 11)</summary></entry><entry><title type="html">Notes: Crisis Mindsets</title><link href="http://localhost:4000/notes/crisis-mindsets/" rel="alternate" type="text/html" title="Notes: Crisis Mindsets" /><published>2022-07-07T04:07:43+08:00</published><updated>2022-07-07T04:07:43+08:00</updated><id>http://localhost:4000/notes/crisis-mindsets-notes</id><content type="html" xml:base="http://localhost:4000/notes/crisis-mindsets/">&lt;p&gt;source: &lt;a href=&quot;https://www.ribbonfarm.com/2022/05/18/crisis-mindset&quot;&gt;RIBBONFARM&lt;/a&gt;&lt;/p&gt;
-
-&lt;hr /&gt;
-
-&lt;p&gt;It’s important to cultivate an effective crisis mindset
-    - in order to do this, you must retain a strong connection to the sublime&lt;/p&gt;
-
-&lt;h3 id=&quot;solving-problems-as-a-group&quot;&gt;solving problems as a group&lt;/h3&gt;
-
-&lt;p&gt;people deal with crises in groups, not individually&lt;/p&gt;
-&lt;ul&gt;
-  &lt;li&gt;mix of strengths, more bandwidth&lt;/li&gt;
-  &lt;li&gt;who you are fighting alongside is also who you’re fighting for&lt;/li&gt;
-  &lt;li&gt;example: Robinson Crusoe had the survival skills, but almost gave up before he met Friday&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;Finding the right group is important&lt;/p&gt;
-&lt;ul&gt;
-  &lt;li&gt;the wrong configuration of people will demotivate you&lt;/li&gt;
-  &lt;li&gt;the right group will illustrate to you what’s at stake&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;Because crises bind people so well, they can be rich with significance and meaning&lt;/p&gt;
-&lt;ul&gt;
-  &lt;li&gt;the most extreme version of this can make regular life seem dull by comparison&lt;/li&gt;
-  &lt;li&gt;some people arrange their lives so that they’re constantly facing a crisis&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;Moments of connection during a crisis are more intense&lt;/p&gt;
-&lt;ul&gt;
-  &lt;li&gt;the bigger the crisis, the rarer the surpluses. The rarer the surpluses, the more they matter&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3 id=&quot;times-of-crisis-vs-flourishing&quot;&gt;times of crisis vs flourishing&lt;/h3&gt;
-
-&lt;p&gt;If you grow up during crisis, you’ll have a mindset that’s rooted in scarcity and short time horizons&lt;/p&gt;
-
-&lt;p&gt;by contrast, when you have a &lt;strong&gt;flourishing mindset&lt;/strong&gt;, you’re focused on personal fulfillment and accomplishment&lt;/p&gt;
-&lt;ul&gt;
-  &lt;li&gt;If you spend your whole life in this mindset, you can only handle small crises. You’ll be overwhelmed by a medium sized crisis&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;Your ability to deal with crises changes when you age&lt;/p&gt;
-&lt;ul&gt;
-  &lt;li&gt;you have more experience, resources and emotional regulation&lt;/li&gt;
-  &lt;li&gt;you have less physical energy, health, imagination&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3 id=&quot;ngozis-thoughts-on-this&quot;&gt;Ngozi’s thoughts on this&lt;/h3&gt;
-
-&lt;p&gt;Clearly, it’s important to experience both times of crisis and times of flourishing in order to grow into a well rounded person. I don’t think it’s realistic to contrive a crisis, but perhaps we can find a way to cultivate our crisis mindsets anyway. How can we do this?&lt;/p&gt;
-&lt;ul&gt;
-  &lt;li&gt;Make a point of attempting to solve problems that are slightly out of our comfort zone&lt;/li&gt;
-  &lt;li&gt;If someone in our community needs help, we can view it as an opportunity. By helping a friend or neighbor through a crisis, we increase our ability to handle a crisis&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;When we do need to face a crisis in our life, how can we tackle it in a way that helps us grow?&lt;/p&gt;
-&lt;ul&gt;
-  &lt;li&gt;Reach out to friends and family. Not only can they help you face the crisis, but the experience may deepen your bonds and enrich your relationships&lt;/li&gt;
-  &lt;li&gt;Reflect after it’s over. You probably grew in a way that you didn’t notice, or you may have accomplished something you didn’t know was possible. You can face the next crisis with more confidence.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;How do we take full advantage of a flourishing mindset?&lt;/p&gt;
-&lt;ul&gt;
-  &lt;li&gt;Don’t arrange your life so that you never encounter hardship, but stay organized enough to avoid unnecessary chaos. For example, if you have to tear your apartment apart before leaving on a trip because you forgot where you put your passport, you’ve lost time that you could be spending researching your destination&lt;/li&gt;
-  &lt;li&gt;Don’t take flourishing time for granted. Learn to play guitar instead of binging Netflix&lt;/li&gt;
-&lt;/ul&gt;</content><author><name></name></author><summary type="html">source: RIBBONFARM</summary></entry><entry><title type="html">Notes: Kafka Producers</title><link href="http://localhost:4000/programming/kafka-producers/" rel="alternate" type="text/html" title="Notes: Kafka Producers" /><published>2022-07-03T04:07:43+08:00</published><updated>2022-07-03T04:07:43+08:00</updated><id>http://localhost:4000/programming/Kafka-Producers</id><content type="html" xml:base="http://localhost:4000/programming/kafka-producers/">&lt;p&gt;source: &lt;a href=&quot;https://www.oreilly.com/library/view/kafka-the-definitive/9781491936153//&quot;&gt;Kafka: The Definitive Guide&lt;/a&gt; by Neha Narkhede, Gwen Shapira, Todd Palino (Chapter 3)&lt;/p&gt;
+&lt;p&gt;When you can perform an operation multiple times, and it has the same effect as if it was performed one time&lt;/p&gt;</content><author><name></name></author><summary type="html">source: Designing Data Intensive Applications by Martin Kleppmann (Chapter 11)</summary></entry><entry><title type="html">Notes: Kafka Producers</title><link href="http://localhost:4000/programming/kafka-producers/" rel="alternate" type="text/html" title="Notes: Kafka Producers" /><published>2022-07-03T04:07:43+08:00</published><updated>2022-07-03T04:07:43+08:00</updated><id>http://localhost:4000/programming/Kafka-Producers</id><content type="html" xml:base="http://localhost:4000/programming/kafka-producers/">&lt;p&gt;source: &lt;a href=&quot;https://www.oreilly.com/library/view/kafka-the-definitive/9781491936153//&quot;&gt;Kafka: The Definitive Guide&lt;/a&gt; by Neha Narkhede, Gwen Shapira, Todd Palino (Chapter 3)&lt;/p&gt;
 
 &lt;hr /&gt;
 &lt;p&gt;Producers write messages to Kafka&lt;/p&gt;
@@ -2306,4 +2240,184 @@
 
 &lt;h3 id=&quot;refugees&quot;&gt;Refugees&lt;/h3&gt;
 
-&lt;p&gt;There were about 600k refugees trying to escape from Republican Spain at the end of the war&lt;/p&gt;</content><author><name></name></author><summary type="html">source: The Spanish Civil War: A Very Short Introduction, Helen Graham</summary></entry></feed>
+&lt;p&gt;There were about 600k refugees trying to escape from Republican Spain at the end of the war&lt;/p&gt;</content><author><name></name></author><summary type="html">source: The Spanish Civil War: A Very Short Introduction, Helen Graham</summary></entry><entry><title type="html">Notes: Genetics and Politics</title><link href="http://localhost:4000/notes/genetics-politics/" rel="alternate" type="text/html" title="Notes: Genetics and Politics" /><published>2021-09-26T04:07:43+08:00</published><updated>2021-09-26T04:07:43+08:00</updated><id>http://localhost:4000/notes/genetics-politics</id><content type="html" xml:base="http://localhost:4000/notes/genetics-politics/">&lt;p&gt;source: &lt;a href=&quot;https://www.newyorker.com/magazine/2021/09/13/can-progressives-be-convinced-that-genetics-matters&quot;&gt;The New Yorker&lt;/a&gt;&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;p&gt;&lt;strong&gt;Kathryn Paige Harden&lt;/strong&gt; works in the field of behavior genetics&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;psych professor, University of Texas at Austin&lt;/li&gt;
+  &lt;li&gt;mentored by Eric Turkheimer&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;strong&gt;behavior genetics&lt;/strong&gt; investigates influence of genes on &lt;strong&gt;character traits&lt;/strong&gt; and &lt;strong&gt;life outcomes&lt;/strong&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;pushback-from-hardens-colleagues&quot;&gt;pushback from Harden’s colleagues&lt;/h3&gt;
+
+&lt;p&gt;there’s a possible link between behavior genetics and eugenics&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Harden was ostracized by her liberal colleagues for her work&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;strong&gt;polygenic score&lt;/strong&gt; a weighted sum of an individuals relevant genetic variants&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Harden shared &lt;a href=&quot;https://journals.sagepub.com/doi/abs/10.1177/0956797616643070&quot;&gt;a paper&lt;/a&gt; that used polygenic score to explain population variance&lt;/li&gt;
+  &lt;li&gt;the paper emphasized that it’s difficult to distinguish between genetic and environmental effects on social outcomes&lt;/li&gt;
+  &lt;li&gt;There was a lot of pushback to this paper. professor of public policy at Duke: “there will be no reason to pursue these types of research programs at all, and they can be rendered to the same location as Holocaust denial research”&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;strong&gt;The Bell Curve&lt;/strong&gt;, Charles Murray &amp;amp; Richard Herrnstein - includes claims about:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;genetic basis for racial hierarchy in intelligence&lt;/li&gt;
+  &lt;li&gt;genetic foundation for poverty and inequality&lt;/li&gt;
+  &lt;li&gt;Harden’s colleagues compared the paper she shared to the bell curve&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;they considered refusing to fund research into effects of genes on behavior or social outcomes&lt;/p&gt;
+
+&lt;p&gt;We can’t commit to egalitarianism by declaring genetic uniformity&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;The left isn’t talking about this, so the only voices are on the right&lt;/strong&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;“red pill” claims to expose liberal hypocrisy&lt;/li&gt;
+  &lt;li&gt;Harden is trying to fight back&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;strong&gt;The Genetic Lottery: Why DNA Matters for Social Equality&lt;/strong&gt; - Harden’s new book&lt;/p&gt;
+
+&lt;h3 id=&quot;behavioralism-vs-determinism&quot;&gt;&lt;strong&gt;behavioralism vs determinism&lt;/strong&gt;&lt;/h3&gt;
+
+&lt;p&gt;&lt;strong&gt;behavioralism&lt;/strong&gt; - claims that environmental manipulation can produce any desired outcome&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;aligns with postwar liberal principles&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;strong&gt;&lt;a href=&quot;https://en.wikipedia.org/wiki/How_Much_Can_We_Boost_IQ_and_Scholastic_Achievement%3F&quot;&gt;How Much Can We Boost IQ and Scholastic Achievement?&lt;/a&gt;&lt;/strong&gt; - 1969 article&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;argued that there was an IQ gap between races in America, and the reason was at least partly genetic&lt;/li&gt;
+  &lt;li&gt;argued that policy interventions were unlikely shift this hierarchy&lt;/li&gt;
+  &lt;li&gt;Got a lot of criticism&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;IQ is flexible&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Poor children gain IQ after wealthy families adopt them&lt;/li&gt;
+  &lt;li&gt;populations gain IQ over time&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Just because outcomes are partly genetic doesn’t mean they’re inevitable&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://www.gwern.net/docs/iq/1997-turkheimer.pdf&quot;&gt;&lt;strong&gt;The Search for a Psychometric left&lt;/strong&gt;&lt;/a&gt; - Terkheimer argued that the left has nothing to fear from genes&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;We don’t need to deny heritability to oppose determinism, reductionism and racism&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;the-limits-of-behavior-genetics&quot;&gt;the limits of behavior genetics&lt;/h3&gt;
+
+&lt;p&gt;Some studies found genes for aggression, depression, homosexuality, but &lt;strong&gt;the studies couldn’t be replicated&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;Complex traits are governed by multiple genes&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;genome-wide association study&lt;/strong&gt; (GWAS)- attempt to identify thousands of places in the genome where DNA differences correlate to traits/outcomes&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;can predict population variance for height, weight and some diseases&lt;/li&gt;
+  &lt;li&gt;can predict some complex behavioral traits&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;A GWA for educational attainment found ~1300 sites on the genome that correlate with scholastic success&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;individual sites have a negligible predictive ability, but the sum is very predictive&lt;/li&gt;
+  &lt;li&gt;people with the highest scores are 5x more likely to graduate from college&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;GWAS show correlation, but not causation&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;depend on populations within a specific society&lt;/li&gt;
+  &lt;li&gt;results are not portable - results from the UK will not tell you anything about populations in Estonia&lt;/li&gt;
+  &lt;li&gt;not a good predictor for individuals&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;GWAS reveal a lot much about geography and culture&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;example: you could conduct a GWAS for chopstick use. It would tell you more about culture than individual’s dexterity&lt;/li&gt;
+  &lt;li&gt;possible solution: compare GWAS results within families&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Social outcomes also depend on plenty of factors (conscientiousness, risk-aversion, physical features…)&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Harden thinks we’ll be stuck forever if we consider this question to have a binary answer&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;One benefit of GWAS: they help you account for genetic differences when trying to do studies on environmental factors&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Parents have significant impact on environmental effects, even if they don’t pass on all of their genes&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Another benefit: We can see how treatments interact with genetics&lt;/p&gt;
+
+&lt;h3 id=&quot;clash-with-sam-harris&quot;&gt;Clash with Sam Harris&lt;/h3&gt;
+
+&lt;p&gt;Sam Harris had Charles Murray on as a guest in April 2017&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;they said that people don’t want to hear that IQ differs across ethnic groups&lt;/li&gt;
+  &lt;li&gt;Harris mostly had him on because he’d been caught up in the culture war&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Harden and Turkheimer wrote a &lt;a href=&quot;https://www.vox.com/the-big-idea/2017/5/18/15655638/charles-murray-race-iq-sam-harris-science-free-speech&quot;&gt;piece for vox&lt;/a&gt; meant to confront Harris’ podcast&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;They had to make a nuanced argument to separate the truths from the falsehoods in the podcast&lt;/li&gt;
+  &lt;li&gt;We can’t deny that genetics have an impact on human academic scores&lt;/li&gt;
+  &lt;li&gt;However there’s &lt;strong&gt;no reason to think that racial IQ gaps are anything but the result of racism&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Harris eventually had Harden on his podcast. It was actually pretty awkward&lt;/p&gt;
+
+&lt;h3 id=&quot;blowback-from-the-left&quot;&gt;blowback from the left&lt;/h3&gt;
+
+&lt;p&gt;There are more voices on the left that are trying to acknowledge inherited intelligence&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;strong&gt;the cult of smart&lt;/strong&gt; asserts that improving the education system won’t help until we acknowledge that some students are just smarter than others&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Harden is getting dragged on twitter&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Dorothy Roberts&lt;/strong&gt; professor of law, sociology, Africana studies - responded to a 2018 Op-Ed that Harden wrote in the NYT, which said we should use genetics to inform education policy&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;“There’s no way that genetic testing is going to lead to a restructuring of society in a just way in the future. &lt;strong&gt;We have a hundred years of evidence for what happens when social outcomes are attributed to genetic differences&lt;/strong&gt;, and it is always to stigmatize, control and punish the people predicted to have socially devalued traits”&lt;/p&gt;
+
+&lt;/blockquote&gt;
+
+&lt;p&gt;There is a push from the right to pay more attention to genetics&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;blueprint says that polygenic scores should be understood as “fortune tellers”, and white supremacists love it&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;the-genetic-lottery&quot;&gt;The genetic lottery&lt;/h3&gt;
+
+&lt;p&gt;assersions:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;just because we value some traits more than others doesn’t mean we value some people more than others&lt;/li&gt;
+  &lt;li&gt;We should view inherent qualities as something you were lucky to get&lt;/li&gt;
+  &lt;li&gt;We should get better at separating the questions of nature and nurture&lt;/li&gt;
+  &lt;li&gt;If we don’t acknowledge how genes played a part in our success, we assume that we did it all through hard work&lt;/li&gt;
+  &lt;li&gt;If genes play a significant role in our success, maybe we shouldn’t design our society so that you need a college degree to get health care&lt;/li&gt;
+&lt;/ul&gt;</content><author><name></name></author><summary type="html">source: The New Yorker</summary></entry></feed>
