@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Notes: Crisis Mindsets"
-date:   2022-07-23 00:07:43 -0500
+date:   2022-07-22 00:07:43 -0500
 permalink: /notes/crisis-mindsets/
 ---
 
