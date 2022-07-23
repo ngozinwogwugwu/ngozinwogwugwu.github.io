@@ -9,6 +9,7 @@ I often take notes on the books that I read, but not always. If you want a more 
 ---
 Science & Philosophy
 
+# [Crisis Mindsets](crisis-mindsets)
 # [The Vulnerable World Hypothesis](vulnerable-world)
 # [Maxwell’s Demon](maxwell-demon)
 # [Galileo & Consiousness](galileo-consiousness)
