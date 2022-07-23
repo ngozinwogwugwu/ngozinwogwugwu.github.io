@@ -1,134 +1,163 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.7">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2022-07-23T10:59:26+08:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Ngozi Nwogwugwu</title><subtitle>nwogwugwu.eth</subtitle><entry><title type="html">Notes: Operating Systems Overview</title><link href="http://localhost:4000/programming/operating-systems-overview/" rel="alternate" type="text/html" title="Notes: Operating Systems Overview" /><published>2022-07-07T04:07:43+08:00</published><updated>2022-07-07T04:07:43+08:00</updated><id>http://localhost:4000/programming/Operating-Systems-Overview</id><content type="html" xml:base="http://localhost:4000/programming/operating-systems-overview/">&lt;p&gt;source: &lt;a href=&quot;https://codex.cs.yale.edu/avi/os-book/OS10/index.html&quot;&gt;Operating System Concepts&lt;/a&gt; by Avi Silberschatz, Peter Baer Galvin, Greg Gagne (Chapter 1)&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.7">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2022-07-23T20:37:01+08:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Ngozi Nwogwugwu</title><subtitle>nwogwugwu.eth</subtitle><entry><title type="html">Notes: Crisis Mindsets</title><link href="http://localhost:4000/notes/crisis-mindsets/" rel="alternate" type="text/html" title="Notes: Crisis Mindsets" /><published>2022-07-22T13:07:43+08:00</published><updated>2022-07-22T13:07:43+08:00</updated><id>http://localhost:4000/notes/crisis-mindsets-notes</id><content type="html" xml:base="http://localhost:4000/notes/crisis-mindsets/">&lt;p&gt;source: &lt;a href=&quot;https://www.ribbonfarm.com/2022/05/18/crisis-mindset&quot;&gt;RIBBONFARM&lt;/a&gt;&lt;/p&gt;
 
 &lt;hr /&gt;
-&lt;h1 id=&quot;introduction&quot;&gt;Introduction&lt;/h1&gt;
 
-&lt;p&gt;An &lt;strong&gt;Operating System&lt;/strong&gt; is software that manages a computer’s hardware&lt;/p&gt;
-
+&lt;p&gt;It’s important to cultivate an effective crisis mindset&lt;/p&gt;
 &lt;ul&gt;
-  &lt;li&gt;provides basis for application programs&lt;/li&gt;
-  &lt;li&gt;acts as intermediary between user and hardware&lt;/li&gt;
-  &lt;li&gt;allocates resources to computer programs&lt;/li&gt;
+  &lt;li&gt;in order to do this, you must retain a strong connection to the sublime&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;h2 id=&quot;what-operating-systems-do&quot;&gt;What Operating Systems Do&lt;/h2&gt;
+&lt;h3 id=&quot;solving-problems-as-a-group&quot;&gt;solving problems as a group&lt;/h3&gt;
 
-&lt;p&gt;Components to a computer system:&lt;/p&gt;
-
+&lt;p&gt;people deal with crises in groups, not individually&lt;/p&gt;
 &lt;ul&gt;
-  &lt;li&gt;hardware&lt;/li&gt;
-  &lt;li&gt;operating system&lt;/li&gt;
-  &lt;li&gt;application systems&lt;/li&gt;
-  &lt;li&gt;user&lt;/li&gt;
+  &lt;li&gt;mix of strengths, more bandwidth&lt;/li&gt;
+  &lt;li&gt;who you are fighting alongside is also who you’re fighting for&lt;/li&gt;
+  &lt;li&gt;example: Robinson Crusoe had the survival skills, but almost gave up before he met Friday&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;h3 id=&quot;system-view&quot;&gt;System View&lt;/h3&gt;
-
-&lt;p&gt;from a computer’s point of view, the OS is the program most intimately involved with the hardware. It’s a &lt;strong&gt;resource allocator&lt;/strong&gt;&lt;/p&gt;
-
-&lt;p&gt;A &lt;strong&gt;control program&lt;/strong&gt; manages the execution of user programs&lt;/p&gt;
-
+&lt;p&gt;Finding the right group is important&lt;/p&gt;
 &lt;ul&gt;
-  &lt;li&gt;prevents improper use of the computer&lt;/li&gt;
+  &lt;li&gt;the wrong configuration of people will demotivate you&lt;/li&gt;
+  &lt;li&gt;the right group will illustrate to you what’s at stake&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;h3 id=&quot;defining-operating-systems&quot;&gt;Defining Operating Systems&lt;/h3&gt;
-
-&lt;p&gt;Can be defined as a combination of the kernel and system programs&lt;/p&gt;
-
+&lt;p&gt;Because crises bind people so well, they can be rich with significance and meaning&lt;/p&gt;
 &lt;ul&gt;
-  &lt;li&gt;&lt;strong&gt;the kernel&lt;/strong&gt;: the operating system is the one program that’s always running. This is one possible definition of an operating system&lt;/li&gt;
-  &lt;li&gt;&lt;strong&gt;system programs:&lt;/strong&gt; associated with the operating system, but not part of the kernel&lt;/li&gt;
+  &lt;li&gt;the most extreme version of this can make regular life seem dull by comparison&lt;/li&gt;
+  &lt;li&gt;some people arrange their lives so that they’re constantly facing a crisis&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;p&gt;&lt;strong&gt;middleware:&lt;/strong&gt; a set of software frameworks that provide additional services to application developers&lt;/p&gt;
-
-&lt;h2 id=&quot;computer-system-organization&quot;&gt;Computer-System Organization&lt;/h2&gt;
-
-&lt;h3 id=&quot;interrupts&quot;&gt;Interrupts&lt;/h3&gt;
-
-&lt;p&gt;An interrupt is a signal from the hardware to the CPU, usually by the system bus, which causes the CPU to stop what it’s doing and transfer execution to a fixed location. These locations could be hardcoded, or stored in a table of pointers called the &lt;strong&gt;interrupt vector&lt;/strong&gt;&lt;/p&gt;
-
-&lt;h3 id=&quot;storage-structure&quot;&gt;Storage Structure&lt;/h3&gt;
-
-&lt;p&gt;Computers run most of their programs from main memory (or &lt;strong&gt;RAM&lt;/strong&gt;), which is volatile. You have to load the program to main memory beforehand&lt;/p&gt;
-
+&lt;p&gt;Moments of connection during a crisis are more intense&lt;/p&gt;
 &lt;ul&gt;
-  &lt;li&gt;&lt;strong&gt;DRAM:&lt;/strong&gt; Dynamic Random-Access Memory&lt;/li&gt;
+  &lt;li&gt;the bigger the crisis, the rarer the surpluses. The rarer the surpluses, the more they matter&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;p&gt;&lt;strong&gt;Bootstrap Program&lt;/strong&gt; - the first program to run on a computer. Uses firmware storage to store the program, since RAM is volatile&lt;/p&gt;
+&lt;h3 id=&quot;times-of-crisis-vs-flourishing&quot;&gt;times of crisis vs flourishing&lt;/h3&gt;
 
-&lt;p&gt;We can’t store programs in main memory for two reasons&lt;/p&gt;
+&lt;p&gt;If you grow up during crisis, you’ll have a mindset that’s rooted in scarcity and short time horizons&lt;/p&gt;
 
+&lt;p&gt;by contrast, when you have a &lt;strong&gt;flourishing mindset&lt;/strong&gt;, you’re focused on personal fulfillment and accomplishment&lt;/p&gt;
 &lt;ul&gt;
-  &lt;li&gt;Main memory is too small to store all our programs&lt;/li&gt;
-  &lt;li&gt;Main memory is volatile&lt;/li&gt;
+  &lt;li&gt;If you spend your whole life in this mindset, you can only handle small crises. You’ll be overwhelmed by a medium sized crisis&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;h3 id=&quot;io-structure&quot;&gt;I/O Structure&lt;/h3&gt;
-
-&lt;p&gt;Operating systems handle I/O&lt;/p&gt;
-
-&lt;h2 id=&quot;computer-system-architecture&quot;&gt;Computer-System Architecture&lt;/h2&gt;
-
-&lt;p&gt;There are single processor systems and multi processor systems&lt;/p&gt;
-
+&lt;p&gt;Your ability to deal with crises changes when you age&lt;/p&gt;
 &lt;ul&gt;
-  &lt;li&gt;&lt;strong&gt;core&lt;/strong&gt; - the component that executes instructions&lt;/li&gt;
+  &lt;li&gt;you have more experience, resources and emotional regulation&lt;/li&gt;
+  &lt;li&gt;you have less physical energy, health, imagination&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;h3 id=&quot;multiprocessor-systems&quot;&gt;Multiprocessor systems&lt;/h3&gt;
+&lt;h3 id=&quot;ngozis-thoughts-on-this&quot;&gt;Ngozi’s thoughts on this&lt;/h3&gt;
 
-&lt;p&gt;have processors that share resources (clock, memory, etc)&lt;/p&gt;
-
+&lt;p&gt;Clearly, it’s important to experience both times of crisis and times of flourishing in order to grow into a well rounded person. I don’t think it’s realistic to contrive a crisis, but perhaps we can find a way to cultivate our crisis mindsets anyway. How can we do this?&lt;/p&gt;
 &lt;ul&gt;
-  &lt;li&gt;Primary advantage: increased throughput&lt;/li&gt;
-  &lt;li&gt;Disadvantage: One processor could sit idle&lt;/li&gt;
+  &lt;li&gt;Make a point of attempting to solve problems that are slightly out of our comfort zone&lt;/li&gt;
+  &lt;li&gt;If someone in our community needs help, we can view it as an opportunity. By helping a friend or neighbor through a crisis, we increase our ability to handle a crisis&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;p&gt;&lt;strong&gt;Multicore Systems&lt;/strong&gt; - have multiple cores on a single chip (for faster communication)&lt;/p&gt;
-
-&lt;h3 id=&quot;clustered-systems&quot;&gt;Clustered Systems&lt;/h3&gt;
-
-&lt;p&gt;composed of two more more &lt;strong&gt;nodes&lt;/strong&gt; (individual systems) that are loosely coupled&lt;/p&gt;
-
+&lt;p&gt;When we do need to face a crisis in our life, how can we tackle it in a way that helps us grow?&lt;/p&gt;
 &lt;ul&gt;
-  &lt;li&gt;redundancy leads to high availability&lt;/li&gt;
+  &lt;li&gt;Reach out to friends and family. Not only can they help you face the crisis, but the experience may deepen your bonds and enrich your relationships&lt;/li&gt;
+  &lt;li&gt;Reflect after it’s over. You probably grew in a way that you didn’t notice, or you may have accomplished something you didn’t know was possible. You can face the next crisis with more confidence.&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;p&gt;&lt;strong&gt;Parallelization&lt;/strong&gt; - a technique which divides a program into separate components so they can be run in parallel&lt;/p&gt;
-
-&lt;h2 id=&quot;operating-system-operations&quot;&gt;Operating System Operations&lt;/h2&gt;
-
-&lt;p&gt;&lt;strong&gt;system daemons&lt;/strong&gt; programs that are loaded into memory at boot time. Services that are provided outside of the kernel&lt;/p&gt;
-
-&lt;h3 id=&quot;multiprogramming-and-multitasking&quot;&gt;Multiprogramming and Multitasking&lt;/h3&gt;
-
-&lt;p&gt;&lt;strong&gt;Multiprogramming&lt;/strong&gt; increases CPU utilization by keeping several processes in memory simultaneously. Gives processing time to a new program when the current program is idle&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;Multitasking&lt;/strong&gt; &lt;strong&gt;-&lt;/strong&gt; when the CPU switches between programs&lt;/p&gt;
-
-&lt;h3 id=&quot;dual-mode-and-multi-mode-operation&quot;&gt;Dual-Mode and Multi-Mode Operation&lt;/h3&gt;
-
-&lt;p&gt;Computers must distinguish between operating-system code and user-defined code. This prevents misuse of the computer.&lt;/p&gt;
-
-&lt;p&gt;To implement this, we need two &lt;strong&gt;modes of operation&lt;/strong&gt;&lt;/p&gt;
-
+&lt;p&gt;How do we take full advantage of a flourishing mindset?&lt;/p&gt;
 &lt;ul&gt;
-  &lt;li&gt;Kernel mode (AKA supervisor mode, system mode, privileged mode)&lt;/li&gt;
-  &lt;li&gt;user mode&lt;/li&gt;
+  &lt;li&gt;Don’t arrange your life so that you never encounter hardship, but stay organized enough to avoid unnecessary chaos. For example, if you have to tear your apartment apart before leaving on a trip because you forgot where you put your passport, you’ve lost time that you could be spending researching your destination&lt;/li&gt;
+  &lt;li&gt;Don’t take flourishing time for granted. Learn to play guitar instead of binging Netflix&lt;/li&gt;
+&lt;/ul&gt;</content><author><name></name></author><summary type="html">source: RIBBONFARM</summary></entry><entry><title type="html">Notes: A Lure</title><link href="http://localhost:4000/notes/a-lure/" rel="alternate" type="text/html" title="Notes: A Lure" /><published>2022-07-22T13:07:43+08:00</published><updated>2022-07-22T13:07:43+08:00</updated><id>http://localhost:4000/notes/entangled-life-a-lure</id><content type="html" xml:base="http://localhost:4000/notes/a-lure/">&lt;p&gt;source: &lt;a href=&quot;https://www.merlinsheldrake.com/entangled-life&quot;&gt;Entangled Life&lt;/a&gt; (chapter 1) by Merlin Sheldrake&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;p&gt;&lt;strong&gt;fungal hyphae&lt;/strong&gt; become a &lt;strong&gt;mycelial network&lt;/strong&gt; using two key moves:&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;branching&lt;/li&gt;
+  &lt;li&gt;fusing - must find other hyphae by &lt;strong&gt;homing&lt;/strong&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;p&gt;&lt;strong&gt;mode bit&lt;/strong&gt; - indicates the current mode, added to the hardware of the computer&lt;/p&gt;
+&lt;p&gt;Hyphae need to know what they’re fusing with&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;some fungi have tens of thousands of &lt;strong&gt;mating types&lt;/strong&gt;&lt;/li&gt;
+  &lt;li&gt;sometimes hyphae fuse with their own mycelial network, but “self” here is not a binary&lt;/li&gt;
+&lt;/ul&gt;
 
-&lt;h3 id=&quot;timer&quot;&gt;Timer&lt;/h3&gt;
+&lt;p&gt;“Many fungi produce plant and animal hormones to alter the physiology of their associates”&lt;/p&gt;
 
-&lt;p&gt;a timer can be set to interrupt the computer after a specified period&lt;/p&gt;
+&lt;h3 id=&quot;predatory-fungi&quot;&gt;Predatory fungi&lt;/h3&gt;
 
-&lt;h2 id=&quot;resource-management&quot;&gt;Resource Management&lt;/h2&gt;
+&lt;p&gt;Some fungi eat &lt;strong&gt;nematode worms&lt;/strong&gt;. They’ll only do this if:&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;there’s not enough plant material to decompose&lt;/li&gt;
+  &lt;li&gt;the fungus senses a worm close by&lt;/li&gt;
+&lt;/ul&gt;
 
-&lt;h1 id=&quot;operating-system-structures&quot;&gt;Operating-System Structures&lt;/h1&gt;</content><author><name></name></author><summary type="html">source: Operating System Concepts by Avi Silberschatz, Peter Baer Galvin, Greg Gagne (Chapter 1)</summary></entry><entry><title type="html">Notes: Stream Processing</title><link href="http://localhost:4000/programming/ddia-stream-processing/" rel="alternate" type="text/html" title="Notes: Stream Processing" /><published>2022-07-07T04:07:43+08:00</published><updated>2022-07-07T04:07:43+08:00</updated><id>http://localhost:4000/programming/DDIA-Stream-Processing</id><content type="html" xml:base="http://localhost:4000/programming/ddia-stream-processing/">&lt;p&gt;source: &lt;a href=&quot;https://www.oreilly.com/library/view/designing-data-intensive-applications/9781491903063/&quot;&gt;Designing Data Intensive Applications&lt;/a&gt; by Martin Kleppmann (Chapter 11)&lt;/p&gt;
+&lt;p&gt;The fungus produces worm-hunting organs, which &lt;strong&gt;issue a chemical summons&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;Some fungal tools:&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;adhesive nets&lt;/li&gt;
+  &lt;li&gt;hyphal nooses - inflate when touched&lt;/li&gt;
+  &lt;li&gt;toxic hyphal stalks&lt;/li&gt;
+  &lt;li&gt;spores that find the worm&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;smells&quot;&gt;Smells&lt;/h3&gt;
+
+&lt;p&gt;Human smell: we can distinguish between a trillion odors&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;plants, fungi and animals use similar receptors for detecting chemicals&lt;/li&gt;
+  &lt;li&gt;fungi don’t have noses - they use their whole bodies as one big nose&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;olfactory flashbacks&lt;/strong&gt; often include visual and emotional memories&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;“Male orchid bees collect scents from the world and amass them into a cocktail that they use to court females”&lt;/p&gt;
+
+&lt;h3 id=&quot;truffles&quot;&gt;truffles&lt;/h3&gt;
+&lt;p&gt;&lt;strong&gt;Piedmont white truffles&lt;/strong&gt; have never been domesticated&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;exist as mycelial networks for most of the year&lt;/li&gt;
+  &lt;li&gt;the truffles produce spores&lt;/li&gt;
+  &lt;li&gt;Use smell to attract animals&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Truffles must partner with trees, and the partner tree must consent&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;some fungi will cause disease, while other relationships are symbiotic&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Truffle mycelium sense their surroundings and responds unpredictably
+&lt;strong&gt;diversity dogs&lt;/strong&gt; are trained to find new types of truffles
+Truffles may provide an incentive for people to leave forests alone&lt;/p&gt;</content><author><name></name></author><summary type="html">source: Entangled Life (chapter 1) by Merlin Sheldrake</summary></entry><entry><title type="html">Recommend Me a Book</title><link href="http://localhost:4000/bookshelf/recommend-me/" rel="alternate" type="text/html" title="Recommend Me a Book" /><published>2022-07-21T00:00:00+08:00</published><updated>2022-07-21T00:00:00+08:00</updated><id>http://localhost:4000/bookshelf/recommend-me-a-book</id><content type="html" xml:base="http://localhost:4000/bookshelf/recommend-me/">&lt;html&gt;
+    &lt;head&gt;
+        &lt;script&gt;
+            function myFunction() {
+                let bookName = document.getElementById(&quot;book-name&quot;).value
+                let email = document.getElementById(&quot;your-email&quot;).value
+                document.getElementById(&quot;demo&quot;).innerHTML = &quot;thanks for suggesting &quot; + bookName + &quot; :)&quot;;
+                document.getElementById(&quot;entire-form&quot;).remove();
+                let http = new XMLHttpRequest();
+                http.open(
+                    'POST',
+                    'http://127.0.0.1:8000/witch/send_ngozi_a_book_rec',
+                    true
+                );
+                http.setRequestHeader('Content-type', 'application/json');
+                let thing = {
+                    &quot;email&quot;: email,
+                    &quot;book&quot;: bookName
+                }
+                http.send(JSON.stringify(thing));
+            }
+        &lt;/script&gt;
+    &lt;/head&gt;
+    &lt;p id=&quot;demo&quot;&gt;Recommend a book (or article)&lt;/p&gt;
+    &lt;div id=&quot;entire-form&quot;&gt;
+        Book/Article: &lt;input type=&quot;text&quot; id=&quot;book-name&quot; /&gt;&lt;br /&gt;
+        Your Email: &lt;input type=&quot;text&quot; id=&quot;your-email&quot; /&gt;&lt;br /&gt;
+        &lt;button type=&quot;button&quot; onclick=&quot;myFunction()&quot;&gt;Suggest!&lt;/button&gt;&lt;br /&gt;
+    &lt;/div&gt;
+&lt;/html&gt;</content><author><name></name></author><summary type="html">Recommend a book (or article) Book/Article: Your Email: Suggest!</summary></entry><entry><title type="html">Notes: Stream Processing</title><link href="http://localhost:4000/programming/ddia-stream-processing/" rel="alternate" type="text/html" title="Notes: Stream Processing" /><published>2022-07-07T04:07:43+08:00</published><updated>2022-07-07T04:07:43+08:00</updated><id>http://localhost:4000/programming/DDIA-Stream-Processing</id><content type="html" xml:base="http://localhost:4000/programming/ddia-stream-processing/">&lt;p&gt;source: &lt;a href=&quot;https://www.oreilly.com/library/view/designing-data-intensive-applications/9781491903063/&quot;&gt;Designing Data Intensive Applications&lt;/a&gt; by Martin Kleppmann (Chapter 11)&lt;/p&gt;
 
 &lt;hr /&gt;
 
@@ -447,7 +476,137 @@
 &lt;p&gt;Wrap processing and side effects in a transaction. We don’t want side effects to happen if the processing fails&lt;/p&gt;
 
 &lt;h3 id=&quot;idempotence&quot;&gt;Idempotence&lt;/h3&gt;
-&lt;p&gt;When you can perform an operation multiple times, and it has the same effect as if it was performed one time&lt;/p&gt;</content><author><name></name></author><summary type="html">source: Designing Data Intensive Applications by Martin Kleppmann (Chapter 11)</summary></entry><entry><title type="html">Notes: Kafka Producers</title><link href="http://localhost:4000/programming/kafka-producers/" rel="alternate" type="text/html" title="Notes: Kafka Producers" /><published>2022-07-03T04:07:43+08:00</published><updated>2022-07-03T04:07:43+08:00</updated><id>http://localhost:4000/programming/Kafka-Producers</id><content type="html" xml:base="http://localhost:4000/programming/kafka-producers/">&lt;p&gt;source: &lt;a href=&quot;https://www.oreilly.com/library/view/kafka-the-definitive/9781491936153//&quot;&gt;Kafka: The Definitive Guide&lt;/a&gt; by Neha Narkhede, Gwen Shapira, Todd Palino (Chapter 3)&lt;/p&gt;
+&lt;p&gt;When you can perform an operation multiple times, and it has the same effect as if it was performed one time&lt;/p&gt;</content><author><name></name></author><summary type="html">source: Designing Data Intensive Applications by Martin Kleppmann (Chapter 11)</summary></entry><entry><title type="html">Notes: Operating Systems Overview</title><link href="http://localhost:4000/programming/operating-systems-overview/" rel="alternate" type="text/html" title="Notes: Operating Systems Overview" /><published>2022-07-07T04:07:43+08:00</published><updated>2022-07-07T04:07:43+08:00</updated><id>http://localhost:4000/programming/Operating-Systems-Overview</id><content type="html" xml:base="http://localhost:4000/programming/operating-systems-overview/">&lt;p&gt;source: &lt;a href=&quot;https://codex.cs.yale.edu/avi/os-book/OS10/index.html&quot;&gt;Operating System Concepts&lt;/a&gt; by Avi Silberschatz, Peter Baer Galvin, Greg Gagne (Chapter 1)&lt;/p&gt;
+
+&lt;hr /&gt;
+&lt;h1 id=&quot;introduction&quot;&gt;Introduction&lt;/h1&gt;
+
+&lt;p&gt;An &lt;strong&gt;Operating System&lt;/strong&gt; is software that manages a computer’s hardware&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;provides basis for application programs&lt;/li&gt;
+  &lt;li&gt;acts as intermediary between user and hardware&lt;/li&gt;
+  &lt;li&gt;allocates resources to computer programs&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;what-operating-systems-do&quot;&gt;What Operating Systems Do&lt;/h2&gt;
+
+&lt;p&gt;Components to a computer system:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;hardware&lt;/li&gt;
+  &lt;li&gt;operating system&lt;/li&gt;
+  &lt;li&gt;application systems&lt;/li&gt;
+  &lt;li&gt;user&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;system-view&quot;&gt;System View&lt;/h3&gt;
+
+&lt;p&gt;from a computer’s point of view, the OS is the program most intimately involved with the hardware. It’s a &lt;strong&gt;resource allocator&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;A &lt;strong&gt;control program&lt;/strong&gt; manages the execution of user programs&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;prevents improper use of the computer&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;defining-operating-systems&quot;&gt;Defining Operating Systems&lt;/h3&gt;
+
+&lt;p&gt;Can be defined as a combination of the kernel and system programs&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;strong&gt;the kernel&lt;/strong&gt;: the operating system is the one program that’s always running. This is one possible definition of an operating system&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;system programs:&lt;/strong&gt; associated with the operating system, but not part of the kernel&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;strong&gt;middleware:&lt;/strong&gt; a set of software frameworks that provide additional services to application developers&lt;/p&gt;
+
+&lt;h2 id=&quot;computer-system-organization&quot;&gt;Computer-System Organization&lt;/h2&gt;
+
+&lt;h3 id=&quot;interrupts&quot;&gt;Interrupts&lt;/h3&gt;
+
+&lt;p&gt;An interrupt is a signal from the hardware to the CPU, usually by the system bus, which causes the CPU to stop what it’s doing and transfer execution to a fixed location. These locations could be hardcoded, or stored in a table of pointers called the &lt;strong&gt;interrupt vector&lt;/strong&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;storage-structure&quot;&gt;Storage Structure&lt;/h3&gt;
+
+&lt;p&gt;Computers run most of their programs from main memory (or &lt;strong&gt;RAM&lt;/strong&gt;), which is volatile. You have to load the program to main memory beforehand&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;strong&gt;DRAM:&lt;/strong&gt; Dynamic Random-Access Memory&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;strong&gt;Bootstrap Program&lt;/strong&gt; - the first program to run on a computer. Uses firmware storage to store the program, since RAM is volatile&lt;/p&gt;
+
+&lt;p&gt;We can’t store programs in main memory for two reasons&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Main memory is too small to store all our programs&lt;/li&gt;
+  &lt;li&gt;Main memory is volatile&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;io-structure&quot;&gt;I/O Structure&lt;/h3&gt;
+
+&lt;p&gt;Operating systems handle I/O&lt;/p&gt;
+
+&lt;h2 id=&quot;computer-system-architecture&quot;&gt;Computer-System Architecture&lt;/h2&gt;
+
+&lt;p&gt;There are single processor systems and multi processor systems&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;strong&gt;core&lt;/strong&gt; - the component that executes instructions&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;multiprocessor-systems&quot;&gt;Multiprocessor systems&lt;/h3&gt;
+
+&lt;p&gt;have processors that share resources (clock, memory, etc)&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Primary advantage: increased throughput&lt;/li&gt;
+  &lt;li&gt;Disadvantage: One processor could sit idle&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;strong&gt;Multicore Systems&lt;/strong&gt; - have multiple cores on a single chip (for faster communication)&lt;/p&gt;
+
+&lt;h3 id=&quot;clustered-systems&quot;&gt;Clustered Systems&lt;/h3&gt;
+
+&lt;p&gt;composed of two more more &lt;strong&gt;nodes&lt;/strong&gt; (individual systems) that are loosely coupled&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;redundancy leads to high availability&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;strong&gt;Parallelization&lt;/strong&gt; - a technique which divides a program into separate components so they can be run in parallel&lt;/p&gt;
+
+&lt;h2 id=&quot;operating-system-operations&quot;&gt;Operating System Operations&lt;/h2&gt;
+
+&lt;p&gt;&lt;strong&gt;system daemons&lt;/strong&gt; programs that are loaded into memory at boot time. Services that are provided outside of the kernel&lt;/p&gt;
+
+&lt;h3 id=&quot;multiprogramming-and-multitasking&quot;&gt;Multiprogramming and Multitasking&lt;/h3&gt;
+
+&lt;p&gt;&lt;strong&gt;Multiprogramming&lt;/strong&gt; increases CPU utilization by keeping several processes in memory simultaneously. Gives processing time to a new program when the current program is idle&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Multitasking&lt;/strong&gt; &lt;strong&gt;-&lt;/strong&gt; when the CPU switches between programs&lt;/p&gt;
+
+&lt;h3 id=&quot;dual-mode-and-multi-mode-operation&quot;&gt;Dual-Mode and Multi-Mode Operation&lt;/h3&gt;
+
+&lt;p&gt;Computers must distinguish between operating-system code and user-defined code. This prevents misuse of the computer.&lt;/p&gt;
+
+&lt;p&gt;To implement this, we need two &lt;strong&gt;modes of operation&lt;/strong&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Kernel mode (AKA supervisor mode, system mode, privileged mode)&lt;/li&gt;
+  &lt;li&gt;user mode&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;strong&gt;mode bit&lt;/strong&gt; - indicates the current mode, added to the hardware of the computer&lt;/p&gt;
+
+&lt;h3 id=&quot;timer&quot;&gt;Timer&lt;/h3&gt;
+
+&lt;p&gt;a timer can be set to interrupt the computer after a specified period&lt;/p&gt;
+
+&lt;h2 id=&quot;resource-management&quot;&gt;Resource Management&lt;/h2&gt;
+
+&lt;h1 id=&quot;operating-system-structures&quot;&gt;Operating-System Structures&lt;/h1&gt;</content><author><name></name></author><summary type="html">source: Operating System Concepts by Avi Silberschatz, Peter Baer Galvin, Greg Gagne (Chapter 1)</summary></entry><entry><title type="html">Notes: Kafka Producers</title><link href="http://localhost:4000/programming/kafka-producers/" rel="alternate" type="text/html" title="Notes: Kafka Producers" /><published>2022-07-03T04:07:43+08:00</published><updated>2022-07-03T04:07:43+08:00</updated><id>http://localhost:4000/programming/Kafka-Producers</id><content type="html" xml:base="http://localhost:4000/programming/kafka-producers/">&lt;p&gt;source: &lt;a href=&quot;https://www.oreilly.com/library/view/kafka-the-definitive/9781491936153//&quot;&gt;Kafka: The Definitive Guide&lt;/a&gt; by Neha Narkhede, Gwen Shapira, Todd Palino (Chapter 3)&lt;/p&gt;
 
 &lt;hr /&gt;
 &lt;p&gt;Producers write messages to Kafka&lt;/p&gt;
@@ -1124,1300 +1283,4 @@
 
 &lt;h3 id=&quot;third-option-panpsychism&quot;&gt;Third Option: Panpsychism&lt;/h3&gt;
 
-&lt;p&gt;Panpsychists believe that consciousness is a fundamental and ubiquitous feature of the physical world&lt;/p&gt;</content><author><name></name></author><summary type="html">source: Galileo’s Error, by Philip Goff (Chapter 1)</summary></entry><entry><title type="html">Notes: The Bad Guys Are Winning</title><link href="http://localhost:4000/notes/bad-guys-winning/" rel="alternate" type="text/html" title="Notes: The Bad Guys Are Winning" /><published>2021-12-19T04:07:43+08:00</published><updated>2021-12-19T04:07:43+08:00</updated><id>http://localhost:4000/notes/bad-guys-winning</id><content type="html" xml:base="http://localhost:4000/notes/bad-guys-winning/">&lt;p&gt;source: &lt;a href=&quot;https://www.theatlantic.com/magazine/archive/2021/12/the-autocrats-are-winning/620526/&quot;&gt;The Atlantic&lt;/a&gt;&lt;/p&gt;
-
-&lt;hr /&gt;
-
-&lt;h2 id=&quot;sviatlana-tsikhanouskaya&quot;&gt;Sviatlana Tsikhanouskaya&lt;/h2&gt;
-
-&lt;p&gt;Probably won the 2020 presidential election in &lt;strong&gt;Belarus&lt;/strong&gt;&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;Immediately afterward, &lt;strong&gt;Alexander Lukashenko&lt;/strong&gt; forced her out of the country&lt;/li&gt;
-  &lt;li&gt;Her husband, &lt;strong&gt;Siarhei Tskhanouski&lt;/strong&gt;, is imprisoned in Belarus&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3 id=&quot;the-campaign&quot;&gt;the campaign&lt;/h3&gt;
-
-&lt;p&gt;Siarhei ran for president because he was &lt;strong&gt;frustrated with bureucracy and corruption&lt;/strong&gt;. The regime ended his campaign and imprisoned him. Sviatlana ran in his place&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;the campaign was about ordinary people standing up to the regime&lt;/li&gt;
-  &lt;li&gt;two prominent opposition polititions endorsed her campaign (their campaigns were blocked)&lt;/li&gt;
-  &lt;li&gt;She continued dispite death threats&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3 id=&quot;results-of-the-election&quot;&gt;Results of the election&lt;/h3&gt;
-
-&lt;p&gt;officials announced that Lukashenko won 80% of the vote (no one believed this). Right afterward:&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;the internet was cut off&lt;/li&gt;
-  &lt;li&gt;Sviatlana was detained by police and forced out of the country&lt;/li&gt;
-  &lt;li&gt;Mass demonstrations across Belarus&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;Sviatlana thought that the regime would give way to pressure, but it didn’t&lt;/p&gt;
-
-&lt;h3 id=&quot;sviatlana-in-the-eu&quot;&gt;Sviatlana in the EU&lt;/h3&gt;
-
-&lt;p&gt;she wants to &lt;strong&gt;pressure the regime&lt;/strong&gt;&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;sanctions, democratic unity&lt;/li&gt;
-  &lt;li&gt;anything that makes it expensive for Lukashenko to stay in power&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;She met with &lt;strong&gt;Merkel, Macron and Biden. They broadened sanctions&lt;/strong&gt; on Belarus&lt;/p&gt;
-
-&lt;p&gt;Stayed in Lithuania, which was proud to host her dispite the trouble at the Border&lt;/p&gt;
-
-&lt;p&gt;She now has the entire free world backing her, but it’s not enough to&lt;/p&gt;
-
-&lt;h2 id=&quot;lukashenkos-rescue-package&quot;&gt;Lukashenko’s rescue package&lt;/h2&gt;
-
-&lt;p&gt;When protests first broke out after the election, he didn’t have a plan, but he got help from Moscow&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;FSB: Russian security services&lt;/strong&gt;&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;flew from Moscow to Minsk - helped Lukashenko quell the dissent&lt;/li&gt;
-  &lt;li&gt;shift to a more sophisticated, more controlled way to repress the population&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;&lt;strong&gt;Russian television journalists&lt;/strong&gt; replaced some Belarusian journalists&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;portrayed demonstrations as the work of America&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;&lt;strong&gt;Russian police&lt;/strong&gt; supplemented Belarusian police&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;mass arrests are unnecessary if you can jail, torture or murder the right people&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;&lt;strong&gt;Russian companies&lt;/strong&gt; offered markets for Belarusian products that had been banned in the democratic west&lt;/p&gt;
-
-&lt;p&gt;This rescue package was very similar to the one Putin sent Bashar al-Assad in Syria six years earlier&lt;/p&gt;
-
-&lt;h3 id=&quot;why-did-putin-do-this&quot;&gt;Why did Putin do this?&lt;/h3&gt;
-
-&lt;p&gt;the Arab Spring (and the fall of the Berlin wall) made it clear that &lt;strong&gt;democratic revolutions are contagious&lt;/strong&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;regime change means death, imprisonment or exile&lt;/strong&gt; in an authoritarian country&lt;/p&gt;
-
-&lt;p&gt;If Putin can influence Belarus to remain authoritarian, regime change in Russia is less likely&lt;/p&gt;
-
-&lt;h3 id=&quot;lukashenkos-brazen--illegal-actions&quot;&gt;&lt;strong&gt;Lukashenko’s&lt;/strong&gt; brazen &amp;amp; illegal actions&lt;/h3&gt;
-
-&lt;p&gt;he’s active as if he was untouchable&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;In May 2021, Belarusian air traffic control &lt;strong&gt;forced an Irish passenger plane to land&lt;/strong&gt; in Minsk
-    &lt;ul&gt;
-      &lt;li&gt;this was in order to &lt;strong&gt;arrest Roman Protasevich&lt;/strong&gt;, a young exiled dissident&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;In August, &lt;strong&gt;Vitaly Shishov was hanged&lt;/strong&gt; in Kyiv park&lt;/li&gt;
-  &lt;li&gt;Lukashenko’s regime tried to destabalize its EU neighbors by &lt;strong&gt;forcing streams of refugees across their borders&lt;/strong&gt;
-    &lt;ul&gt;
-      &lt;li&gt;&lt;strong&gt;lured&lt;/strong&gt; Afghan and Iraqi &lt;strong&gt;refugees to Minsk&lt;/strong&gt; with tourist visas&lt;/li&gt;
-      &lt;li&gt;&lt;strong&gt;Forced them across the borders&lt;/strong&gt; of Lithuania, Latvia and Poland &lt;strong&gt;at gunpoint&lt;/strong&gt;&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h1 id=&quot;networks-of-despots&quot;&gt;Networks of despots&lt;/h1&gt;
-
-&lt;p&gt;&lt;strong&gt;Modern autocracies&lt;/strong&gt; are not run by one bad guy. They’re &lt;strong&gt;run by sophisticated networks&lt;/strong&gt; of:&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;kleptocratic financial structures&lt;/li&gt;
-  &lt;li&gt;security services (police, surveillance, military)&lt;/li&gt;
-  &lt;li&gt;propagandists&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;These networks are often &lt;strong&gt;international and do not have a unifying ideology.&lt;/strong&gt; There is no leader and they’re connected by economic deals&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;this eases the pressure sanctions and makes everyone rich&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;In theory, Belarus is an international pariah. In practice, it’s a member of Autocracy Inc&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;&lt;strong&gt;China&lt;/strong&gt; is working on a large development project there&lt;/li&gt;
-  &lt;li&gt;&lt;strong&gt;Iran&lt;/strong&gt; has expanded its relationship with Belarus&lt;/li&gt;
-  &lt;li&gt;&lt;strong&gt;Cuba&lt;/strong&gt;n officials have called for an end to “foreign interference”&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;&lt;strong&gt;Venezuela&lt;/strong&gt; is in a similar position. The United States, Canada, the EU and many of its neighbors have &lt;strong&gt;sanctions&lt;/strong&gt; against it. &lt;strong&gt;Millions of people protest&lt;/strong&gt; in the streets&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;&lt;strong&gt;Russia and China&lt;/strong&gt; invest in Marudo’s Regime&lt;/li&gt;
-  &lt;li&gt;&lt;strong&gt;Turkey&lt;/strong&gt; helps with an illicit gold trade&lt;/li&gt;
-  &lt;li&gt;&lt;strong&gt;Cuba&lt;/strong&gt; provides security advisors and technology&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;&lt;strong&gt;If Venezuela’s regime were acting alone, it would fall&lt;/strong&gt;, but it’s receiving &lt;strong&gt;help from other autocracies&lt;/strong&gt;&lt;/p&gt;
-
-&lt;h3 id=&quot;impervious-to-criticism&quot;&gt;Impervious to Criticism&lt;/h3&gt;
-
-&lt;p&gt;The leaders of the Soviet Union cared deeply about how the world perceived them, but today &lt;strong&gt;autocracies don’t care about criticism&lt;/strong&gt;&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;this enables them to use aggressive tactics against mass protests&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;the &lt;strong&gt;Maduro Model&lt;/strong&gt; of governence means that autocrats are willing to pay the price of becoming a totally failed country&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;means economic collaps, isolation and mass poverty&lt;/li&gt;
-  &lt;li&gt;but the autocrat stays in power&lt;/li&gt;
-  &lt;li&gt;might be what’s in store for Belarus&lt;/li&gt;
-  &lt;li&gt;The west won’t provide money, so they depend on China, Pakistan, Russia and Saudi Arabia&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;This might explain the &lt;strong&gt;pathetic reaction to the fall of Kabul&lt;/strong&gt;&lt;/p&gt;
-
-&lt;h1 id=&quot;uyghurs&quot;&gt;Uyghurs&lt;/h1&gt;
-
-&lt;p&gt;50,000 exiled Uyghers live in Turkey. In another era, these exiles would have sympathy from the Turkish government&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;in 2009, &lt;strong&gt;Erdogan called Chinese repression of Uyghurs a genocide&lt;/strong&gt;&lt;/li&gt;
-  &lt;li&gt;He has strengthened ties with China since becoming president&lt;/li&gt;
-  &lt;li&gt;recently, the Turkish government has surveilled and detained Uyghurs on bogus terrorism charges. Deported some to China&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;In late 2020, a delayed shipment of covid vaccines from China looked suspiciously like a ransom for Uyghur extridition, even though both governments deny it&lt;/p&gt;
-
-&lt;h3 id=&quot;surprisingly-muslim-countries-are-turning-a-blind-eye-to-uyghurs-in-china&quot;&gt;Surprisingly, Muslim countries are turning a blind eye to Uyghurs in China&lt;/h3&gt;
-
-&lt;p&gt;Pakistani Primi Minister accepts the Chinese version of events&lt;/p&gt;
-
-&lt;p&gt;Saudis, Emiratis and Egyptians have all arrested and deported Uyghurs&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;all these countries have purchased Chinese surveillance technology&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;It’s as if these countries agree to accept China’s action on Hong Kong, Tibet, Uygurs and human rights in exchange for investment and equipment&lt;/p&gt;
-
-&lt;h1 id=&quot;it-happened-here&quot;&gt;It happened here&lt;/h1&gt;
-
-&lt;p&gt;We didn’t learn much after 2016 Russian election interference&lt;/p&gt;
-
-&lt;h3 id=&quot;the-united-front&quot;&gt;&lt;strong&gt;The United Front&lt;/strong&gt;&lt;/h3&gt;
-
-&lt;p&gt;an influence projet for the CCP. Meant to shape global opinion about china&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;faculty in American universities tried to shape academic debates in China’s favor. This was in the context of calligraphy courses&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;Chinese democracy activists &lt;em&gt;in America&lt;/em&gt; are harrased by Chinese agents&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;some have had strange car accidents&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3 id=&quot;american-industry&quot;&gt;American Industry&lt;/h3&gt;
-
-&lt;p&gt;lots of personal, financial, business links to China and Russia&lt;/p&gt;
-
-&lt;p&gt;Hollywood and sports appeal to CCP&lt;/p&gt;
-
-&lt;h1 id=&quot;liberal-democracy-vs-authoritarianism-around-the-world&quot;&gt;Liberal Democracy vs Authoritarianism around the world&lt;/h1&gt;
-
-&lt;p&gt;&lt;strong&gt;Srdja Popovic&lt;/strong&gt; democracy activist&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;says democratic movements are becoming better organized&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3 id=&quot;were-not-doing-too-well&quot;&gt;We’re not doing too well&lt;/h3&gt;
-
-&lt;p&gt;The diplomatic tools we used to use against autocrats don’t work anymore&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;Sanctions don’t have the same impact&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;&lt;strong&gt;Democracy assistance&lt;/strong&gt; America spends money on this, but it’s not a lot in comparison to what the Authoritarian leaders will spend&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;We still have American foreign-language broadcasters&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;Russia spends billions on state media, seen all over Europe&lt;/p&gt;
-
-&lt;p&gt;China spends billions on media globally&lt;/p&gt;
-
-&lt;p&gt;We don’t have an answer to:&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;the silk road initiative&lt;/li&gt;
-  &lt;li&gt;the United Front&lt;/li&gt;
-  &lt;li&gt;Russian disinformation&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3 id=&quot;actions-to-take-today&quot;&gt;Actions to take today&lt;/h3&gt;
-
-&lt;p&gt;Biden hosted a &lt;strong&gt;summit for democracy&lt;/strong&gt; Dec 9-10 (&lt;a href=&quot;https://www.economist.com/graphic-detail/2021/12/06/joe-bidens-summit-for-democracy-is-not-all-that-democratic&quot;&gt;The Economist focused more on who was invited than the content&lt;/a&gt;)&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;means very little&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;Real actions we should take:&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;shut down tax havens, enforce money-laundering laws&lt;/li&gt;
-  &lt;li&gt;Stop selling surveillance tech to autocracies&lt;/li&gt;
-  &lt;li&gt;Divest from vicious regimes&lt;/li&gt;
-  &lt;li&gt;figure out how to respond when autocracies commit crimes outside their borders&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3 id=&quot;how-americas-doing-now&quot;&gt;How America’s doing now&lt;/h3&gt;
-
-&lt;p&gt;Our actions on the global stage have been declining. So has global respect for American democracy&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;Trump&lt;/strong&gt; seems okay with global autocracy, and he eroded rules and norms that strengthen democracy in the United States&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;The American left&lt;/strong&gt; has become dissolusioned with democracy at home&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;focused on America’s problems, convinced that democracy doesn’t work, or that it’s not working here&lt;/li&gt;
-  &lt;li&gt;When protesters in Hong Kong asked for help, American activists didn’t do much&lt;/li&gt;
-&lt;/ul&gt;</content><author><name></name></author><summary type="html">source: The Atlantic</summary></entry><entry><title type="html">Notes: The Spanish Civil War</title><link href="http://localhost:4000/notes/spanish-civil-war/" rel="alternate" type="text/html" title="Notes: The Spanish Civil War" /><published>2021-10-28T04:07:43+08:00</published><updated>2021-10-28T04:07:43+08:00</updated><id>http://localhost:4000/notes/spanish-civil-war</id><content type="html" xml:base="http://localhost:4000/notes/spanish-civil-war/">&lt;p&gt;source: &lt;a href=&quot;https://www.veryshortintroductions.com/view/10.1093/actrade/9780192803771.001.0001/actrade-9780192803771&quot;&gt;The Spanish Civil War: A Very Short Introduction&lt;/a&gt;, Helen Graham&lt;/p&gt;
-
-&lt;hr /&gt;
-
-&lt;p&gt;The civil war started with a coup on July 17-18th, 1936&lt;/p&gt;
-
-&lt;h1 id=&quot;1-origins&quot;&gt;1: Origins&lt;/h1&gt;
-
-&lt;p&gt;Three crucial factors:&lt;/p&gt;
-
-&lt;ol&gt;
-  &lt;li&gt;There were &lt;strong&gt;extremely uneven levels of development&lt;/strong&gt; within Spain&lt;/li&gt;
-  &lt;li&gt;the &lt;strong&gt;cultural influence of Catholicism&lt;/strong&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;strong&gt;Spain’s army&lt;/strong&gt; had an intolerant political culture in its officer corps&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;p&gt;Traditional order was coming under strain&lt;/p&gt;
-
-&lt;p&gt;1923: soft military coup by General Miguel Primo de Rivera (had backing of the king)&lt;/p&gt;
-
-&lt;p&gt;1930: army opposition brought Primo down&lt;/p&gt;
-
-&lt;p&gt;1931: republic was declared peacefully&lt;/p&gt;
-
-&lt;h3 id=&quot;uneven-levels-of-development&quot;&gt;Uneven Levels of Development&lt;/h3&gt;
-
-&lt;p&gt;There was a debate over how Spain should modernize itself economically&lt;/p&gt;
-
-&lt;p&gt;The WWI caused social change - economic boom, severe inflation and dislocation&lt;/p&gt;
-
-&lt;p&gt;Political parties were illegal in the 1920s, so professional associations became more powerful&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;progressive industrial elites (based in Catalan textile sector)&lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;large landowners in souther half of Spain&lt;/p&gt;
-
-    &lt;p&gt;It was similar to the American deep south - landless peasants lived like slaves&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;urban professional sector &amp;amp; industrial workers - wanted political voice&lt;/li&gt;
-  &lt;li&gt;&lt;strong&gt;CNT: anarcho-syndicalist trade union movement&lt;/strong&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3 id=&quot;catholicism&quot;&gt;Catholicism&lt;/h3&gt;
-
-&lt;p&gt;embraced order and hierarchy&lt;/p&gt;
-
-&lt;p&gt;church’s monopoly on truth was challenged by political liberalism and cultural pluralism&lt;/p&gt;
-
-&lt;p&gt;local priests were allies of landowners and souther police - &lt;strong&gt;made rural poor anticlerical&lt;/strong&gt;&lt;/p&gt;
-
-&lt;p&gt;Catholics didn’t like being constrained, but had no tolerance for non-catholics&lt;/p&gt;
-
-&lt;h3 id=&quot;spains-army&quot;&gt;Spain’s Army&lt;/h3&gt;
-
-&lt;p&gt;Spain lost its empire in 1898 - deprived the over-large officer corps of any meaningful external role&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;powerful myth that civilian politicians had been responsible for the final loss of empire&lt;/li&gt;
-  &lt;li&gt;disliked metropolitan Spanish society and politics&lt;/li&gt;
-  &lt;li&gt;took charge of Spain’s main military academy at Zaragoza&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;Spain’s military class was becoming increasingly isolated&lt;/p&gt;
-
-&lt;p&gt;Junior officers stood to lose a lot of money from the Republican reforms&lt;/p&gt;
-
-&lt;h3 id=&quot;large-southern-landowners&quot;&gt;Large Southern Landowners&lt;/h3&gt;
-
-&lt;p&gt;used religious issues to mobilize poor northern smallholders to act against their own interests&lt;/p&gt;
-
-&lt;h3 id=&quot;franco&quot;&gt;Franco&lt;/h3&gt;
-
-&lt;p&gt;entered the military academy in 1907 (at the age of 15)&lt;/p&gt;
-
-&lt;p&gt;Made his career in the colonial Army of Africa&lt;/p&gt;
-
-&lt;h2 id=&quot;progressive-republicans-in-power&quot;&gt;&lt;strong&gt;Progressive Republicans in Power&lt;/strong&gt;&lt;/h2&gt;
-
-&lt;p&gt;Coalition of socially progressive Republicans and Socialists&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;Republicans wanted social reform: land ownership, education, state-church relations, the army&lt;/li&gt;
-  &lt;li&gt;Socialists wanted welfare&lt;/li&gt;
-  &lt;li&gt;The coalition was less effective because of big ideological differences between republicans and socialists&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;Republican Reforms were designed to increase &lt;strong&gt;economic democracy,&lt;/strong&gt; which is a &lt;strong&gt;prerequisite for political democracy&lt;/strong&gt;&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;&lt;strong&gt;Agrarian reform&lt;/strong&gt; intended to create smallholding peasantry in souther Spain. They’d be loyal to repluclicans&lt;/li&gt;
-  &lt;li&gt;&lt;strong&gt;separation of church and state&lt;/strong&gt; - no more subsidy to clergy (alienated many poor priests)
-    &lt;ul&gt;
-      &lt;li&gt;unpopular interference with Catholic culture&lt;/li&gt;
-      &lt;li&gt;opposition to women’s suffrage. Thought women would be influenced by the church&lt;/li&gt;
-      &lt;li&gt;&lt;strong&gt;secularization was impolitic, ill thought-out and counterproductive&lt;/strong&gt;&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;&lt;strong&gt;education&lt;/strong&gt; - more money to non-religious primary education&lt;/li&gt;
-  &lt;li&gt;&lt;strong&gt;army reform&lt;/strong&gt; - to bring the army under civilian and constitutional control
-    &lt;ul&gt;
-      &lt;li&gt;Tried to close down military academy at Zaragoza, enraging &lt;em&gt;Africanistas&lt;/em&gt;&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;These reforms were extremely ambitious&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;too many at once&lt;/li&gt;
-  &lt;li&gt;attempted during a depression&lt;/li&gt;
-  &lt;li&gt;opposed by Spain’s traditional elites (landowners, church, millitary)&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;Their reforms made them enemies, but never actually went into affect&lt;/p&gt;
-
-&lt;h1 id=&quot;2-rebellion&quot;&gt;2: Rebellion&lt;/h1&gt;
-
-&lt;p&gt;The coup began on July 17th, 1936&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;started in Spanish North Africa (Morocco)&lt;/li&gt;
-  &lt;li&gt;spread to mainland Spain the next day (provincial garrison revolts)&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;one result was the government in Madrid didn’t have a functioning army&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;trade unions and political parties had to find an army&lt;/li&gt;
-  &lt;li&gt;used a combination of the (loyal) police and the worker militia&lt;/li&gt;
-  &lt;li&gt;quelled the urban garrison revolts&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;Republican/progressive areas tended to be areas where the rebellion didn’t take hold&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;Catalonia and Valencia stayed Republican throughout the war&lt;/li&gt;
-  &lt;li&gt;Madrid was the capital of the Republic&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;No area of Spain was entirely conservative&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;people with Republican sympathies in conservative areas had to publicly embrace the rebellion&lt;/li&gt;
-  &lt;li&gt;often led to betrayals&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;A week after the initial coup, the rebels got planes from Hitler and Mussolini&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;used to transport their troops to Spain&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;The government didn’t have power outside of Madrid&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;people used the chaos to settle personal vendettas (post-coup violence and pre-war conflicts)&lt;/li&gt;
-  &lt;li&gt;lots of violence against the powerful. Priests and monks were killed&lt;/li&gt;
-  &lt;li&gt;the violence damaged the Republic’s credibility abroad when it needed external support&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;Violence in rebel areas: goal was purification&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;local civilian elites declared this&lt;/li&gt;
-  &lt;li&gt;fascists saw killings as cleansing the community of pollution&lt;/li&gt;
-  &lt;li&gt;this applied to anyone who benefited from the Republic, whether they were political or not: teachers and intellectuals, “new” women, self-educated workers&lt;/li&gt;
-  &lt;li&gt;at first, vigilantes killed people. However, these vigilantes usually either had close links to rightist organizations, or they were working with the authorities&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;This meant that there was killing on both sides, but there was an asymmetry to it: the republicans didn’t have the ability to stop the violence. The rebels did, but they chose not to&lt;/p&gt;
-
-&lt;p&gt;For rebels, liberal politics were the problem, and the solution was terror&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;it undid the Republic’s redistribution of social and economic power&lt;/li&gt;
-  &lt;li&gt;it created a complicity between the rebel authorities and everyone who turned against their friends &amp;amp; family&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;Home was no longer safe&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;people migrated back home after the coup, but their former neighbors killed them&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;&lt;strong&gt;General Francisco Franco&lt;/strong&gt; headed &lt;strong&gt;The Army of Africa&lt;/strong&gt;&lt;/p&gt;
-
-&lt;p&gt;As the Army of Africa moved through the souther half of Spain, large landowners reclaimed their land. They killed Rural laborers&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;This warfare was similar to colonial campaigns agains insubordinate indigenous peoples&lt;/li&gt;
-  &lt;li&gt;They faced a local civilian population with no real weapons, so they tore through the southern half of Spain&lt;/li&gt;
-  &lt;li&gt;Spain had used poison gas against people in Morocco&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;Franco’s political belief was that alien political ideas had &lt;em&gt;occupied&lt;/em&gt; Spain&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;“I will save Spain from Marxism whatever the cost” “And if that means shooting half of Spain” “As I said, whatever the cost”&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;The Catholic Church provided legitimacy to the rebels, so they got very little bad press abroad&lt;/p&gt;
-
-&lt;p&gt;The Spanish left cared more about workers’ rights than the wrongs of colonization&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;General Emilio Mola&lt;/strong&gt; nominal leader of the rebellion&lt;/p&gt;
-
-&lt;h1 id=&quot;3-the-republic-at-war&quot;&gt;3: The Republic at War&lt;/h1&gt;
-
-&lt;p&gt;&lt;strong&gt;Non-Intervention treaty&lt;/strong&gt; (August 1936) that Britain and France signed with Germany and Italy&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;said they wouldn’t deliver war material to Spain&lt;/li&gt;
-  &lt;li&gt;Britain and France honored it. Germany and Italy didn’t&lt;/li&gt;
-  &lt;li&gt;This gave the rebels a huge advantage over the republic&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;Why did Britain &amp;amp; France allow this to happen?&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;Idea was to prevent Spanish war from escalating into a European conflict&lt;/li&gt;
-  &lt;li&gt;Also, the British thought that a rebel victory would preserve more capital, which affected British investments&lt;/li&gt;
-  &lt;li&gt;&lt;em&gt;Also&lt;/em&gt;, Britain’s governing elite had political, personal and financial connections to conservative Spain&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;Britain and France were screwing the republic over&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;They &lt;em&gt;knew&lt;/em&gt; Germany and Italy were not honoring the treaty, but they didn’t do anything about it&lt;/li&gt;
-  &lt;li&gt;Britain refused the republic’s navy the right to review in Gibraltar or Tangier&lt;/li&gt;
-  &lt;li&gt;France reneged on its initial promise to send war material&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;Hitler and Mussolini’s aid was strategically motivated, although ideology also played apart&lt;/p&gt;
-
-&lt;p&gt;The Soviet Union provisioned military aid in &lt;strong&gt;November 1936.&lt;/strong&gt; This aid was just in time&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;At first, the Soviets backed Non-Intervention&lt;/li&gt;
-  &lt;li&gt;They thought the Republic would win under these circumstances if the fascists honored the agreement&lt;/li&gt;
-  &lt;li&gt;The soviets never acknowledged the military assistance&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&quot;anti-fascists-came-to-spain-to-fight&quot;&gt;anti-fascists came to Spain to fight&lt;/h2&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;&lt;strong&gt;International Brigrades&lt;/strong&gt; (about 35,000)&lt;/li&gt;
-  &lt;li&gt;most were already political exiles&lt;/li&gt;
-  &lt;li&gt;a quarter of the volunteers were Jewish - were actively anti-fascist&lt;/li&gt;
-  &lt;li&gt;Example: Canadian volunteers who had fled Finland’s nationalist leader around 1918&lt;/li&gt;
-  &lt;li&gt;The brigades were diverse, which made them antithetical to the fascist ideals of purification&lt;/li&gt;
-  &lt;li&gt;brigades were used as shock troops and sustained high casualties&lt;/li&gt;
-  &lt;li&gt;The &lt;strong&gt;Abraham Lincoln Brigade&lt;/strong&gt; included 90 black Americans
-    &lt;ul&gt;
-      &lt;li&gt;&lt;strong&gt;Oliver Law -&lt;/strong&gt; first military commander in US history to lead a nonsegregated unit of troops&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;Foreign medical volunteers joined too&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;developed new types of emergency treatment, like blood transfusion techniques&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;Women generally weren’t recruited to help fight&lt;/p&gt;
-
-&lt;p&gt;The European communist movement organized most of the international brigades and lobbied governments to lift non-intervention&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;&lt;strong&gt;Comintern (Communist International)&lt;/strong&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;strong&gt;PCF (French Communist Party)&lt;/strong&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;The Republican military command were hostile to the international brigades&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;because reasons&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;Volunteers weren’t prepared for the war&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;military discipline&lt;/li&gt;
-  &lt;li&gt;harsh warfare&lt;/li&gt;
-  &lt;li&gt;antiquated weaponry&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&quot;conditions-in-madrid&quot;&gt;Conditions in Madrid&lt;/h2&gt;
-
-&lt;p&gt;the first &lt;strong&gt;air raids&lt;/strong&gt; of their kind to happen anywhere in Europe&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;War Refugees&lt;/strong&gt; first went to Madrid, then Barcelona and Valencia - severe culture shock&lt;/p&gt;
-
-&lt;p&gt;The rebel army &lt;strong&gt;besieged&lt;/strong&gt; Madrid&lt;/p&gt;
-
-&lt;h2 id=&quot;fascist-help&quot;&gt;Fascist Help&lt;/h2&gt;
-
-&lt;p&gt;Hitler and Mussolini recognized rebel Spain in November 1936, provided weaponry and manpower (75,000 troops)&lt;/p&gt;
-
-&lt;h2 id=&quot;internal-fighting&quot;&gt;Internal fighting&lt;/h2&gt;
-
-&lt;p&gt;The Republic distrusted their professional army officers, and the coup had shattered &lt;strong&gt;army unity&lt;/strong&gt;&lt;/p&gt;
-
-&lt;p&gt;There were political tensions between &lt;strong&gt;the center and periphery&lt;/strong&gt;&lt;/p&gt;
-
-&lt;p&gt;the &lt;strong&gt;central Republican government&lt;/strong&gt; clashed with the &lt;strong&gt;Basque regional authority&lt;/strong&gt;&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;&lt;strong&gt;PNV (Basque Nationalist Party)&lt;/strong&gt; sought sovereign rights&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;Before the war, there had already been political rivalries between different groups&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;the war intensified them&lt;/li&gt;
-  &lt;li&gt;clashes between socialists-led trade unions, communists and Catalan communists&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3 id=&quot;basque-fell-in-the-summer-of-1937&quot;&gt;Basque fell in the summer of 1937&lt;/h3&gt;
-
-&lt;p&gt;this happened just as the republican military was beginning to cohere&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;also guerrilla fighters behind enemy lines&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&quot;republics-propaganda&quot;&gt;Republic’s Propaganda&lt;/h2&gt;
-
-&lt;p&gt;used &lt;strong&gt;photomontage&lt;/strong&gt; as a weapon&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;depicted their own soldiers as mechanized and modernist&lt;/li&gt;
-  &lt;li&gt;the fascists didn’t do this because &lt;strong&gt;photomontage was modernist and cosmopolitan&lt;/strong&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&quot;cultural-bolshevism&quot;&gt;Cultural Bolshevism&lt;/h2&gt;
-
-&lt;p&gt;the Nazis coined this term to describe &lt;strong&gt;avant-garde cultural production&lt;/strong&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;degenerate art&lt;/strong&gt; - Nazi Germany’s term for modern art&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;idea that a culture can degenerate like a biological organism was widespread, especially among conservative sectors in Europe&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;Soviet fashion became popular&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;the styles were superficial and had little to do with Marxist-Leninism&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&quot;wartime-madrid&quot;&gt;Wartime Madrid&lt;/h2&gt;
-
-&lt;p&gt;The government tried to centralize power&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;local governments and trade unions had gained more power since the war had started&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;The government re-introduced market forces to the food supply&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;this hit the urban poor the hardest. They couldn’t afford the black market and they had no contacts in the countryside&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;&lt;strong&gt;Housing shortage&lt;/strong&gt; - 350,000 refugees by the end of 1936 meant a 10% population increase&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;extra pressure on housing and food in the poorest inner city areas&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;&lt;strong&gt;May Days&lt;/strong&gt; - period of time where [radicalized workers and the urban poor] staged [social and political protests] in Barcelona&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;these caused sectarian political struggles&lt;/li&gt;
-  &lt;li&gt;Soviet intelligence was involved somehow&lt;/li&gt;
-  &lt;li&gt;Italian secret police assassinated an Italian anarchist in Barcelona during this time&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;&lt;strong&gt;Andrue Nin&lt;/strong&gt; - leader of Catalan-based dissent party&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;Spanish/Catalan communists worked with the Comintern to assassinate hime&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;&lt;strong&gt;Checas&lt;/strong&gt; - illegal prisons, appeared in Republican territory in the aftermath of the military uprising&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;political parties, unions and militia established their on detention agencies&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;It became more common to incorporate women and young people into the war effort&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;this was partly due the the increased popularity of the Soviet Union&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h1 id=&quot;4-rebel-spain&quot;&gt;4: Rebel Spain&lt;/h1&gt;
-
-&lt;p&gt;Francoist Spain was much more ideologically homogeneous&lt;/p&gt;
-
-&lt;h2 id=&quot;franco-1&quot;&gt;Franco&lt;/h2&gt;
-
-&lt;p&gt;People in power died by accident or got executed by the rebels. Also &lt;strong&gt;Franco had control of the Army of Africa&lt;/strong&gt; at the beginning of the war&lt;/p&gt;
-
-&lt;p&gt;Franco’s mission was to “save Spain”&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;this shaped his military strategy&lt;/li&gt;
-  &lt;li&gt;he probably thought he was justified in terrorizing civilians&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;Franco’s military strategy:&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;colonize the metropolis&lt;/li&gt;
-  &lt;li&gt;destroy the “alien” republican culture in the cities&lt;/li&gt;
-  &lt;li&gt;purify Spain from everything that didn’t align with his values&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;Franco thought that industrial cities caused moral pollution&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;The war was more about controlling people than about controlling territory&lt;/li&gt;
-  &lt;li&gt;Franco was prepared to incur losses among his troops&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;Franco thought that the Army had an absolute right to impose its will on society&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;Thought that military organization was the best way to structure a society&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;Franco deported Spanish Republicans to Nazi concentration camps in 1940&lt;/p&gt;
-
-&lt;h2 id=&quot;wartime-stuff&quot;&gt;Wartime stuff&lt;/h2&gt;
-
-&lt;p&gt;&lt;strong&gt;Estado Campamental&lt;/strong&gt; - “Battlefield state”&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;By mobilizing Spain’s armies, Franco was achieving the “ideal Spain”&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;The rebels used a lot of air raides&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;they backfired. Caused more hatred than fear&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;&lt;strong&gt;Falange&lt;/strong&gt; - a group&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;leader got executed by Republicans&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;&lt;strong&gt;Blue Division&lt;/strong&gt; fought with the German armies on the eastern front (1941)&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;old shirt Falangists joined this&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;&lt;strong&gt;Seccion Femenina (SF)&lt;/strong&gt; - women’s section of the Falange. An “army” of unmarried, economically independent women&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;Urban and provincial middle class women joined this&lt;/li&gt;
-  &lt;li&gt;Women were mobilized for health and welfare needs&lt;/li&gt;
-  &lt;li&gt;not used for industrial war work&lt;/li&gt;
-  &lt;li&gt;valued domesticity and subservience&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;&lt;strong&gt;Anti-Comintern pact&lt;/strong&gt; - (February 1939) agreement between Germany, Japan and Italy&lt;/p&gt;
-
-&lt;h3 id=&quot;after-the-victory&quot;&gt;After the victory&lt;/h3&gt;
-
-&lt;p&gt;Spaniards had to &lt;strong&gt;denounce&lt;/strong&gt; their neighbors to military tribunals&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;this happened after Franco’s military victory in April 1936&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;The government took all the wealth and property by passing legislation&lt;/p&gt;
-
-&lt;h3 id=&quot;captured-republican-soldiers&quot;&gt;Captured Republican Soldiers&lt;/h3&gt;
-
-&lt;p&gt;they were often recycled&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;especially the ones who had been conscripts in the first place&lt;/li&gt;
-  &lt;li&gt;after the war, they faced political investigation&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;&lt;strong&gt;Political commissars&lt;/strong&gt; were usually shot&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;international brigaders&lt;/strong&gt; were usually shot&lt;/p&gt;
-
-&lt;p&gt;This meant that Franco was breaking the Geneva Conventions&lt;/p&gt;
-
-&lt;h3 id=&quot;propoganda&quot;&gt;Propoganda&lt;/h3&gt;
-
-&lt;p&gt;Commercial cinema was becoming more popular&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;Francoist authorities censored them carefully&lt;/li&gt;
-  &lt;li&gt;Hollywood productions were an important component of popular cinema&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&quot;help-from-germany-and-italy&quot;&gt;Help from Germany and Italy&lt;/h2&gt;
-
-&lt;p&gt;Hitler and Mussolini wanted a fast victory&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;They increased their aid for this outcome&lt;/li&gt;
-  &lt;li&gt;Franco advanced his army slowly and deliberately&lt;/li&gt;
-  &lt;li&gt;This caused political tension&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;Franco depended heavily on Italian military hardware&lt;/p&gt;
-
-&lt;p&gt;Germany and Italy provided airpower, and Franco needed it&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;Why did this alliance happen?&lt;/strong&gt; All three dictators wanted to expand their territories&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;they would turn a blind eye to each other’s imperial actions&lt;/li&gt;
-  &lt;li&gt;Nazi Germany was disrupting the international status quo, which meant more opportunities to gain territory&lt;/li&gt;
-  &lt;li&gt;Spain would disrupt French and English imperial interests, since it was in an important strategic position&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;There was an ideological divide between Francoists and Nazis over the Catholic church&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;Nazis were trying to take society beyond sectarian allegiances&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3 id=&quot;passive-france-and-britain&quot;&gt;Passive France and Britain&lt;/h3&gt;
-
-&lt;p&gt;British government didn’t think that a Francoist victory would pose a threat to their interests. They didn’t help much&lt;/p&gt;
-
-&lt;h2 id=&quot;the-church&quot;&gt;The Church&lt;/h2&gt;
-
-&lt;p&gt;the Vatican didn’t like the radical aspects of fascism, or its exaltation of the state&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;opposed Nazism for its atheistic dimension&lt;/li&gt;
-  &lt;li&gt;this is why the Vatican publicly condemned Hitler’s racism&lt;/li&gt;
-  &lt;li&gt;This was very bad for Franco&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;The Vatican attempted to broker peace settlements with Franco&lt;/p&gt;
-
-&lt;p&gt;The Vatican established full diplomatic relations in 1938, when a rebel victory seemed imminent&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;Spain’s Catholic hierarchy&lt;/strong&gt; aligned itself with Franco&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;shared hostility with rationalism, liberalism, socialism and communism&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;Franco’s government would mix in fascist symbols during ceremonial occasions&lt;/p&gt;
-
-&lt;h1 id=&quot;5-the-republic-besieged&quot;&gt;5: The Republic besieged&lt;/h1&gt;
-
-&lt;p&gt;The rebels were way better equipped than the Republic&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;Portuguese authorities unloaded German and Italian supplies at their ports&lt;/li&gt;
-  &lt;li&gt;most of the middle-ranking officers were on Franco’s side&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;Stalin sent materiel to the republic (including planes and tanks)&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;This was crucial for their survival&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;Non-Intervention prevented the Republic from buying war material on its own behalf&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;this is a big reason why it needed Soviet help&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;The Republic also didn’t have access to its money&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;the outgoing cabinet transferred Spain’s gold reserves out of the country right before the war (two weeks after the coup)&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;Mexico was the only country that helped the Republic as a broker&lt;/p&gt;
-
-&lt;p&gt;Eastern European countries (mainly Poland) sold armaments to the Republic&lt;/p&gt;
-
-&lt;p&gt;The Republic had to overpay for everything because of Non-Intervention&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;Had to pay cash up front (unlike the rebels, which bought everything on credit)&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3 id=&quot;delivery-was-a-nightmare&quot;&gt;Delivery was a nightmare&lt;/h3&gt;
-
-&lt;p&gt;The Soviets made the Republic transport everything they bought&lt;/p&gt;
-
-&lt;p&gt;Germans and Italians illegally attacked all ships bound for Republic ports&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;They allowed Franco to set up a blockade&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3 id=&quot;french-help&quot;&gt;French help&lt;/h3&gt;
-
-&lt;p&gt;The blockade meant that all military aid had to go over land, through France&lt;/p&gt;
-
-&lt;p&gt;The French were afraid of being surrounded by fascists, so they practiced “relaxed Non-Intervention”&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;goods could go over the French border to Spain, but this route was unpredictable&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3 id=&quot;a-fractured-republic&quot;&gt;A Fractured Republic&lt;/h3&gt;
-
-&lt;p&gt;There were “five armies, not one”, mainly due to regional groupings&lt;/p&gt;
-
-&lt;p&gt;During 1938, the Republican camp had many political divisions&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;the more defeats it suffered, the more divisions there were&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;central Republican versus the regional government of Catalonia&lt;/p&gt;
-
-&lt;p&gt;Catalonia had one of the deepest independent political and cultural traditions in Spain. When &lt;strong&gt;Negrin assumed control of the Catalan war industry&lt;/strong&gt;, he caused another fracture&lt;/p&gt;
-
-&lt;h3 id=&quot;the-fall-of-asturias&quot;&gt;The Fall of Asturias&lt;/h3&gt;
-
-&lt;p&gt;October 1937 - made it clear that the Republic wouldn’t win&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;no more coal industry&lt;/li&gt;
-  &lt;li&gt;no more northern army (200k soldiers)&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3 id=&quot;battle-of-teruel&quot;&gt;Battle of Teruel&lt;/h3&gt;
-
-&lt;p&gt;winter 1937-8 - made it even more clear that the Republic wouldn’t win&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;was a diversionary campaign&lt;/li&gt;
-  &lt;li&gt;that was an especially cold winter&lt;/li&gt;
-  &lt;li&gt;Republicans captured the city in January, but Franco got it back in a counter offensive&lt;/li&gt;
-  &lt;li&gt;clear turning point of the war&lt;/li&gt;
-  &lt;li&gt;Franco captured the city, 15k prisoners and lots of military equipment&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3 id=&quot;the-rebels-took-vinaros&quot;&gt;The rebels took Vinaros&lt;/h3&gt;
-
-&lt;p&gt;The rebels separated Catalonia from the central-south Republican zone&lt;/p&gt;
-
-&lt;p&gt;this was &lt;em&gt;very bad&lt;/em&gt; for the Republic, but Franco diverted troops south to Valencia because he thought that France would have to intervene if he sent troops to Catalonia&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;The point was to attack the Republic’s human resources as much as possible&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3 id=&quot;anglo-italian-agreement&quot;&gt;Anglo-Italian agreement&lt;/h3&gt;
-
-&lt;p&gt;April 1938 Britain signed this right after the rebels took a significant victory&lt;/p&gt;
-
-&lt;p&gt;Britain pressured France to close its frontier to Spain&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;Italy was still sinking Britain’s merchant ships, so this didn’t make much sense&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3 id=&quot;soviet-help&quot;&gt;Soviet help&lt;/h3&gt;
-
-&lt;p&gt;Soviet technical advisors (about 700 of them) helped Spanish commanders and officers&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;military engineers, technicians, strategists and experts in irregular warfare&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;By 1938, Stalin thought that the Republic couldn’t win, so he stopped helping in any significant way&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;there were foreign volunteers, but they were basically symbolic&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;The longer the Republic resisted, the longer it distracted Germany, so Stalin did continue to help&lt;/p&gt;
-
-&lt;h2 id=&quot;internal-fracturing&quot;&gt;Internal Fracturing&lt;/h2&gt;
-
-&lt;p&gt;When Negrin did the following, he damaged morale in Catalonia:&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;move the Republican government to Barcelona&lt;/li&gt;
-  &lt;li&gt;assumed direct control of Catalan war industry&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;Catalonia had the deepest independent political and cultural traditions in Spain&lt;/p&gt;
-
-&lt;h3 id=&quot;socialists-vs-communists&quot;&gt;socialists vs communists&lt;/h3&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;these were the two mass movements sustaining the war effort&lt;/li&gt;
-  &lt;li&gt;had rivalies before the war that grew more intense during the war&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&quot;juan-negrin&quot;&gt;Juan Negrin&lt;/h2&gt;
-
-&lt;p&gt;Republican prime minister, took office in May 1937&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;tried to get Non-Intervention lifted&lt;/li&gt;
-  &lt;li&gt;good at international diplomacy&lt;/li&gt;
-  &lt;li&gt;Non-Intervention basically ended when Hitler occupied Austria in March 1938, but it was too late by then&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3 id=&quot;values&quot;&gt;Values&lt;/h3&gt;
-
-&lt;p&gt;Negrin prioritized Republican morale, tried to strengthen Spain’s constitutional order&lt;/p&gt;
-
-&lt;p&gt;Designed his wartime measures to reinforce &lt;strong&gt;liberal market-based values&lt;/strong&gt;, instead of collectivist or anti-capitalist values&lt;/p&gt;
-
-&lt;p&gt;Wanted to &lt;strong&gt;normalize the Catholic Church&lt;/strong&gt;, even though he was a secular rationalist&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;wanted to reintroduce public worship&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;The communist ideology did not appeal to him&lt;/p&gt;
-
-&lt;h3 id=&quot;actions-aborad&quot;&gt;Actions Aborad&lt;/h3&gt;
-
-&lt;p&gt;Britain and France were afraid of the conflict extending to the rest of Europe, so &lt;strong&gt;they opposed Negrin’s bid to have Non-Intervention lifted&lt;/strong&gt; at the league of Nations&lt;/p&gt;
-
-&lt;p&gt;Negrin made a number of trips abroad in 1938 to meet with fascists&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;he wanted to prevent reprisals and guarantee the integrity of Spain&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3 id=&quot;politics-at-home&quot;&gt;Politics at home&lt;/h3&gt;
-
-&lt;p&gt;Negrin was starting to rely on the communists more than on his own party, which caused problems&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;He needed the communists because of their &lt;strong&gt;commitment to a policy of resistance&lt;/strong&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&quot;downfall&quot;&gt;Downfall&lt;/h2&gt;
-
-&lt;p&gt;By spring 1938, the Republic couldn’t serve its civilian population effectively&lt;/p&gt;
-
-&lt;h3 id=&quot;catalonia-isolated&quot;&gt;Catalonia Isolated&lt;/h3&gt;
-
-&lt;p&gt;Communication between Catalonia and the central zone was hazardous&lt;/p&gt;
-
-&lt;p&gt;It was difficult to travel there, since the rebels controlled sea and air between the two zones&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;rebels torpedoed sea traffic&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;Food had to come from France, but there wasn’t enough food coming across the border. Also, whether it came at all depended on politics&lt;/p&gt;
-
-&lt;h3 id=&quot;militarization&quot;&gt;Militarization&lt;/h3&gt;
-
-&lt;p&gt;The Republican zone was militarizing under the pressure of war, which backfired&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;conscription was becoming more aggressive, which made communities resentful&lt;/li&gt;
-  &lt;li&gt;soldiers were living off the land, which increased social tension&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3 id=&quot;the-fifth-column&quot;&gt;The fifth column&lt;/h3&gt;
-
-&lt;p&gt;All major Republican cities had organized networks of spies and saboteurs&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;it was difficult for the Republic to deal with these spies without resorting to fascistic surveillance and interrogation techniques&lt;/li&gt;
-  &lt;li&gt;this contrasted with how the Francoists dealth with spies, which gave the fascists an advantage&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;Played a major role in the eventual hand over to Franco&lt;/p&gt;
-
-&lt;h3 id=&quot;battle-at-ebro&quot;&gt;Battle at Ebro&lt;/h3&gt;
-
-&lt;p&gt;July - November 1938. The last big battle during the war&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;Republic’s last gamble&lt;/li&gt;
-  &lt;li&gt;three objectives:
-    &lt;ul&gt;
-      &lt;li&gt;protect Valencia from Franco&lt;/li&gt;
-      &lt;li&gt;restore contact with Catalonia&lt;/li&gt;
-      &lt;li&gt;demonstrate to the world that the Republican army was resilient (success - the Brits noticed the victory, and noticed how reliant Franco was on Italy and Germany)&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;Franco paid the Nazi’s in mining rights. In exchange, they guaranteed his air superiority during the battle at Ebro&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;This was a testing ground for Blitzkrieg tactics&lt;/li&gt;
-  &lt;li&gt;also for Soviet armored vehicles&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;the republicans retreated in November because of the Munich agreement&lt;/p&gt;
-
-&lt;h3 id=&quot;the-agreement&quot;&gt;The agreement&lt;/h3&gt;
-
-&lt;p&gt;Britain and France signed a deal with Germany and Italy&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;&lt;strong&gt;It said that Hitler could invade Czechoslovakia&lt;/strong&gt;, which was the last functioning democracy in central eastern Europe&lt;/li&gt;
-  &lt;li&gt;this undermined Negrin’s credibility and his resistance strategy&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3 id=&quot;poum-trial&quot;&gt;POUM Trial&lt;/h3&gt;
-
-&lt;p&gt;October 1938 (so duing the battle of Ebro) - POUM leaders publicly supported a rebellion&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;the trial observed the constitutional process&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3 id=&quot;the-downfall&quot;&gt;The downfall&lt;/h3&gt;
-
-&lt;p&gt;Negrin knew that if he surrendured, Franco would not negotiate&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;he planned on resisting&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;&lt;strong&gt;Las of Political Responsibilities&lt;/strong&gt; law pushed by Franco in February 1939&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;blanket repression, meant that there would be reprisals against Republican population&lt;/li&gt;
-  &lt;li&gt;retroactively punished people&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;Other republican and socialist leaders thought that they could negotiate pease with Franco, even though it was clear they couldn’t&lt;/p&gt;
-
-&lt;p&gt;Armies surrendured to Franco in &lt;strong&gt;March 1939&lt;/strong&gt;&lt;/p&gt;
-
-&lt;p&gt;Negrin had continued resisting because he believed that Britain and France would help Republican Spain&lt;/p&gt;
-
-&lt;h3 id=&quot;refugees&quot;&gt;Refugees&lt;/h3&gt;
-
-&lt;p&gt;There were about 600k refugees trying to escape from Republican Spain at the end of the war&lt;/p&gt;</content><author><name></name></author><summary type="html">source: The Spanish Civil War: A Very Short Introduction, Helen Graham</summary></entry><entry><title type="html">Notes: Genetics and Politics</title><link href="http://localhost:4000/notes/genetics-politics/" rel="alternate" type="text/html" title="Notes: Genetics and Politics" /><published>2021-09-26T04:07:43+08:00</published><updated>2021-09-26T04:07:43+08:00</updated><id>http://localhost:4000/notes/genetics-politics</id><content type="html" xml:base="http://localhost:4000/notes/genetics-politics/">&lt;p&gt;source: &lt;a href=&quot;https://www.newyorker.com/magazine/2021/09/13/can-progressives-be-convinced-that-genetics-matters&quot;&gt;The New Yorker&lt;/a&gt;&lt;/p&gt;
-
-&lt;hr /&gt;
-
-&lt;p&gt;&lt;strong&gt;Kathryn Paige Harden&lt;/strong&gt; works in the field of behavior genetics&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;psych professor, University of Texas at Austin&lt;/li&gt;
-  &lt;li&gt;mentored by Eric Turkheimer&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;&lt;strong&gt;behavior genetics&lt;/strong&gt; investigates influence of genes on &lt;strong&gt;character traits&lt;/strong&gt; and &lt;strong&gt;life outcomes&lt;/strong&gt;&lt;/p&gt;
-
-&lt;h3 id=&quot;pushback-from-hardens-colleagues&quot;&gt;pushback from Harden’s colleagues&lt;/h3&gt;
-
-&lt;p&gt;there’s a possible link between behavior genetics and eugenics&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;Harden was ostracized by her liberal colleagues for her work&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;&lt;strong&gt;polygenic score&lt;/strong&gt; a weighted sum of an individuals relevant genetic variants&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;Harden shared &lt;a href=&quot;https://journals.sagepub.com/doi/abs/10.1177/0956797616643070&quot;&gt;a paper&lt;/a&gt; that used polygenic score to explain population variance&lt;/li&gt;
-  &lt;li&gt;the paper emphasized that it’s difficult to distinguish between genetic and environmental effects on social outcomes&lt;/li&gt;
-  &lt;li&gt;There was a lot of pushback to this paper. professor of public policy at Duke: “there will be no reason to pursue these types of research programs at all, and they can be rendered to the same location as Holocaust denial research”&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;&lt;strong&gt;The Bell Curve&lt;/strong&gt;, Charles Murray &amp;amp; Richard Herrnstein - includes claims about:&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;genetic basis for racial hierarchy in intelligence&lt;/li&gt;
-  &lt;li&gt;genetic foundation for poverty and inequality&lt;/li&gt;
-  &lt;li&gt;Harden’s colleagues compared the paper she shared to the bell curve&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;they considered refusing to fund research into effects of genes on behavior or social outcomes&lt;/p&gt;
-
-&lt;p&gt;We can’t commit to egalitarianism by declaring genetic uniformity&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;The left isn’t talking about this, so the only voices are on the right&lt;/strong&gt;&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;“red pill” claims to expose liberal hypocrisy&lt;/li&gt;
-  &lt;li&gt;Harden is trying to fight back&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;&lt;strong&gt;The Genetic Lottery: Why DNA Matters for Social Equality&lt;/strong&gt; - Harden’s new book&lt;/p&gt;
-
-&lt;h3 id=&quot;behavioralism-vs-determinism&quot;&gt;&lt;strong&gt;behavioralism vs determinism&lt;/strong&gt;&lt;/h3&gt;
-
-&lt;p&gt;&lt;strong&gt;behavioralism&lt;/strong&gt; - claims that environmental manipulation can produce any desired outcome&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;aligns with postwar liberal principles&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;&lt;strong&gt;&lt;a href=&quot;https://en.wikipedia.org/wiki/How_Much_Can_We_Boost_IQ_and_Scholastic_Achievement%3F&quot;&gt;How Much Can We Boost IQ and Scholastic Achievement?&lt;/a&gt;&lt;/strong&gt; - 1969 article&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;argued that there was an IQ gap between races in America, and the reason was at least partly genetic&lt;/li&gt;
-  &lt;li&gt;argued that policy interventions were unlikely shift this hierarchy&lt;/li&gt;
-  &lt;li&gt;Got a lot of criticism&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;IQ is flexible&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;Poor children gain IQ after wealthy families adopt them&lt;/li&gt;
-  &lt;li&gt;populations gain IQ over time&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;Just because outcomes are partly genetic doesn’t mean they’re inevitable&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://www.gwern.net/docs/iq/1997-turkheimer.pdf&quot;&gt;&lt;strong&gt;The Search for a Psychometric left&lt;/strong&gt;&lt;/a&gt; - Terkheimer argued that the left has nothing to fear from genes&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;We don’t need to deny heritability to oppose determinism, reductionism and racism&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3 id=&quot;the-limits-of-behavior-genetics&quot;&gt;the limits of behavior genetics&lt;/h3&gt;
-
-&lt;p&gt;Some studies found genes for aggression, depression, homosexuality, but &lt;strong&gt;the studies couldn’t be replicated&lt;/strong&gt;&lt;/p&gt;
-
-&lt;p&gt;Complex traits are governed by multiple genes&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;genome-wide association study&lt;/strong&gt; (GWAS)- attempt to identify thousands of places in the genome where DNA differences correlate to traits/outcomes&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;can predict population variance for height, weight and some diseases&lt;/li&gt;
-  &lt;li&gt;can predict some complex behavioral traits&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;A GWA for educational attainment found ~1300 sites on the genome that correlate with scholastic success&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;individual sites have a negligible predictive ability, but the sum is very predictive&lt;/li&gt;
-  &lt;li&gt;people with the highest scores are 5x more likely to graduate from college&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;GWAS show correlation, but not causation&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;depend on populations within a specific society&lt;/li&gt;
-  &lt;li&gt;results are not portable - results from the UK will not tell you anything about populations in Estonia&lt;/li&gt;
-  &lt;li&gt;not a good predictor for individuals&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;GWAS reveal a lot much about geography and culture&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;example: you could conduct a GWAS for chopstick use. It would tell you more about culture than individual’s dexterity&lt;/li&gt;
-  &lt;li&gt;possible solution: compare GWAS results within families&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;Social outcomes also depend on plenty of factors (conscientiousness, risk-aversion, physical features…)&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;Harden thinks we’ll be stuck forever if we consider this question to have a binary answer&lt;/strong&gt;&lt;/p&gt;
-
-&lt;p&gt;One benefit of GWAS: they help you account for genetic differences when trying to do studies on environmental factors&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;Parents have significant impact on environmental effects, even if they don’t pass on all of their genes&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;Another benefit: We can see how treatments interact with genetics&lt;/p&gt;
-
-&lt;h3 id=&quot;clash-with-sam-harris&quot;&gt;Clash with Sam Harris&lt;/h3&gt;
-
-&lt;p&gt;Sam Harris had Charles Murray on as a guest in April 2017&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;they said that people don’t want to hear that IQ differs across ethnic groups&lt;/li&gt;
-  &lt;li&gt;Harris mostly had him on because he’d been caught up in the culture war&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;Harden and Turkheimer wrote a &lt;a href=&quot;https://www.vox.com/the-big-idea/2017/5/18/15655638/charles-murray-race-iq-sam-harris-science-free-speech&quot;&gt;piece for vox&lt;/a&gt; meant to confront Harris’ podcast&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;They had to make a nuanced argument to separate the truths from the falsehoods in the podcast&lt;/li&gt;
-  &lt;li&gt;We can’t deny that genetics have an impact on human academic scores&lt;/li&gt;
-  &lt;li&gt;However there’s &lt;strong&gt;no reason to think that racial IQ gaps are anything but the result of racism&lt;/strong&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;Harris eventually had Harden on his podcast. It was actually pretty awkward&lt;/p&gt;
-
-&lt;h3 id=&quot;blowback-from-the-left&quot;&gt;blowback from the left&lt;/h3&gt;
-
-&lt;p&gt;There are more voices on the left that are trying to acknowledge inherited intelligence&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;&lt;strong&gt;the cult of smart&lt;/strong&gt; asserts that improving the education system won’t help until we acknowledge that some students are just smarter than others&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;Harden is getting dragged on twitter&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;Dorothy Roberts&lt;/strong&gt; professor of law, sociology, Africana studies - responded to a 2018 Op-Ed that Harden wrote in the NYT, which said we should use genetics to inform education policy&lt;/p&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;“There’s no way that genetic testing is going to lead to a restructuring of society in a just way in the future. &lt;strong&gt;We have a hundred years of evidence for what happens when social outcomes are attributed to genetic differences&lt;/strong&gt;, and it is always to stigmatize, control and punish the people predicted to have socially devalued traits”&lt;/p&gt;
-
-&lt;/blockquote&gt;
-
-&lt;p&gt;There is a push from the right to pay more attention to genetics&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;blueprint says that polygenic scores should be understood as “fortune tellers”, and white supremacists love it&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3 id=&quot;the-genetic-lottery&quot;&gt;The genetic lottery&lt;/h3&gt;
-
-&lt;p&gt;assersions:&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;just because we value some traits more than others doesn’t mean we value some people more than others&lt;/li&gt;
-  &lt;li&gt;We should view inherent qualities as something you were lucky to get&lt;/li&gt;
-  &lt;li&gt;We should get better at separating the questions of nature and nurture&lt;/li&gt;
-  &lt;li&gt;If we don’t acknowledge how genes played a part in our success, we assume that we did it all through hard work&lt;/li&gt;
-  &lt;li&gt;If genes play a significant role in our success, maybe we shouldn’t design our society so that you need a college degree to get health care&lt;/li&gt;
-&lt;/ul&gt;</content><author><name></name></author><summary type="html">source: The New Yorker</summary></entry></feed>
+&lt;p&gt;Panpsychists believe that consciousness is a fundamental and ubiquitous feature of the physical world&lt;/p&gt;</content><author><name></name></author><summary type="html">source: Galileo’s Error, by Philip Goff (Chapter 1)</summary></entry></feed>

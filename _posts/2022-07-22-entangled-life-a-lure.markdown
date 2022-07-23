@@ -5,7 +5,7 @@ date:   2022-07-22 00:07:43 -0500
 permalink: /notes/a-lure/
 ---
 
-source: [Entangled Life](https://www.merlinsheldrake.com/entangled-life) by Merlin Sheldrake
+source: [Entangled Life](https://www.merlinsheldrake.com/entangled-life) (chapter 1) by Merlin Sheldrake
 
 ---
 

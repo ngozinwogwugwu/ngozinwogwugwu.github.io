@@ -3,17 +3,19 @@
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1"><!-- Begin Jekyll SEO tag v2.6.1 -->
-<title>Notes | Ngozi Nwogwugwu</title>
+<title>Recommend Me a Book | Ngozi Nwogwugwu</title>
 <meta name="generator" content="Jekyll v3.8.7" />
-<meta property="og:title" content="Notes" />
+<meta property="og:title" content="Recommend Me a Book" />
 <meta property="og:locale" content="en_US" />
-<meta name="description" content="nwogwugwu.eth" />
-<meta property="og:description" content="nwogwugwu.eth" />
-<link rel="canonical" href="http://localhost:4000/notes/" />
-<meta property="og:url" content="http://localhost:4000/notes/" />
+<meta name="description" content="Recommend a book (or article) Book/Article: Your Email: Suggest!" />
+<meta property="og:description" content="Recommend a book (or article) Book/Article: Your Email: Suggest!" />
+<link rel="canonical" href="http://localhost:4000/bookshelf/recommend-me/" />
+<meta property="og:url" content="http://localhost:4000/bookshelf/recommend-me/" />
 <meta property="og:site_name" content="Ngozi Nwogwugwu" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2022-07-21T00:00:00+08:00" />
 <script type="application/ld+json">
-{"url":"http://localhost:4000/notes/","headline":"Notes","description":"nwogwugwu.eth","@type":"WebPage","@context":"https://schema.org"}</script>
+{"url":"http://localhost:4000/bookshelf/recommend-me/","headline":"Recommend Me a Book","dateModified":"2022-07-21T00:00:00+08:00","datePublished":"2022-07-21T00:00:00+08:00","description":"Recommend a book (or article) Book/Article: Your Email: Suggest!","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/bookshelf/recommend-me/"},"@type":"BlogPosting","@context":"https://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 <link rel="stylesheet" href="/assets/main.css"><link type="application/atom+xml" rel="alternate" href="http://localhost:4000/feed.xml" title="Ngozi Nwogwugwu" /></head>
 <body><header class="site-header" role="banner">
@@ -36,37 +38,40 @@
         <article class="post">
 
   <header class="post-header">
-    <h1 class="post-title">Notes</h1>
+    <h1 class="post-title">Recommend Me a Book</h1>
   </header>
 
   <div class="post-content">
-    <p>I often take notes on the books that I read, but not always. If you want a more comprehensive list of the books I like, check out <a href="/bookshelf">My Bookshelf</a></p>
-
-<hr />
-<p>Science &amp; Philosophy</p>
-
-<h1 id="fungi-navigating-the-world"><a href="a-lure">Fungi Navigating the World</a></h1>
-<h1 id="crisis-mindsets"><a href="crisis-mindsets">Crisis Mindsets</a></h1>
-<h1 id="the-vulnerable-world-hypothesis"><a href="vulnerable-world">The Vulnerable World Hypothesis</a></h1>
-<h1 id="maxwells-demon"><a href="maxwell-demon">Maxwell’s Demon</a></h1>
-<h1 id="galileo--consiousness"><a href="galileo-consiousness">Galileo &amp; Consiousness</a></h1>
-
-<hr />
-<p>Politics &amp; Society</p>
-<h1 id="the-spanish-civil-war"><a href="spanish-civil-war">The Spanish Civil War</a></h1>
-<h1 id="autocrats-forming-alliances"><a href="bad-guys-winning">Autocrats Forming Alliances</a></h1>
-<h1 id="intro-to-feminism"><a href="bell-hooks-feminism">Intro to Feminism</a></h1>
-<h1 id="genetics-and-politics"><a href="genetics-politics">Genetics and Politics</a></h1>
-<h1 id="challenges-of-monogamy"><a href="playing-monogamy">Challenges of Monogamy</a></h1>
-
-<hr />
-<p>Some Articles I read</p>
-<h1 id="2019-2020-2021-2022"><a href="articles-2019">2019</a>, <a href="articles-2020">2020</a>, <a href="articles-2021">2021</a>, <a href="articles-2022">2022</a></h1>
-
-<hr />
-<p>architecture</p>
-<h1 id="skylights"><a href="skylights">Skylights</a></h1>
-
+    <html>
+    <head>
+        <script>
+            function myFunction() {
+                let bookName = document.getElementById("book-name").value
+                let email = document.getElementById("your-email").value
+                document.getElementById("demo").innerHTML = "thanks for suggesting " + bookName + " :)";
+                document.getElementById("entire-form").remove();
+                let http = new XMLHttpRequest();
+                http.open(
+                    'POST',
+                    'http://127.0.0.1:8000/witch/send_ngozi_a_book_rec',
+                    true
+                );
+                http.setRequestHeader('Content-type', 'application/json');
+                let thing = {
+                    "email": email,
+                    "book": bookName
+                }
+                http.send(JSON.stringify(thing));
+            }
+        </script>
+    </head>
+    <p id="demo">Recommend a book (or article)</p>
+    <div id="entire-form">
+        Book/Article: <input type="text" id="book-name" /><br />
+        Your Email: <input type="text" id="your-email" /><br />
+        <button type="button" onclick="myFunction()">Suggest!</button><br />
+    </div>
+</html>
 
   </div>
 
