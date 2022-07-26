@@ -31,6 +31,7 @@ Designing Data Intensive Applications
 ---
 Miscellaneous Notes
 
+### [Logs](logs)
 ### [RSA Encryption](rsa-encryption)
 ### [How to Dockerize a Project](dockerize-project)
 ### [Kafka: Introduction](kafka-introduction)

@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1"><!-- Begin Jekyll SEO tag v2.6.1 -->
+<title>Notes: Logs | Ngozi Nwogwugwu</title>
+<meta name="generator" content="Jekyll v3.8.7" />
+<meta property="og:title" content="Notes: Logs" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="source: Jay Kreps’ blogpost" />
+<meta property="og:description" content="source: Jay Kreps’ blogpost" />
+<link rel="canonical" href="http://localhost:4000/programming/logs/" />
+<meta property="og:url" content="http://localhost:4000/programming/logs/" />
+<meta property="og:site_name" content="Ngozi Nwogwugwu" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2022-07-25T13:07:43+08:00" />
+<script type="application/ld+json">
+{"url":"http://localhost:4000/programming/logs/","headline":"Notes: Logs","dateModified":"2022-07-25T13:07:43+08:00","datePublished":"2022-07-25T13:07:43+08:00","description":"source: Jay Kreps’ blogpost","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/programming/logs/"},"@type":"BlogPosting","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link rel="stylesheet" href="/assets/main.css"><link type="application/atom+xml" rel="alternate" href="http://localhost:4000/feed.xml" title="Ngozi Nwogwugwu" /></head>
+<body><header class="site-header" role="banner">
+
+  <div class="wrapper"><a class="site-title" rel="author" href="/">Ngozi Nwogwugwu</a><nav class="site-nav">
+        <input type="checkbox" id="nav-trigger" class="nav-trigger" />
+        <label for="nav-trigger">
+          <span class="menu-icon">
+            <svg viewBox="0 0 18 15" width="18px" height="15px">
+              <path d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.032C17.335,0,18,0.665,18,1.484L18,1.484z M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.032C17.335,6.031,18,6.696,18,7.516L18,7.516z M18,13.516C18,14.335,17.335,15,16.516,15H1.484 C0.665,15,0,14.335,0,13.516l0,0c0-0.82,0.665-1.483,1.484-1.483h15.032C17.335,12.031,18,12.695,18,13.516L18,13.516z"/>
+            </svg>
+          </span>
+        </label>
+
+        <div class="trigger"><a class="page-link" href="/bookshelf/">My Bookshelf</a><a class="page-link" href="/notes/">Notes</a><a class="page-link" href="/programming/">Programming</a></div>
+      </nav></div>
+</header>
+<main class="page-content" aria-label="Content">
+      <div class="wrapper">
+        <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
+
+  <header class="post-header">
+    <h1 class="post-title p-name" itemprop="name headline">Notes: Logs</h1>
+    <p class="post-meta">
+      <time class="dt-published" datetime="2022-07-25T13:07:43+08:00" itemprop="datePublished">Jul 25, 2022
+      </time></p>
+  </header>
+
+  <div class="post-content e-content" itemprop="articleBody">
+    <p>source: <a href="https://engineering.linkedin.com/distributed-systems/log-what-every-software-engineer-should-know-about-real-time-datas-unifying">Jay Kreps’ blogpost</a></p>
+
+<hr />
+
+<p>A lot of the information discussed in this article is relevant to Chapter 11 of Designing Data Intensive Application. <a href="https://ngozinwogwugwu.github.io/programming/ddia-stream-processing/">My notes on this are here</a></p>
+
+<h1 id="whats-a-log">What’s a Log?</h1>
+
+<p>it’s an <strong>append-only, totally-ordered sequence of records</strong></p>
+
+<ul>
+  <li>ordered by time</li>
+  <li>each entry has a unique ID. Can be used as a timestamp. Allows you to <strong>decouple from a physical clock</strong></li>
+  <li>aka write-ahead logs, commit logs, transaction logs</li>
+</ul>
+
+<p>The point of a log is to record what happened and when</p>
+
+<ul>
+  <li>extremely important for distributed data systems</li>
+</ul>
+
+<p><strong>it’s important for machines to play back their history at their own rate in a deterministic manner</strong></p>
+
+<h3 id="logs-in-databases">Logs in databases</h3>
+
+<p>Databases use logs to sync their data structures and indexes. Logs are only used internally by the database</p>
+
+<ul>
+  <li>write-ahead log (notes from DDIA <a href="https://ngozinwogwugwu.github.io/programming/ddia-storage-and-retrieval/#:~:text=A%20Write%2DAhead%20Log%20(WAL%2C%20redo%20log)%3A%20is%20an%20additional%20append%2Donly%20file%20on%20disk">here</a>) helps the DB recover after a crash</li>
+  <li>Now it’s used as a way to replicate data between databases (notes from DDIA <a href="https://ngozinwogwugwu.github.io/programming/ddia-replication/#:~:text=Write%2DAhead%20Log%20Shipping%3A%20Use%20the%20append%2Donly%20log%20file%20that%20describes%20the%20database%20writes%20(either%20log%20segments%20or%20WAL)">here</a>)</li>
+</ul>
+
+<h3 id="logs-in-distributed-systems">Logs in distributed systems</h3>
+
+<p>For distributed systems, the order of inputs is extremely important</p>
+
+<ul>
+  <li>Logs help these systems agree on an ordering of events</li>
+  <li>an event’s log ID becomes a universal timestamp</li>
+</ul>
+
+<p><strong>State Machine Replication Principle</strong> - identical deterministic processes that get the same inputs in the same order will have the same output</p>
+
+<p><strong>physical vs logical logging</strong> - relevant for DB people</p>
+
+<ul>
+  <li>physical: logging the contents of each row that was changed</li>
+  <li>logical: log the SQL commands</li>
+</ul>
+
+<p><strong>state machine model</strong> each machine processes data based directly on the log</p>
+
+<p><strong>primary-backup model</strong> elect a leader to process the log. It pushes changes to followers</p>
+
+<p>A distributed log can be seen as the data structure which models the problem of consensus</p>
+
+<h3 id="changelog-101-tables-and-events-are-dual">Changelog 101: Tables and Events are Dual</h3>
+
+<p>logs are like list of transactions. A table just shows the current account balance</p>
+
+<ul>
+  <li>if you have a log, you can create a table</li>
+  <li>If you have a <strong>changelog</strong> (changes to a table), you can create a log</li>
+</ul>
+
+<p>Version control is also like this</p>
+
+<h1 id="data-integration">Data Integration</h1>
+
+<p><strong>data integration</strong> making sure your services have access to the data they need</p>
+
+<ul>
+  <li>aka <strong>ETL</strong>, which is usually limited to data integration in relational data warehouses</li>
+  <li>this is a <strong>mundane but essential</strong> problem for organizations</li>
+</ul>
+
+<p>Not only does this data need to be available, but it <strong>needs to be readable</strong></p>
+
+<h3 id="complications-to-data-integration">Complications to data integration</h3>
+
+<ol>
+  <li>There’s a lot of event data - way more than what we can store in a database</li>
+  <li>there are a lot of specialized systems (for search, batch processing, …)</li>
+</ol>
+
+<h3 id="log-structured-data-flow">Log-structured data flow</h3>
+
+<p>Disadvantages of depending on data warehouses</p>
+
+<ul>
+  <li>processing isn’t reversable, specific to one problem</li>
+  <li>if data isn’t entered correctly right away, the data warehouse has bad data</li>
+</ul>
+
+<p>solution: all your organizations data goes into a central log (each logical data source is marked as its own log). Advantages:</p>
+
+<ul>
+  <li>You have a buffer for async data consumption</li>
+  <li>destination systems don’t know anything about the data’s origin</li>
+  <li>all your systems potentially have access to all of the data</li>
+  <li>introducing a new system is straightforward</li>
+</ul>
+
+<p>This is slightly different from a <strong>messaging system</strong> or <strong>pub sub</strong></p>
+
+<p><strong>databus</strong> infrastructure that provides log caching abstraction</p>
+
+<p>technologies that do this:</p>
+
+<ul>
+  <li><strong>Kafka</strong></li>
+  <li><strong>Kinesis</strong></li>
+</ul>
+
+<h3 id="relationship-to-etl-and-the-data-warehouse">Relationship to ETL and the Data Warehouse</h3>
+
+<p>A data warehouse is (supposed to be) a repository of <strong>clean, integrated data</strong> to support analysis</p>
+
+<ul>
+  <li>this is great for batch jobs</li>
+  <li>sometimes we need clean integrated data for things other than batch jobs</li>
+</ul>
+
+<p>During ETL, the data is:</p>
+
+<ol>
+  <li>clean up</li>
+  <li>structured for the data warehouse</li>
+</ol>
+
+<p>One problem of the data warehouse is organizational: The data warehouse team is the only party responsible for getting data cleaned up and into the warehouse</p>
+
+<ul>
+  <li>there’s no incentive for other teams to make this easy</li>
+</ul>
+
+<p>Alternative: if a log is acting as a central pipeline, and it has a <strong>well defined API for adding data</strong>, the responsibility for providing data in a readable format falls to individual teams</p>
+
+<ul>
+  <li>this way, the data warehouse team focuses on the problem of loading the (already structured) data into the warehouse</li>
+  <li>teams clean their data before they put it on the pipeline. This cleanup should be lossless and reversible</li>
+  <li>you can enrich data asynchronously</li>
+</ul>
+
+<p>Advantage to this: it becomes easy to add data systems besides warehouses</p>
+
+<p>This architecture enables <strong>decoupled, event driven systems</strong></p>
+
+<h3 id="building-a-scalable-log">Building a Scalable Log</h3>
+
+<p>LinkedIn handles tens of billions of logs every day. How do the do it?</p>
+
+<ol>
+  <li>partition the log
+    <ul>
+      <li>Each partition is a totally ordered log, but there’s <strong>no global ordering</strong> between partitions</li>
+      <li>this allows systems to append to logs without coordinating</li>
+    </ul>
+  </li>
+  <li>batch reads and writes
+    <ul>
+      <li>Kafka does this aggressively</li>
+    </ul>
+  </li>
+  <li>de-dup
+    <ul>
+      <li><strong>zero-copy data transfer</strong>, in Kafka</li>
+    </ul>
+  </li>
+</ol>
+
+<h1 id="real-time-data-processing">Real Time Data Processing</h1>
+
+<p>we can view stream processing as infrastructure for continuous data processing</p>
+
+<ul>
+  <li>this depends on how we collect the data. Is it collected continuously or as a batch?</li>
+  <li>most real-world use cases are continuous</li>
+</ul>
+
+<h3 id="data-flow-graphs">Data flow graphs</h3>
+
+<p>stream processing lets us create feeds computed from other feeds</p>
+
+<p>Advantages for using a log for stream processing: each dataset is <strong>multi-subscriber</strong> and <strong>ordered</strong></p>
+
+<h3 id="stateful-real-time-processing">Stateful Real-Time Processing</h3>
+
+<p>We need to maintain state in the processor to handle sophisticated counts, aggregations and joins. <strong>How do we maintain this state?</strong></p>
+
+<ul>
+  <li>DDIA addresses this a little bit (<a href="https://ngozinwogwugwu.github.io/programming/ddia-stream-processing/#:~:text=together%20in%20time-,Stream%20Joins,-Joining%20data%20on">notes</a>)</li>
+</ul>
+
+<p>We could keep state in memory, but this can be fragile. We could also keep the state in a remote machine, but many round-trip calls would be expensive</p>
+
+<p>Alternative: The processor can <strong>journal out a changelog</strong></p>
+
+<ul>
+  <li>it can just restore its index from the changelog after a crash</li>
+  <li>advantage: other processes can subscribe to this</li>
+</ul>
+
+<h3 id="log-compaction">Log compaction</h3>
+
+<p>we have a finite amount of space for logs</p>
+
+<p>for <strong>event data</strong>, Kafka supports retaining a window of data</p>
+
+<p>for <strong>key data</strong>, we can remove obsolete records (any record with a more recent update)</p>
+
+<h1 id="distributed-system-design">Distributed system Design</h1>
+
+<p>in a system with a shared log, individual systems can rely on the shared log</p>
+<ul>
+  <li>it allows them to reduce complexity</li>
+</ul>
+
+<p>The log captures state changes, the <strong>serving nodes</strong> just need to store the right index, and subscribe to the log</p>
+
+<p>this separation makes it easy to restore failed nodes or move partitions</p>
+<ul>
+  <li>use a combination of <strong>snapshots</strong> and a fixed window of data</li>
+</ul>
+
+  </div><a class="u-url" href="/programming/logs/" hidden></a>
+</article>
+
+      </div>
+    </main><footer class="site-footer h-card">
+  <data class="u-url" href="/"></data>
+
+  <div class="wrapper">
+
+    <h2 class="footer-heading">Ngozi Nwogwugwu</h2>
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col footer-col-1">
+        <ul class="contact-list">
+          <li class="p-name">Ngozi Nwogwugwu</li><li><a class="u-email" href="mailto:ngozi.n.nwogwugwu@gmail.com">ngozi.n.nwogwugwu@gmail.com</a></li></ul>
+      </div>
+
+      <div class="footer-col footer-col-2"><ul class="social-media-list"><li><a href="https://github.com/ngozinwogwugwu"><svg class="svg-icon"><use xlink:href="/assets/minima-social-icons.svg#github"></use></svg> <span class="username">ngozinwogwugwu</span></a></li></ul>
+</div>
+
+      <div class="footer-col footer-col-3">
+        <p>nwogwugwu.eth</p>
+      </div>
+    </div>
+
+  </div>
+
+</footer>
+</body>
+
+</html>

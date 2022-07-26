@@ -1,0 +1,181 @@
+---
+layout: post
+title:  "Notes: Logs"
+date:   2022-07-25 00:07:43 -0500
+permalink: /programming/logs/
+---
+
+source: [Jay Kreps' blogpost](https://engineering.linkedin.com/distributed-systems/log-what-every-software-engineer-should-know-about-real-time-datas-unifying) 
+
+---
+
+A lot of the information discussed in this article is relevant to Chapter 11 of Designing Data Intensive Application. [My notes on this are here](https://ngozinwogwugwu.github.io/programming/ddia-stream-processing/)
+
+# What’s a Log?
+
+it’s an **append-only, totally-ordered sequence of records**
+
+- ordered by time
+- each entry has a unique ID. Can be used as a timestamp. Allows you to **decouple from a physical clock**
+- aka write-ahead logs, commit logs, transaction logs
+
+The point of a log is to record what happened and when
+
+- extremely important for distributed data systems
+
+**it’s important for machines to play back their history at their own rate in a deterministic manner**
+
+### Logs in databases
+
+Databases use logs to sync their data structures and indexes. Logs are only used internally by the database
+
+- write-ahead log (notes from DDIA [here](https://ngozinwogwugwu.github.io/programming/ddia-storage-and-retrieval/#:~:text=A%20Write%2DAhead%20Log%20(WAL%2C%20redo%20log)%3A%20is%20an%20additional%20append%2Donly%20file%20on%20disk)) helps the DB recover after a crash
+- Now it’s used as a way to replicate data between databases (notes from DDIA [here](https://ngozinwogwugwu.github.io/programming/ddia-replication/#:~:text=Write%2DAhead%20Log%20Shipping%3A%20Use%20the%20append%2Donly%20log%20file%20that%20describes%20the%20database%20writes%20(either%20log%20segments%20or%20WAL)))
+
+### Logs in distributed systems
+
+For distributed systems, the order of inputs is extremely important
+
+- Logs help these systems agree on an ordering of events
+- an event’s log ID becomes a universal timestamp
+
+**State Machine Replication Principle** - identical deterministic processes that get the same inputs in the same order will have the same output
+
+**physical vs logical logging** - relevant for DB people
+
+- physical: logging the contents of each row that was changed
+- logical: log the SQL commands
+
+**state machine model** each machine processes data based directly on the log
+
+**primary-backup model** elect a leader to process the log. It pushes changes to followers
+
+A distributed log can be seen as the data structure which models the problem of consensus
+
+### Changelog 101: Tables and Events are Dual
+
+logs are like list of transactions. A table just shows the current account balance
+
+- if you have a log, you can create a table
+- If you have a **changelog** (changes to a table), you can create a log
+
+Version control is also like this
+
+# Data Integration
+
+**data integration** making sure your services have access to the data they need
+
+- aka **ETL**, which is usually limited to data integration in relational data warehouses
+- this is a **mundane but essential** problem for organizations
+
+Not only does this data need to be available, but it **needs to be readable**
+
+### Complications to data integration
+
+1. There’s a lot of event data - way more than what we can store in a database
+2. there are a lot of specialized systems (for search, batch processing, …)
+
+### Log-structured data flow
+
+Disadvantages of depending on data warehouses
+
+- processing isn’t reversable, specific to one problem
+- if data isn’t entered correctly right away, the data warehouse has bad data
+
+solution: all your organizations data goes into a central log (each logical data source is marked as its own log). Advantages:
+
+- You have a buffer for async data consumption
+- destination systems don’t know anything about the data’s origin
+- all your systems potentially have access to all of the data
+- introducing a new system is straightforward
+
+This is slightly different from a **messaging system** or **pub sub**
+
+**databus** infrastructure that provides log caching abstraction
+
+technologies that do this:
+
+- **Kafka**
+- **Kinesis**
+
+### Relationship to ETL and the Data Warehouse
+
+A data warehouse is (supposed to be) a repository of **clean, integrated data** to support analysis
+
+- this is great for batch jobs
+- sometimes we need clean integrated data for things other than batch jobs
+
+During ETL, the data is:
+
+1. clean up
+2. structured for the data warehouse
+
+One problem of the data warehouse is organizational: The data warehouse team is the only party responsible for getting data cleaned up and into the warehouse
+
+- there’s no incentive for other teams to make this easy
+
+Alternative: if a log is acting as a central pipeline, and it has a **well defined API for adding data**, the responsibility for providing data in a readable format falls to individual teams
+
+- this way, the data warehouse team focuses on the problem of loading the (already structured) data into the warehouse
+- teams clean their data before they put it on the pipeline. This cleanup should be lossless and reversible
+- you can enrich data asynchronously
+
+Advantage to this: it becomes easy to add data systems besides warehouses
+
+This architecture enables **decoupled, event driven systems**
+
+### Building a Scalable Log
+
+LinkedIn handles tens of billions of logs every day. How do the do it?
+
+1. partition the log
+    - Each partition is a totally ordered log, but there’s **no global ordering** between partitions
+    - this allows systems to append to logs without coordinating
+2. batch reads and writes
+    - Kafka does this aggressively
+3. de-dup
+    - **zero-copy data transfer**, in Kafka
+
+# Real Time Data Processing
+
+we can view stream processing as infrastructure for continuous data processing
+
+- this depends on how we collect the data. Is it collected continuously or as a batch?
+- most real-world use cases are continuous
+
+### Data flow graphs
+
+stream processing lets us create feeds computed from other feeds
+
+Advantages for using a log for stream processing: each dataset is **multi-subscriber** and **ordered**
+
+### Stateful Real-Time Processing
+
+We need to maintain state in the processor to handle sophisticated counts, aggregations and joins. **How do we maintain this state?**
+
+- DDIA addresses this a little bit ([notes](https://ngozinwogwugwu.github.io/programming/ddia-stream-processing/#:~:text=together%20in%20time-,Stream%20Joins,-Joining%20data%20on))
+
+We could keep state in memory, but this can be fragile. We could also keep the state in a remote machine, but many round-trip calls would be expensive
+
+Alternative: The processor can **journal out a changelog**
+
+- it can just restore its index from the changelog after a crash
+- advantage: other processes can subscribe to this
+
+### Log compaction
+
+we have a finite amount of space for logs
+
+for **event data**, Kafka supports retaining a window of data
+
+for **key data**, we can remove obsolete records (any record with a more recent update)
+
+# Distributed system Design
+
+in a system with a shared log, individual systems can rely on the shared log
+- it allows them to reduce complexity
+
+The log captures state changes, the **serving nodes** just need to store the right index, and subscribe to the log
+
+this separation makes it easy to restore failed nodes or move partitions
+- use a combination of **snapshots** and a fixed window of data

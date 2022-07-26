@@ -1,4 +1,290 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.7">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2022-07-23T20:37:01+08:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Ngozi Nwogwugwu</title><subtitle>nwogwugwu.eth</subtitle><entry><title type="html">Notes: Crisis Mindsets</title><link href="http://localhost:4000/notes/crisis-mindsets/" rel="alternate" type="text/html" title="Notes: Crisis Mindsets" /><published>2022-07-22T13:07:43+08:00</published><updated>2022-07-22T13:07:43+08:00</updated><id>http://localhost:4000/notes/crisis-mindsets-notes</id><content type="html" xml:base="http://localhost:4000/notes/crisis-mindsets/">&lt;p&gt;source: &lt;a href=&quot;https://www.ribbonfarm.com/2022/05/18/crisis-mindset&quot;&gt;RIBBONFARM&lt;/a&gt;&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.7">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2022-07-26T15:07:38+08:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Ngozi Nwogwugwu</title><subtitle>nwogwugwu.eth</subtitle><entry><title type="html">Notes: Logs</title><link href="http://localhost:4000/programming/logs/" rel="alternate" type="text/html" title="Notes: Logs" /><published>2022-07-25T13:07:43+08:00</published><updated>2022-07-25T13:07:43+08:00</updated><id>http://localhost:4000/programming/logs</id><content type="html" xml:base="http://localhost:4000/programming/logs/">&lt;p&gt;source: &lt;a href=&quot;https://engineering.linkedin.com/distributed-systems/log-what-every-software-engineer-should-know-about-real-time-datas-unifying&quot;&gt;Jay Kreps’ blogpost&lt;/a&gt;&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;p&gt;A lot of the information discussed in this article is relevant to Chapter 11 of Designing Data Intensive Application. &lt;a href=&quot;https://ngozinwogwugwu.github.io/programming/ddia-stream-processing/&quot;&gt;My notes on this are here&lt;/a&gt;&lt;/p&gt;
+
+&lt;h1 id=&quot;whats-a-log&quot;&gt;What’s a Log?&lt;/h1&gt;
+
+&lt;p&gt;it’s an &lt;strong&gt;append-only, totally-ordered sequence of records&lt;/strong&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;ordered by time&lt;/li&gt;
+  &lt;li&gt;each entry has a unique ID. Can be used as a timestamp. Allows you to &lt;strong&gt;decouple from a physical clock&lt;/strong&gt;&lt;/li&gt;
+  &lt;li&gt;aka write-ahead logs, commit logs, transaction logs&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;The point of a log is to record what happened and when&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;extremely important for distributed data systems&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;strong&gt;it’s important for machines to play back their history at their own rate in a deterministic manner&lt;/strong&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;logs-in-databases&quot;&gt;Logs in databases&lt;/h3&gt;
+
+&lt;p&gt;Databases use logs to sync their data structures and indexes. Logs are only used internally by the database&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;write-ahead log (notes from DDIA &lt;a href=&quot;https://ngozinwogwugwu.github.io/programming/ddia-storage-and-retrieval/#:~:text=A%20Write%2DAhead%20Log%20(WAL%2C%20redo%20log)%3A%20is%20an%20additional%20append%2Donly%20file%20on%20disk&quot;&gt;here&lt;/a&gt;) helps the DB recover after a crash&lt;/li&gt;
+  &lt;li&gt;Now it’s used as a way to replicate data between databases (notes from DDIA &lt;a href=&quot;https://ngozinwogwugwu.github.io/programming/ddia-replication/#:~:text=Write%2DAhead%20Log%20Shipping%3A%20Use%20the%20append%2Donly%20log%20file%20that%20describes%20the%20database%20writes%20(either%20log%20segments%20or%20WAL)&quot;&gt;here&lt;/a&gt;)&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;logs-in-distributed-systems&quot;&gt;Logs in distributed systems&lt;/h3&gt;
+
+&lt;p&gt;For distributed systems, the order of inputs is extremely important&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Logs help these systems agree on an ordering of events&lt;/li&gt;
+  &lt;li&gt;an event’s log ID becomes a universal timestamp&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;strong&gt;State Machine Replication Principle&lt;/strong&gt; - identical deterministic processes that get the same inputs in the same order will have the same output&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;physical vs logical logging&lt;/strong&gt; - relevant for DB people&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;physical: logging the contents of each row that was changed&lt;/li&gt;
+  &lt;li&gt;logical: log the SQL commands&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;strong&gt;state machine model&lt;/strong&gt; each machine processes data based directly on the log&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;primary-backup model&lt;/strong&gt; elect a leader to process the log. It pushes changes to followers&lt;/p&gt;
+
+&lt;p&gt;A distributed log can be seen as the data structure which models the problem of consensus&lt;/p&gt;
+
+&lt;h3 id=&quot;changelog-101-tables-and-events-are-dual&quot;&gt;Changelog 101: Tables and Events are Dual&lt;/h3&gt;
+
+&lt;p&gt;logs are like list of transactions. A table just shows the current account balance&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;if you have a log, you can create a table&lt;/li&gt;
+  &lt;li&gt;If you have a &lt;strong&gt;changelog&lt;/strong&gt; (changes to a table), you can create a log&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Version control is also like this&lt;/p&gt;
+
+&lt;h1 id=&quot;data-integration&quot;&gt;Data Integration&lt;/h1&gt;
+
+&lt;p&gt;&lt;strong&gt;data integration&lt;/strong&gt; making sure your services have access to the data they need&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;aka &lt;strong&gt;ETL&lt;/strong&gt;, which is usually limited to data integration in relational data warehouses&lt;/li&gt;
+  &lt;li&gt;this is a &lt;strong&gt;mundane but essential&lt;/strong&gt; problem for organizations&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Not only does this data need to be available, but it &lt;strong&gt;needs to be readable&lt;/strong&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;complications-to-data-integration&quot;&gt;Complications to data integration&lt;/h3&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;There’s a lot of event data - way more than what we can store in a database&lt;/li&gt;
+  &lt;li&gt;there are a lot of specialized systems (for search, batch processing, …)&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h3 id=&quot;log-structured-data-flow&quot;&gt;Log-structured data flow&lt;/h3&gt;
+
+&lt;p&gt;Disadvantages of depending on data warehouses&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;processing isn’t reversable, specific to one problem&lt;/li&gt;
+  &lt;li&gt;if data isn’t entered correctly right away, the data warehouse has bad data&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;solution: all your organizations data goes into a central log (each logical data source is marked as its own log). Advantages:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;You have a buffer for async data consumption&lt;/li&gt;
+  &lt;li&gt;destination systems don’t know anything about the data’s origin&lt;/li&gt;
+  &lt;li&gt;all your systems potentially have access to all of the data&lt;/li&gt;
+  &lt;li&gt;introducing a new system is straightforward&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;This is slightly different from a &lt;strong&gt;messaging system&lt;/strong&gt; or &lt;strong&gt;pub sub&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;databus&lt;/strong&gt; infrastructure that provides log caching abstraction&lt;/p&gt;
+
+&lt;p&gt;technologies that do this:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;strong&gt;Kafka&lt;/strong&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Kinesis&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;relationship-to-etl-and-the-data-warehouse&quot;&gt;Relationship to ETL and the Data Warehouse&lt;/h3&gt;
+
+&lt;p&gt;A data warehouse is (supposed to be) a repository of &lt;strong&gt;clean, integrated data&lt;/strong&gt; to support analysis&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;this is great for batch jobs&lt;/li&gt;
+  &lt;li&gt;sometimes we need clean integrated data for things other than batch jobs&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;During ETL, the data is:&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;clean up&lt;/li&gt;
+  &lt;li&gt;structured for the data warehouse&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;One problem of the data warehouse is organizational: The data warehouse team is the only party responsible for getting data cleaned up and into the warehouse&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;there’s no incentive for other teams to make this easy&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Alternative: if a log is acting as a central pipeline, and it has a &lt;strong&gt;well defined API for adding data&lt;/strong&gt;, the responsibility for providing data in a readable format falls to individual teams&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;this way, the data warehouse team focuses on the problem of loading the (already structured) data into the warehouse&lt;/li&gt;
+  &lt;li&gt;teams clean their data before they put it on the pipeline. This cleanup should be lossless and reversible&lt;/li&gt;
+  &lt;li&gt;you can enrich data asynchronously&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Advantage to this: it becomes easy to add data systems besides warehouses&lt;/p&gt;
+
+&lt;p&gt;This architecture enables &lt;strong&gt;decoupled, event driven systems&lt;/strong&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;building-a-scalable-log&quot;&gt;Building a Scalable Log&lt;/h3&gt;
+
+&lt;p&gt;LinkedIn handles tens of billions of logs every day. How do the do it?&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;partition the log
+    &lt;ul&gt;
+      &lt;li&gt;Each partition is a totally ordered log, but there’s &lt;strong&gt;no global ordering&lt;/strong&gt; between partitions&lt;/li&gt;
+      &lt;li&gt;this allows systems to append to logs without coordinating&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;batch reads and writes
+    &lt;ul&gt;
+      &lt;li&gt;Kafka does this aggressively&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;de-dup
+    &lt;ul&gt;
+      &lt;li&gt;&lt;strong&gt;zero-copy data transfer&lt;/strong&gt;, in Kafka&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h1 id=&quot;real-time-data-processing&quot;&gt;Real Time Data Processing&lt;/h1&gt;
+
+&lt;p&gt;we can view stream processing as infrastructure for continuous data processing&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;this depends on how we collect the data. Is it collected continuously or as a batch?&lt;/li&gt;
+  &lt;li&gt;most real-world use cases are continuous&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;data-flow-graphs&quot;&gt;Data flow graphs&lt;/h3&gt;
+
+&lt;p&gt;stream processing lets us create feeds computed from other feeds&lt;/p&gt;
+
+&lt;p&gt;Advantages for using a log for stream processing: each dataset is &lt;strong&gt;multi-subscriber&lt;/strong&gt; and &lt;strong&gt;ordered&lt;/strong&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;stateful-real-time-processing&quot;&gt;Stateful Real-Time Processing&lt;/h3&gt;
+
+&lt;p&gt;We need to maintain state in the processor to handle sophisticated counts, aggregations and joins. &lt;strong&gt;How do we maintain this state?&lt;/strong&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;DDIA addresses this a little bit (&lt;a href=&quot;https://ngozinwogwugwu.github.io/programming/ddia-stream-processing/#:~:text=together%20in%20time-,Stream%20Joins,-Joining%20data%20on&quot;&gt;notes&lt;/a&gt;)&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;We could keep state in memory, but this can be fragile. We could also keep the state in a remote machine, but many round-trip calls would be expensive&lt;/p&gt;
+
+&lt;p&gt;Alternative: The processor can &lt;strong&gt;journal out a changelog&lt;/strong&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;it can just restore its index from the changelog after a crash&lt;/li&gt;
+  &lt;li&gt;advantage: other processes can subscribe to this&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;log-compaction&quot;&gt;Log compaction&lt;/h3&gt;
+
+&lt;p&gt;we have a finite amount of space for logs&lt;/p&gt;
+
+&lt;p&gt;for &lt;strong&gt;event data&lt;/strong&gt;, Kafka supports retaining a window of data&lt;/p&gt;
+
+&lt;p&gt;for &lt;strong&gt;key data&lt;/strong&gt;, we can remove obsolete records (any record with a more recent update)&lt;/p&gt;
+
+&lt;h1 id=&quot;distributed-system-design&quot;&gt;Distributed system Design&lt;/h1&gt;
+
+&lt;p&gt;in a system with a shared log, individual systems can rely on the shared log&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;it allows them to reduce complexity&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;The log captures state changes, the &lt;strong&gt;serving nodes&lt;/strong&gt; just need to store the right index, and subscribe to the log&lt;/p&gt;
+
+&lt;p&gt;this separation makes it easy to restore failed nodes or move partitions&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;use a combination of &lt;strong&gt;snapshots&lt;/strong&gt; and a fixed window of data&lt;/li&gt;
+&lt;/ul&gt;</content><author><name></name></author><summary type="html">source: Jay Kreps’ blogpost</summary></entry><entry><title type="html">Notes: A Lure</title><link href="http://localhost:4000/notes/a-lure/" rel="alternate" type="text/html" title="Notes: A Lure" /><published>2022-07-22T13:07:43+08:00</published><updated>2022-07-22T13:07:43+08:00</updated><id>http://localhost:4000/notes/entangled-life-a-lure</id><content type="html" xml:base="http://localhost:4000/notes/a-lure/">&lt;p&gt;source: &lt;a href=&quot;https://www.merlinsheldrake.com/entangled-life&quot;&gt;Entangled Life&lt;/a&gt; (chapter 1) by Merlin Sheldrake&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;p&gt;&lt;strong&gt;fungal hyphae&lt;/strong&gt; become a &lt;strong&gt;mycelial network&lt;/strong&gt; using two key moves:&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;branching&lt;/li&gt;
+  &lt;li&gt;fusing - must find other hyphae by &lt;strong&gt;homing&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Hyphae need to know what they’re fusing with&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;some fungi have tens of thousands of &lt;strong&gt;mating types&lt;/strong&gt;&lt;/li&gt;
+  &lt;li&gt;sometimes hyphae fuse with their own mycelial network, but “self” here is not a binary&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;“Many fungi produce plant and animal hormones to alter the physiology of their associates”&lt;/p&gt;
+
+&lt;h3 id=&quot;predatory-fungi&quot;&gt;Predatory fungi&lt;/h3&gt;
+
+&lt;p&gt;Some fungi eat &lt;strong&gt;nematode worms&lt;/strong&gt;. They’ll only do this if:&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;there’s not enough plant material to decompose&lt;/li&gt;
+  &lt;li&gt;the fungus senses a worm close by&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;The fungus produces worm-hunting organs, which &lt;strong&gt;issue a chemical summons&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;Some fungal tools:&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;adhesive nets&lt;/li&gt;
+  &lt;li&gt;hyphal nooses - inflate when touched&lt;/li&gt;
+  &lt;li&gt;toxic hyphal stalks&lt;/li&gt;
+  &lt;li&gt;spores that find the worm&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;smells&quot;&gt;Smells&lt;/h3&gt;
+
+&lt;p&gt;Human smell: we can distinguish between a trillion odors&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;plants, fungi and animals use similar receptors for detecting chemicals&lt;/li&gt;
+  &lt;li&gt;fungi don’t have noses - they use their whole bodies as one big nose&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;olfactory flashbacks&lt;/strong&gt; often include visual and emotional memories&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;“Male orchid bees collect scents from the world and amass them into a cocktail that they use to court females”&lt;/p&gt;
+
+&lt;h3 id=&quot;truffles&quot;&gt;truffles&lt;/h3&gt;
+&lt;p&gt;&lt;strong&gt;Piedmont white truffles&lt;/strong&gt; have never been domesticated&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;exist as mycelial networks for most of the year&lt;/li&gt;
+  &lt;li&gt;the truffles produce spores&lt;/li&gt;
+  &lt;li&gt;Use smell to attract animals&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Truffles must partner with trees, and the partner tree must consent&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;some fungi will cause disease, while other relationships are symbiotic&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Truffle mycelium sense their surroundings and responds unpredictably
+&lt;strong&gt;diversity dogs&lt;/strong&gt; are trained to find new types of truffles
+Truffles may provide an incentive for people to leave forests alone&lt;/p&gt;</content><author><name></name></author><summary type="html">source: Entangled Life (chapter 1) by Merlin Sheldrake</summary></entry><entry><title type="html">Notes: Crisis Mindsets</title><link href="http://localhost:4000/notes/crisis-mindsets/" rel="alternate" type="text/html" title="Notes: Crisis Mindsets" /><published>2022-07-22T13:07:43+08:00</published><updated>2022-07-22T13:07:43+08:00</updated><id>http://localhost:4000/notes/crisis-mindsets-notes</id><content type="html" xml:base="http://localhost:4000/notes/crisis-mindsets/">&lt;p&gt;source: &lt;a href=&quot;https://www.ribbonfarm.com/2022/05/18/crisis-mindset&quot;&gt;RIBBONFARM&lt;/a&gt;&lt;/p&gt;
 
 &lt;hr /&gt;
 
@@ -66,69 +352,7 @@
 &lt;ul&gt;
   &lt;li&gt;Don’t arrange your life so that you never encounter hardship, but stay organized enough to avoid unnecessary chaos. For example, if you have to tear your apartment apart before leaving on a trip because you forgot where you put your passport, you’ve lost time that you could be spending researching your destination&lt;/li&gt;
   &lt;li&gt;Don’t take flourishing time for granted. Learn to play guitar instead of binging Netflix&lt;/li&gt;
-&lt;/ul&gt;</content><author><name></name></author><summary type="html">source: RIBBONFARM</summary></entry><entry><title type="html">Notes: A Lure</title><link href="http://localhost:4000/notes/a-lure/" rel="alternate" type="text/html" title="Notes: A Lure" /><published>2022-07-22T13:07:43+08:00</published><updated>2022-07-22T13:07:43+08:00</updated><id>http://localhost:4000/notes/entangled-life-a-lure</id><content type="html" xml:base="http://localhost:4000/notes/a-lure/">&lt;p&gt;source: &lt;a href=&quot;https://www.merlinsheldrake.com/entangled-life&quot;&gt;Entangled Life&lt;/a&gt; (chapter 1) by Merlin Sheldrake&lt;/p&gt;
-
-&lt;hr /&gt;
-
-&lt;p&gt;&lt;strong&gt;fungal hyphae&lt;/strong&gt; become a &lt;strong&gt;mycelial network&lt;/strong&gt; using two key moves:&lt;/p&gt;
-&lt;ul&gt;
-  &lt;li&gt;branching&lt;/li&gt;
-  &lt;li&gt;fusing - must find other hyphae by &lt;strong&gt;homing&lt;/strong&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;Hyphae need to know what they’re fusing with&lt;/p&gt;
-&lt;ul&gt;
-  &lt;li&gt;some fungi have tens of thousands of &lt;strong&gt;mating types&lt;/strong&gt;&lt;/li&gt;
-  &lt;li&gt;sometimes hyphae fuse with their own mycelial network, but “self” here is not a binary&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;“Many fungi produce plant and animal hormones to alter the physiology of their associates”&lt;/p&gt;
-
-&lt;h3 id=&quot;predatory-fungi&quot;&gt;Predatory fungi&lt;/h3&gt;
-
-&lt;p&gt;Some fungi eat &lt;strong&gt;nematode worms&lt;/strong&gt;. They’ll only do this if:&lt;/p&gt;
-&lt;ul&gt;
-  &lt;li&gt;there’s not enough plant material to decompose&lt;/li&gt;
-  &lt;li&gt;the fungus senses a worm close by&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;The fungus produces worm-hunting organs, which &lt;strong&gt;issue a chemical summons&lt;/strong&gt;&lt;/p&gt;
-
-&lt;p&gt;Some fungal tools:&lt;/p&gt;
-&lt;ul&gt;
-  &lt;li&gt;adhesive nets&lt;/li&gt;
-  &lt;li&gt;hyphal nooses - inflate when touched&lt;/li&gt;
-  &lt;li&gt;toxic hyphal stalks&lt;/li&gt;
-  &lt;li&gt;spores that find the worm&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3 id=&quot;smells&quot;&gt;Smells&lt;/h3&gt;
-
-&lt;p&gt;Human smell: we can distinguish between a trillion odors&lt;/p&gt;
-&lt;ul&gt;
-  &lt;li&gt;plants, fungi and animals use similar receptors for detecting chemicals&lt;/li&gt;
-  &lt;li&gt;fungi don’t have noses - they use their whole bodies as one big nose&lt;/li&gt;
-  &lt;li&gt;&lt;strong&gt;olfactory flashbacks&lt;/strong&gt; often include visual and emotional memories&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;“Male orchid bees collect scents from the world and amass them into a cocktail that they use to court females”&lt;/p&gt;
-
-&lt;h3 id=&quot;truffles&quot;&gt;truffles&lt;/h3&gt;
-&lt;p&gt;&lt;strong&gt;Piedmont white truffles&lt;/strong&gt; have never been domesticated&lt;/p&gt;
-&lt;ul&gt;
-  &lt;li&gt;exist as mycelial networks for most of the year&lt;/li&gt;
-  &lt;li&gt;the truffles produce spores&lt;/li&gt;
-  &lt;li&gt;Use smell to attract animals&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;Truffles must partner with trees, and the partner tree must consent&lt;/p&gt;
-&lt;ul&gt;
-  &lt;li&gt;some fungi will cause disease, while other relationships are symbiotic&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;Truffle mycelium sense their surroundings and responds unpredictably
-&lt;strong&gt;diversity dogs&lt;/strong&gt; are trained to find new types of truffles
-Truffles may provide an incentive for people to leave forests alone&lt;/p&gt;</content><author><name></name></author><summary type="html">source: Entangled Life (chapter 1) by Merlin Sheldrake</summary></entry><entry><title type="html">Recommend Me a Book</title><link href="http://localhost:4000/bookshelf/recommend-me/" rel="alternate" type="text/html" title="Recommend Me a Book" /><published>2022-07-21T00:00:00+08:00</published><updated>2022-07-21T00:00:00+08:00</updated><id>http://localhost:4000/bookshelf/recommend-me-a-book</id><content type="html" xml:base="http://localhost:4000/bookshelf/recommend-me/">&lt;html&gt;
+&lt;/ul&gt;</content><author><name></name></author><summary type="html">source: RIBBONFARM</summary></entry><entry><title type="html">Recommend Me a Book</title><link href="http://localhost:4000/bookshelf/recommend-me/" rel="alternate" type="text/html" title="Recommend Me a Book" /><published>2022-07-21T00:00:00+08:00</published><updated>2022-07-21T00:00:00+08:00</updated><id>http://localhost:4000/bookshelf/recommend-me-a-book</id><content type="html" xml:base="http://localhost:4000/bookshelf/recommend-me/">&lt;html&gt;
     &lt;head&gt;
         &lt;script&gt;
             function myFunction() {
@@ -139,7 +363,7 @@ Truffles may provide an incentive for people to leave forests alone&lt;/p&gt;</c
                 let http = new XMLHttpRequest();
                 http.open(
                     'POST',
-                    'http://127.0.0.1:8000/witch/send_ngozi_a_book_rec',
+                    'https://witch-game-zn7nb.ondigitalocean.app/witch/send_ngozi_a_book_rec',
                     true
                 );
                 http.setRequestHeader('Content-type', 'application/json');
@@ -1176,111 +1400,4 @@ Truffles may provide an incentive for people to leave forests alone&lt;/p&gt;</c
 &lt;ol&gt;
   &lt;li&gt;&lt;strong&gt;transferFrom&lt;/strong&gt; - the owner transfers the NFT to the recipient&lt;/li&gt;
   &lt;li&gt;&lt;strong&gt;approve&lt;/strong&gt; and &lt;strong&gt;transferFrom&lt;/strong&gt; - the owner approves a transfer to a specific address, then the recipient calls the &lt;code class=&quot;highlighter-rouge&quot;&gt;transferFrom&lt;/code&gt; fununction&lt;/li&gt;
-&lt;/ol&gt;</content><author><name></name></author><summary type="html">source: CryptoZombies</summary></entry><entry><title type="html">Notes: How Galileo Created the Problem of Consiousness</title><link href="http://localhost:4000/notes/galileo-consiousness/" rel="alternate" type="text/html" title="Notes: How Galileo Created the Problem of Consiousness" /><published>2021-12-19T04:07:43+08:00</published><updated>2021-12-19T04:07:43+08:00</updated><id>http://localhost:4000/notes/playing-monogamy%20copy</id><content type="html" xml:base="http://localhost:4000/notes/galileo-consiousness/">&lt;p&gt;source: &lt;a href=&quot;https://www.penguinrandomhouse.com/books/599229/galileos-error-by-philip-goff/&quot;&gt;Galileo’s Error&lt;/a&gt;, by Philip Goff (Chapter 1)&lt;/p&gt;
-
-&lt;hr /&gt;
-
-&lt;p&gt;The book is about &lt;strong&gt;conscious experience&lt;/strong&gt;, and states that characterize our &lt;strong&gt;subjective inner lives&lt;/strong&gt;&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;experiences are what make life worth living&lt;/li&gt;
-  &lt;li&gt;it’s the only thing we know for sure is real&lt;/li&gt;
-  &lt;li&gt;Rene Descarte - “Cogito ergo sum” (I think therefor I am)&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;but we have not incorporated it into our scientific picture of the world&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;at this point, neuroscience hasn’t even started to explain it&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3 id=&quot;well-get-there-in-the-end&quot;&gt;We’ll get there in the end&lt;/h3&gt;
-
-&lt;p&gt;In other branches of science (like biochemistry), we can focus on the answerable questions first. Then we might have the tools to get to the harder questions&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;the real problem of consciousness&lt;/strong&gt;: mapping brain activity to conscious experience&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;we should take this problem seriously&lt;/li&gt;
-  &lt;li&gt;we’ve started working on a theoretical framework to address the problem&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;&lt;strong&gt;Patricia Churchland&lt;/strong&gt; - neurophilosopher, “get out of the armchair and into the lab” proponent&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;&lt;strong&gt;eliminative materialism&lt;/strong&gt; the mind doesn’t exist and we shouldn’t try to explain it&lt;/li&gt;
-  &lt;li&gt;thinks that complex functions of the mind (”thought”, “desire”) are outdated concepts&lt;/li&gt;
-  &lt;li&gt;thinks we should talk about human behavior in terms of electrochemical processes in the brain&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;Science can tell us counterintuitive things about the world, but it &lt;strong&gt;can’t tell us we don’t have experiences&lt;/strong&gt;&lt;/p&gt;
-
-&lt;h3 id=&quot;what-is-science&quot;&gt;What is Science?&lt;/h3&gt;
-
-&lt;p&gt;Science helps us reimagine nature&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;example: gravity is responsible for apples falling to the ground &lt;em&gt;and&lt;/em&gt; the orbit of the moon&lt;/li&gt;
-  &lt;li&gt;example: space and time aren’t two distinct entities. They’re both spacetime&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;We think of science as driven by experiments but thought experiments are powerful tools&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;Einstein used thought experiments to identify gravitational force as the result of curvature in the fabric of spacetime&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;The scientific revolution worked because it &lt;strong&gt;excluded consciousness from the domain of science&lt;/strong&gt;&lt;/p&gt;
-
-&lt;h3 id=&quot;philosophical-foundations-of-science&quot;&gt;Philosophical Foundations of Science&lt;/h3&gt;
-
-&lt;p&gt;&lt;strong&gt;Galileo Galilei&lt;/strong&gt; (1564-1642) - father of modern science&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;declared that math is the language of science&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;&lt;strong&gt;Aristotelian orthodoxy&lt;/strong&gt; acceptance of Aristotle’s worldview&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;&lt;strong&gt;Ptolemaic&lt;/strong&gt; view of the universe (earth at the center)&lt;/li&gt;
-  &lt;li&gt;&lt;strong&gt;teleological&lt;/strong&gt; theory (inanimate objects have goals)&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;We all assume that Galileo disproved Aristotle’s view through scientific method, but he did it using a thought experiment&lt;/p&gt;
-
-&lt;p&gt;Before Galileo, philosophers thought the world was full of &lt;em&gt;sensory qualities.&lt;/em&gt; After, scientists thought of material objects as existing without sensory qualities&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;example: lemons aren’t yellow. We perceive the yellowness in our souls&lt;/li&gt;
-  &lt;li&gt;example: sound exists in the material world only as waves. It only exists as sound when we listen to it&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;Galileo divided the world into &lt;strong&gt;material objects&lt;/strong&gt; and &lt;strong&gt;souls&lt;/strong&gt;&lt;/p&gt;
-
-&lt;p&gt;This was meant to be a &lt;strong&gt;partial description of reality&lt;/strong&gt;&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;by narrowing the scope of inquiry, we’ve been able to achieve a lot using science&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;This means that science as we know it might not solve the problem of consciousness&lt;/p&gt;
-
-&lt;h3 id=&quot;first-option-naturalistic-dualism&quot;&gt;First Option: Naturalistic Dualism&lt;/h3&gt;
-
-&lt;p&gt;&lt;strong&gt;dualism&lt;/strong&gt; divides nature into two categories:&lt;/p&gt;
-
-&lt;ol&gt;
-  &lt;li&gt;physical objects&lt;/li&gt;
-  &lt;li&gt;incorporeal consciousness&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;p&gt;&lt;strong&gt;naturalistic dualism&lt;/strong&gt; says the mind is not magical, but it’s part of the natural order&lt;/p&gt;
-
-&lt;h3 id=&quot;second-option-materialism&quot;&gt;Second Option: Materialism&lt;/h3&gt;
-
-&lt;p&gt;Radical materialists argue that consciousness is an illusion&lt;/p&gt;
-
-&lt;h3 id=&quot;third-option-panpsychism&quot;&gt;Third Option: Panpsychism&lt;/h3&gt;
-
-&lt;p&gt;Panpsychists believe that consciousness is a fundamental and ubiquitous feature of the physical world&lt;/p&gt;</content><author><name></name></author><summary type="html">source: Galileo’s Error, by Philip Goff (Chapter 1)</summary></entry></feed>
+&lt;/ol&gt;</content><author><name></name></author><summary type="html">source: CryptoZombies</summary></entry></feed>
