@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Notes: The Tyrrany of Merit"
+title:  "Notes: The Tyranny of Merit"
 date:   2022-07-31 00:07:43 -0500
 permalink: /notes/tyranny-of-merit/
 ---
@@ -8,8 +8,6 @@ permalink: /notes/tyranny-of-merit/
 source: [The Tyranny of Merit: What's Become of the Common Good?](https://www.amazon.com/Tyranny-Merit-Whats-Become-Common/dp/0374289980) by Michael J. Sandel
 
 ---
-
-# The tyranny of merit
 
 The usual objection to our current system is that we haven’t properly implemented a meritocracy. **We take for granted that a meritocracy is the goal**
 
@@ -40,3 +38,6 @@ In a meritocratic society, the **winners think they earned their success**
 When we think of ourselves as self-made and self sufficient, we have less gratitude and humility
 
 - this diminishes civic responsibility
+
+# Chapters
+[Winners and Losers](ch-1)
