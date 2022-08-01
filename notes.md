@@ -17,6 +17,7 @@ Science & Philosophy
 
 ---
 Politics & Society
+# [The Tyranny of Merit](tyranny-of-merit)
 # [The Spanish Civil War](spanish-civil-war)
 # [Autocrats Forming Alliances](bad-guys-winning)
 # [Intro to Feminism](bell-hooks-feminism)
