@@ -7,9 +7,6 @@ permalink: /bookshelf/
 I'm fairly opinionated about books, and I love to talk about what I read. Here are some of the books I've read in the past decade, grouped by how much I enjoyed them. I'm always on the lookout for something new to read, so please [recommend me a book](recommend-me), if you know of anything you think I'd enjoy
 
 ### I'd recommend this, no questions asked
-
----
-Fiction
 - **The Book of Form and Emptiness** Ruth Ozeki
 - **Exhalation** Ted Chiang
 - **Detransition, Baby** Torrey Peters
@@ -24,9 +21,6 @@ Fiction
 - **Island** Aldous Huxley
 - **World War Z: An Oral History of the Zombie War** by Max Brooks
 - **Piranesi** Susanna Clarke
-
----
-Nonfiction
 - **Mortality** Christopher Hitchens
 
 ### I'm glad I read this, but I don't feel passionately about it
