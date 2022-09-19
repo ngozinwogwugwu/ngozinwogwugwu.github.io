@@ -21,6 +21,9 @@ I'm fairly opinionated about books, and I love to talk about what I read. Here a
 - **Island** Aldous Huxley
 - **World War Z: An Oral History of the Zombie War** by Max Brooks
 - **Piranesi** Susanna Clarke
+---
+Nonfiction
+- **Mortality** Christopher Hitchens
 
 ### I'm glad I read this, but I don't feel passionately about it
 
@@ -39,6 +42,7 @@ Fiction
 - **Pachinko** Min-jin Lee
 - **Freshwater** Akwaeke Emezi
 - **The Underground Railroad** Colson Whitehead
+- **The Signature of All Things** Elizabeth Gilbert
 - **All Systems Red** Martha Wells
 - **Middlesex** Jeffrey Eugenides
 - **House of Leaves** Mark Z. Danielewski
@@ -62,7 +66,10 @@ Fiction
 - **The Kite Runner** Khaled Hosseini
 - **The Fault in Our Stars** John Green
 - **The Alchemist** Paulo Coelho
-- **Colorless Tsukuru Tazaki and His Years of Pilgrimage** Haruki Murakami
+- **The Grownup** Gillian Flynn
+- **Dark Places** Gillian Flynn
+- **Colorless Tsukuru Tazaki and His Years of Pilgrimage** Haruki
+ Murakami
 - **The Wind-Up Bird Chronicle** Haruki Murakami
 - **1Q84** Haruki Murakami
 - **Ghostwritten** David Mitchell
