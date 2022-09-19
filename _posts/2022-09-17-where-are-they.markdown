@@ -11,7 +11,7 @@ source: [Where Are They?](https://nickbostrom.com/extraterrestrial.pdf) by Nick 
 
 ### The Great Filter
 
-**The Great Filter** one or more *highly improbable *****evolutionary steps that would be required to produce an intelligent civilization that would be visible to us
+**The Great Filter** one or more *highly improbable* evolutionary steps that would be required to produce an intelligent civilization that would be visible to us
 
 This filter could be in our **future** or in our **past**
 
@@ -44,6 +44,8 @@ It’s possible that there’s some destructive tendency common to almost all su
 
 - if a civilization failed a thousand times before succeeding, they could have still arrived here millions of years ago
 - some technological discovery could constitute a great filter
+
+This is extremely related to Bostrom's [Vulnerable World Hypothesis](https://ngozinwogwugwu.github.io/notes/vulnerable-world/)
 
 ### Other possibilities
 
