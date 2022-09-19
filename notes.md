@@ -10,6 +10,7 @@ I often take notes on the books that I read, but not always. If you want a more 
 Science & Philosophy
 
 # [Fungi](entangled-life)
+# [Great Filters and Alien Civilization](where-are-they)
 # [Crisis Mindsets](crisis-mindsets)
 # [The Vulnerable World Hypothesis](vulnerable-world)
 # [Maxwell’s Demon](maxwell-demon)

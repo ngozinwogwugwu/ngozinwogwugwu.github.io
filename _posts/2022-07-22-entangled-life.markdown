@@ -10,6 +10,6 @@ source: [Entangled Life](https://www.merlinsheldrake.com/entangled-life) by Merl
 ---
 
 # Chapters
-- [A lure](ch-1)
-- [Living Labyrinths](ch-2)
-- [Lichens](ch-3)
+- Chapter 1: [A lure](ch-1)
+- Chapter 2: [Living Labyrinths](ch-2)
+- Chapter 3: [Lichens](ch-3)
