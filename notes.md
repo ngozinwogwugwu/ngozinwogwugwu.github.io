@@ -18,6 +18,7 @@ Science & Philosophy
 
 ---
 Politics & Society
+# [The For The People Act](disclose-act)
 # [The Tyranny of Merit](tyranny-of-merit)
 # [Why We Fight](why-we-fight)
 # [The Spanish Civil War](spanish-civil-war)
