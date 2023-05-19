@@ -7,6 +7,7 @@ permalink: /bookshelf/
 I'm fairly opinionated about books, and I love to talk about what I read. Here are some of the books I've read in the past decade, grouped by how much I enjoyed them.
 
 ### I'd recommend this, no questions asked
+
 - **The Book of Form and Emptiness** Ruth Ozeki
 - **Exhalation** Ted Chiang
 - **Detransition, Baby** Torrey Peters
@@ -22,11 +23,14 @@ I'm fairly opinionated about books, and I love to talk about what I read. Here a
 - **World War Z: An Oral History of the Zombie War** by Max Brooks
 - **Piranesi** Susanna Clarke
 - **Mortality** Christopher Hitchens
+- **When We Cease to Understand the World** Benjamín Labatut
 
 ### I'm glad I read this, but I don't feel passionately about it
 
 ---
+
 Fiction
+
 - **The Aleph** Jorge Luis Borges
 - **Klara and the Sun** Kazuo Ishiguro
 - **A Tale for the Time Being** Ruth Ozeki
@@ -67,23 +71,25 @@ Fiction
 - **The Grownup** Gillian Flynn
 - **Dark Places** Gillian Flynn
 - **Colorless Tsukuru Tazaki and His Years of Pilgrimage** Haruki
- Murakami
+  Murakami
 - **The Wind-Up Bird Chronicle** Haruki Murakami
 - **1Q84** Haruki Murakami
 - **Ghostwritten** David Mitchell
 - **Slaughterhouse-Five** Kurt Vonnegut Jr.
 - **The Watchmaker of Filigree Street** Natasha Pulley
-- **Oryx and Crake** Margaret Atwood 
+- **Oryx and Crake** Margaret Atwood
 - **The Girl with All the Gifts** M.R. Carey
 - **Hyperion** Dan Simmons
 - **American Gods** Neil Gaiman
 - **A Memory Called Empire** Arkady Martine
 
 ---
+
 Nonfiction
+
 - **Mastering Ethereum: Building Smart Contracts and DApps** Andreas M. Antonopoulos
 - **Galileo's Error: Foundations for a New Science of Consciousness** Philip Goff
-- **Entangled Life: How Fungi Make Our Worlds, Change Our Minds & Shape Our Futures** Merlin  Sheldrake
+- **Entangled Life: How Fungi Make Our Worlds, Change Our Minds & Shape Our Futures** Merlin Sheldrake
 - **Ethics in the Real World: 86 Brief Essays on Things that Matter** Peter Singer
 - **The Spanish Civil War: A Very Short Introduction** Helen Graham
 - **Waking Up: A Guide to Spirituality Without Religion** Sam Harris
@@ -99,11 +105,15 @@ Nonfiction
 - **Disunited Nations: Succeeding in a World Where No One Gets Along** Peter Zeihan
 - **Radical Markets: Uprooting Capitalism and Democracy for a Just Society** Eric A. Posner, E. Glen Weyl
 - **Caffeine: How Caffeine Created the Modern World** Michael Pollan
+- **Chip War: The Fight for the World's Most Critical Technology** Chris Miller
+- **CHAOS: Charles Manson, the CIA, and the Secret History of the Sixties** Tom O'Neill
 
 ### This book was a waste of time. Fight me.
 
 ---
+
 Fiction
+
 - **The Devotion of Suspect X** Keigo Higashino
 - **The Shadow of the Torturer** Gene Wolfe
 - **Dune** Frank Herbert
@@ -114,6 +124,8 @@ Fiction
 - **The Doors of Eden** Adrian Tchaikovsky
 
 ---
+
 Nonfiction
+
 - **Homo Deus: A History of Tomorrow** Yuval Noah Harari
 - **12 Rules for Life: An Antidote to Chaos** Jordan B. Peterson
