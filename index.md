@@ -20,7 +20,3 @@ I work as a software engineer, based out of New York. In my own time, I [try](/a
 
 - **Boston University College of Engineering, Boston MA** September 2009 – May 2013
 - **The Recurse Center, Brooklyn NY** April 2019 – June 2019
-
-<script type="text/javascript">
-    console.log("Hello, world!");
-</script>
