@@ -7,8 +7,6 @@ permalink: /programming/image-analyzer/
 
 upload any photo, and I'll tell you the main colors in it
 
-!DOCTYPE html>
-
 <html>
   <head>
     <style>
