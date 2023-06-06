@@ -83,7 +83,7 @@ upload any photo, and I'll tell you the main colors in it
         <input type="file" id="imageFile" accept="image/*" required />
 
         <label for="nClusters">Number of clusters:</label>
-        <input type="number" id="nClusters" min="1" value="3" required />
+        <input type="number" id="nClusters" min="1" max="6" value="3" required />
 
         <label for="minRepresentation">Minimum representation:</label>
         <input
@@ -91,8 +91,8 @@ upload any photo, and I'll tell you the main colors in it
           id="minRepresentation"
           min="0"
           max="1"
-          step="0.01"
-          value="0.1"
+          step="0.0001"
+          value="0.001"
           required
         />
 
