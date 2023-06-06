@@ -7,7 +7,7 @@ permalink: /programming/image-analyzer/
 
 upload any photo, and I'll tell you the main colors in it
 
-<html>
+<div>
   <head>
     <style>
       body {
@@ -83,14 +83,7 @@ upload any photo, and I'll tell you the main colors in it
         <input type="file" id="imageFile" accept="image/*" required />
 
         <label for="nClusters">Number of clusters:</label>
-        <input
-          type="number"
-          id="nClusters"
-          min="1"
-          max="6"
-          value="5"
-          required
-        />
+        <input type="number" id="nClusters" min="1" value="3" required />
 
         <label for="minRepresentation">Minimum representation:</label>
         <input
@@ -98,8 +91,8 @@ upload any photo, and I'll tell you the main colors in it
           id="minRepresentation"
           min="0"
           max="1"
-          step="0.00001"
-          value="0.001"
+          step="0.01"
+          value="0.1"
           required
         />
 
@@ -180,13 +173,11 @@ upload any photo, and I'll tell you the main colors in it
                   };
                 });
 
-                let output = JSON.stringify(
+                document.getElementById("result").textContent = JSON.stringify(
                   data,
                   null,
                   2
                 ).replace(/\\/g, "");
-
-                document.getElementById("result").textContent = output;
 
                 button.disabled = false;
                 button.textContent = "Analyze Colors";
@@ -197,8 +188,21 @@ upload any photo, and I'll tell you the main colors in it
     </script>
 
   </body>
-</html>
+</div>
 
 # why did I make this?
 
 I'm dabbling in generative art, and I noticed that when creating color palettes, I would often reference photos. This is just a tool to automatically get a list of colors
+
+# Curious about my most recent drop?
+
+I made these
+
+| ------------- |
+| ![black.png](/assets/expressions/black.png) |
+| ![blue-city.png](/assets/expressions/blue-city.png) |
+| ![blue-yellow.png](/assets/expressions/blue-yellow.png) |
+| ![green.png](/assets/expressions/green.png) |
+| ![neons.png](/assets/expressions/neons.png) |
+| ![tiles.png](/assets/expressions/tiles.png) |
+| ![yellow.png](/assets/expressions/yellow.png) |
