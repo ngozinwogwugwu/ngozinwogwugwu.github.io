@@ -196,13 +196,4 @@ I'm dabbling in generative art, and I noticed that when creating color palettes,
 
 # Curious about my most recent drop?
 
-I made these
-
-| ------------- |
-| ![black.png](/assets/expressions/black.png) |
-| ![blue-city.png](/assets/expressions/blue-city.png) |
-| ![blue-yellow.png](/assets/expressions/blue-yellow.png) |
-| ![green.png](/assets/expressions/green.png) |
-| ![neons.png](/assets/expressions/neons.png) |
-| ![tiles.png](/assets/expressions/tiles.png) |
-| ![yellow.png](/assets/expressions/yellow.png) |
+[check out my twitter](https://twitter.com/NgoziArt)
