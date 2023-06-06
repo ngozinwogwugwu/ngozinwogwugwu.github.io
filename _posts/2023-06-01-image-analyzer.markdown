@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Image Analyzer"
-date: 2022-04-30 15:07:43 -0500
+date: 2023-06-03 15:07:43 -0500
 permalink: /programming/image-analyzer/
 ---
 
@@ -97,22 +97,6 @@ upload any photo, and I'll tell you the main colors in it
         />
 
         <button type="submit">Analyze Colors</button>
-        <label for="format">Select display format:</label><br />
-        <input
-          type="radio"
-          id="defaultFormat"
-          name="format"
-          value="default"
-          checked
-        />
-        RGB String (e.g. color("#4a5f54"))<br />
-        <input
-          type="radio"
-          id="alternativeFormat"
-          name="format"
-          value="alternative"
-        />
-        RGB Values (e.g. [74, 95, 84])
       </form>
       <pre id="result"></pre>
     </div>
