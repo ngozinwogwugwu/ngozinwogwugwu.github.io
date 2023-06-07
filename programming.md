@@ -6,8 +6,6 @@ permalink: /programming/
 
 Feel free to take a look at some of my side projects
 
-### [Image Analyzer](image-analyzer)
-
 ### [My Fitness RPG](fitness-rpg)
 
 ### [Recurse Center Projects](recurse-center)
