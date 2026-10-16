@@ -11,6 +11,7 @@ I work as a software engineer, based out of New York. In my own time, I [try](/a
 
 # Professional Background
 
+- **Founding Engineer - Faraday** April 2026 – Present
 - **Senior Software Engineer - Brilliant** October 2022 – July 2024
 - **Software Engineer III - Better.com** July 2020 – February 2022
 - **Software Engineer III - Managed by Q** August 2019 – March 2020
@@ -21,7 +22,7 @@ I work as a software engineer, based out of New York. In my own time, I [try](/a
 - **Boston University College of Engineering, Boston MA** September 2009 – May 2013
 - **The Recurse Center, Brooklyn NY** April 2019 – June 2019
 
-# Currently Working On
+# Creative Projects During My Time Off
 
 - **Generative Art** Using p5.js to create algorithmic art. Check it out at [ngozi-nao.com](https://ngozi-nao.com/)
 - **Notebook Digitizer** Creating an ergonomic way to preserve content written on paper. Try it! [notebook-digitizer.com](https://www.notebook-digitizer.com/)
